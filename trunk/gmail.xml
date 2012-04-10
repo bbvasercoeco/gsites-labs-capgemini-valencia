@@ -10,7 +10,7 @@
 		function SendGmail()
 		{
 			var to ='';
-			var subject ='Petición de información';
+			var subject ='Peticion de informacion';
 			var message ='Cuerpo del mensaje';
 			var str = 'http://mail.google.com/mail/?view=cm&fs=1'+
              '&to=' + to +
