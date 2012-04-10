@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+ <ModulePrefs
+   title="gmail enlace"
+   height="200"/>
+ <Content type="html">
+ <![CDATA[
+   <script type="text/javascript">
+
+function SendGmail(){
+
+var to ='123@123.com';
+
+var subject ='Yoooooooooo';
+
+var message ='Ejemplo del cuerpo del mensaje.';
+
+var str = 'http://mail.google.com/mail/?view=cm&fs=1'+
+
+             '&to=' + to +
+
+             '&su=' + subject +
+
+             '&body=' + message.replace(/\n/g,'%0A') +
+
+             '&ui=1';
+
+window.open (str,"send mail");
+
+}
+  </script>
+
+<div style="border:2px solid black;padding:10px;">
+
+<a href="#" onclick="SendGmail();">Contacto</a>
+</div>
+
+ ]]>
+ </Content>
+</Module>
