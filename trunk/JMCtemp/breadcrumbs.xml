@@ -6,18 +6,20 @@
  <Content type="html">
  <![CDATA[
 <script type="text/javascript">
+gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+
 function showBreadcrumbs(){
 //Construct the breadcrumb string
   var s ="";
     var parametros = gadgets.util.getUrlParameters()["parent"].split("|");  
-alert(parametros);
+  write(parametros);
   for (var i in parametros){
     if (parametros[i]=='root') s = "InicioJordi";
     else s = s + " > " + DocsList.getFolderById(parametros[i]).getName();  
     
     }
     
-  Document.write(s);
+   write(s);
     
     }
 </script>
@@ -26,6 +28,3 @@ alert(parametros);
  
  </Content>
 </Module>
-
-
-
