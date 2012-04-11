@@ -15,7 +15,7 @@ function showBreadcrumbs(){
    
   for (var i in parametros){
     if (parametros[i]=='root') s = "InicioJordi";
-    else s = s + " > " + document.getElementById(parametros[i]).getName();  
+    else s = s + " > " + parametros[i].getName();  
     
     }
     alert (parametros);
