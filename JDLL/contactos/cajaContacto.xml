@@ -38,14 +38,15 @@
 				color: #3F78B2;
 			}
 			h1 {
-				font-size: 16px;
-				margin: 0 0 10px 0;
-				color: #3F78B2;
+				font-size: 14px;
+				font-weight: normal;
+				margin: 0 0 5px;
+				color: #009EE5;
 			}
 			h2 {
-				font-size: 16px;
-				margin: 0 0 10px 0;
-				color: #3F78B2;
+				font-size: 13px;
+				font-weight: normal;
+				margin: 0 0 5px;
 			}	
 			h3 {
 				font-size: 16px;
