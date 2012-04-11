@@ -11,7 +11,7 @@ gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 function showBreadcrumbs(){
 //Construct the breadcrumb string
   var s ="";
-    var parametros = gadgets.util.getUrlParameters()["parent"].split("|");  
+    var parametros = gadgets.util.getUrlParameters()["parent"];  
    alert (parametros + "array");
   for (var i in parametros){
     if (parametros[i]=='home') s = "InicioJordi";
