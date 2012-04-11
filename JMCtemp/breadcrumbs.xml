@@ -3,28 +3,30 @@
 <ModulePrefs
    title="breadcrumbs"
    height="200"/>
- <Content type="html">
+ <Content type="html" view="home">
  <![CDATA[
-<script type="text/javascript">
-	gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+ 
+	<div id="titlecrumbsjmc">valor de title</div>
+	
+	<script type="text/javascript">
+		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 
-	function showBreadcrumbs()
-	{
-		//Construct the breadcrumb string
-		var s ="";
-		var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
-		// alert (parametros + "---->array");
-		for (var i in parametros)
+		function showBreadcrumbs()
 		{
-			if (parametros[i]=='home') s = "InicioJordi";
-			else s = s + " > " + parametros[i];      
+			//Construct the breadcrumb string
+			var s ="";
+			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+			// alert (parametros + "---->array");
+			for (var i in parametros)
+			{
+				if (parametros[i]=='home') s = "InicioJordi";
+				else s = s + " > " + parametros[i];      
+			}
+			alert (s);
+			document.getElementById('titlecrumbsjmc').innerHTML = s;    
 		}
-		// alert (s);
-		document.getElementById('titlecrumbsjmc').innerHTML = s;    
-    }
-</script>
-
+	</script>
  ]]>
- <div id="titlecrumbsjmc">valor de title</div>
+ 
  </Content>
 </Module>
