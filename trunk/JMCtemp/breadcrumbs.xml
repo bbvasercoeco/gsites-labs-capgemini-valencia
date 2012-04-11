@@ -34,7 +34,7 @@
 				}
 				else 
 				{
-					s = s + " >  <a href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home/" + parametros[i] + "\' target=\'_parent\' >" + parametros[i] + "</a>";      
+					s = s + " >  <a href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home/" + parametros[i] + "\'>" + parametros[i] + "</a>";      
 				}
 			}
 			alert (s);
