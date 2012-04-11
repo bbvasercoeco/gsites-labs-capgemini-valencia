@@ -15,7 +15,7 @@ function showBreadcrumbs(){
   // return(parametros);
   for (var i in parametros){
     if (parametros[i]=='root') s = "InicioJordi";
-    else s = s + " > " + DocsList.getFolderById(parametros[i]).getName();  
+    else s = s + " > " + Document.getElementById(parametros[i]).getName();  
     
     }
     
