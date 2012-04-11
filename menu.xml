@@ -136,14 +136,11 @@ function datospagina()
 	{
 		document.getElementById("enlaces").style.backgroundColor = "#2586D7";
 	}
-	if (parametros.indexOf("/labs/")!=-1)
+	if (parametros.indexOf("\/labs\/")!=-1)
 	{
 		document.getElementById("labs").style.backgroundColor = "#2586d7";
 	}
-	else 
-	{
-		document.getElementById("labs").style.backgroundColor = "transparent";
-	}
+
 }
 </script>
 ]]></Content>
