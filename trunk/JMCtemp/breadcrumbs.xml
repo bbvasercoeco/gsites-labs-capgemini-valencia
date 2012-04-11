@@ -6,25 +6,25 @@
  <Content type="html">
  <![CDATA[
 <script type="text/javascript">
-gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+	gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 
-function showBreadcrumbs(){
-//Construct the breadcrumb string
-  var s ="";
-    var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
-   // alert (parametros + "---->array");
-  for (var i in parametros){
-    if (parametros[i]=='home') s = "InicioJordi";
-    else s = s + " > " + parametros[i];  
-    
-    }
-   // alert (s);
- document.getElementById('title-crumbs').value = s;
-    
+	function showBreadcrumbs()
+	{
+		//Construct the breadcrumb string
+		var s ="";
+		var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+		// alert (parametros + "---->array");
+		for (var i in parametros)
+		{
+			if (parametros[i]=='home') s = "InicioJordi";
+			else s = s + " > " + parametros[i];      
+		}
+		// alert (s);
+		document.getElementById('title-crumbs').innerHTML = s;    
     }
 </script>
 
  ]]>
- 
+ <div id="title-crumbs"></div>
  </Content>
 </Module>
