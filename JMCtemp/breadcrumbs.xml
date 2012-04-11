@@ -14,11 +14,11 @@
 		function showBreadcrumbs()
 		{
 			//Construct the breadcrumb string
-			var s ="";
-			
+			var s ="";			
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
-			var parametrosAux = gadgets.util.getUrlParameters()["parent"];
+			var parametrosAux = gadgets.util.getUrlParameters()["root"];
 			// alert (parametros + "---->array");
+			
 			for (var i in parametros)
 			{
 				if (parametros[i]=='home') 
