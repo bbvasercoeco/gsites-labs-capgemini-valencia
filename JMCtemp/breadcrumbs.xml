@@ -16,7 +16,7 @@
 			//Construct the breadcrumb string
 			var s ="";			
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
-			var parametrosAux = gadgets.util.getUrlParameters()["root"];
+			
 			// alert (parametros + "---->array");
 			
 			for (var i in parametros)
@@ -27,7 +27,7 @@
 				}
 				else 
 				{
-					s = s + " > " + parametros[i];      
+					s = s + " >  <a href='https://sites.google.com/site/gsiteslabscapgeminivalencia/home/'+ parametros[i] + ">" + parametros[i] + "</a>";      
 				}
 			}
 			alert (s);
