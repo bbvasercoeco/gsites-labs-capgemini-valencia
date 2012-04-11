@@ -121,6 +121,7 @@
 				{
 					var link = varEnlace;
 				}
+				return link;
 			}
 						
 			function insertarEnlace()
