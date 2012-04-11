@@ -16,7 +16,7 @@
 		text-decoration:none;
 		} 
 		
-		a:hover .linkBreadCrumb{
+		a:hover.linkBreadCrumb{
 		font-style: italic;
 		font-size:15px;
 		font-color:#000099;
