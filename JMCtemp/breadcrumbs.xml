@@ -12,14 +12,17 @@
 		a.linkBreadCrumb {
 		font-style: italic;
 		font-size:14px;
-		font-color:blue;		
+		font-color:blue;
+		text-decoration:none;
 		} 
 		
 		a:hover .linkBreadCrumb {
 		font-style: italic;
-		font-size:14px;
+		font-size:15px;
 		font-color:blue;
-		font-weight:bold;		
+		font-weight:bold;
+		text-decoration:none;
+		
 		} 
 		
 		
@@ -40,7 +43,7 @@
 			{
 				if (parametros[i]=='home') 
 				{	
-					s = "<a class=\'linkBreadCrumb\' href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				}
 				else 
 				{
