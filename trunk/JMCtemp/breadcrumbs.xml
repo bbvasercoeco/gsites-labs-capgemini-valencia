@@ -19,7 +19,7 @@ function showBreadcrumbs(){
     
     }
    // alert (s);
- document.getElementById('title-crumbs') == s;
+ document.getElementById('title-crumbs').value = s;
     
     }
 </script>
