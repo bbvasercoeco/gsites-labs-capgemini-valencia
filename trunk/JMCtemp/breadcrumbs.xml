@@ -18,8 +18,8 @@ function showBreadcrumbs(){
     else s = s + " > " + parametros[i];  
     
     }
-    alert (parametros);
-   // return(s);
+    alert (s);
+    return(s);
     
     }
 </script>
