@@ -30,7 +30,7 @@
 	<Content type="html" view="home"><![CDATA[
 		<style>				
 			#content_div {
-				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/puntobarra.png");
+				background-image: url("http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/puntobarra.png");
 				background-repeat: repeat-x;
 				background-position: bottom;
 				height:21px;
