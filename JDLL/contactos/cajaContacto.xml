@@ -2,8 +2,8 @@
 <Module>
 	<ModulePrefs title="Cajetin personalizado CONTACTOS portal Global Customer Solutions"
 		title_url=""
-		height="300"
-		width="465"
+		height="173"
+		width="300"
 		author=""
 		author_email=""
 		description="Cajetin personalizado CONTACTOS portal Global Customer Solutions"
@@ -73,8 +73,8 @@
 			html+='<tr><td>';  
 			html+='<div style=\"padding: 10px; font-size:' + VarSize + '; color:' + VarColorLetra + ';\">';
 			
-			html+='<h1>'+VarNombreProyecto+'</h1>';	
-			html+='<h2>'+VarNombreResponsable+'</h2>';	
+			html+='<h2>'+VarNombreProyecto+'</h2>';	
+			html+='<h1>'+VarNombreResponsable+'</h1>';	
 			html+='<h3>'+VarCargo+'</h3>';	
 			html+='<h4>'+Varemail+'</h4>';			
 					
