@@ -120,14 +120,20 @@
 				}
 				else
 				{
-					var link = 'href=\"varEnlace\"';
+					var link = 'href=\"'+ varEnlace +'\"';
 				}
 				return link;
 			}
 						
 			function insertarEnlace()
 			{
-				var claseEnlace1,claseEnlace2,claseEnlace3,claseEnlace3,claseEnlace5,html,strLink = "";	
+				var claseEnlace1 = "";
+				var claseEnlace2 = "";
+				var claseEnlace3 = "";
+				var claseEnlace4 = ""; 
+				var claseEnlace5 = "";
+				var html = "";
+				var strLink = "";	
 				
 				if (VarEnlace1Texto!="")
 				{
