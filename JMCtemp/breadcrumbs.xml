@@ -30,7 +30,7 @@
 			{
 				if (parametros[i]=='home') 
 				{	
-					s = "<a class=\'linkBreadCrumb\' href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home\' target=\'_parent\'>home</a>";
+					s = "<a class=\'linkBreadCrumb\' href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				}
 				else 
 				{
