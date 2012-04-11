@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs
+   title="breadcrumbs"
+   height="200"/>
+ <Content type="html">
+ <![CDATA[
+<script type="text/javascript">
+function showBreadcrumbs(){
+//Construct the breadcrumb string
+  var s ="";
+    var parametros = gadgets.util.getUrlParameters()["parent"].split("|");  
+alert(parametros);
+  for (var i in parametros){
+    if (parametros[i]=='root') s = "InicioJordi";
+    else s = s + " > " + DocsList.getFolderById(parametros[i]).getName();  
+    
+    }
+    
+  Document.write(s);
+    
+    }
+</script>
+
+ ]]>
+ 
+ </Content>
+</Module>
+
+
+
