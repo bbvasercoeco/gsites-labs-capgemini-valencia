@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="menu portal Google Sites Labs - Capgemini Valencia" />
+<Content type="html"><![CDATA[
+<style> 
+#cabeceramenu {
+	width: 960px;
+	height: 65px;
+	background-image:url(http://code.google.com/p/test-mlp/source/browse/trunk/fondomenu.png);	
+	margin:0;
+	padding: 0;
+	background-repeat: no-repeat;
+}
+#button {  
+	padding: 5px 0 0 5px;
+	height:60px;
+	margin: 0 0 0 0px;
+}  
+#button li {  
+	display: inline; 
+	text-align: center; 
+}  
+#button li a {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;   
+	color: #fff;  
+	width: 120px;
+	height: 34px;
+} 
+#button li a.barralateral {  
+	background-image: url("http://code.google.com/p/test-mlp/source/browse/trunk/barralateralmenu.png");
+    background-position: right 0;
+    background-repeat: no-repeat;
+} 
+#button li a.first {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 5px 0 0 0;     
+	color: #fff;  
+	width: 60px;
+	height:48px;
+}  
+
+#button li a#clientes,
+#button li a#metodologia,
+#button li a#servicing {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #fff;  
+	width: 125px;
+	height:34px;
+}
+#button li a#informes,
+#button li a#global-product,
+#button li a#global-sales,
+#button li a#onboarding-clients {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 9px 0 0 0;     
+	color: #fff;  
+	width: 125px;
+	height:44px;
+}
+
+#button li a:hover {  
+	background-color: #2586d7;  
+}  
+#button li a:active {  
+	background-color: #2586d7;  
+}
+
+#cabeceramenu #button li a.desactivado {
+	color: #999;
+}
+</style>
+<div id="cabeceramenu">
+	<ul id="button">
+		<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
+		<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral" target="_parent">Onboarding<br/>Clientes</a></li>
+		<li><a id="clientes" href="#" class="barralateral desactivado" >Clientes</a></li>
+		<li><a id="informes" href="#" class="barralateral desactivado" >Informes<br/>Gestión</a></li>  
+		<li><a id="global-sales" href="#" class="barralateral desactivado" >Global<br/>Sales</a></li>
+		<li><a id="global-product" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" class="barralateral" target="_parent">Global<br/>Product</a></li>
+		<li><a id="servicing" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" class="barralateral" target="_parent">Servicing</a></li> 
+		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia"  target="_parent">Metodología</a></li> 
+	</ul>  
+</div>
+<script type="text/javascript">
+gadgets.util.registerOnLoadHandler(datospagina);
+function datospagina()
+{
+	var parametros = gadgets.util.getUrlParameters()["parent"];	
+	if (parametros.indexOf("onboarding-clients")!=-1)
+	{
+		document.getElementById("onboarding-clients").style.backgroundColor = "#2586D7";
+	}
+	if (parametros.indexOf("global-product")!=-1)
+	{
+		document.getElementById("global-product").style.backgroundColor = "#2586d7";
+	}
+	if (parametros.indexOf("metodologia")!=-1)
+	{
+		document.getElementById("metodologia").style.backgroundColor = "#2586d7";
+	}
+	if (parametros.indexOf("servicing")!=-1)
+	{
+		document.getElementById("servicing").style.backgroundColor = "#2586d7";
+	}
+	
+}
+</script>
+]]></Content>
+</Module>
