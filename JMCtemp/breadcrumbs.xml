@@ -23,7 +23,7 @@
 			{
 				if (parametros[i]=='home') 
 				{	
-					s = "<a href=" + parametrosaux + ">InicioJordi</a>";
+					s = "<a href=" + parametrosAux + ">InicioJordi</a>";
 				}
 				else 
 				{
