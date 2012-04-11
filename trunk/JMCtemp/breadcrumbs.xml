@@ -2,11 +2,18 @@
 <Module>
 <ModulePrefs
    title="breadcrumbs"
-   height="200"/>
+   height="50"/>
  <Content type="html">
  <![CDATA[
  
 	<div id="title-crumbs">valor de title</div>
+	
+	<style>
+		a.linkBreadCrumb {
+		
+		
+		}
+	</style>
 	
 	<script type="text/javascript">
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
@@ -23,7 +30,7 @@
 			{
 				if (parametros[i]=='home') 
 				{	
-					s = "<a href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home\'>home</a>";
+					s = "<a class=\'linkBreadCrumb\' href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home\' target=\'_parent\'>home</a>";
 				}
 				else 
 				{
