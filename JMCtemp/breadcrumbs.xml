@@ -19,7 +19,7 @@ function showBreadcrumbs(){
     
     }
    // alert (s);
-    return (setText(s));
+ document.getElementById("title-crumbs")= s;
     
     }
 </script>
