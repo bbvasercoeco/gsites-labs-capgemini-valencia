@@ -19,8 +19,14 @@
 			// alert (parametros + "---->array");
 			for (var i in parametros)
 			{
-				if (parametros[i]=='home') s = "InicioJordi";
-				else s = s + " > " + parametros[i];      
+				if (parametros[i]=='home') 
+				{	
+					s = "InicioJordi";
+				}
+				else 
+				{
+					s = s + " > " + parametros[i];      
+				}
 			}
 			alert (s);
 			document.getElementById('titlecrumbsjmc').innerHTML = s;    
