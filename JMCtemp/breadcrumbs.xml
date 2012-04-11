@@ -6,7 +6,7 @@
  <Content type="html">
  <![CDATA[
  
-	<div id="title-crumbs">valor de title</div>
+	<!--<div id="title-crumbs">valor de title</div>-->
 	
 	<script type="text/javascript">
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
