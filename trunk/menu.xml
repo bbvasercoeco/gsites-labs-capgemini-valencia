@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="menu portal Google Sites Labs - Capgemini Valencia" />
+<Content type="html"><![CDATA[
+<style> 
+#cabeceramenu {
+	width: 960px;
+	height: 65px;
+	background-image:url(http://test-mlp.googlecode.com/svn/trunk/fondomenu.png);	
+	margin:0;
+	padding: 0;
+	background-repeat: no-repeat;
+}
+#button {  
+	padding: 5px 0 0 5px;
+	height:60px;
+	margin: 0 0 0 0px;
+}  
+#button li {  
+	display: inline; 
+	text-align: center; 
+}  
+#button li a {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;   
+	color: #fff;  
+	width: 120px;
+	height: 34px;
+} 
+#button li a.barralateral {  
+	background-image: url("http://test-mlp.googlecode.com/svn/trunk/barralateralmenu.png");
+    background-position: right 0;
+    background-repeat: no-repeat;
+} 
+#button li a.first {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 5px 0 0 0;     
+	color: #fff;  
+	width: 60px;
+	height:48px;
+}  
+
+#button li a#gas,
+#button li a#noticias,
+#button li a#gadgets {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #fff;  
+	width: 125px;
+	height:34px;
+}
+#button li a#labs {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #fff;  
+	width: 125px;
+	height:34px;
+}
+#button li a#tutoriales {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 9px 0 0 0;     
+	color: #fff;  
+	width: 125px;
+	height:44px;
+}
+#button li a#enlaces {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 9px 0 0 0;     
+	color: #fff;  
+	width: 125px;
+	height:44px;
+}
+
+#button li a:hover {  
+	background-color: #2586d7;  
+}  
+#button li a:active {  
+	background-color: #2586d7;  
+}
+
+#cabeceramenu #button li a.desactivado {
+	color: #999;
+}
+</style>
+<div id="cabeceramenu">
+	<ul id="button">
+		<li><a href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home" class="first" target="_parent" title="home"><img src="https://test-mlp.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
+		<li><a id="gadgets" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/gadgets-finalizados" class="barralateral" target="_parent">Gadgets</a></li>
+		<li><a id="gas" href="#" class="barralateral desactivado" >GAS</a></li>
+		<li><a id="labs" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs" class="barralateral" target="_parent">Labs</a></li>  
+		<li><a id="noticias" href="#" class="barralateral desactivado" >Noticias</a></li>
+		<li><a id="tutoriales" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/mini-tutoriales" class="barralateral" target="_parent">Mini<br/>Tutoriales</a></li>
+		<li><a id="enlaces" href="#" class="barralateral desactivado">Enlaces<br>de Interes</a></li> 
+	</ul>  
+</div>
+<script type="text/javascript">
+gadgets.util.registerOnLoadHandler(datospagina);
+function datospagina()
+{
+	var parametros = gadgets.util.getUrlParameters()["parent"];	
+	if (parametros.indexOf("gadgets")!=-1)
+	{
+		document.getElementById("gadgets").style.backgroundColor = "#2586D7";
+	}
+	if (parametros.indexOf("tutoriales")!=-1)
+	{
+		document.getElementById("tutoriales").style.backgroundColor = "#2586d7";
+	}
+	if (parametros.indexOf("labs")!=-1)
+	{
+		document.getElementById("labs").style.backgroundColor = "#2586d7";
+	}
+}
+</script>
+]]></Content>
+</Module>
