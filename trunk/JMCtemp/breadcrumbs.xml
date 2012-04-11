@@ -10,9 +10,19 @@
 	
 	<style>
 		a.linkBreadCrumb {
-		
-		
+		font-style: italic;
+		font-size:14px;
+		font-color:blue;		
 		} 
+		
+		a:hover .linkBreadCrumb {
+		font-style: italic;
+		font-size:14px;
+		font-color:blue;
+		font-weight:bold;		
+		} 
+		
+		
 	</style>
 	
 	<script type="text/javascript">
