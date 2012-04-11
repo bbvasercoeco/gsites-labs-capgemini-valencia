@@ -11,10 +11,10 @@ gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 function showBreadcrumbs(){
 //Construct the breadcrumb string
   var s ="";
-    var parametros = gadgets.util.getUrlParameters()["current"].split("|");  
+    var parametros = gadgets.util.getUrlParameters()["parent"].split("|");  
    
   for (var i in parametros){
-    if (parametros[i]=='root') s = "InicioJordi";
+    if (parametros[i]=='home') s = "InicioJordi";
     else s = s + " > " + (parametros[i]).getName();  
     
     }
