@@ -12,14 +12,14 @@ function showBreadcrumbs(){
 //Construct the breadcrumb string
   var s ="";
     var parametros = gadgets.util.getUrlParameters()["parent"].split("|");  
-  write(parametros);
+  // return(parametros);
   for (var i in parametros){
     if (parametros[i]=='root') s = "InicioJordi";
     else s = s + " > " + DocsList.getFolderById(parametros[i]).getName();  
     
     }
     
-   write(s);
+   return(s);
     
     }
 </script>
