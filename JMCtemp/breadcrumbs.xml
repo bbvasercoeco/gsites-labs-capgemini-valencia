@@ -19,7 +19,7 @@ function showBreadcrumbs(){
     
     }
     alert (s);
-    return(s);
+    return (s);
     
     }
 </script>
