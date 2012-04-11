@@ -113,13 +113,14 @@
 			
 			function devuelveEnlace(varEnlace)
 			{
+				var link = "";
 				if (varEnlace.indexOf("javascript:")!=-1)
 				{
 					var link = 'href=\"#\" onclick=\"' + varEnlace + '\"';
 				}
 				else
 				{
-					var link = varEnlace;
+					var link = 'href=\"varEnlace\"';
 				}
 				return link;
 			}
@@ -152,7 +153,9 @@
 				if ((VarEnlace1Texto!="")&&(VarEnlace1URL!=""))
 				{	
 					var strLink = devuelveEnlace(VarEnlace1URL);
-					html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace1Texto + '\" target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					//html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace1Texto + '\" target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + ' target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					alert(html);
 				}
 				if ((VarEnlace2Texto!="")&&(VarEnlace2URL!=""))
 				{
