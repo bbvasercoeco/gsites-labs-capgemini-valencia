@@ -15,12 +15,12 @@
 		<Require feature="dynamic-height"/>
 		<Require feature="setprefs"/>
 	</ModulePrefs>  
-	<UserPref name="VarEnlace1Texto" display_name="Texto enlace 1:" default_value="Usabilidad"/>
-	<UserPref name="VarEnlace1URL" display_name="enlace 1:" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/"/>
-	<UserPref name="VarEnlace2Texto" display_name="Texto Enlace 2:" default_value="Contacto"/>
-	<UserPref name="VarEnlace2URL" display_name="URL Enlace 2:" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/"/>
-	<UserPref name="VarEnlace3Texto" display_name="Texto Enlace 3:" default_value="Comunicaciones"/>
-	<UserPref name="VarEnlace3URL" display_name="URL Enlace 3:" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/"/>
+	<UserPref name="VarEnlace1Texto" display_name="Texto enlace 1:" default_value=""/>
+	<UserPref name="VarEnlace1URL" display_name="enlace 1:" default_value=""/>
+	<UserPref name="VarEnlace2Texto" display_name="Texto Enlace 2:" default_value=""/>
+	<UserPref name="VarEnlace2URL" display_name="URL Enlace 2:" default_value=""/>
+	<UserPref name="VarEnlace3Texto" display_name="Texto Enlace 3:" default_value=""/>
+	<UserPref name="VarEnlace3URL" display_name="URL Enlace 3:" default_value=""/>
 	<UserPref name="VarEnlace4Texto" display_name="Texto Enlace 4:" default_value=""/>
 	<UserPref name="VarEnlace4URL" display_name="URL Enlace 4:" default_value=""/>	
 	<UserPref name="VarEnlace5Texto" display_name="Texto Enlace 5:" default_value=""/>
@@ -63,7 +63,7 @@
 				width: 125px;
 			}			
 			ul#botoneraPie .barralateral {  
-				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
+				background-image: url("http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/barraSeparadora.png");
 				background-position: right 0;
 				background-repeat: no-repeat;
 			}							
