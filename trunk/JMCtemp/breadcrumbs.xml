@@ -23,7 +23,7 @@
 			{
 				if (parametros[i]=='home') 
 				{	
-					s = "<a href=" + parametrosAux + ">InicioJordi</a>";
+					s = "<a href='https://sites.google.com/site/gsiteslabscapgeminivalencia/home'>InicioJordi</a>";
 				}
 				else 
 				{
