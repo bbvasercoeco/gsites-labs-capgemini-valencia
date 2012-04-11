@@ -116,11 +116,11 @@
 				var link = "";
 				if (varEnlace.indexOf("javascript:")!=-1)
 				{
-					var link = 'href=\"#\" onclick=\"' + varEnlace + '\" target=\"_parent\" ';
+					var link = 'href=\"#\" onclick=\"' + varEnlace + '\" ';
 				}
 				else
 				{
-					var link = 'href=\"'+ varEnlace +'\"';
+					var link = 'href=\"'+ varEnlace +'\"  target=\"_parent\" ';
 				}
 				return link;
 			}
