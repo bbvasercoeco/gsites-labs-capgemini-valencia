@@ -35,13 +35,33 @@
 				padding: 0;
 			}			
 			h1, h2, h3, h4, h5 {
-				color: #002B45;
+				color: #3F78B2;
+			}
+			h1 {
+				font-size: 16px;
+				margin: 0 0 10px 0;
+				color: #3F78B2;
 			}
 			h2 {
 				font-size: 16px;
 				margin: 0 0 10px 0;
 				color: #3F78B2;
-			}			
+			}	
+			h3 {
+				font-size: 16px;
+				margin: 0 0 10px 0;
+				color: #3F78B2;
+			}	
+			h4 {
+				font-size: 16px;
+				margin: 0 0 10px 0;
+				color: #3F78B2;
+			}	
+			h5 {
+				font-size: 16px;
+				margin: 0 0 10px 0;
+				color: #3F78B2;
+			}				
 			.margintop {
 				margin-top: 7px !important;
 			}
