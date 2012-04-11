@@ -20,7 +20,7 @@
 	<UserPref name="VarTelefono" display_name="Número de teléfono:" default_value=""/>
 	<UserPref name="VarCargo" display_name="VarCargo:" default_value="Managing Director"/>	
 	<UserPref name="Varemail" display_name="Correo:" default_value="jesus.acedos@grupobbva.com"/>		
-	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#666"/>
+	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#002B45"/>
 	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
 	<Content type="html">
 	<![CDATA[
@@ -66,6 +66,7 @@
 			
 			var VarColorBorde="#fff";
 			var VarSize=prefs.getString("VarSize");
+			var VarColorLetra=prefs.getString("VarColorLetra");
 						
 			document.body.style.backgroundColor="#fff";			
 			html+='<table style=\"border-style: none;\" width=\"100%\">';
