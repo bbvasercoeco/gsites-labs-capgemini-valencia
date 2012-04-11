@@ -15,13 +15,15 @@
 		{
 			//Construct the breadcrumb string
 			var s ="";
+			
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+			var parametrosAux = gadgets.util.getUrlParameters()["parent"];
 			// alert (parametros + "---->array");
 			for (var i in parametros)
 			{
 				if (parametros[i]=='home') 
 				{	
-					s = "<a href=" + parametros + ">InicioJordi</a>";
+					s = "<a href=" + parametrosaux + ">InicioJordi</a>";
 				}
 				else 
 				{
