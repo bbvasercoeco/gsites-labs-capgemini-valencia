@@ -20,11 +20,11 @@
 			else s = s + " > " + parametros[i];      
 		}
 		// alert (s);
-		document.getElementById('title-crumbs').innerHTML = s;    
+		document.getElementById('titlecrumbsjmc').innerHTML = s;    
     }
 </script>
 
  ]]>
- <div id="title-crumbs"></div>
+ <div id="titlecrumbsjmc">valor de title</div>
  </Content>
 </Module>
