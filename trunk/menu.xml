@@ -140,6 +140,10 @@ function datospagina()
 	{
 		document.getElementById("labs").style.backgroundColor = "#2586d7";
 	}
+	else 
+	{
+		document.getElementById("labs").style.backgroundColor = "transparent";
+	}
 }
 </script>
 ]]></Content>
