@@ -12,13 +12,13 @@ function showBreadcrumbs(){
 //Construct the breadcrumb string
   var s ="";
     var parametros = gadgets.util.getUrlParameters()["parent"].split("|");  
-   return (parametros);
+   
   for (var i in parametros){
     if (parametros[i]=='root') s = "InicioJordi";
     else s = s + " > " + document.getElementById(parametros[i]).getName();  
     
     }
-    
+    return (parametros);
    // return(s);
     
     }
