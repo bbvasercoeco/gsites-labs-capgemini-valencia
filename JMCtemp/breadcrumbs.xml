@@ -2,7 +2,9 @@
 <Module>
 <ModulePrefs
    title="breadcrumbs"
-   height="50"/>
+   height="50"
+   description="Script que genera los breadcrumbs de forma automática"
+   />
  <Content type="html">
  <![CDATA[
  
@@ -35,9 +37,7 @@
 		{
 			//Construct the breadcrumb string
 			var s ="";			
-			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
-			
-			// alert (parametros + "---->array");
+			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  			
 			
 			for (var i in parametros)
 			{
@@ -50,7 +50,7 @@
 					s = s + " >  <a class=\'linkBreadCrumb\' href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home/" + parametros[i] + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>" + parametros[i] + "</a>";      
 				}
 			}
-			alert (s);
+			
 			document.getElementById("title-crumbs").innerHTML = s;    
 		}
 	</script>
