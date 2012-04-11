@@ -12,14 +12,14 @@
 		a.linkBreadCrumb {
 		font-style: italic;
 		font-size:14px;
-		font-color:blue;
+		font-color:#0099CC;
 		text-decoration:none;
 		} 
 		
-		a.linkBreadCrumb:hover{
+		.linkBreadCrumb a:hover{
 		font-style: italic;
 		font-size:15px;
-		font-color:blue;
+		font-color:#000099;
 		font-weight:bold;
 		text-decoration:none;
 		
