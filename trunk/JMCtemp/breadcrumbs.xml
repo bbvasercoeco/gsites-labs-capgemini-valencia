@@ -38,17 +38,17 @@
 			//Construct the breadcrumb string
 			var rootSite="https://sites.google.com/site/gsiteslabscapgeminivalencia/";
 			var s ="";
-			
+			var i,j =0;
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  			
 			// alert (parametros.length());
 			
-			for (var i==0;i<parametros.length;i++)
+			for (i==0;i<parametros.length;i++)
 			{
 				if (parametros[i] == rootSite) 
 				{	
 					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'" + rootSite + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				
-					for(var j==i;j<parametros.length;j++)
+					for(j==i;j<parametros.length;j++)
 					{
 						s = s + " >  <a class=\'linkBreadCrumb\' href=\'" + rootSite + parametros[j] + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
 
