@@ -38,16 +38,21 @@
 			//Construct the breadcrumb string
 			var rootSite="gsiteslabscapgeminivalencia";
 			var s ="";
-			var i,j =0;
+			var i,j,k = 0;
+			var base = 0;
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  			
 			// alert (parametros.length());
 			
+			
+			
 			for (i=0;i<parametros.length;i++)
 			{
-				alert("Entro en bucle FOR "+parametros[i]);
+				// alert("Entro en bucle FOR "+parametros[i]);
 				
 				if (parametros[i] == rootSite) 
-				{	alert("Entro en bucle IF");
+				{	// alert("Entro en bucle IF");
+					base = parametros;
+					alert(base);
 					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'" + rootSite + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				
 					for(j=i+1;j<parametros.length;j++)
