@@ -40,14 +40,15 @@
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
-			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  			
+			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+			var indexroot = parametros.indexOf(rootSite);
 			// alert (parametros.length());
 			
 			
 			for (i=0;i<parametros.length;i++)
 			{
 				// alert("Entro en bucle FOR "+parametros[i]);
-				if((parametros[i] != rootSite) && (parametros.indexOf(parametros[i]))<parametros.indexOf(rootSite))){
+				if((parametros[i] != rootSite) && (i<indexroot)){
 				base = base + parametros[i]+ "/";
 				alert(base);
 				}
