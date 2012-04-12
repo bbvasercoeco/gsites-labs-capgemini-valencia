@@ -40,6 +40,7 @@
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
+			var barra = "/";
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
 			var indexroot = parametros.indexOf(rootSite);
 			// alert (parametros.length());
@@ -48,17 +49,17 @@
 			for (i=0;i<parametros.length;i++)
 			{
 				// alert("Entro en bucle FOR "+parametros[i]);
-				if((parametros[i] != rootSite) && (i<indexroot)){
+				if(i<indexroot){
 				base = base + parametros[i]+ "/";
 				//alert(base);
 				}
 				if (parametros[i] == rootSite) 
 				{	// alert("Entro en bucle IF");
-					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				
-					for(j=i+1;j<parametros.length;j++)
+					for(j=i;j<parametros.length;j++)
 					{
-						s = s + " >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + parametros[j] + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
+						s = s + " >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra + parametros[j] + barra + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
 
 					}
 				
