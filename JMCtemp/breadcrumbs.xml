@@ -59,7 +59,7 @@
 				
 					for(j=i+1;j<parametros.length;++j)
 					{
-						s = s + " >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra + barra + parametros[i] + parametros[j] + barra + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
+						s = s + " >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra + parametros[i] + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
 
 					}
 				
