@@ -55,11 +55,11 @@
 				}
 				if (parametros[i] == rootSite) 
 				{	// alert("Entro en bucle IF");
-					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + "/" + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				
 					for(j=i+1;j<parametros.length;++j)
 					{   
-						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
+						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + "/"  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
 						rootSite = rootSite + "/" + parametros[j];
 					}
 				
