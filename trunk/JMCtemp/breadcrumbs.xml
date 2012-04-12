@@ -40,7 +40,6 @@
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
-			var barra = "/";
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
 			var indexroot = parametros.indexOf(rootSite);
 			// alert (parametros.length());
@@ -59,7 +58,7 @@
 				
 					for(j=i+1;j<parametros.length;++j)
 					{   
-						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + "/"  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
+						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + "/"  + parametros[j] + "/" + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
 						rootSite = rootSite + "/" + parametros[j];
 					}
 				
