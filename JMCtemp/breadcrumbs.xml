@@ -49,9 +49,9 @@
 				{	
 					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'" + rootSite + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				
-					for(j==parametros[i];j<parametros.length;j++)
+					for(j==i;j<parametros.length;j++)
 					{
-						s = s + " >  <a class=\'linkBreadCrumb\' href=\'" + rootSite + parametros[i] + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>" + parametros[i] + "</a>";      
+						s = s + " >  <a class=\'linkBreadCrumb\' href=\'" + rootSite + parametros[j] + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
 
 					}
 				
