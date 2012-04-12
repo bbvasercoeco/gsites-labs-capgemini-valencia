@@ -48,7 +48,7 @@
 			{
 				// alert("Entro en bucle FOR "+parametros[i]);
 				//if(parametros[i] != rootSite)
-				base = base + parametros[i];
+				base = base + parametros[i]+ "/";
 				alert(base);
 				
 				if (parametros[i] == rootSite) 
