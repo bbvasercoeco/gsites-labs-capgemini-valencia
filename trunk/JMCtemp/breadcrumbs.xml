@@ -39,7 +39,7 @@
 			var rootSite="gsiteslabscapgeminivalencia";
 			var s ="";
 			var i,j,k = 0;
-			var base = 0;
+			var base = "";
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  			
 			// alert (parametros.length());
 			
@@ -47,8 +47,10 @@
 			for (i=0;i<parametros.length;i++)
 			{
 				// alert("Entro en bucle FOR "+parametros[i]);
+				//if(parametros[i] != rootSite)
 				base = base + parametros[i];
 				alert(base);
+				
 				if (parametros[i] == rootSite) 
 				{	// alert("Entro en bucle IF");
 					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'" + rootSite + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
