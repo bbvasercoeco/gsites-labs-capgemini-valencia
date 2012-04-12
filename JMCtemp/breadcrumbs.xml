@@ -49,7 +49,7 @@
 				}
 				else 
 				{
-					s = s + " >  <a class=\'linkBreadCrumb\' href=\'" + rootSite + "\' + parametros[i] + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>" + parametros[i] + "</a>";      
+					s = s + " >  <a class=\'linkBreadCrumb\' href=\'" + rootSite + parametros[i] + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>" + parametros[i] + "</a>";      
 				}
 			}
 			
