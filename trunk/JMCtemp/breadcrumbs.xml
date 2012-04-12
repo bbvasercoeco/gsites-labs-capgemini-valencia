@@ -38,19 +38,26 @@
 			//Construct the breadcrumb string
 			var rootSite="https://sites.google.com/site/gsiteslabscapgeminivalencia/";
 			var s ="";
-			var i = 0;			
+			var i = 0;	
+			var j = 0;	
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  			
 			// alert (parametros.length());
 			
-			for (i=rootSite.length;i<parametros.length;i++){
-				if (parametros[i]=='home') 
+			for (i==0;i<parametros.length;i++)
+			{
+				if (parametros[i] == rootSite) 
 				{	
 					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'" + rootSite + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
+				
+					for(j==parametros[i];j<parametros.length;j++)
+					{
+						s = s + " >  <a class=\'linkBreadCrumb\' href=\'" + rootSite  parametros[i] + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>" + parametros[i] + "</a>";      
+
+					}
+				
+				
 				}
-				else 
-				{
-					s = s + " >  <a class=\'linkBreadCrumb\' href=\'" + rootSite  parametros[i] + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>" + parametros[i] + "</a>";      
-				}
+				
 			}
 			
 			document.getElementById("title-crumbs").innerHTML = s;    
