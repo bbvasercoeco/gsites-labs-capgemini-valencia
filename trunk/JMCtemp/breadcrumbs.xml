@@ -47,7 +47,7 @@
 			for (i=0;i<parametros.length;i++)
 			{
 				// alert("Entro en bucle FOR "+parametros[i]);
-				if((parametros[i] != rootSite) && (parametros.indexOf(i))<parametros.indexOf(rootSite))){
+				if((parametros[i] != rootSite) && (parametros.indexOf(parametros[i]))<parametros.indexOf(rootSite))){
 				base = base + parametros[i]+ "/";
 				alert(base);
 				}
