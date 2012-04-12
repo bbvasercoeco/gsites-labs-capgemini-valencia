@@ -64,7 +64,8 @@
 				font-weight: normal;
 				text-decoration: none;
 			}
-			h4 a:hover {				
+			h4 a:hover
+			{				
 				color: #009EE5;
 				font-weight: normal;
 				text-decoration: underline;
@@ -128,7 +129,8 @@
 			html+='<h3>'+VarCargo+'</h3>';	
 			//html+='<h4><a href=\"' + strMail + '\" title=\"Enviar correo a ' + VarNombreResponsable + '\">' + Varemail+'</a></h4>';			
 			//html+='<h4>strMail<a href=\"' + strMail + '\" >' + Varemail+'</a></h4>';			
-			html+='<h4><a href=\'javascript:' + strMail + '\'>' + Varemail + '</a></h4>';			
+			//html+='<h4><a href=\'javascript:' + strMail + '\'>' + Varemail + '</a></h4>';			
+			html+='<h4><a href=\'#\' onclick=\'javascript:' + strMail + '\'>' + Varemail + '</a></h4>';
 
 			html+='</div>';
 			html+='</td></tr></table>';
