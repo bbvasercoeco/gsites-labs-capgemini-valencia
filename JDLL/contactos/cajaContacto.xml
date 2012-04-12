@@ -59,13 +59,14 @@
 				color: #009EE5;
 				font-weight: normal;
 			}	
-			h4 a {				
+			h4 a, 
+			h4 a:visited,
+			h4 a:active {
 				color: #009EE5;
 				font-weight: normal;
 				text-decoration: none;
-			}
-			h4 a:hover
-			{				
+			}			
+			h4 a:hover {				
 				color: #009EE5;
 				font-weight: normal;
 				text-decoration: underline;
@@ -86,6 +87,7 @@
 
 		<script type="text/javascript">
 			var html="";
+			
 			// Obtener userprefs
 			var prefs = new gadgets.Prefs();
 			var VarBorde="0";
@@ -109,12 +111,7 @@
 				var to = Varemail;
 				var subject ='Peticion de Informacion';
 				var message ='';
-				var str = 'window.open(\"http://mail.google.com/mail/?view=cm&fs=1' + '&to=' + to + '&su=' + subject + '&body=' + message.replace(/\n/g,'%0A') + '&ui=1\",\"send mail\")';
-				
-				
-				
-				//window.open(str,"send mail");
-				alert(str);
+				var str = 'window.open(\"http://mail.google.com/mail/?view=cm&fs=1' + '&to=' + to + '&su=' + subject + '&body=' + message.replace(/\n/g,'%0A') + '&ui=1\",\"send mail\")';				
 				return str;
 			}	
 
@@ -126,16 +123,15 @@
 			
 			html+='<h2>'+VarNombreProyecto+'</h2>';	
 			html+='<h1>'+VarNombreResponsable+'</h1>';	
-			html+='<h3>'+VarCargo+'</h3>';	
-			//html+='<h4><a href=\"' + strMail + '\" title=\"Enviar correo a ' + VarNombreResponsable + '\">' + Varemail+'</a></h4>';			
-			//html+='<h4>strMail<a href=\"' + strMail + '\" >' + Varemail+'</a></h4>';			
-			//html+='<h4><a href=\'javascript:' + strMail + '\'>' + Varemail + '</a></h4>';			
+			html+='<h3>'+VarCargo+'</h3>';				
 			html+='<h4><a href=\'#\' onclick=\'javascript:' + strMail + '\'>' + Varemail + '</a></h4>';
 
 			html+='</div>';
 			html+='</td></tr></table>';
 			document.getElementById("content_div").innerHTML = html;
+			
 			gadgets.window.adjustHeight();
+			
 		</script>
 	]]>  
 	</Content>  
