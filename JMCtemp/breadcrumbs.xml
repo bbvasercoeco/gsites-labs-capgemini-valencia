@@ -36,7 +36,7 @@
 		function showBreadcrumbs()
 		{
 			//Construct the breadcrumb string
-			var rootSite="sites.google.com/site/gsiteslabscapgeminivalencia";
+			var rootSite="gsiteslabscapgeminivalencia";
 			var s ="";
 			var i,j =0;
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  			
@@ -46,7 +46,7 @@
 			{
 				alert("Entro en bucle FOR "+parametros[i]);
 				
-				if (parametros == rootSite) 
+				if (parametros[i] == rootSite) 
 				{	alert("Entro en bucle IF");
 					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'" + rootSite + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				
