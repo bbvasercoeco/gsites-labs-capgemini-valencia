@@ -42,7 +42,7 @@
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  			
 			// alert (parametros.length());
 			
-			for (parametros == rootSite;i<parametros.length;i++){
+			for (i=rootSite.length;i<parametros.length;i++){
 				if (parametros[i]=='home') 
 				{	
 					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'" + rootSite + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
