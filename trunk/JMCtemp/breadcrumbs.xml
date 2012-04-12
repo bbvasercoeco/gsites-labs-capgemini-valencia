@@ -55,7 +55,7 @@
 				}
 				if (parametros[i] == rootSite) 
 				{	// alert("Entro en bucle IF");
-					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'></a>";
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				
 					for(j=i+1;j<parametros.length;++j)
 					{   
