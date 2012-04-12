@@ -36,14 +36,15 @@
 		function showBreadcrumbs()
 		{
 			//Construct the breadcrumb string
+			var rootSite="https://sites.google.com/site/gsiteslabscapgeminivalencia/";
 			var s ="";			
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  			
+			// alert (parametros.length());
 			
-			for (var i in parametros)
 			{
 				if (parametros[i]=='home') 
 				{	
-					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'https://sites.google.com/site/gsiteslabscapgeminivalencia/home\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'" + rootSite + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
 				}
 				else 
 				{
