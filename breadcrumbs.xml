@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs
+   title="breadcrumbs"
+   height="50"
+   description="Script que genera los breadcrumbs de forma automática"
+   />
+ <Content type="html">
+ <![CDATA[
+ 
+	<div id="title-crumbs">valor de title</div>
+	
+	<style>
+		a.linkBreadCrumb {
+		font-style: italic;
+		font-size:14px;
+		font-color:#0099CC;
+		text-decoration:none;
+		} 
+		
+		a:hover.linkBreadCrumb{
+		font-style: italic;
+		font-size:15px;
+		font-color:#000099;
+		font-weight:bold;
+		text-decoration:none;
+		
+		} 
+		
+		
+	</style>
+	
+	<script type="text/javascript">
+		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+
+		function showBreadcrumbs()
+		{
+			//Construct the breadcrumb string
+			var rootSite="gsiteslabscapgeminivalencia";
+			var s ="";
+			var i,j,k = 0;
+			var base = "";
+			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+			var indexroot = parametros.indexOf(rootSite);
+			// alert (parametros.length());
+			
+			
+			for (i=0;i<parametros.length;i++)
+			{
+				// alert("Entro en bucle FOR "+parametros[i]);
+				if(i<indexroot){
+				base = base + parametros[i]+ "/";
+				//alert(base);
+				}
+				if (parametros[i] == rootSite) 
+				{	// alert("Entro en bucle IF");
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + "/" + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
+				
+					for(j=i+1;j<parametros.length;++j)
+					{   
+						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + "/"  + parametros[j] + "/" + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
+						rootSite = rootSite + "/" + parametros[j];
+					}
+				
+				
+				}
+				
+			}
+			
+			document.getElementById("title-crumbs").innerHTML = s;    
+		}
+	</script>
+ ]]>
+ 
+ </Content>
+</Module>
