@@ -87,18 +87,17 @@ function sendQuery() {
   query.send(handleQueryResponse);
 }
 
-function siguientes(response){
+function siguientes(){
   pagActual++;
-//  var tableDiv = _gel('tablediv');
-//  tableDiv.innerHTML = "";
+  dibujaTabla();
+}
 
-alert('ENTRA');
-  dibujaTabla(response);
-alert('SALE');
+function anteriores(){
+  pagActual--;
+  dibujaTabla();
 }
 
 function dibujaTabla(){
-alert('1');
    var html = [];
    
    html.push('<table class="tablaGeneral">');
@@ -111,7 +110,6 @@ alert('1');
     html.push('</td>');
   }
   html.push('</tr>');
-alert('2');
   var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
   var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
   for (var row = inicio; row < fin; row++) {
@@ -132,11 +130,10 @@ alert('2');
     }
     html.push('</tr>');
   }
-alert('3');
   html.push('<tr class="filaUltima"><td colspan="'+_Col +'">');
   if(data.getNumberOfRows() > numElePag){
      if(pagActual > 1){
-        html.push('<< Anteriores | ');
+	    html.push('<a href="#" onclick="anteriores();"><< Anteriores </a> |');
      }
      html.push('P&aacute;gina '+pagActual+' de '+totPag);
      if(pagActual < totPag){
@@ -145,19 +142,17 @@ alert('3');
   }
 
   html.push('</td></tr></table>');
- alert('4'); 
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html.join('');
   tableDiv.style.width = document.body.clientWidth + 'px';
   tableDiv.style.height = document.body.clientHeight + 'px';
- alert('5');
 }
 
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   data = response.getDataTable();
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
-  dibujaTabla(response);
+  dibujaTabla();
 }
 
 function escapeHtml(text) {
