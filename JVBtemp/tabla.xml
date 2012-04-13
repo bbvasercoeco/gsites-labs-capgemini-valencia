@@ -98,6 +98,11 @@ function dibujaTabla(){
 	     html.push('<td>123</td>');
 	  html.push('</tr');
    html.push('</table>');
+   
+  var tableDiv = _gel('tablediv');
+  tableDiv.innerHTML = html.join('');
+  tableDiv.style.width = document.body.clientWidth + 'px';
+  tableDiv.style.height = document.body.clientHeight + 'px';
 }
 
 function handleQueryResponse(response) {
