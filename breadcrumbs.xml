@@ -12,13 +12,13 @@
 	
 	<style>
 		#title-breadcrumbs {
-			font-size:12px;
+			font-size:13px;
 			color:#3F78B2;
 		}
 		a.linkBreadCrumb,
 		a:visited.linkBreadCrumb {
 			fon-weight: normal;
-			font-size:12px;
+			font-size:13px;
 			color:#3F78B2;
 			text-decoration:none;
 		}
