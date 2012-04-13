@@ -14,6 +14,22 @@
           }
 		  
   </style>
+  <table width="100%" border="0" id="tablaconfig">           
+            <tr>       
+                <td>
+                    Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__" onchange="registra('VarrootSite')">                   
+                </td>
+            </tr>
+			
+<script type="text/javascript">           
+            // Get userprefs
+            var prefs = new gadgets.Prefs();           
+            function registra(variable)
+            {
+                prefs.set(variable,document.getElementById(variable).value);
+            }   
+            gadgets.window.adjustHeight();
+        </script>   
  ]]>
  </Content>
  <Content type="html">
@@ -49,12 +65,12 @@
 	
 	<script type="text/javascript">
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
-		var prefs = new gadgets.Prefs();
+		
 		
 		function showBreadcrumbs()
 		{
-			//Construct the breadcrumb string
-			var rootSite = prefs.getString("VarrootSite");
+			// Construct the breadcrumb string
+		    var rootSite = VarrootSite;
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
