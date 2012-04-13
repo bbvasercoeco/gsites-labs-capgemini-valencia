@@ -73,51 +73,6 @@ var totPag = 1;
 var data;
 _IG_RegisterOnloadHandler(loadVisualizationAPI);
 
-
-function compare(sVal1, sVal2){ 
- if (sVal1 < sVal2) return 1; 
- if (sVal1 > sVal2) return -1; 
- return 0; 
-} 
-function setDataType(cValue)  { 
-    var isDate = new Date(cValue); 
-    if (isDate == "NaN") 
-      { 
-        if (isNaN(cValue)) 
-          { 
-            // THE VALUE IS A STRING, MAKE ALL CHARACTERS IN 
-            // STRING UPPER CASE TO ASSURE PROPER A-Z SORT 
-            cValue = cValue.toUpperCase(); 
-            return cValue; 
-          } 
-        else 
-          { 
-            // VALUE IS A NUMBER, TO PREVENT STRING SORTING OF A NUMBER 
-            // ADD AN ADDITIONAL DIGIT THAT IS THE + TO THE LENGTH OF 
-            // THE NUMBER WHEN IT IS A STRING 
-            var myNum; 
-            myNum = String.fromCharCode(48 + cValue.length) + cValue; 
-            return myNum; 
-          } 
-        } 
-  else 
-      { 
-        // VALUE TO SORT IS A DATE, REMOVE ALL OF THE PUNCTUATION AND 
-        // AND RETURN THE STRING NUMBER 
-        //BUG - STRING AND NOT NUMERICAL SORT ..... 
-        // ( 1 - 10 - 11 - 2 - 3 - 4 - 41 - 5  etc.) 
-        var myDate = new String(); 
-        myDate = isDate.getFullYear() + " " ; 
-        myDate = myDate + isDate.getMonth() + " "; 
-        myDate = myDate + isDate.getDate(); + " "; 
-        myDate = myDate + isDate.getHours(); + " "; 
-        myDate = myDate + isDate.getMinutes(); + " "; 
-        myDate = myDate + isDate.getSeconds(); 
-        //myDate = String.fromCharCode(48 + myDate.length) + myDate; 
-        return myDate ; 
-      } 
-  } 
-
 function loadVisualizationAPI() {
   google.load("visualization", "1");
   google.setOnLoadCallback(sendQuery);
