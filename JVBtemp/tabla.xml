@@ -94,6 +94,7 @@ function siguientes(){
 }
 
 function dibujaTabla(){
+alert('1');
    var html = [];
    
    html.push('<table class="tablaGeneral">');
@@ -101,9 +102,10 @@ function dibujaTabla(){
 	     html.push('<td>123</td>');
 	  html.push('</tr');
    html.push('</table>');
-   
+alert('2');   
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html.join('');
+alert('3');
 }
 
 function handleQueryResponse(response) {
