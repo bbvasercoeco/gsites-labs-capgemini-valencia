@@ -69,6 +69,7 @@ var _filaDescartadas = 0;
 var _Col = 3;
 var numElePag = 8;
 var totPag = 1;
+var data;
 _IG_RegisterOnloadHandler(loadVisualizationAPI);
 
 function loadVisualizationAPI() {
@@ -96,12 +97,8 @@ alert('ENTRA');
 alert('SALE');
 }
 
-function dibujaTabla(response){
+function dibujaTabla(){
 alert('1');
-alert('1_');
-   var data = response.getDataTable();
-alert('12_');
-totPag = Math.ceil(data.getNumberOfRows() / numElePag);
    var html = [];
    
    html.push('<table class="tablaGeneral">');
@@ -158,7 +155,8 @@ alert('3');
 
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
-
+  data = response.getDataTable();
+  totPag = Math.ceil(data.getNumberOfRows() / numElePag);
   dibujaTabla(response);
 }
 
