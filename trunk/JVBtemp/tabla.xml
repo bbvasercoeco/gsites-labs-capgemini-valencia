@@ -106,9 +106,9 @@ function dibujaTabla(){
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
     html.push('<td>');
-       formattedValue = escapeHtml(formattedValue);
+       formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html.push(formattedValue);
-	   html.push('&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
+	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
     html.push('</td>');
   }
   html.push('</tr>');
