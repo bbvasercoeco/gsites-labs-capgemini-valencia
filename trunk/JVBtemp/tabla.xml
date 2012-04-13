@@ -98,7 +98,9 @@ alert('SALE');
 
 function dibujaTabla(response){
 alert('1');
+alert('1_');
    var data = response.getDataTable();
+alert('12_');
 totPag = Math.ceil(data.getNumberOfRows() / numElePag);
    var html = [];
    
@@ -112,7 +114,7 @@ totPag = Math.ceil(data.getNumberOfRows() / numElePag);
     html.push('</td>');
   }
   html.push('</tr>');
-
+alert('2');
   var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
   var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
   for (var row = inicio; row < fin; row++) {
@@ -133,7 +135,7 @@ totPag = Math.ceil(data.getNumberOfRows() / numElePag);
     }
     html.push('</tr>');
   }
-
+alert('3');
   html.push('<tr class="filaUltima"><td colspan="'+_Col +'">');
   if(data.getNumberOfRows() > numElePag){
      if(pagActual > 1){
@@ -146,11 +148,12 @@ totPag = Math.ceil(data.getNumberOfRows() / numElePag);
   }
 
   html.push('</td></tr></table>');
-  
+ alert('4'); 
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html.join('');
   tableDiv.style.width = document.body.clientWidth + 'px';
   tableDiv.style.height = document.body.clientHeight + 'px';
+ alert('5');
 }
 
 function handleQueryResponse(response) {
