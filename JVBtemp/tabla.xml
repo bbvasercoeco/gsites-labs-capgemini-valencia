@@ -73,41 +73,26 @@ var totPag = 1;
 var data;
 _IG_RegisterOnloadHandler(loadVisualizationAPI);
 
-function compare(sVal1, sVal2){ 
-//para cambiar el orden (ascendente o descendente) se debe  
-//cambiar a negativo el primer 1 y a positivo el segundo, segun convenga 
- if (sVal1 < sVal2) return 1; 
- if (sVal1 > sVal2) return -1; 
- return 0; 
-} 
-function setDataType(cValue) 
-  { 
-    var isDate = new Date(cValue); 
-    if (isDate == "NaN") 
-      { 
-        if (isNaN(cValue)) 
-          { 
-            // THE VALUE IS A STRING, MAKE ALL CHARACTERS IN 
-            // STRING UPPER CASE TO ASSURE PROPER A-Z SORT 
+	function compare(sVal1, sVal2){ 
+		if (sVal1 < sVal2) return 1; 
+		if (sVal1 > sVal2) return -1; 
+		return 0; 
+	} 
+
+	function setDataType(cValue) { 
+		var isDate = new Date(cValue); 
+		if (isDate == "NaN") { 
+			if (isNaN(cValue)) { 
             cValue = cValue.toUpperCase(); 
             return cValue; 
           } 
-        else 
-          { 
-            // VALUE IS A NUMBER, TO PREVENT STRING SORTING OF A NUMBER 
-            // ADD AN ADDITIONAL DIGIT THAT IS THE + TO THE LENGTH OF 
-            // THE NUMBER WHEN IT IS A STRING 
+        else { 
             var myNum; 
             myNum = String.fromCharCode(48 + cValue.length) + cValue; 
             return myNum; 
           } 
         } 
-  else 
-      { 
-        // VALUE TO SORT IS A DATE, REMOVE ALL OF THE PUNCTUATION AND 
-        // AND RETURN THE STRING NUMBER 
-        //BUG - STRING AND NOT NUMERICAL SORT ..... 
-        // ( 1 - 10 - 11 - 2 - 3 - 4 - 41 - 5  etc.) 
+  else { 
         var myDate = new String(); 
         myDate = isDate.getFullYear() + " " ; 
         myDate = myDate + isDate.getMonth() + " "; 
@@ -119,8 +104,7 @@ function setDataType(cValue)
         return myDate ; 
       } 
   } 
-function sortTable(col, tableToSort) 
-  { 
+function sortTable(col, tableToSort) { 
     var iCurCell = col + tableToSort.cols; 
     var totalRows = tableToSort.rows.length; 
     var bSort = 0; 
