@@ -103,8 +103,6 @@ function dibujaTabla(){
    
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html.join('');
-  tableDiv.style.width = document.body.clientWidth + 'px';
-  tableDiv.style.height = document.body.clientHeight + 'px';
 }
 
 function handleQueryResponse(response) {
