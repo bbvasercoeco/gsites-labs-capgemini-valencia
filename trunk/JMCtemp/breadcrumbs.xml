@@ -5,6 +5,7 @@
    height="50"
    description="Script que genera los breadcrumbs de forma automática"
    />
+<UserPref name="rootSite" display_name="Root del Site" required="true" />
  <Content type="html">
  <![CDATA[
  
@@ -32,12 +33,12 @@
 	
 	<script type="text/javascript">
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
-
+		var prefs= new gadgets.Prefs();
 		function showBreadcrumbs()
 		{
 			//Construct the breadcrumb string
-			var rootSite="gsiteslabscapgeminivalencia";
-			var s ="";
+			var rootSite = prefs.getString("rootSite");
+			var s = "";
 			var i,j,k = 0;
 			var base = "";
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
