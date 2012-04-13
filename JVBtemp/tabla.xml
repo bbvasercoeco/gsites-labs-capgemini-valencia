@@ -64,7 +64,6 @@
 
 var pagActual = 1;
 
-
 var gadgetHelper = null;
 var _filaDescartadas = 0;
 var _Col = 3;
@@ -88,10 +87,13 @@ function sendQuery() {
 }
 
 function siguientes(f){
-  pagActual++;
-//  alert('Hola');
-  document.form[f].submit();
+  //pagActual++;
+  //alert('Hola');
+  //document.form[f].submit();
 
+  var tableDiv = _gel('tablediv');
+  tableDiv.innerHTML = "";
+  
   //var html = 'HOLAAAAA';
   //var tableDiv = _gel('tablediv');
   //tableDiv.innerHTML = html.join('');
