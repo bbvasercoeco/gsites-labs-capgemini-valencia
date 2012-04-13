@@ -86,13 +86,6 @@ function sendQuery() {
   query.send(handleQueryResponse);
 }
 
-function siguientes(){
-  pagActual++;
-  var tableDiv = _gel('tablediv');
-  tableDiv.innerHTML = "";
-  dibujaTabla();
-}
-
 function dibujaTabla(){
 alert('1');
    var html = [];
@@ -106,6 +99,14 @@ alert('2');
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html.join('');
 alert('3');
+}
+
+function siguientes(){
+alert('***');
+  pagActual++;
+  var tableDiv = _gel('tablediv');
+  tableDiv.innerHTML = "";
+  dibujaTabla();
 }
 
 function handleQueryResponse(response) {
