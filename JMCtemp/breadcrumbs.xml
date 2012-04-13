@@ -10,32 +10,29 @@
  
 	<div id="title-crumbs">valor de title</div>
 	
-	<style>
-		.linkBreadCrumb{
-		font-style: normal;
-		font-size:13px;
-		color:#009EE5;
-		text-decoration:none;
-		font-family:arial,sans-serif;
+	<style>		
+		#title-breadcrumbs {
+			font-size:13px;
+			color:#3F78B2;
+			text-transform: capitalize;
 		}
-		
-		a.linkBreadCrumb {
-		font-style: normal;
-		font-size:13px;
-		color:#009EE5;
-		text-decoration:none;
-		font-family:arial,sans-serif;
+		a.linkBreadCrumb,
+		a:visited.linkBreadCrumb {
+			fon-weight: normal;
+			font-size:13px;
+			color:#3F78B2;
+			text-decoration:none;
+			text-transform: capitalize;
+		}
+		a:hover.linkBreadCrumb,
+		a:active.linkBreadCrumb {
+			font-style: normal;
+			font-size:13px;
+			color:#009EE5;
+			fon-weight: normal;
+			text-decoration:none;		
+			text-transform: capitalize;
 		} 
-		
-		a:hover.linkBreadCrumb{
-		font-style: normal;
-		font-size:13px;
-		color:#009EE5;
-		font-weight:bold;
-		text-decoration:none;
-		font-family:arial,sans-serif;
-		} 
-		.linkBreadCrumb
 		
 	</style>
 	
@@ -69,7 +66,7 @@
 					for(j=i+1;j<parametros.length;++j)
 					{   
 						var aux = parametros[j].replace("-"," ");
-						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + aux + "  \'> >&nbsp; " + aux + "</a>";
+						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + aux + "  \'> >&nbsp;" + aux + "</a>";
 						rootSite = rootSite + "/" + parametros[j];
 					}
 				
