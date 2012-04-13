@@ -93,6 +93,8 @@ function siguientes(){
 }
 
 function dibujaTabla(){
+   var html = [];
+   
    html.push('<table class="tablaGeneral">');
       html.push('<tr class="cabecera">');
 	     html.push('<td>123</td>');
