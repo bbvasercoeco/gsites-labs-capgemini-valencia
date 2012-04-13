@@ -92,9 +92,6 @@ function siguientes(){
   tableDiv.innerHTML = "";
 }
 
-function dibujaTabla(){
-  
-}
 
 function handleQueryResponse(response) {
 
@@ -105,7 +102,6 @@ function handleQueryResponse(response) {
 
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
 
-  dibujaTabla();
 
   html.push('<table class="tablaGeneral">');
   html.push('<tr class="cabecera">');
