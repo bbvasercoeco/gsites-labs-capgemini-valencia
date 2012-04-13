@@ -89,7 +89,7 @@ function sendQuery() {
 function dibujaTabla(response){
 
    var data = response.getDataTable();
-
+totPag = Math.ceil(data.getNumberOfRows() / numElePag);
    var html = [];
    
    html.push('<table class="tablaGeneral">');
@@ -152,7 +152,7 @@ function siguientes(response){
 
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
-  totPag = Math.ceil(data.getNumberOfRows() / numElePag);
+
   dibujaTabla(response);
 }
 
