@@ -91,13 +91,13 @@ function siguientes(response){
 //  var tableDiv = _gel('tablediv');
 //  tableDiv.innerHTML = "";
 
-alert('1');
+alert('ENTRA');
   dibujaTabla(response);
-alert('2');
+alert('SALE');
 }
 
 function dibujaTabla(response){
-
+alert('1');
    var data = response.getDataTable();
 totPag = Math.ceil(data.getNumberOfRows() / numElePag);
    var html = [];
