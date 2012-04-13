@@ -90,6 +90,7 @@ function siguientes(){
   pagActual++;
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = "";
+  dibujaTabla();
 }
 
 function dibujaTabla(){
