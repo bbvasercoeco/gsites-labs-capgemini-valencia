@@ -93,7 +93,11 @@ function siguientes(){
 }
 
 function dibujaTabla(){
-
+   html.push('<table class="tablaGeneral">');
+      html.push('<tr class="cabecera">');
+	     html.push('<td>123</td>');
+	  html.push('</tr');
+   html.push('</table>');
 }
 
 function handleQueryResponse(response) {
