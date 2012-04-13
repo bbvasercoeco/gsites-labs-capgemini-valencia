@@ -5,7 +5,6 @@
    height="50"
    description="Script que genera los breadcrumbs de forma automática"
    />
-<UserPref name="rootSite" display_name="Root del Site" required="true" />
  <Content type="html">
  <![CDATA[
  
@@ -13,19 +12,20 @@
 	
 	<style>
 		a.linkBreadCrumb {
-		font-style: italic;
-		font-size:14px;
-		font-color:#0099CC;
+		font-style: normal;
+		font-size:13px;
+		color:#009EE5;
 		text-decoration:none;
+		font-family:arial,sans-serif;
 		} 
 		
 		a:hover.linkBreadCrumb{
-		font-style: italic;
-		font-size:15px;
-		font-color:#000099;
+		font-style: normal;
+		font-size:13px;
+		color:#009EE5;
 		font-weight:bold;
 		text-decoration:none;
-		
+		font-family:arial,sans-serif;
 		} 
 		
 		
@@ -33,14 +33,15 @@
 	
 	<script type="text/javascript">
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
-		var prefs= new gadgets.Prefs();
+
 		function showBreadcrumbs()
 		{
 			//Construct the breadcrumb string
-			var rootSite = prefs.getString("rootSite");
-			var s = "";
+			var rootSite="gsiteslabscapgeminivalencia";
+			var s ="";
 			var i,j,k = 0;
 			var base = "";
+			var barra = "/";
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
 			var indexroot = parametros.indexOf(rootSite);
 			// alert (parametros.length());
@@ -55,11 +56,12 @@
 				}
 				if (parametros[i] == rootSite) 
 				{	// alert("Entro en bucle IF");
-					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + "/" + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace("-"," ") + "  \'>home</a>";
 				
 					for(j=i+1;j<parametros.length;++j)
 					{   
-						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + "/"  + parametros[j] + "/" + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
+						var aux = parametros[j].replace("-"," ");
+						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + aux + "  \'>" + aux + "</a>";
 						rootSite = rootSite + "/" + parametros[j];
 					}
 				
