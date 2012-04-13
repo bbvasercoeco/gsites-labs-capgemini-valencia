@@ -93,6 +93,20 @@ function siguientes(){
 }
 
 function dibujaTabla(){
+  
+}
+
+function handleQueryResponse(response) {
+
+  if (!gadgetHelper.validateResponse(response)) { return; }
+
+  var data = response.getDataTable();
+  var html = [];   // start the HTML output string
+
+  totPag = Math.ceil(data.getNumberOfRows() / numElePag);
+
+  dibujaTabla();
+
   html.push('<table class="tablaGeneral">');
   html.push('<tr class="cabecera">');
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
@@ -137,19 +151,7 @@ function dibujaTabla(){
   }
 
   html.push('</td></tr></table>');
-}
-
-function handleQueryResponse(response) {
-
-  if (!gadgetHelper.validateResponse(response)) { return; }
-
-  var data = response.getDataTable();
-  var html = [];   // start the HTML output string
-
-  totPag = Math.ceil(data.getNumberOfRows() / numElePag);
-
-  dibujaTabla();
-
+  
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html.join('');
   tableDiv.style.width = document.body.clientWidth + 'px';
