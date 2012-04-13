@@ -8,22 +8,25 @@
  <Content type="html">
  <![CDATA[
  
-	<div id="title-crumbs"></div>
+	<div id="title-breadcrumbs"></div>
 	
 	<style>
+		#title-breadcrumbs {
+			font-size:12px;
+			color:#3F78B2;
+		}
 		a.linkBreadCrumb,
 		a:visited.linkBreadCrumb {
 			fon-weight: normal;
-			font-size:14px;
-			font-color:#3F78B2;
+			font-size:12px;
+			color:#3F78B2;
 			text-decoration:none;
-		} 
-		
+		}
 		a:hover.linkBreadCrumb,
 		a:active.linkBreadCrumb {
 			font-style: normal;
-			font-size:15px;
-			font-color:#009EE5;
+			font-size:12px;
+			color:#009EE5;
 			fon-weight: normal;
 			text-decoration:none;		
 		} 
@@ -57,7 +60,7 @@
 					}	
 				}
 			}			
-			document.getElementById("title-crumbs").innerHTML = s;    
+			document.getElementById("title-breadcrumbs").innerHTML = s;    
 		}
 	</script>
  ]]> 
