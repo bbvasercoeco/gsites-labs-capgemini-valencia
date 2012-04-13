@@ -69,7 +69,7 @@
 					for(j=i+1;j<parametros.length;++j)
 					{   
 						var aux = parametros[j].replace("-"," ");
-						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + aux + "  \'> >" + aux + "</a>";
+						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + aux + "  \'> > " + aux + "</a>";
 						rootSite = rootSite + "/" + parametros[j];
 					}
 				
