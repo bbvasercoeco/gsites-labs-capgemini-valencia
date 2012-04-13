@@ -86,34 +86,16 @@ function sendQuery() {
   query.send(handleQueryResponse);
 }
 
-function siguientes(f){
-  //pagActual++;
-  //alert('Hola');
-  //document.form[f].submit();
-
+function siguientes(){
+  pagActual++;
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = "";
-  
-  //var html = 'HOLAAAAA';
-  //var tableDiv = _gel('tablediv');
-  //tableDiv.innerHTML = html.join('');
-  //tableDiv.style.width = document.body.clientWidth + 'px';
-  //tableDiv.style.height = document.body.clientHeight + 'px';
 }
 
-function handleQueryResponse(response) {
-
-  if (!gadgetHelper.validateResponse(response)) { return; }
-
-  var data = response.getDataTable();
-  var html = [];   // start the HTML output string
-
-  totPag = Math.ceil(data.getNumberOfRows() / numElePag);
-
+function dibujaTabla(){
   html.push('<table class="tablaGeneral">');
   html.push('<tr class="cabecera">');
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
-    //var formattedValue = data.getFormattedValue(0, col);
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
     html.push('<td>');
        formattedValue = escapeHtml(formattedValue);
@@ -150,12 +132,23 @@ function handleQueryResponse(response) {
      }
      html.push('P&aacute;gina '+pagActual+' de '+totPag);
      if(pagActual < totPag){
-        html.push(' | <a href="#" onclick="siguientes(this);">Siguientes >></a>');
- //html.push(' | <a href="#" onclick="this.submit();">Siguientes >></a>');
+        html.push(' | <a href="#" onclick="siguientes();">Siguientes >></a>');
      }
   }
 
   html.push('</td></tr></table>');
+}
+
+function handleQueryResponse(response) {
+
+  if (!gadgetHelper.validateResponse(response)) { return; }
+
+  var data = response.getDataTable();
+  var html = [];   // start the HTML output string
+
+  totPag = Math.ceil(data.getNumberOfRows() / numElePag);
+
+  dibujaTabla();
 
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html.join('');
