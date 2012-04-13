@@ -108,7 +108,7 @@ function dibujaTabla(){
     html.push('<td>');
        formattedValue = escapeHtml(formattedValue);
        html.push(formattedValue);
-	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
+	   html.push('&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
     html.push('</td>');
   }
   html.push('</tr>');
