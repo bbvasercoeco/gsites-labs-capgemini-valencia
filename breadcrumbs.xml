@@ -2,7 +2,7 @@
 <Module>
 <ModulePrefs
    title="breadcrumbs"
-   height="30"
+   height="25"
    description="Script que genera los breadcrumbs de forma automática"
    />
  <Content type="html">
