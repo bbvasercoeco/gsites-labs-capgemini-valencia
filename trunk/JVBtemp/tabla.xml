@@ -24,6 +24,7 @@
    
    .tablaGeneral{
       border-collapse:collapse;
+	  width:100%;
    }
 
    .tablaGeneral td{
@@ -133,7 +134,7 @@ function dibujaTabla(){
   html.push('<tr class="filaUltima"><td colspan="'+_Col +'">');
   if(data.getNumberOfRows() > numElePag){
      if(pagActual > 1){
-	    html.push('<a href="#" onclick="anteriores();"><< Anteriores </a> |');
+	    html.push('<a href="#" onclick="anteriores();"><< Anteriores</a>&nbsp;|');
      }
      html.push('P&aacute;gina '+pagActual+' de '+totPag);
      if(pagActual < totPag){
