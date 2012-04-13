@@ -145,9 +145,12 @@ totPag = Math.ceil(data.getNumberOfRows() / numElePag);
 
 function siguientes(response){
   pagActual++;
-  var tableDiv = _gel('tablediv');
-  tableDiv.innerHTML = "";
+//  var tableDiv = _gel('tablediv');
+//  tableDiv.innerHTML = "";
+
+alert('1');
   dibujaTabla(response);
+alert('2');
 }
 
 function handleQueryResponse(response) {
