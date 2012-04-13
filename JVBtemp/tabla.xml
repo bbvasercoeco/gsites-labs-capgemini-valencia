@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="Sample Spreadsheet Gadget"
-             description="Fun sample spreadsheet Gadget."
-             author="Google Engineering"
-             author_affiliation="Google Inc."
-             author_email="visualization.api+spreadsheet@gmail.com"
-             screenshot="/ig/modules/spreadsheet.png"
-             thumbnail="/ig/modules/spreadsheet-thm.png" >
+  <ModulePrefs title="TablaPaginada"
+  description="Tabla cargada desde docs con paginacion y parametrizada."
+  author_affiliation="Capgemini">
 <Require feature="idi"/>
 <Require feature="locked-domain" />
 </ModulePrefs>
   
 <UserPref name="_table_query_url" display_name="Data source url" required="true"/>
-  <UserPref name="_filaDescartadas" default_value="0" display_name="Descartar primeras n filas:" required="true"/>
-  <UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
+<UserPref name="_filaDescartadas" default_value="0" display_name="Descartar primeras n filas:" required="true"/>
+<UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
+<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
   
-<UserPref name="_table_query_refresh_interval"
-          display_name="Data refresh interval (minutes)"
-          default_value="0" datatype="enum" required="false">
-<EnumValue value="0" display_value="Do not refresh"/>
-<EnumValue value="60" display_value="1"/>
-<EnumValue value="300" display_value="5"/>
-<EnumValue value="1800" display_value="30"/>
-</UserPref>
 <Content type="html"><![CDATA[
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -48,23 +37,39 @@
        font-family:Arial;
    }
 
+   .fila{
+       background: white;
+       border-bottom:solid #E2E2E2;
+       height: 50px;
+   }
+
    .filaDestacada{
       background: #F3F3F3;
       border-bottom:solid #E2E2E2;
+      height: 50px;
    }
 
-   .filaNormal{
-       background: white;
-       border-bottom:solid #E2E2E2;
+   .filaUltima{
+      background: white;
+      height: 50px;
+      valign:center;
+      text-align: right;
    }
+
+   
 
 </style>
 
 <script>
 
+var pagActual = 1;
+
+
 var gadgetHelper = null;
 var _filaDescartadas = 0;
 var _Col = 3;
+var numElePag = 8;
+var totPag = 1;
 _IG_RegisterOnloadHandler(loadVisualizationAPI);
 
 function loadVisualizationAPI() {
@@ -76,9 +81,22 @@ function sendQuery() {
   var prefs = new _IG_Prefs(); // User preferences
   _filaDescartadas = prefs.getInt("_filaDescartadas");
   _Col = prefs.getInt("_Col");
+  numElePag = prefs.getInt("_NumElemPorPagina");
   gadgetHelper = new google.visualization.GadgetHelper();
   var query = gadgetHelper.createQueryFromPrefs(prefs);
   query.send(handleQueryResponse);
+}
+
+function siguientes(f){
+  pagActual++;
+//  alert('Hola');
+  document.form[f].submit();
+
+  //var html = 'HOLAAAAA';
+  //var tableDiv = _gel('tablediv');
+  //tableDiv.innerHTML = html.join('');
+  //tableDiv.style.width = document.body.clientWidth + 'px';
+  //tableDiv.style.height = document.body.clientHeight + 'px';
 }
 
 function handleQueryResponse(response) {
@@ -87,6 +105,8 @@ function handleQueryResponse(response) {
 
   var data = response.getDataTable();
   var html = [];   // start the HTML output string
+
+  totPag = Math.ceil(data.getNumberOfRows() / numElePag);
 
   html.push('<table class="tablaGeneral">');
   html.push('<tr class="cabecera">');
@@ -99,11 +119,14 @@ function handleQueryResponse(response) {
     html.push('</td>');
   }
   html.push('</tr>');
-  for (var row = _filaDescartadas + 1; row < data.getNumberOfRows(); row++) {
+
+  var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
+  var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
+  for (var row = inicio; row < fin; row++) {
     if((row % 2) == 0)
        html.push('<tr class="filaDestacada">');
     else
-       html.push('<tr class="filaNormal">');
+       html.push('<tr class="fila">');
       
     for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 
@@ -117,7 +140,20 @@ function handleQueryResponse(response) {
     }
     html.push('</tr>');
   }
-  html.push('</table>');
+
+  html.push('<tr class="filaUltima"><td colspan="'+_Col +'">');
+  if(data.getNumberOfRows() > numElePag){
+     if(pagActual > 1){
+        html.push('<< Anteriores | ');
+     }
+     html.push('P&aacute;gina '+pagActual+' de '+totPag);
+     if(pagActual < totPag){
+        html.push(' | <a href="#" onclick="siguientes(this);">Siguientes >></a>');
+ //html.push(' | <a href="#" onclick="this.submit();">Siguientes >></a>');
+     }
+  }
+
+  html.push('</td></tr></table>');
 
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html.join('');
