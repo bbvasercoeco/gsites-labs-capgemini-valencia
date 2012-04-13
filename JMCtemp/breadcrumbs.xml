@@ -5,6 +5,17 @@
    height="50"
    description="Script que genera los breadcrumbs de forma automÃ¡tica"
    />
+<UserPref name="VarrootSite" display_name="Root del Site" required="true" />
+<Content type="html" view="configuration" preferred_height="480">
+ <![CDATA[
+ <style>
+    input#VarrootSite {
+           width: 300px;
+          }
+		  
+  </style>
+ ]]>
+ </Content>
  <Content type="html">
  <![CDATA[
  
@@ -38,11 +49,12 @@
 	
 	<script type="text/javascript">
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
-
+		var prefs = new gadgets.Prefs();
+		
 		function showBreadcrumbs()
 		{
 			//Construct the breadcrumb string
-			var rootSite="gsiteslabscapgeminivalencia";
+			var rootSite = prefs.getString("VarrootSite");
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
@@ -58,11 +70,11 @@
 				}
 				if (parametros[i] == rootSite) 
 				{	
-					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace("-"," ") + "  \'>home</a>";
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
 				
 					for(j=i+1;j<parametros.length;++j)
 					{   
-						var aux = parametros[j].replace("-"," ");
+						var aux = parametros[j].replace(/-/g," ");
 						if (aux.indexOf("?")>1)
 						{
 							var auxMov = aux.split("?");
