@@ -108,6 +108,7 @@ function dibujaTabla(){
     html.push('<td>');
        formattedValue = escapeHtml(formattedValue);
        html.push(formattedValue);
+	   html.push('<img url="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
     html.push('</td>');
   }
   html.push('</tr>');
@@ -134,7 +135,7 @@ function dibujaTabla(){
   html.push('<tr class="filaUltima"><td colspan="'+_Col +'">');
   if(data.getNumberOfRows() > numElePag){
      if(pagActual > 1){
-	    html.push('<a href="#" onclick="anteriores();"><< Anteriores</a>&nbsp;|');
+	    html.push('<a href="#" onclick="anteriores();"><< Anteriores</a>&nbsp;|&nbsp;');
      }
      html.push('P&aacute;gina '+pagActual+' de '+totPag);
      if(pagActual < totPag){
