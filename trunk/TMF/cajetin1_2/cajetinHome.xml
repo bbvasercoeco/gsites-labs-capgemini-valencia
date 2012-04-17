@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-	<ModulePrefs 
+	<ModulePrefs title=""
 		title_url=""
-		height="270"
+		height="300"
 		width="470"
 		author=""
 		author_email=""
@@ -63,7 +63,7 @@
 				margin-top: 7px !important;
 			}			</style>
 	
-		<div id="content_div"  style="background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio2.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_div"  style="height:270px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio2.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
 
