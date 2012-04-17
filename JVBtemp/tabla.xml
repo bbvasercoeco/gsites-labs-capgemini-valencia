@@ -98,6 +98,11 @@ function anteriores(){
   dibujaTabla();
 }
 
+function ordenar(){
+	pagActual--;
+  dibujaTabla();
+}
+
 function dibujaTabla(){
    var html = [];
    
@@ -105,7 +110,7 @@ function dibujaTabla(){
   html.push('<tr class="cabecera">');
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-    html.push('<td>');
+    html.push('<td onclick="ordenar()">');
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html.push(formattedValue);
 	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
