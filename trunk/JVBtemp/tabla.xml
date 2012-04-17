@@ -161,7 +161,7 @@ function ordenar(columna){
 	alert('Columna: '+columna);
 	
 	//pagActual--;
-	//dibujaTabla();
+	dibujaTabla();
 }
 
 function dibujaTabla(){
@@ -171,11 +171,11 @@ function dibujaTabla(){
   html.push('<tr class="cabecera">');
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-    html.push('<td><span onclick="ordenar('+col+')">');
+    html.push('<th><span onclick="ordenar('+col+')">');
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html.push(formattedValue);
 	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
-    html.push('</span></td>');
+    html.push('</span></th>');
   }
   html.push('</tr>');
   var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
