@@ -99,9 +99,11 @@ function anteriores(){
 }
 
 function ordenar(columna){
+	data[2].sort();
 	alert('Columna: '+columna);
+	
 	//pagActual--;
-	//dibujaTabla();
+	dibujaTabla();
 }
 
 function dibujaTabla(){
