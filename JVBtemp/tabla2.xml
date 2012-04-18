@@ -286,27 +286,34 @@ function anteriores(){
 
 
 function dibujaTabla(){
-   var html = [];
-   html.push('<table class="tablaGeneral" >');
-   html.push('<tr class="cabecera">');
+  var html = "";
+   html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
+   html += '<thead><tr>';
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-    html.push('<th><span onclick="ordenar('+col+')">');
+//html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
+html += '<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"tretretre\">';
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
-       html.push(formattedValue);
-	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
-    html.push('</span></th>');
+       html += formattedValue;
+	   html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
+    html += '</a></th>';
   }
-  html.push('</tr>');
+  html += '</tr></thead>';
+  
+  
+html += '<tbody id=\"offTblBdy\">';
+/*
   var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
   var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
   for (var row = inicio; row < fin; row++) {
-    if((row % 2) == 0)
-       html.push('<tr class="filaDestacada">');
-    else
-       html.push('<tr class="fila">');
-      
+    //if((row % 2) == 0)
+      // html.push('<tr class="filaDestacada">');
+    //else
+//       html.push('<tr class="fila">');
+     
+html.push('<tr>');
+
     for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 
       var formattedValue = data.getFormattedValue(row, col);
@@ -329,10 +336,13 @@ function dibujaTabla(){
         html.push(' | <a href="#" onclick="siguientes();">Siguientes >></a>');
      }
   }
+*/
 
-  html.push('</td></tr></table>');
+html += '<tr><td>';
+
+  html += '</td></tr></tbody></table>';
   var tableDiv = _gel('tablediv');
-  tableDiv.innerHTML = html.join('');
+  tableDiv.innerHTML = html;
   tableDiv.style.width = document.body.clientWidth + 'px';
   tableDiv.style.height = document.body.clientHeight + 'px';
 }
@@ -345,8 +355,9 @@ function handleQueryResponse(response) {
   data = response.getDataTable();
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
-  //dibujaTabla();
+  dibujaTabla();
   
+  /*
    var html = [];
    html.push('<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">');
    html.push('<thead><tr>');
@@ -354,7 +365,7 @@ function handleQueryResponse(response) {
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
 //html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
-html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"perico\">');
+//html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"perico\">');
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html.push(formattedValue);
 	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
@@ -368,11 +379,11 @@ html.push('<tbody id="offTblBdy">');
   var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
   var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
   for (var row = inicio; row < fin; row++) {
-/*    if((row % 2) == 0)
-       html.push('<tr class="filaDestacada">');
-    else
-       html.push('<tr class="fila">');
-*/      
+    //if((row % 2) == 0)
+      // html.push('<tr class="filaDestacada">');
+    //else
+//       html.push('<tr class="fila">');
+     
 html.push('<tr>');
 
     for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
@@ -403,6 +414,7 @@ html.push('<tr>');
   tableDiv.innerHTML = html.join('');
   tableDiv.style.width = document.body.clientWidth + 'px';
   tableDiv.style.height = document.body.clientHeight + 'px';
+*/
 }
 
 function escapeHtml(text) {
