@@ -129,7 +129,6 @@ function compareValues(v1, v2) {
 }
 
 function partition(begin, end, pivot, col){
-//alert('paso2.');
 	//var piv = array[pivot][col];
 	var piv = pivot;
 	
@@ -137,7 +136,7 @@ function partition(begin, end, pivot, col){
 	
 	var store=begin;
 	var x2;
-	for(x2=begin; x2<end-1; ++x2) {
+	for(x2=begin+1; x2<end-1; ++x2) {
 		if(compareValues(data.getFormattedValue(x2, col),data.getFormattedValue(piv, col)) == 1) {
 			MiSwap(store, x2);
 			++store;
@@ -149,7 +148,6 @@ function partition(begin, end, pivot, col){
 }
 
 function qsort(begin, end, col){
-//alert('paso1');
 	if(end-1>begin) {
 		var pivot=begin+Math.floor(Math.random()*(end-begin));
 
@@ -160,12 +158,9 @@ function qsort(begin, end, col){
 }
 
 function ordenar(columna){
-alert('777: '+columna);
-	//data.getFormattedValue(_filaDescartadas, col);
+	alert('999: '+columna);
 	qsort(_filaDescartadas+1,data.getNumberOfRows(),columna);
-	//data.setFormattedValue(_filaDescartadas+1,columna,'***');
-alert('555: '+columna);
-	//pagActual = 1;
+	pagActual = 1;
 	dibujaTabla();
 }
 
