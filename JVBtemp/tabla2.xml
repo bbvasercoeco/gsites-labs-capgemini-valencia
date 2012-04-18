@@ -295,10 +295,10 @@ function dibujaTabla(){
 //html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
 html += '<th><a href=\"\"'; 
 html += 'onclick=\"this.blur();'; 
-html += 'return sortTable(\"';
+html += 'return sortTable(\"asdsadsad\",1,true);';
 html += 'offTblBdy\"';
 html += ',1,true);\"'; 
-html += 'title=\"trutrutrutrutru\">';
+html += ' title=\"trutrutrutrutru\">';
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html += formattedValue;
 	   html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
