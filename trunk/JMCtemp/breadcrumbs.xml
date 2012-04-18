@@ -29,8 +29,9 @@
 				// alert(document.getElementById(variable).value);
                 prefs.set(variable,document.getElementById(variable).value);
 				// alert(variable);
+				alert(variable + "estoy en el 1 alert");
             }  
-			alert(variable + "estoy en el 1 alert");
+			
             gadgets.window.adjustHeight();
         </script>   
  ]]>
