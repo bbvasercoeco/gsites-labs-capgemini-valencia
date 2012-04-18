@@ -352,15 +352,13 @@ html += '<tr><td>';
   tableDiv.style.height = document.body.clientHeight + 'px';
 }
 
-function lala(){
-}
-
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   data = response.getDataTable();
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
-//  dibujaTabla();
+
+  dibujaTabla();
   
   /*
    var html = [];
