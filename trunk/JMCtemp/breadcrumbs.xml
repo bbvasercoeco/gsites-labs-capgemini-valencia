@@ -72,7 +72,7 @@
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
 		
-		function showBreadcrumbs(prefs)
+		function showBreadcrumbs()
 		{
 			// Construct the breadcrumb string
 			var prefs = new gadgets.Prefs();
