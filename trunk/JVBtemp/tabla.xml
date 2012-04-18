@@ -180,10 +180,10 @@ function ordenar(columna){
 function dibujaTabla(){
    var html = [];
    
-   html.push('<table class="tablaGeneral" id="sorter">');
-
-   html.push('<tr class="sortable">');
-   //html.push('<tr class="cabecera">');
+   //html.push('<table class="tablaGeneral" id="sorter">');
+html.push('<table class="sortable" id="sorter">');
+   
+   html.push('<tr class="cabecera">');
    
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
