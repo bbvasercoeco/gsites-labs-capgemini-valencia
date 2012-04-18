@@ -68,6 +68,7 @@
 	
 	<script type="text/javascript">
 	 var prefs = new gadgets.Prefs();
+		var prefs = new gadgets.Prefs();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
 		
