@@ -67,14 +67,15 @@
 	</style>
 	
 	<script type="text/javascript">
-	
+	 var prefs = new gadgets.Prefs();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
-		 var prefs = new gadgets.Prefs();
+		
 		
 		function showBreadcrumbs()
 		{
 			// Construct the breadcrumb string
 		    var rootSite = prefs.getString("VarrootSite");
+			// var  =  
 		    alert(rootSite);
 			var s ="";
 			var i,j,k = 0;
