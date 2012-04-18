@@ -295,7 +295,9 @@ function dibujaTabla(){
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-var temp = '<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">';
+var tempString = '<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\"';
+html += tempString;
+ var temp = ' title=\"'+formattedValue+'\">';
 html += temp;
 
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
