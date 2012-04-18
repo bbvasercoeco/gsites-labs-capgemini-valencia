@@ -17,7 +17,7 @@
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
-                    Root del Site: <input type="text" id="VarrootSite"  onchange="registra('VarrootSite')"/>                   
+                    Root del Site: <input type="text" id="VarrootSite" value="__UP_rootSite__"  onchange="registra('VarrootSite')"/>                   
                 </td>
             </tr>
 			
@@ -25,8 +25,8 @@
             // Get userprefs
             var prefs = new gadgets.Prefs();           
             function registra(variable)
-            {	alert(variable);
-			alert(document.getElementById(variable).value);
+            {	// alert(variable);
+			// alert(document.getElementById(variable).value);
                 prefs.set(variable,document.getElementById(variable).value);
 				
             }  
