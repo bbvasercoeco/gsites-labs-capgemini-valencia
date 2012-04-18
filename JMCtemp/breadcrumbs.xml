@@ -31,11 +31,10 @@
             // Get userprefs
             var prefs = new gadgets.Prefs();           
             function registra(variable)
-            {	// alert(variable);
-				// alert(document.getElementById(variable).value);
+            {	
                 prefs.set(variable,document.getElementById(variable).value);
-				// alert(variable);
-				alert(variable + "estoy en el 1 alert");
+				
+			
             }  
 			
             gadgets.window.adjustHeight();
@@ -82,6 +81,7 @@
 			var prefs = new gadgets.Prefs();
 		    var rootSite = prefs.getString("VarrootSite");			
 		    alert(rootSite);
+			exit();
 			alert("aki entro");
 			var s ="";
 			var i,j,k = 0;
