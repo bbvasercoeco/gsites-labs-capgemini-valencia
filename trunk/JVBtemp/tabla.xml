@@ -130,7 +130,7 @@ alert('paso2');
 	var store=begin;
 	var ix;
 	for(ix=begin; ix<end-1; ++ix) {
-		if(data[ix][col]<=piv) {
+		if(ix<=piv) {
 			MiSwap(store, ix);
 			++store;
 		}
@@ -152,7 +152,7 @@ alert('paso1');
 }
 
 function ordenar(columna){
-alert('999: '+columna);
+alert('777: '+columna);
 	//data.getFormattedValue(_filaDescartadas, col);
 	qsort(_filaDescartadas+1,data.getNumberOfRows(),columna);
 	//data.setFormattedValue(_filaDescartadas+1,columna,'***');
