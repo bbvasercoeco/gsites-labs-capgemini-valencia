@@ -158,9 +158,10 @@ function qsort(begin, end, col){
 }
 
 function ordenar(columna){
-	alert('999: '+columna);
+	alert('666: '+columna);
 	qsort(_filaDescartadas+1,data.getNumberOfRows(),columna);
 	pagActual = 1;
+data.setFormattedValue(_filaDescartadas+1, 1,'***');
 	dibujaTabla();
 }
 
