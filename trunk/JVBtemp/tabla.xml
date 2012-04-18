@@ -150,16 +150,16 @@ function partition(begin, end, pivot, col){
 function qsort(begin, end, col){
 	if(end-1>begin) {
 		var pivot=begin+Math.floor(Math.random()*(end-begin));
-alert('Pivot: '+pivot);
+//alert('Pivot: '+pivot);
 		pivot=partition(begin, end, pivot, col);
-alert('Pivot: '+pivot);
+//alert('Pivot: '+pivot);
 		qsort(begin, pivot,col);
 		qsort(pivot+1, end,col);
 	}
 }
 
 function ordenar(columna){
-alert('77: '+columna);
+alert('99: '+columna);
 	qsort(_filaDescartadas+1,data.getNumberOfRows()-1,columna);
 	pagActual = 1;
 data.setFormattedValue(_filaDescartadas+1, 1,'***');
