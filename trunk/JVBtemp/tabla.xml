@@ -104,19 +104,14 @@ function anteriores(){
 }
 
 function MiSwap(a, b){
-alert('paso3');
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
-alert('a:'+a+'b'+b);
 
 var temp = data.getFormattedValue(a, col);
 		//temp = array[a][col];
-	alert('paso4');
 	data.setFormattedValue(a, col, data.getFormattedValue(b, col));
 		//array[a][col]=array[b][col];
-alert('paso5');
 		data.setFormattedValue(b, col, temp);
 		//array[b][col]=tmp;
-alert('paso6');		
 	}
 }
 
