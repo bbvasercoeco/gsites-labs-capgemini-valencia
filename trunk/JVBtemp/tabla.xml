@@ -114,7 +114,8 @@ alert('paso3');
 
 function partition(array, begin, end, pivot, col){
 alert('paso2');
-	var piv = array[pivot][col];
+	//var piv = array[pivot][col];
+	var piv = pivot;
 	
 	MiSwap(array, pivot, end-1);
 	
@@ -143,7 +144,7 @@ alert('paso1');
 }
 
 function ordenar(columna){
-alert('333: '+columna);
+alert('999: '+columna);
 	//data.getFormattedValue(_filaDescartadas, col);
 	qsort(data,_filaDescartadas+1,data.getNumberOfRows(),columna);
 	//data.setFormattedValue(_filaDescartadas+1,columna,'***');
