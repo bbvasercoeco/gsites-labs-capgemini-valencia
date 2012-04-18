@@ -17,7 +17,7 @@
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
-                    Root del Site: <input type="text" id="VarrootSite" value="__UP_rootSite__"  onchange="registra('VarrootSite')"/>                   
+                    Root del Site: <input type="text" id="VarrootSite" value="http://www.marca.es"  onchange="registra('VarrootSite')"/>                   
                 </td>
             </tr>
 			
@@ -27,7 +27,7 @@
             function registra(variable)
             {	// alert(variable);
 			// alert(document.getElementById(variable).value);
-                prefs.set(variable,document.getElementById(variable).value);
+                prefs.set(variable,document.getElementsByName(variable).value);
 				
             }  
 			
