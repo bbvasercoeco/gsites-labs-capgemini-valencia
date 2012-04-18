@@ -289,7 +289,20 @@ function dibujaTabla(){
   var html = " ";
    html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
    html += '<thead><tr>';
+html += '<th><a href=\"\"'; 
+html += 'onclick=\"this.blur();'; 
+html += 'return'; 
+html += ' sortTable(';
+html += '\" \" );'; 
+html += '\"';
+html += '>';
+ html += 'no vaaaaaaaaaaaaaaa</a></th>';
+ html += '</tr></thead>';
+  
+  
+html += '<tbody id=\"offTblBdy\">';
 
+/*
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
 
@@ -307,7 +320,7 @@ html += '>';
     html += 'enlaceeee</a></th>';
   }
   html += '</tr></thead>';
-  
+  */
   
 html += '<tbody id=\"offTblBdy\">';
 /*
