@@ -27,7 +27,7 @@
             function registra(variable)
             {
                 prefs.set(variable,document.getElementById(variable).value);
-				alert(variable."1");
+				alert("entro");
             }   
             gadgets.window.adjustHeight();
         </script>   
@@ -73,7 +73,7 @@
 		{
 			// Construct the breadcrumb string
 		    var rootSite = prefs.getString('VarrootSite');
-		    alert(rootSite);
+		    alert(rootSite."entro en 2");
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
