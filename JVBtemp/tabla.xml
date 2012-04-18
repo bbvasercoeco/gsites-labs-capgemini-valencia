@@ -103,12 +103,12 @@ function anteriores(){
   dibujaTabla();
 }
 
-function MiSwap(a, b){
+function MiSwap(array, a, b){
 alert('paso3');
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
-		var tmp=this[a][col];
-		this[a][col]=this[b][col];
-		this[b][col]=tmp;
+		var tmp=array[a][col];
+		array[a][col]=array[b][col];
+		array[b][col]=tmp;
 	}
 }
 
