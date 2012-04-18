@@ -296,13 +296,10 @@ function dibujaTabla(){
 html += '<th><a href=\"\"'; 
 html += 'onclick=\"this.blur();'; 
 html += 'return sortTable(';
-html += '\"';
-html += 'asdsadsad';
-html += '\"';
-html += ',1,true);';
+html += '\"' + 'asdsadsad' + '\"' +';';
 //html += 'offTblBdy\"';
 //html += ',1,true);\"'; 
-html += ' title=\"YYY\">';
+html += ' title=\"ZZZ\">';
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html += formattedValue;
 	   html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
