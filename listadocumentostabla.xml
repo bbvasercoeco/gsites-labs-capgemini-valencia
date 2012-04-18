@@ -1,0 +1,271 @@
+
+    //Only modify the text in red
+    function showFolderInSite_DEST_PAGE_NAME() {
+    var Page_ID = "https://sites.google.com/site/miwikijosedrac/home/gtb-archivador/gtb-archivador-listartabla"; //Destination Page    
+	var Page_ID = "https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/marta"; //Destination Page    
+    //var Folder_ID = "0B4YEewut2JmZcVhDaEdFUzhUQjZQQVc2SnBJOHhaQQ"; //Source Folder
+    var Folder_ID = "0B4YEewut2JmZbjRwZEs5a0pUT3FWbHRLMzZnQlh2dw";
+    showFolderInSite(Page_ID,Folder_ID);
+    }
+
+var LOGS_SHEET_ID = "0AoYEewut2JmZdFBvS0FxelROUXFiSzhDRGgxOHR0VVE";
+var LOGS_STARTED = false;
+var logSheet = null;
+var logColumn = null;
+var logRow = null;
+
+
+function startLogs() {
+  if (!LOGS_STARTED) {
+    LOGS_STARTED = true;
+    var logSpreadSheet = SpreadsheetApp.openById(LOGS_SHEET_ID);
+    logSheet = logSpreadSheet.getSheets()[0];
+    // make a new column
+    var lastColumn = logSheet.getLastColumn();
+    logColumn = lastColumn+1;
+    logRow = 2;
+    logSheet.getRange(1, logColumn).setValue(new Date().toUTCString());
+    logSheet.getRange(1, logColumn).setBackgroundRGB(128, 128, 128);
+  }
+}
+
+function writeError(e, optMsg) {
+  startLogs();
+  // write the error into the next cell and turn it red
+  msg = (optMsg ? optMsg+'...':'') + e.name + '--' + e.message;
+  logSheet.getRange(logRow, logColumn).setValue(msg);
+  logSheet.getRange(logRow++, logColumn).setBackground('red');
+}
+
+function writeLog(msg) {
+  startLogs();
+  // write the msg into the next cell
+  logSheet.getRange(logRow++, logColumn).setValue(msg);
+}
+
+//Mis modificaciones
+function doGet(e) {
+    // Create the various UI Panels
+	var app   = UiApp.createApplication();
+	var spnl  = app.createScrollPanel();
+	var vpnl  = app.createVerticalPanel();
+	var hpnl  = app.createHorizontalPanel();
+	var bcpnl = app.createHorizontalPanel();
+	var gd    = app.createGrid();
+	
+	// Set IDs so we can reference items in Button Clicks
+	gd.setId('colGrid');
+	
+	 // Use the full gadget width
+	spnl.setSize('100%','200px');
+	vpnl.setWidth('100%');
+	
+	var infoBox = app.createLabel().setVisible(false).setId('infoBox');
+	app.add(infoBox);
+  
+	//Form panel is required for upload
+	var form = app.createFormPanel().setId('form').setEncoding('multipart/form-data');
+	app.add(form);
+
+	//a grid to hold the widgets to guild user
+	var formContent = app.createGrid().resize(1,6);
+	form.add(formContent);
+
+	//create a text box to name the file
+	formContent.setText(0, 0, 'Nombre del fichero: ')
+	formContent.setWidget(0, 1, app.createTextBox().setName('newName'));
+  
+  
+	//writeLog("rootId = ["+rootId+']');
+	var infoIdFolder = app.createTextBox();
+	infoIdFolder.setName('infoIdFolder');
+	infoIdFolder.setText(Folder_ID);
+	infoIdFolder.setVisible(false); 
+	formContent.setWidget(0, 2, infoIdFolder);
+  
+	//create file upload widget
+	formContent.setWidget(0, 3, app.createLabel('Fichero:'));
+	fileUploadBox = app.createFileUpload().setName("file");   
+	formContent.setWidget(0, 4, fileUploadBox);
+ 
+	//create submit button  
+	formContent.setWidget(0, 5, app.createSubmitButton('Subir'));
+	
+
+    ////////////////////////////////////////////////////////////////
+    ///////////////////////Folder to page Functions/////////////////
+    ////////////////////////////////////////////////////////////////
+
+    //Get a folder and list it in site
+    function showFolderInSite(Page_ID,Folder_ID){
+    try{
+    writeLog('showFolderInSite <--');
+    var page = SitesApp.getPageByUrl(Page_ID);
+    var folder = DocsList.getFolderById(Folder_ID);
+    var Level_Header=2;
+    writeLog('antes de llamar a Return_Folders');
+    writeLog('folder =['+folder+'], Folder_ID = ['+Folder_ID+']');
+    var Test_String_Result = Return_Folders(folder,Level_Header,"1") + "<hr id=\"Horizontal line\">";
+    writeLog('después de llamar a Return_Folders');
+    page.setHtmlContent(Test_String_Result);
+    var Content_href = folder.getUrl();
+    writeLog('antes de llamar a TOC_Generator');
+    var TOC_Object = TOC_Generator(page,Content_href);
+    writeLog('despues de llamar a TOC_Generator');
+    page.setHtmlContent(TOC_Object + Test_String_Result);
+      
+    }
+
+    catch(e){
+      writeError(e, 'mensaje de showFolderInSite1');
+      writeLog('mensaje de showFolderInSite2');
+    }
+
+      writeLog('showFolderInSite -->');
+    }
+
+    //Recursive function to get all subfolders list
+    function Return_Folders(Folder_Name,Level_Header,TOC_Index_Name){
+    writeLog('Return_Folders <--');
+      
+      
+    /*
+    writeLog('Folder_Name = ['+Folder_Name+']');
+    writeLog('Level_Header = ['+Level_Header+']');
+    writeLog('TOC_Index_Name = ['+TOC_Index_Name+']');     
+     */
+      
+    var Text_String_Folders = "";
+    if(Level_Header<4){
+    Text_String_Folders = "<hr id=\"Horizontal line\">";
+    }
+
+    //writeLog('antes de llamar a Return_Files');
+      
+    Text_String_Folders = Text_String_Folders + "<h" + Level_Header + ">" + TOC_Index_Name + ". " + Folder_Name.getName() + "</h" + Level_Header + "><table style=\"border-collapse: collapse; border-top-color: rgb(136, 136, 136); border-right-color: rgb(136, 136, 136); border-bottom-color: rgb(136, 136, 136); border-left-color: rgb(136, 136, 136); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; \" border=\"1\" bordercolor=\"#888\" cellspacing=\"0\"><tbody><tr><td style=\"width: 256px; height: 19px; \"><b>&nbsp;File Name</b></td><td style=\"width: 116px; height: 19px; \"><b>&nbsp;Type</b></td><td style=\"width: 121px; height: 19px; \"><b>Size&nbsp;</b></td><td style=\"width: 119px; height: 19px; \"><b>Owner&nbsp;</b></td><td style=\"width: 134px; height: 19px; \"><b>Last update&nbsp;</b></td></tr>";
+    Text_String_Folders = Text_String_Folders + Return_Files(Folder_Name);
+    Text_String_Folders = Text_String_Folders + "</tbody></table><br>";
+      
+      
+    //writeLog('antes de llamar a getFolders');
+    var folders_Group = Folder_Name.getFolders();
+    //writeLog('después de llamar a getFolders');
+    var Index_Number;
+    for(var i in folders_Group){
+    Index_Number=parseInt(i)+1;
+    Text_String_Folders = Text_String_Folders + Return_Folders(folders_Group[i],(Level_Header+1),TOC_Index_Name + "." + Index_Number );
+    }
+
+    writeLog('Return_Folders -->');
+    return Text_String_Folders;
+    }
+
+    //Returns the list of files in a Folder
+    function Return_Files(Folder_Name){
+    writeLog('Return_Files <--');      
+    var files = Folder_Name.getFiles();
+    var Text_String_Files = "";
+    for(var j in files){
+    /*** Title field ***/
+    var title = "<a href=\""+files[j].getUrl()+"\" target=\"_blank\" >" + files[j].getName() +"</a>";
+    /*** Type field ***/
+    var type = files[j].getType();
+    // condition: if the type is "blob_item" replace it by the filename extension
+    if(type == "blob_item"){
+    type = files[j].getName().substring(files[j].getName().lastIndexOf('.'));
+    }
+
+    /*** Size field ***/
+
+    // To indicate the size properly, we need multiple conditions:
+    // - If size > 0, we show the size, else (if size = 0) it's a Google Docs file and we can hide this zero.
+    // - Calculate the length of the number (28099 is five digits, 2158080 is seven digits):
+    // If length < 7 digits then size is < 1mb. Indicate "kb" and remove the last digits (the bytes).
+    // Else, indicate "mb" and remove the last digits (kilobytes and bytes).
+    var size = files[j].getSize();
+    if(size > 0){
+    var length = size.toString().length;
+    if(length < 7){
+    size = size.toString().substring(0,length - 3) + "kb";
+    }
+
+    else{
+    size = size.toString().substring(0,length - 6) + "mb";
+    }
+    }
+    else{
+    size = "";
+    }
+
+    /*** Owner field ***/
+    // Take the email address and remove everything after the @.
+    var owner = files[j].getOwner().toString().substring(0,files[j].getOwner().toString().indexOf('@'));
+    /*** Last Updated field ***/
+    // .formatDate() is a method from the Utilities Services
+    var lastUpdated = Utilities.formatDate(files[j].getLastUpdated(), "GMT+1", "dd-MM-yyyy");
+    // Add data to table [title, type, size, owner, lastUpdated]
+    Text_String_Files = Text_String_Files + "<tr><td style=\"width: 356px; height: 19px; \">&nbsp;" + title + "</td><td style=\"width: 116px; height: 19px; \">&nbsp;" + type + "</td><td style=\"width: 121px; height: 19px; \">" + size + "&nbsp;</td><td style=\"width: 119px; height: 19px; \">" + owner + "&nbsp;</td><td style=\"width: 134px; height: 19px; \">" + lastUpdated + "&nbsp;</td></tr>";
+
+    }
+
+    writeLog('Return_Files -->');      
+    return Text_String_Files;
+    }
+
+    ////////////////////////////////////////////////////////////////
+    ///////////////////////TOC Functions////////////////////////////
+    ////////////////////////////////////////////////////////////////
+
+    function TOC_Generator(Page_Destination,Content_href) {
+    var content = Page_Destination.getHtmlContent();
+    var doc = Xml.parse(content, true);
+    var root = doc.getElement();
+    var toc=[];
+    parse(toc, root);
+    return tocToHtml(toc,Content_href);
+    }
+
+    // Recurse through the XML, finding <h[1-5]> tags.
+    function parse(toc, element) {
+    var name = element.getName().getLocalName().toUpperCase();
+    if(name == "H1" || name == "H2" || name == "H3" || name == "H4" || name == "H5") {
+    var level = parseInt(name.substring(1));
+    var anchorChildren = element.getElements("a");
+    var anchorText = (anchorChildren.length > 0)? anchorChildren[0].getAttribute("name").getValue() : "";
+    var item = {
+    level : level,
+    anchor : anchorText,
+    description : element.getText() };
+    toc.push(item);
+    } else {
+    for each (var child in element.getElements()) {
+    parse(toc, child);
+    }
+
+    }
+
+    }
+
+    // Convert the table of contents entries into HTML.
+    function tocToHtml(toc,Content_href) {
+    var html = "<div style=\"text-align: left; background: #F8F5F5; border:1px solid #CCCCCC; width: 250px; height= 300px; \">\n" + "<br/><b>&nbsp;&nbsp;&nbsp;<a href='" + Content_href + "' target=\"_blank\">Contents</a></b><br/><br/>\n";
+    for each (var entry in toc) {
+    var html2 = indent(entry["level"]) + " <a href='#" + entry["anchor"] + "'>" + entry["description"] + "</a><br/>\n";
+    html = html + html2;
+    }
+
+    html = html + "<br/></div>";
+    return html;
+    }
+
+    // Given an indentation level, return (2 * (level - 1)) non-breaking spaces.
+
+    function indent(level) {
+    var x = "";
+    for (var i = 0; i < level - 1; i++) {
+    x = x + "&nbsp;&nbsp;&nbsp;";
+    }
+    return x;
+    }
+
+
