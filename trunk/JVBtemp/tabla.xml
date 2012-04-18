@@ -139,7 +139,7 @@ alert('paso2');
 	var x2;
 	for(x2=begin; x2<end-1; ++x2) {
 alert(x2);
-		if(compareValues(data[x2][col],data[piv][col]) == 1) {
+		if(compareValues(data.getFormattedValue(x2, col),data.getFormattedValue(piv, col)) == 1) {
 			MiSwap(store, x2);
 			++store;
 		}
