@@ -145,7 +145,7 @@ alert('paso1');
 function ordenar(columna){
 alert('333: '+columna);
 	//data.getFormattedValue(_filaDescartadas, col);
-	quicksort(data,_filaDescartadas+1,data.getNumberOfRows(),columna);
+	qsort(data,_filaDescartadas+1,data.getNumberOfRows(),columna);
 	//data.setFormattedValue(_filaDescartadas+1,columna,'***');
 alert('555: '+columna);
 	//pagActual = 1;
