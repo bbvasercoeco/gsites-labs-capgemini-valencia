@@ -28,11 +28,10 @@
             {	// alert(variable);
 			// alert(document.getElementById(variable).value);
                 prefs.set(variable,document.getElementById(variable).value);
-				
+				alert(variable);
             }  
 			
             gadgets.window.adjustHeight();
-			gadgets.util.registerOnLoadHandler(showBreadcrumbs);
         </script>   
  ]]>
  </Content>
@@ -67,11 +66,8 @@
 		
 	</style>
 	
-	<script type="text/javascript">
-	 
-		
-		
-		
+	<script type="text/javascript">		
+		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
 		function showBreadcrumbs()
 		{
