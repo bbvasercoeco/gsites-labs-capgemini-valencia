@@ -105,10 +105,10 @@ function anteriores(){
 
 function ordenar(columna){
 		//quicksort();
-		
+alert('222: '+columna);
 	//data.getFormattedValue(_filaDescartadas, col);
 	data.setFormattedValue(0,0,'***');
-	alert('555: '+columna);
+alert('555: '+columna);
 	//pagActual = 1;
 	dibujaTabla();
 }
