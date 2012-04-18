@@ -413,11 +413,11 @@ function handleQueryResponse(response) {
     //html.push('<th><span onclick="ordenar('+col+')">');
 //html.push('<th><a href="#" onclick="this.blur(); return sortTable("offTblBdy", '+col+', true);" title="'+formattedValue+'">');
 //html.push('<th><a href="#" onclick="sortTable("offTblBdy", '+col+', true);" title="'+formattedValue+'">');
-html.push('<th><a href="#" onclick="lala("offTblBdy", '+col+', true);" title="'+formattedValue+'">');
+html.push('<th><span onclick="lala("offTblBdy", '+col+', true);" title="'+formattedValue+'">');
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html.push(formattedValue);
 	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
-    html.push('</a></th>');
+    html.push('</span></th>');
   }
   html.push('</tr></thead>');
   
