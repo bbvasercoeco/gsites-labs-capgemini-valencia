@@ -17,66 +17,33 @@
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
 <div id="tablediv" style="overflow: auto;">
-<img src="http://www.google.com/ig/images/spinner.gif"/>
+	<img src="http://www.google.com/ig/images/spinner.gif"/>
 </div>
 
 <style type="text/css">
-   
-
-   .tablaGeneral{
-      border-collapse:collapse;
-	  width:100%;
-   }
-   
-   .tablaGeneral th:hover{
-		cursor:pointer;
-   }
-
-   .tablaGeneral td{
-      padding-left: 5px;
-   }
-
-   .cabecera{
-       background: blue;
-       color: white;
-       font-size:18px;
-       font-family:Arial;
-   }
-
-   .fila{
-       background: white;
-       border-bottom:solid #E2E2E2;
-       height: 50px;
-   }
-
-   .filaDestacada{
-      background: #F3F3F3;
-      border-bottom:solid #E2E2E2;
-      height: 50px;
-   }
-
-   .filaUltima{
-      background: white;
-      height: 50px;
-      valign:center;
-      text-align: right;
-   }
-
-   
-
+	table {  border-color: #000000;  border-spacing: 0px;  border-style: solid;  border-width: 2px;  cell-spacing: 0px;}
+	td, th {  font-family: Arial, Helvetica, sans-serif;  font-size: 10pt;  padding: 2px 0.5em;  white-space: nowrap;}
+	td.numeric {  text-align: right;}
+	th {  background-color: #c0c0c0;}
+	th.mainHeader {  background-color: #808080;  color: #ffffff;  text-align: left;}
+	th a {  color: #000080;  text-decoration: none;}
+	th a:visited {  color: #000080;}
+	th a:active, th a:hover { color: #800000; text-decoration: underline;}
+	tr.alternateRow {background-color: #e0e0e0;}
+	td.sortedColumn {background-color: #f0f0f0;}
+	th.sortedColumn { background-color: #b0b0b0;}
+	tr.alternateRow td.sortedColumn { background-color: #d0d0d0; } 
 </style>
 
 <script>
-
-var pagActual = 1;
-
-var gadgetHelper = null;
-var _filaDescartadas = 0;
-var _Col = 3;
-var numElePag = 8;
-var totPag = 1;
-var data;
-_IG_RegisterOnloadHandler(loadVisualizationAPI);
+	var pagActual = 1;
+	var gadgetHelper = null;
+	var _filaDescartadas = 0;
+	var _Col = 3;
+	var numElePag = 8;
+	var totPag = 1;
+	var data;
+	_IG_RegisterOnloadHandler(loadVisualizationAPI);
 
 function loadVisualizationAPI() {
   google.load("visualization", "1");
@@ -103,67 +70,7 @@ function anteriores(){
   dibujaTabla();
 }
 
-function MiSwap(a, b){
-	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 
-var temp = data.getFormattedValue(a, col);
-		//temp = array[a][col];
-	data.setFormattedValue(a, col, data.getFormattedValue(b, col));
-		//array[a][col]=array[b][col];
-		data.setFormattedValue(b, col, temp);
-		//array[b][col]=tmp;
-	}
-}
-
-function compareValues(v1, v2) {
-  var f1, f2;
-  f1 = parseFloat(v1);
-  f2 = parseFloat(v2);
-  if (!isNaN(f1) && !isNaN(f2)) {
-    v1 = f1;
-    v2 = f2;
-  }
-  if (v1 <= v2)
-    return 1;
-  return 0;
-}
-
-function partition(begin, end, pivot, col){
-	//var piv = array[pivot][col];
-	var piv = pivot;
-	
-	MiSwap(pivot, end-1);
-	
-	var store=begin;
-	var x2;
-	for(x2=begin+1; x2<end-1; ++x2) {
-		if(compareValues(data.getFormattedValue(x2, col),data.getFormattedValue(piv, col)) == 1) {
-			MiSwap(store, x2);
-			++store;
-		}
-	}
-	MiSwap(end-1, store);
-
-	return store;
-}
-
-function qsort(begin, end, col){
-	if(end-1>begin) {
-		var pivot=begin+Math.floor(Math.random()*(end-begin));
-
-		pivot=partition(begin, end, pivot, col);
-		qsort(begin, pivot,col);
-		qsort(pivot+1, end,col);
-	}
-}
-
-function ordenar(columna){
-	alert('666: '+columna);
-	qsort(_filaDescartadas+1,data.getNumberOfRows(),columna);
-	pagActual = 1;
-data.setFormattedValue(_filaDescartadas+1, 1,'***');
-	dibujaTabla();
-}
 
 function dibujaTabla(){
    var html = [];
