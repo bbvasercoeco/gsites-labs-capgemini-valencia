@@ -286,32 +286,47 @@ function anteriores(){
 //html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
 
 function dibujaTabla(){
-   var html = "";
-   
-   var temp = '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
-   html += temp;
-   var temp = '<thead><tr>';
-   html += temp;
+  var html = " ";
+  var enlaceString='<a href=\"\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\',1,true);\" >';
+  // var enlaceString='<a href=\"\" onclick=\"javascript:alert(\'yaaaa\');\" >';
+   html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
+   html += '<thead><tr>';
+    html += enlaceString;
+/*html += '<th><a href=\"\"'; 
+html += 'onclick=\"this.blur();'; 
+html += 'return'; 
+html += ' sortTable(';
+html += '\" \" );'; 
+html += '\"';
+html += '>';*/
+ html += 'SI SI que siiiii</a></th>';
+ html += '</tr></thead>';
+  
+  
+html += '<tbody id=\"offTblBdy\">';
 
+/*
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-var tempString = '<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\"';
-html += tempString;
- //var temp = ' title=\"'+formattedValue+'\"';
-//html += temp;
- html += '>';
 
-       formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
-       html += formattedValue;
-	   html += '<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>';
-var temp = '</a></th>';
-html += temp;
+html += '<th><a href=\"\"'; 
+html += 'onclick=\"this.blur();'; 
+html += 'return'; 
+html += ' sortTable(';
+html += '\" \" );'; 
+html += '\"';
+
+html += '>';
+ //      formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
+   //    html += formattedValue;
+//	   html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
+    html += 'enlaceeee</a></th>';
   }
   html += '</tr></thead>';
+  */
   
-/*  
-html.push('<tbody id="offTblBdy">');
-
+html += '<tbody id=\"offTblBdy\">';
+/*
   var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
   var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
   for (var row = inicio; row < fin; row++) {
@@ -344,10 +359,10 @@ html.push('<tr>');
         html.push(' | <a href="#" onclick="siguientes();">Siguientes >></a>');
      }
   }
-  
-  
-html += '<tr><td>';
 */
+
+html += '<tr><td>';
+
   html += '</td></tr></tbody></table>';
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html;
@@ -355,12 +370,14 @@ html += '<tr><td>';
   tableDiv.style.height = document.body.clientHeight + 'px';
 }
 
+function lala(){
+}
+
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   data = response.getDataTable();
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
-
   dibujaTabla();
   
   /*
