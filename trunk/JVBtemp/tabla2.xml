@@ -283,27 +283,28 @@ function anteriores(){
   dibujaTabla();
 }
 
-
+//html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
 
 function dibujaTabla(){
-  var html = "";
+  var html = " ";
    html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
    html += '<thead><tr>';
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-//html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
+
 html += '<th><a href=\"\"'; 
 html += 'onclick=\"this.blur();'; 
 html += 'return'; 
 html += ' sortTable(';
-html += '\" \"' +';';
+html += '\" \" );'; 
+html += '\"';
 
 html += '>';
-       formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
-       html += formattedValue;
-	   html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
-    html += '</a></th>';
+ //      formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
+   //    html += formattedValue;
+//	   html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
+    html += 'enlaceeee</a></th>';
   }
   html += '</tr></thead>';
   
