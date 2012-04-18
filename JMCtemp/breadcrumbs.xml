@@ -27,11 +27,12 @@
             function registra(variable)
             {	// alert(variable);
 			// alert(document.getElementById(variable).value);
-                prefs.set(variable,document.getElementsByName(variable).value);
+                prefs.set(variable,document.getElementById(variable).value);
 				
             }  
 			
             gadgets.window.adjustHeight();
+			gadgets.util.registerOnLoadHandler(showBreadcrumbs);
         </script>   
  ]]>
  </Content>
@@ -69,7 +70,7 @@
 	<script type="text/javascript">
 	 
 		
-		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+		
 		
 		
 		function showBreadcrumbs()
