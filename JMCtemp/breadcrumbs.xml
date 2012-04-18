@@ -73,7 +73,7 @@
 		{
 			// Construct the breadcrumb string
 			var prefs = new gadgets.Prefs();
-		    var rootSite = prefs.getString("VarrootSite");			
+		    var rootSite = document.getElementById(prefs.getString("VarrootSite").value).value    //prefs.getString("VarrootSite").value;			
 		    alert(rootSite);
 			alert("aki entro");
 			var s ="";
