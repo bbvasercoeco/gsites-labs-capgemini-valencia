@@ -105,9 +105,9 @@ function anteriores(){
 
 function ordenar(columna){
 		//quicksort();
-alert('222: '+columna);
+alert('333: '+columna);
 	//data.getFormattedValue(_filaDescartadas, col);
-	data.setFormattedValue(0,0,'***');
+	data.setFormattedValue(_filaDescartadas+1,2,'***');
 alert('555: '+columna);
 	//pagActual = 1;
 	dibujaTabla();
