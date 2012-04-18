@@ -72,16 +72,16 @@
 		
 	</style>
 	
-	<script type="text/javascript">		
+	<script type="text/javascript">	
+		var prefs = new gadgets.Prefs();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
 		function showBreadcrumbs()
 		{
 			// Construct the breadcrumb string
-			var prefs = new gadgets.Prefs();
+			
 		    var rootSite = prefs.getString("VarrootSite");			
 		    alert(rootSite);
-			exit();
 			alert("aki entro");
 			var s ="";
 			var i,j,k = 0;
