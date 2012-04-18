@@ -394,6 +394,9 @@ function dibujaTabla(){
   tableDiv.style.height = document.body.clientHeight + 'px';
 }
 
+function lala(){
+}
+
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   data = response.getDataTable();
@@ -409,7 +412,8 @@ function handleQueryResponse(response) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
     //html.push('<th><span onclick="ordenar('+col+')">');
 //html.push('<th><a href="#" onclick="this.blur(); return sortTable("offTblBdy", '+col+', true);" title="'+formattedValue+'">');
-html.push('<th><a href="#" onclick="sortTable("offTblBdy", '+col+', true);" title="'+formattedValue+'">');
+//html.push('<th><a href="#" onclick="sortTable("offTblBdy", '+col+', true);" title="'+formattedValue+'">');
+html.push('<th><a href="#" onclick="lala("offTblBdy", '+col+', true);" title="'+formattedValue+'">');
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html.push(formattedValue);
 	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
