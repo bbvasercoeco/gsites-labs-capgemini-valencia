@@ -118,6 +118,8 @@ function sortTable(id, col, rev) {
   // Restore the table's display style.
   tblEl.style.display = oldDsply;
 
+dibujaTabla();
+
   return false;
 }
 
