@@ -38,8 +38,22 @@
 <script>
     
     
+
+//-----------------------------------------------------------------------------
+// sortTable(id, col, rev)
+//
+//  id  - ID of the TABLE, TBODY, THEAD or TFOOT element to be sorted.
+//  col - Index of the column to sort, 0 = first column, 1 = second column,
+//        etc.
+//  rev - If true, the column is sorted in reverse (descending) order
+//        initially.
+//
+// Note: the team name column (index 1) is used as a secondary sort column and
+// always sorted in ascending order.
+//-----------------------------------------------------------------------------
+
 function sortTable(id, col, rev) {
-alert('1');
+
   // Get the table or table section to sort.
   var tblEl = document.getElementById(id);
 
@@ -50,7 +64,7 @@ alert('1');
     // Also, assume the team name column is initially sorted.
     tblEl.lastColumn = 1;
   }
-alert('2');
+
   // If this column has not been sorted before, set the initial sort direction.
   if (tblEl.reverseSort[col] == null)
     tblEl.reverseSort[col] = rev;
@@ -61,7 +75,7 @@ alert('2');
 
   // Remember this column as the last one sorted.
   tblEl.lastColumn = col;
-alert('3');
+
   // Set the table display style to "none" - necessary for Netscape 6 
   // browsers.
   var oldDsply = tblEl.style.display;
@@ -117,8 +131,6 @@ alert('3');
 
   // Restore the table's display style.
   tblEl.style.display = oldDsply;
-
-//dibujaTabla();
 
   return false;
 }
@@ -234,75 +246,6 @@ function makePretty(tblEl, col) {
     if (i == col)
       cellEl.className += " " + colClsNm;
       cellEl.className = normalizeString(cellEl.className);
-  }
-}
-
-function setRanks(tblEl, col, rev) {
-
-  // Determine whether to start at the top row of the table and go down or
-  // at the bottom row and work up. This is based on the current sort
-  // direction of the column and its reversed flag.
-
-  var i    = 0;
-  var incr = 1;
-  if (tblEl.reverseSort[col])
-    rev = !rev;
-  if (rev) {
-    incr = -1;
-    i = tblEl.rows.length - 1;
-  }
-
-  // Now go through each row in that direction and assign it a rank by
-  // counting 1, 2, 3...
-
-  var count   = 1;
-  var rank    = count;
-  var curVal;
-  var lastVal = null;
-
-  // Note that this loop is skipped if the table was sorted on the name
-  // column.
-  while (col > 1 && i >= 0 && i < tblEl.rows.length) {
-
-    // Get the value of the sort column in this row.
-    curVal = getTextValue(tblEl.rows[i].cells[col]);
-
-    // On rows after the first, compare the sort value of this row to the
-    // previous one. If they differ, update the rank to match the current row
-    // count. (If they are the same, this row will get the same rank as the
-    // previous one.)
-    if (lastVal != null && compareValues(curVal, lastVal) != 0)
-        rank = count;
-    // Set the rank for this row.
-    tblEl.rows[i].rank = rank;
-
-    // Save the sort value of the current row for the next time around and bump
-    // the row counter and index.
-    lastVal = curVal;
-    count++;
-    i += incr;
-  }
-
-  // Now go through each row (from top to bottom) and display its rank. Note
-  // that when two or more rows are tied, the rank is shown on the first of
-  // those rows only.
-
-  var rowEl, cellEl;
-  var lastRank = 0;
-
-  // Go through the rows from top to bottom.
-  for (i = 0; i < tblEl.rows.length; i++) {
-    rowEl = tblEl.rows[i];
-    cellEl = rowEl.cells[0];
-    // Delete anything currently in the rank column.
-    while (cellEl.lastChild != null)
-      cellEl.removeChild(cellEl.lastChild);
-    // If this row's rank is different from the previous one, Insert a new text
-    // node with that rank.
-    if (col > 1 && rowEl.rank != lastRank) {
-      cellEl.appendChild(document.createTextNode(rowEl.rank));
-      lastRank = rowEl.rank;
-    }
   }
 }
     
