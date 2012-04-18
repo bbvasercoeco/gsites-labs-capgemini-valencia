@@ -145,7 +145,7 @@ alert('paso1');
 	if(end-1>begin) {
 		var pivot=begin+Math.floor(Math.random()*(end-begin));
 
-		pivot=partition(array, begin, end, pivot, col);
+		pivot=partition(begin, end, pivot, col);
 		qsort(begin, pivot,col);
 		qsort(pivot+1, end,col);
 	}
