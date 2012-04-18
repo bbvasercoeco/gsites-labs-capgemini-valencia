@@ -298,7 +298,7 @@ function dibujaTabla(){
 var tempString = '<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\"';
 html += tempString;
  //var temp = ' title=\"'+formattedValue+'\"';
-html += temp;
+//html += temp;
  html += '>';
 
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
