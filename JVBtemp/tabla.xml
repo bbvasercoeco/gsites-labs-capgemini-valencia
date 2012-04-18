@@ -104,6 +104,7 @@ function anteriores(){
 }
 
 function MiSwap(a, b){
+alert('paso3');
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 		var tmp=this[a][col];
 		this[a][col]=this[b][col];
@@ -112,6 +113,7 @@ function MiSwap(a, b){
 }
 
 function partition(array, begin, end, pivot, col){
+alert('paso2');
 	var piv = array[pivot][col];
 	
 	MiSwap(array, pivot, end-1);
@@ -130,6 +132,7 @@ function partition(array, begin, end, pivot, col){
 }
 
 function qsort(array, begin, end, col){
+alert('paso1');
 	if(end-1>begin) {
 		var pivot=begin+Math.floor(Math.random()*(end-begin));
 
