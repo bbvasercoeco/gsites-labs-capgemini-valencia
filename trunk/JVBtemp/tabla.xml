@@ -104,9 +104,10 @@ function anteriores(){
 }
 
 function ordenar(columna){
+		//quicksort();
+	datos[0][0]="31232";
 	alert('Columna: '+columna);
-	
-	//pagActual--;
+	//pagActual = 1;
 	dibujaTabla();
 }
 
