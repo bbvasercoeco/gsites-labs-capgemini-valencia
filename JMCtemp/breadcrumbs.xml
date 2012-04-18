@@ -65,7 +65,7 @@
 	</style>
 	
 	<script type="text/javascript">
-	import java.util.prefs.Preferences;
+	
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		 var prefs = new gadgets.Prefs();
 		
