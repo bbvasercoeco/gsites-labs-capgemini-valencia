@@ -7,6 +7,7 @@
    />
 <UserPref name="VarrootSite" display_name="Root del Site" required="true" />
 <Content type="html" view="configuration" preferred_height="480">
+<Require feature="setprefs" />
  <![CDATA[
  <style>
     input#VarrootSite {
