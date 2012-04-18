@@ -27,7 +27,7 @@
             function registra(variable)
             {
                 prefs.set(variable,document.getElementById(variable).value);
-				alert(variable);
+				alert(variable."1");
             }   
             gadgets.window.adjustHeight();
         </script>   
