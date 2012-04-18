@@ -172,7 +172,9 @@ function dibujaTabla(){
    html.push('<table class="tablaGeneral" >');
   
    html.push('<tr class="cabecera">');
-   
+alert(_filaDescartadas);
+alert(data.getFormattedValue(_filaDescartadas, 0));
+alert(data.getFormattedValue(_filaDescartadas+1, 0));
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
     html.push('<th><span onclick="ordenar('+col+')">');
