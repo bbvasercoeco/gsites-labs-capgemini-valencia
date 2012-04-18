@@ -5,7 +5,7 @@
    height="50"
    description="Script que genera los breadcrumbs de forma automÃ¡tica"
    />
-<UserPref name="VarrootSite" id="VarrootSite" display_name="Root del Site" required="true" />
+<UserPref name="VarrootSite" display_name="Root del Site" required="true" />
 <Content type="html" view="configuration" preferred_height="480">
  <![CDATA[
  <style>
@@ -73,7 +73,7 @@
 		{
 			// Construct the breadcrumb string
 			var prefs = new gadgets.Prefs();
-		    var rootSite = document.getElementById('VarrootSite').value  //prefs.getString("VarrootSite").value;			
+		    var rootSite = document.getElementsByName('VarrootSite').value  //prefs.getString("VarrootSite").value;			
 		    alert(rootSite);
 			alert("aki entro");
 			var s ="";
