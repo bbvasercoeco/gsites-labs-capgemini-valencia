@@ -103,7 +103,7 @@ function anteriores(){
   dibujaTabla();
 }
 
-function MiSwap(array, a, b){
+function MiSwap(a, b){
 alert('paso3');
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 alert('a:'+a+'b'+b);
@@ -111,49 +111,50 @@ alert('a:'+a+'b'+b);
 var temp = data.getFormattedValue(a, col);
 		//temp = array[a][col];
 	alert('paso4');
-		array[a][col]=array[b][col];
+	data.setFormattedValue(a, col, data.getFormattedValue(b, col));
+		//array[a][col]=array[b][col];
 alert('paso5');
-		
-		array[b][col]=tmp;
-		
+		data.setFormattedValue(b, col, temp);
+		//array[b][col]=tmp;
+alert('paso6');		
 	}
 }
 
-function partition(array, begin, end, pivot, col){
+function partition(begin, end, pivot, col){
 alert('paso2');
 	//var piv = array[pivot][col];
 	var piv = pivot;
 	
-	MiSwap(array, pivot, end-1);
+	MiSwap(pivot, end-1);
 	
 	var store=begin;
 	var ix;
 	for(ix=begin; ix<end-1; ++ix) {
-		if(array[ix][col]<=piv) {
-			MiSwap(array, store, ix);
+		if(data[ix][col]<=piv) {
+			MiSwap(store, ix);
 			++store;
 		}
 	}
-	MiSwap(array, end-1, store);
+	MiSwap(end-1, store);
 
 	return store;
 }
 
-function qsort(array, begin, end, col){
+function qsort(begin, end, col){
 alert('paso1');
 	if(end-1>begin) {
 		var pivot=begin+Math.floor(Math.random()*(end-begin));
 
 		pivot=partition(array, begin, end, pivot, col);
-		qsort(array, begin, pivot,col);
-		qsort(array, pivot+1, end,col);
+		qsort(begin, pivot,col);
+		qsort(pivot+1, end,col);
 	}
 }
 
 function ordenar(columna){
 alert('999: '+columna);
 	//data.getFormattedValue(_filaDescartadas, col);
-	qsort(data,_filaDescartadas+1,data.getNumberOfRows(),columna);
+	qsort(_filaDescartadas+1,data.getNumberOfRows(),columna);
 	//data.setFormattedValue(_filaDescartadas+1,columna,'***');
 alert('555: '+columna);
 	//pagActual = 1;
