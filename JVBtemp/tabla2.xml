@@ -406,7 +406,7 @@ function handleQueryResponse(response) {
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
     //html.push('<th><span onclick="ordenar('+col+')">');
-html.push('<th><a href="#" onclick="this.blur(); return sortTable("offTblBdy",  3, true);" title="'+formattedValue+'">');
+html.push('<th><a href="#" onclick="this.blur(); return sortTable("offTblBdy", '+col+', true);" title="'+formattedValue+'">');
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html.push(formattedValue);
 	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
