@@ -68,14 +68,14 @@
 	
 	<script type="text/javascript">
 	 
-		var prefs = new gadgets.Prefs();
-
+		
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
 		
 		function showBreadcrumbs(prefs)
 		{
 			// Construct the breadcrumb string
+			var prefs = new gadgets.Prefs();
 		    var rootSite = prefs.getString("VarrootSite");			
 		    alert(rootSite + "entro en 2");
 			var s ="";
