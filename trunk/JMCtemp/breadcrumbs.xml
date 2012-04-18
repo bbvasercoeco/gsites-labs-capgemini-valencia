@@ -6,33 +6,7 @@
    description="Script que genera los breadcrumbs de forma automÃ¡tica"
    />
 <UserPref name="VarrootSite" display_name="Root del Site" required="true" />
-<Content type="html" view="configuration" preferred_height="480">
- <![CDATA[
- <style>
-    input#VarrootSite {
-           width: 300px;
-          }
-		  
-  </style>
-  <table width="100%" border="0" id="tablaconfig">           
-            <tr>       
-                <td>
-                    Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__" onchange="registra('VarrootSite')">                   
-                </td>
-            </tr>
-			
-<script type="text/javascript">           
-            // Get userprefs
-            var prefs = new gadgets.Prefs();           
-            function registra(variable)
-            {
-                prefs.set(variable,document.getElementById(variable).value);
-				alert(variable);
-            }   
-            gadgets.window.adjustHeight();
-        </script>   
- ]]>
- </Content>
+
  <Content type="html">
  <![CDATA[
  
@@ -113,5 +87,32 @@
 	</script>
  ]]>
  
+ </Content>
+ <Content type="html" view="configuration" preferred_height="480">
+ <![CDATA[
+ <style>
+    input#VarrootSite {
+           width: 300px;
+          }
+		  
+  </style>
+  <table width="100%" border="0" id="tablaconfig">           
+            <tr>       
+                <td>
+                    Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__" onchange="registra('VarrootSite')">                   
+                </td>
+            </tr>
+			
+<script type="text/javascript">           
+            // Get userprefs
+            var prefs = new gadgets.Prefs();           
+            function registra(variable)
+            {
+                prefs.set(variable,document.getElementById(variable).value);
+				alert(variable);
+            }   
+            gadgets.window.adjustHeight();
+        </script>   
+ ]]>
  </Content>
 </Module>
