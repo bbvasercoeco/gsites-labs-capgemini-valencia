@@ -299,7 +299,7 @@ html += ' sortTable(';
 html += '\" \" );'; 
 html += '\"';
 html += '>';*/
- html += 'no vaaaaaaaaaaaaaaa</a></th>';
+ html += 'SI SI</a></th>';
  html += '</tr></thead>';
   
   
