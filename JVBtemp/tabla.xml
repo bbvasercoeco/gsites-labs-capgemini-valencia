@@ -159,8 +159,8 @@ alert('Pivot: '+pivot);
 }
 
 function ordenar(columna){
-//alert('666: '+columna);
-	qsort(_filaDescartadas+1,data.getNumberOfRows(),columna);
+alert('77: '+columna);
+	qsort(_filaDescartadas+1,data.getNumberOfRows()-1,columna);
 	pagActual = 1;
 data.setFormattedValue(_filaDescartadas+1, 1,'***');
 	dibujaTabla();
