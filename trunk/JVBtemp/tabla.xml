@@ -129,7 +129,7 @@ function compareValues(v1, v2) {
 }
 
 function partition(begin, end, pivot, col){
-alert('paso2');
+alert('paso2.');
 	//var piv = array[pivot][col];
 	var piv = pivot;
 	
@@ -138,7 +138,6 @@ alert('paso2');
 	var store=begin;
 	var x2;
 	for(x2=begin; x2<end-1; ++x2) {
-alert(x2);
 		if(compareValues(data.getFormattedValue(x2, col),data.getFormattedValue(piv, col)) == 1) {
 			MiSwap(store, x2);
 			++store;
