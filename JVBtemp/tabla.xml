@@ -136,10 +136,10 @@ alert('paso2');
 	MiSwap(pivot, end-1);
 	
 	var store=begin;
-	var ix;
-	for(ix=begin; ix<end-1; ++ix) {
-		if(compareValues(data[ix][col],data[piv][col]) == 1) {
-			MiSwap(store, ix);
+	var x2;
+	for(x2=begin; x2<end-1; ++x2) {
+		if(compareValues(data[x2][col],data[piv][col]) == 1) {
+			MiSwap(store, x2);
 			++store;
 		}
 	}
