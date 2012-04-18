@@ -106,7 +106,8 @@ function anteriores(){
 function MiSwap(array, a, b){
 alert('paso3');
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
-		var tmp=array[a][col];
+alert('a:'+a+'b'+b);
+		var tmp = array[a][col];
 		array[a][col]=array[b][col];
 		array[b][col]=tmp;
 	}
