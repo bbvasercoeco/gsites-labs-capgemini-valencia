@@ -70,7 +70,7 @@
 	 
 		var prefs = new gadgets.Prefs();
 
-		gadgets.util.registerOnLoadHandler(showBreadcrumbs(prefs));
+		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
 		
 		function showBreadcrumbs(prefs)
