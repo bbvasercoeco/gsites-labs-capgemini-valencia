@@ -129,7 +129,7 @@ function compareValues(v1, v2) {
 }
 
 function partition(begin, end, pivot, col){
-alert('paso2.');
+//alert('paso2.');
 	//var piv = array[pivot][col];
 	var piv = pivot;
 	
@@ -149,7 +149,7 @@ alert('paso2.');
 }
 
 function qsort(begin, end, col){
-alert('paso1');
+//alert('paso1');
 	if(end-1>begin) {
 		var pivot=begin+Math.floor(Math.random()*(end-begin));
 
