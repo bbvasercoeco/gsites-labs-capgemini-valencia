@@ -39,7 +39,7 @@
     
     
 function sortTable(id, col, rev) {
-
+alert('1');
   // Get the table or table section to sort.
   var tblEl = document.getElementById(id);
 
@@ -50,7 +50,7 @@ function sortTable(id, col, rev) {
     // Also, assume the team name column is initially sorted.
     tblEl.lastColumn = 1;
   }
-
+alert('2');
   // If this column has not been sorted before, set the initial sort direction.
   if (tblEl.reverseSort[col] == null)
     tblEl.reverseSort[col] = rev;
@@ -61,7 +61,7 @@ function sortTable(id, col, rev) {
 
   // Remember this column as the last one sorted.
   tblEl.lastColumn = col;
-
+alert('3');
   // Set the table display style to "none" - necessary for Netscape 6 
   // browsers.
   var oldDsply = tblEl.style.display;
@@ -118,7 +118,7 @@ function sortTable(id, col, rev) {
   // Restore the table's display style.
   tblEl.style.display = oldDsply;
 
-dibujaTabla();
+//dibujaTabla();
 
   return false;
 }
