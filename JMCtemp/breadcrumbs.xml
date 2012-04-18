@@ -72,7 +72,7 @@
                 prefs.set(variable,document.getElementById(variable).value);
 				alert(variable);
             }   
-            gadgets.window.adjustHeight();
+          //  gadgets.window.adjustHeight();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		 var prefs = new gadgets.Prefs();
 		
