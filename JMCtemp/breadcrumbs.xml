@@ -74,8 +74,8 @@
 		function showBreadcrumbs()
 		{
 			// Construct the breadcrumb string
-		    var rootSite = prefs.getString("VarrootSite");
-			// var  =  
+		    var auxiliar = prefs.getString("VarrootSite");
+			var rootSite = document.getElementById(auxiliar).value; 
 		    alert(rootSite);
 			var s ="";
 			var i,j,k = 0;
