@@ -105,7 +105,9 @@ function anteriores(){
 
 function ordenar(columna){
 		//quicksort();
-	datos[0][0]="31232";
+		
+	//data.getFormattedValue(_filaDescartadas, col);
+	data.setFormattedValue(0,0,'***');
 	alert('555: '+columna);
 	//pagActual = 1;
 	dibujaTabla();
