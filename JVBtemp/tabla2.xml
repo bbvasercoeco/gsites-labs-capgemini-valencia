@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="TablaPaginada"
+  description="Tabla cargada desde docs con paginacion y parametrizada."
+  author_affiliation="Capgemini">
+<Require feature="idi"/>
+<Require feature="locked-domain" />
+</ModulePrefs>
+  
+<UserPref name="_table_query_url" display_name="Data source url" required="true"/>
+<UserPref name="_filaDescartadas" default_value="0" display_name="Descartar primeras n filas:" required="true"/>
+<UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
+<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
+  
+<Content type="html"><![CDATA[
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+<div id="tablediv" style="overflow: auto;">
+<img src="http://www.google.com/ig/images/spinner.gif"/>
+</div>
+
+<style type="text/css">
+   
+
+   .tablaGeneral{
+      border-collapse:collapse;
+	  width:100%;
+   }
+   
+   .tablaGeneral th:hover{
+		cursor:pointer;
+   }
+
+   .tablaGeneral td{
+      padding-left: 5px;
+   }
+
+   .cabecera{
+       background: blue;
+       color: white;
+       font-size:18px;
+       font-family:Arial;
+   }
+
+   .fila{
+       background: white;
+       border-bottom:solid #E2E2E2;
+       height: 50px;
+   }
+
+   .filaDestacada{
+      background: #F3F3F3;
+      border-bottom:solid #E2E2E2;
+      height: 50px;
+   }
+
+   .filaUltima{
+      background: white;
+      height: 50px;
+      valign:center;
+      text-align: right;
+   }
+
+   
+
+</style>
+
+<script>
+
+var pagActual = 1;
+
+var gadgetHelper = null;
+var _filaDescartadas = 0;
+var _Col = 3;
+var numElePag = 8;
+var totPag = 1;
+var data;
+_IG_RegisterOnloadHandler(loadVisualizationAPI);
+
+function loadVisualizationAPI() {
+  google.load("visualization", "1");
+  google.setOnLoadCallback(sendQuery);
+}
+
+function sendQuery() {
+  var prefs = new _IG_Prefs(); // User preferences
+  _filaDescartadas = prefs.getInt("_filaDescartadas");
+  _Col = prefs.getInt("_Col");
+  numElePag = prefs.getInt("_NumElemPorPagina");
+  gadgetHelper = new google.visualization.GadgetHelper();
+  var query = gadgetHelper.createQueryFromPrefs(prefs);
+  query.send(handleQueryResponse);
+}
+
+function siguientes(){
+  pagActual++;
+  dibujaTabla();
+}
+
+function anteriores(){
+  pagActual--;
+  dibujaTabla();
+}
+
+function MiSwap(a, b){
+	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+
+var temp = data.getFormattedValue(a, col);
+		//temp = array[a][col];
+	data.setFormattedValue(a, col, data.getFormattedValue(b, col));
+		//array[a][col]=array[b][col];
+		data.setFormattedValue(b, col, temp);
+		//array[b][col]=tmp;
+	}
+}
+
+function compareValues(v1, v2) {
+  var f1, f2;
+  f1 = parseFloat(v1);
+  f2 = parseFloat(v2);
+  if (!isNaN(f1) && !isNaN(f2)) {
+    v1 = f1;
+    v2 = f2;
+  }
+  if (v1 <= v2)
+    return 1;
+  return 0;
+}
+
+function partition(begin, end, pivot, col){
+	//var piv = array[pivot][col];
+	var piv = pivot;
+	
+	MiSwap(pivot, end-1);
+	
+	var store=begin;
+	var x2;
+	for(x2=begin+1; x2<end-1; ++x2) {
+		if(compareValues(data.getFormattedValue(x2, col),data.getFormattedValue(piv, col)) == 1) {
+			MiSwap(store, x2);
+			++store;
+		}
+	}
+	MiSwap(end-1, store);
+
+	return store;
+}
+
+function qsort(begin, end, col){
+	if(end-1>begin) {
+		var pivot=begin+Math.floor(Math.random()*(end-begin));
+
+		pivot=partition(begin, end, pivot, col);
+		qsort(begin, pivot,col);
+		qsort(pivot+1, end,col);
+	}
+}
+
+function ordenar(columna){
+	alert('666: '+columna);
+	qsort(_filaDescartadas+1,data.getNumberOfRows(),columna);
+	pagActual = 1;
+data.setFormattedValue(_filaDescartadas+1, 1,'***');
+	dibujaTabla();
+}
+
+function dibujaTabla(){
+   var html = [];
+   
+   html.push('<table class="tablaGeneral" >');
+  
+   html.push('<tr class="cabecera">');
+   
+  for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+    var formattedValue = data.getFormattedValue(_filaDescartadas, col);
+    html.push('<th><span onclick="ordenar('+col+')">');
+       formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
+       html.push(formattedValue);
+	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
+    html.push('</span></th>');
+  }
+  html.push('</tr>');
+  var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
+  var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
+  for (var row = inicio; row < fin; row++) {
+    if((row % 2) == 0)
+       html.push('<tr class="filaDestacada">');
+    else
+       html.push('<tr class="fila">');
+      
+    for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+
+      var formattedValue = data.getFormattedValue(row, col);
+      formattedValue = escapeHtml(formattedValue);
+
+        //html.push('<span style="color:red; font-size:24pt; font-weight:bold;">');
+        html.push('<td>');
+           html.push(formattedValue);
+        html.push('</td>');
+    }
+    html.push('</tr>');
+  }
+  html.push('<tr class="filaUltima"><td colspan="'+_Col +'">');
+  if(data.getNumberOfRows() > numElePag){
+     if(pagActual > 1){
+	    html.push('<a href="#" onclick="anteriores();"><< Anteriores</a>&nbsp;|&nbsp;');
+     }
+     html.push('P&aacute;gina '+pagActual+' de '+totPag);
+     if(pagActual < totPag){
+        html.push(' | <a href="#" onclick="siguientes();">Siguientes >></a>');
+     }
+  }
+
+  html.push('</td></tr></table>');
+  var tableDiv = _gel('tablediv');
+  tableDiv.innerHTML = html.join('');
+  tableDiv.style.width = document.body.clientWidth + 'px';
+  tableDiv.style.height = document.body.clientHeight + 'px';
+}
+
+function handleQueryResponse(response) {
+  if (!gadgetHelper.validateResponse(response)) { return; }
+  data = response.getDataTable();
+  
+  totPag = Math.ceil(data.getNumberOfRows() / numElePag);
+  dibujaTabla();
+}
+
+function escapeHtml(text) {
+  if (text == null) {
+    return '';
+  }
+  return _hesc(text);
+}
+</script>
+]]>
+</Content>
+</Module>
