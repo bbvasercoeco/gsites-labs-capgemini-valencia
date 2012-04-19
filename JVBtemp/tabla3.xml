@@ -304,15 +304,14 @@ function handleQueryResponse(response) {
   
 	totPag = Math.ceil(data.getNumberOfRows() / numElePag);
 
-alert('1');
-	for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
+	for (var fil = _filaDescartadas; fil < data.getNumberOfRows(); fil++) {
   		var formattedValue = "";
 		formattedValue += data.getValue(fil, 0);
 		if(formattedValue  != ""){
-			matriz[fil - _filaDescartadas - 1] = new Array();
+			matriz[fil - _filaDescartadas] = new Array();
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 				var formattedValue = data.getValue(fil, col);
-				matriz[fil - _filaDescartadas - 1][col] = formattedValue;
+				matriz[fil - _filaDescartadas][col] = formattedValue;
 			}
 		}
 	}
@@ -341,14 +340,12 @@ function dibujaTabla2(){
         //html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
         html += '</a></th>';
   }
-alert('33');
+
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
-	var inicio = (pagActual - 1) * numElePag;
+	var inicio = (pagActual) * numElePag;
   	var fin = Math.min(inicio + numElePag, matriz.length);
-	//for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
-	//for (var fil = inicio; fil < fin; fil++) {
-	for (var fil = 0; fil < matriz.length; fil++){ 
+	for (var fil = inicio; fil < fin; fil++){ 
         //var formattedValue = "";
 		
 		//formattedValue += data.getFormattedValue(fil, 0);
@@ -366,6 +363,7 @@ alert('33');
             html += temString;
         }
   }
+  
 	html += '<tr class="filaUltima"><td colspan="'+_Col +'">';
 	if( matriz.length > numElePag){
     	if(pagActual > 1){
