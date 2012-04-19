@@ -275,12 +275,15 @@ function sendQuery() {
   var prefs = new _IG_Prefs(); // User preferences
   _filaDescartadas = prefs.getInt("_filaDescartadas");
   _Col = prefs.getInt("_Col");
+var urlTable = prefs.getString("_table_query_url");
   numElePag = prefs.getInt("_NumElemPorPagina");
   gadgetHelper = new google.visualization.GadgetHelper();
-  var query = gadgetHelper.createQueryFromPrefs(prefs);
+//  var query = gadgetHelper.createQueryFromPrefs(prefs);
   
+var opts = {dataType:'jsonp'};
+var query = new google.visualization.Query(urlTable, opts);
 query.setQuery("select * ");
-
+  
   query.send(handleQueryResponse);
 }
 
@@ -300,7 +303,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('gggg');
+ alert('fgggffdsaawerwerewewerrwewer');
   dibujaTablaHidden();
  alert('2');
 //  dibujaTabla();
