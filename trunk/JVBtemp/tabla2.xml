@@ -440,6 +440,8 @@ html.push('<tr>');
 function dibujaTabla2(){
     
 
+
+/*
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
 html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
@@ -449,7 +451,7 @@ html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\
     html.push('</a></th>');
   }
 
-
+*/
 
 
 
@@ -477,8 +479,8 @@ html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\
             html += 'SI SI que siiiii</a></th>';
 */
   
-  
-html += '<tbody id=\"offTblBdy\">';
+
+    html += '<tbody id=\"offTblBdy\">';
 
 /*
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
