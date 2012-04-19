@@ -43,12 +43,18 @@
 
 <script>
     
+	var pagActual = 1;
+	var gadgetHelper = null;
+	var _filaDescartadas = 0;
+	var _Col = 3;
+	var numElePag = 8;
+	var totPag = 1;
+	var matriz = new Array();
+	_IG_RegisterOnloadHandler(loadVisualizationAPI);
     
 
 //-----------------------------------------------------------------------------
-// sortTable(id, col, rev)
-//
-//  id  - ID of the TABLE, TBODY, THEAD or TFOOT element to be sorted.
+// sortTable( col, rev)
 //  col - Index of the column to sort, 0 = first column, 1 = second column,
 //        etc.
 //  rev - If true, the column is sorted in reverse (descending) order
@@ -122,6 +128,7 @@ function sortTable(col, rev) {
     }
   }
 
+	pagActual = 1;
 	dibujaTabla();
 	
 	return false;
@@ -188,15 +195,6 @@ function normalizeString(s) {
   return s;
 }
 
-
-	var pagActual = 1;
-	var gadgetHelper = null;
-	var _filaDescartadas = 0;
-	var _Col = 3;
-	var numElePag = 8;
-	var totPag = 1;
-	var matriz = new Array();
-	_IG_RegisterOnloadHandler(loadVisualizationAPI);
 
 function loadVisualizationAPI() {
   google.load("visualization", "1");
