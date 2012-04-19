@@ -311,7 +311,8 @@ function dibujaTabla(){
   html += '<thead><tr>';
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
-        var formattedValue = data.getFormattedValue(_filaDescartadas, col);
+        //var formattedValue = data.getFormattedValue(_filaDescartadas, col);
+var formattedValue = data.getValue(_filaDescartadas, col);
         formattedValue = escapeHtml(formattedValue);
         
         html += '<th>';
@@ -334,13 +335,15 @@ alert(inicio+'*'+fin)
     //for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
 alert('12');
         var formattedValue = "";
-        formattedValue += data.getFormattedValue(fil, 0);
+//formattedValue += data.getFormattedValue(fil, 0);
+formattedValue += data.getValue(fil, 0);
         if(formattedValue  != ""){
             html += '<tr>';
 alert('13');
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
                 
-                var formattedValue = data.getFormattedValue(fil, col);
+//                var formattedValue = data.getFormattedValue(fil, col);
+var formattedValue = data.getValue(fil, col);
                 formattedValue = escapeHtml(formattedValue);
                 
                 html += '<td>';
@@ -378,7 +381,8 @@ function dibujaTablaHidden(){
   html += '<thead><tr>';
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
-        var formattedValue = data.getFormattedValue(_filaDescartadas, col);
+        //var formattedValue = data.getFormattedValue(_filaDescartadas, col);
+var formattedValue = data.getValue(_filaDescartadas, col);
         formattedValue = escapeHtml(formattedValue);
         
         html += '<th>';
@@ -398,12 +402,14 @@ function dibujaTablaHidden(){
     for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
     
         var formattedValue = "";
-        formattedValue += data.getFormattedValue(fil, 0);
+        //formattedValue += data.getFormattedValue(fil, 0);
+formattedValue += data.getValue(fil, 0);
         if(formattedValue  != ""){
             html += '<tr>';
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
                 
-                var formattedValue = data.getFormattedValue(fil, col);
+                //var formattedValue = data.getFormattedValue(fil, col);
+var formattedValue = data.getValue(fil, col);
                 formattedValue = escapeHtml(formattedValue);
                 
                 html += '<td>';
