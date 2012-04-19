@@ -376,6 +376,9 @@ function handleQueryResponse(response) {
   data = response.getDataTable();
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
+  
+  alert('1');
+  
   dibujaTabla2();
   
   /*
@@ -438,6 +441,7 @@ html.push('<tr>');
 }
 
 function dibujaTabla2(){
+alert('2');
     /*
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
                 var formattedValue = data.getFormattedValue(_filaDescartadas, col);
