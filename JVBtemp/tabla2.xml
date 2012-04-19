@@ -53,7 +53,6 @@
 //-----------------------------------------------------------------------------
 
 function sortTable(id, col, rev) {
-alert('1');
   // Get the table or table section to sort.
   var tblEl = document.getElementById(id);
 
@@ -83,7 +82,6 @@ alert('1');
 
   // Sort the rows based on the content of the specified column using a
   // selection sort.
-alert('2');
   var tmpEl;
   var i, j;
   var minVal, minIdx;
@@ -122,16 +120,20 @@ alert('2');
       tblEl.insertBefore(tmpEl, tblEl.rows[i]);
     }
   }
-alert('3');
+  
+  
+  
   // Make it look pretty.
-//  makePretty(tblEl, col);
+alert('sin lo siguiente funciona');
+  makePretty(tblEl, col);
+alert('funciona');
+
+
 
   // Set team rankings.
 //  setRanks(tblEl, col, rev);
-alert('4');
   // Restore the table's display style.
   tblEl.style.display = oldDsply;
-alert('5');
   return false;
 }
 
@@ -302,7 +304,7 @@ function dibujaTabla2(){
         formattedValue = escapeHtml(formattedValue);
         
         html += '<th>';
-        var enlaceString='<a href=\"#\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\',1,true);\"';
+        var enlaceString='<a href=\"#\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\','+col+',true);\"';
         html += enlaceString;
         html +=  ' title=\"';
         html += formattedValue+'\">';
