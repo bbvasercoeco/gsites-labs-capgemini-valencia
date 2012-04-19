@@ -386,7 +386,6 @@ function dibujaTablaHidden(){
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
         //var formattedValue = data.getFormattedValue(_filaDescartadas, col);
 		var formattedValue = data.getValue(_filaDescartadas, col);
-alert(formattedValue);
         //formattedValue = escapeHtml(formattedValue);
         
         html += '<th>';
