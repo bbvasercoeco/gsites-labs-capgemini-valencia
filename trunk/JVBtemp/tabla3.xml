@@ -294,10 +294,11 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
   
-  dibujaTabla2();
+  dibujaTablaHidden();
+  dibujaTabla();
 }
 
-function dibujaTabla2(){
+function dibujaTablaHidden(){
   var html = " ";
   html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
   html += '<thead><tr>';
@@ -349,6 +350,57 @@ function dibujaTabla2(){
   
 }
 
+function dibujaTabla(){
+  var html = " ";
+  html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
+  html += '<thead><tr>';
+
+  for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+        var formattedValue = data.getFormattedValue(_filaDescartadas, col);
+        formattedValue = escapeHtml(formattedValue);
+        
+        html += '<th>';
+        var enlaceString='<a href=\"#\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\','+col+',true);\"';
+        html += enlaceString;
+        html +=  ' title=\"';
+        html += formattedValue+'\">';
+        html += formattedValue;
+        //html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
+        html += '</a></th>';
+  }
+
+ 
+    html += '</tr></thead>';
+    html += '<tbody id=\"offTblBdy\">';
+
+    for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
+    
+        var formattedValue = "";
+        formattedValue += data.getFormattedValue(fil, 0);
+        if(formattedValue  != ""){
+            html += '<tr>';
+            for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+                
+                var formattedValue = data.getFormattedValue(fil, col);
+                formattedValue = escapeHtml(formattedValue);
+                
+                html += '<td>';
+                    var temp = formattedValue;
+                    html += temp;
+                html += '</td>';
+                
+            }
+            html += '</tr>';
+        }
+  }
+ 
+  html += '</tbody></table>';
+  var tableDiv = _gel('tablediv');
+  tableDiv.innerHTML = html;
+  tableDiv.style.width = document.body.clientWidth + 'px';
+  tableDiv.style.height = document.body.clientHeight + 'px';
+  
+}
 
 
 
