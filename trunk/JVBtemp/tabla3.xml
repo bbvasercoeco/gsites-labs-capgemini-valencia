@@ -297,7 +297,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('retretres');
+ alert('tttwesadf');
   dibujaTablaHidden();
  alert('2');
   dibujaTabla();
@@ -335,15 +335,17 @@ alert(inicio+'*'+fin)
     //for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
 alert('12');
         var formattedValue = "";
-//formattedValue += data.getFormattedValue(fil, 0);
-formattedValue += data.getValue(fil, 0);
+		
+		//formattedValue += data.getFormattedValue(fil, 0);
+		formattedValue += data.getValue(fil, 0);
+		
         if(formattedValue  != ""){
             html += '<tr>';
 alert('13');
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
                 
-//                var formattedValue = data.getFormattedValue(fil, col);
-var formattedValue = data.getValue(fil, col);
+				//var formattedValue = data.getFormattedValue(fil, col);
+				var formattedValue = data.getValue(fil, col);
                 formattedValue = escapeHtml(formattedValue);
 alert('4');
                 html += '<td>';
@@ -352,7 +354,9 @@ alert('4');
                 html += '</td>';
                 
             }
-            html += '</tr>';
+alert('antes15');
+			var temString = '</tr>';
+            html += temString;
 alert('15');
         }
   }
