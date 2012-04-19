@@ -297,7 +297,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('tt1');
+ alert('yyyy1');
   dibujaTablaHidden();
  alert('2');
   dibujaTabla();
@@ -326,17 +326,18 @@ function dibujaTabla(){
 
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
-alert('5');
 	var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
   	var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
-alert('6');  
+alert('6');
+alert(inicio+'*'+fin)
 	for (var fil = inicio; fil < fin; fill++) {
     //for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
-    
+alert('12');
         var formattedValue = "";
         formattedValue += data.getFormattedValue(fil, 0);
         if(formattedValue  != ""){
             html += '<tr>';
+alert('13');
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
                 
                 var formattedValue = data.getFormattedValue(fil, col);
@@ -349,6 +350,7 @@ alert('6');
                 
             }
             html += '</tr>';
+alert('15');
         }
   }
  alert('7');  
@@ -363,13 +365,11 @@ alert('6');
         	html += ' | <a href="#" onclick="siguientes();">Siguientes >></a>';
 		}
   }
- alert('8');
   html += '</tbody></table>';
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML += html;
   tableDiv.style.width = document.body.clientWidth + 'px';
   tableDiv.style.height = document.body.clientHeight + 'px';
- alert('9');
 }
 
 function dibujaTablaHidden(){
