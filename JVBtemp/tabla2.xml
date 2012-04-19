@@ -124,10 +124,10 @@ alert('2');
   }
 alert('3');
   // Make it look pretty.
-  makePretty(tblEl, col);
+//  makePretty(tblEl, col);
 
   // Set team rankings.
-  setRanks(tblEl, col, rev);
+//  setRanks(tblEl, col, rev);
 alert('4');
   // Restore the table's display style.
   tblEl.style.display = oldDsply;
