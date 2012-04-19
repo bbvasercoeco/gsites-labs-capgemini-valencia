@@ -295,9 +295,12 @@ function handleQueryResponse(response) {
   data = response.getDataTable();
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
-  
+ 
+ alert('1');
   dibujaTablaHidden();
+ alert('2');
   dibujaTabla();
+ alert('3');
 }
 
 function dibujaTabla(){
