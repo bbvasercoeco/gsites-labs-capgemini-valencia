@@ -297,7 +297,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('yyyy1');
+ alert('retretres');
   dibujaTablaHidden();
  alert('2');
   dibujaTabla();
@@ -345,7 +345,7 @@ alert('13');
 //                var formattedValue = data.getFormattedValue(fil, col);
 var formattedValue = data.getValue(fil, col);
                 formattedValue = escapeHtml(formattedValue);
-                
+alert('4');
                 html += '<td>';
                     var temp = formattedValue;
                     html += temp;
