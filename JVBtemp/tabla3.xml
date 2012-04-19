@@ -246,6 +246,27 @@ function handleQueryResponse(response) {
   
 }
 
+function Ordenar(campo) 
+{
+	position = new Array();
+	newRow = new Array();
+	jQuery.each(matriz, function(key, row) {
+			regis = row[campo];
+			position[key]  = [regis, key];
+			newRow[key] = matriz[key];
+	});
+
+	position.sort();
+	
+//	returnArray = new Array();
+	jQuery.each(position, function(key, row) {
+			pos = position[key][1];
+			matriz[key] = newRow[pos];
+	});				
+	
+dibujaTabla();
+}
+
 function dibujaTabla(){
 
   var html = " ";
@@ -254,7 +275,7 @@ function dibujaTabla(){
 
 	for (var col = 0; col < matriz[0].length; col++){
     	html += '<th>';
-        var enlaceString='<a href=\"#\" onclick=\"javascript:this.blur(); sortTable('+col+',true);\"';
+        var enlaceString='<a href=\"#\" onclick=\"javascript:this.blur(); Ordenar('+col+');\"';
         html += enlaceString;
         html +=  ' title=\"';
         html += escapeHtml(matriz[0][col]);
