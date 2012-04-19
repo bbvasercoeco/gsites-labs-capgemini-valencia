@@ -307,9 +307,13 @@ function handleQueryResponse(response) {
 alert('1');
 	for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
   		var formattedValue = "";
+alert('2');
 		formattedValue += data.getValue(fil, 0);
+alert('3');
 		if(formattedValue  != ""){
+alert('4');
 			matriz[fil - _filaDescartadas - 1] = new Array();
+alert('5');
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 				var formattedValue = data.getValue(fil, col);
 				matriz[fil - _filaDescartadas - 1][col] = formattedValue;
