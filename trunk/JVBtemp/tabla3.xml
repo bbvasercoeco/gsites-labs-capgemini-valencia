@@ -304,7 +304,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('xx');
+ alert('fff');
   dibujaTablaHidden();
  alert('2');
   dibujaTabla();
@@ -336,11 +336,8 @@ var formattedValue = data.getValue(_filaDescartadas, col);
     html += '<tbody id=\"offTblBdy\">';
 	var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
   	var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
-alert('6');
-alert(inicio+'*'+fin)
 	//for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
-	for (var fil = inicio; fil < fin; fill++) {
-alert('12');
+	for (var fil = inicio; fil < fin; fil++) {
         var formattedValue = "";
 		
 		//formattedValue += data.getFormattedValue(fil, 0);
@@ -348,27 +345,21 @@ alert('12');
 		
         if(formattedValue  != ""){
             html += '<tr>';
-alert('13');
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
                 
 				//var formattedValue = data.getFormattedValue(fil, col);
 				var formattedValue = data.getValue(fil, col);
                 formattedValue = escapeHtml(formattedValue);
-alert('4');
                 html += '<td>';
                     var temp = formattedValue;
                     html += temp;
                 html += '</td>';
                 
             }
-alert('antes15');
 			var temString = '</tr>';
             html += temString;
-alert('15');
         }
-alert('16');
   }
-alert('7');
 	html += '<tr class="filaUltima"><td colspan="'+_Col +'">';
 	if(data.getNumberOfRows() > numElePag){
     	if(pagActual > 1){
