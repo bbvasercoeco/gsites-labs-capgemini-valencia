@@ -51,6 +51,8 @@
 	var numElePag = 8;
 	var totPag = 1;
 	var matriz = new Array();
+	var ultimaColumnaOrdenada = -1;
+	var ultimaColumnaOrder = true;
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
     
 
@@ -247,8 +249,16 @@ function handleQueryResponse(response) {
   
 }
 
-function Ordenar(campo) 
-{
+function Ordenar(campo) {
+
+	if(ultimaColumnaOrdenada == col){
+		ultimaColumnaOrder = !ultimaColumnaOrder;
+	}
+	else{
+		ultimaColumnaOrdenada = col;
+		ultimaColumnaOrder = true;
+	}
+
 	position = new Array();
 	newRow = new Array();
 	jQuery.each(matriz, function(key, row) {
@@ -257,19 +267,21 @@ function Ordenar(campo)
 			newRow[key] = matriz[key];
 	});
 
-	position.sort();
+	if(ultimaColumnaOrder == true)
+		position.sort();
+	else
+		position.rsort();
 	
-//	returnArray = new Array();
 	jQuery.each(position, function(key, row) {
 			pos = position[key][1];
 			matriz[key] = newRow[pos];
 	});				
 	
-dibujaTabla();
+	dibujaTabla();
 }
 
 function dibujaTabla(){
-alert('1');
+alert('2');
   var html = " ";
   html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
   html += '<thead><tr>';
