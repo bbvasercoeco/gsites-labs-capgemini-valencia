@@ -466,6 +466,19 @@ html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
 
+
+
+
+
+
+html += '<tr><td>';
+
+  html += '</td></tr></tbody></table>';
+  var tableDiv = _gel('tablediv');
+  tableDiv.innerHTML = html;
+  tableDiv.style.width = document.body.clientWidth + 'px';
+  tableDiv.style.height = document.body.clientHeight + 'px';
+  
 /*
             // var enlaceString='<a href=\"\" onclick=\"javascript:alert(\'yaaaa\');\" >';
             
@@ -537,13 +550,7 @@ html.push('<tr>');
   }
 */
 
-html += '<tr><td>';
 
-  html += '</td></tr></tbody></table>';
-  var tableDiv = _gel('tablediv');
-  tableDiv.innerHTML = html;
-  tableDiv.style.width = document.body.clientWidth + 'px';
-  tableDiv.style.height = document.body.clientHeight + 'px';
 }
 
 
