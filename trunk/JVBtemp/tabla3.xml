@@ -33,6 +33,8 @@
         tr {background: white; border-bottom: solid #E2E2E2; height: 50px;}
 	tr.alternateRow {background: #F3F3F3; border-bottom:solid #E2E2E2; height: 50px;}
         
+	.filaUltima{background: white; height: 50px; valign:center; text-align: right;}
+		
 	/*td.sortedColumn {background-color: #f0f0f0;}
 	th.sortedColumn { background-color: #b0b0b0;}
 	tr.alternateRow td.sortedColumn { background-color: #d0d0d0; } */
@@ -321,7 +323,11 @@ function dibujaTabla(){
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
 
-    for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
+	var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
+  	var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
+  
+	for (var fil = inicio; fil < fin; fill++) {
+    //for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
     
         var formattedValue = "";
         formattedValue += data.getFormattedValue(fil, 0);
@@ -340,6 +346,18 @@ function dibujaTabla(){
             }
             html += '</tr>';
         }
+  }
+  
+	html += '<tr class="filaUltima"><td colspan="'+_Col +'">';
+	if(data.getNumberOfRows() > numElePag){
+    	if(pagActual > 1){
+	    	html += '<a href="#" onclick="anteriores();"><< Anteriores</a>&nbsp;|&nbsp;';
+     	}
+     
+	 	html += 'P&aacute;gina '+pagActual+' de '+totPag;
+		if(pagActual < totPag){
+        	html += ' | <a href="#" onclick="siguientes();">Siguientes >></a>';
+		}
   }
  
   html += '</tbody></table>';
