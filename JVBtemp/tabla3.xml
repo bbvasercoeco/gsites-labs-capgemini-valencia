@@ -304,11 +304,9 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('fff');
-  dibujaTablaHidden();
- alert('2');
   dibujaTabla();
- alert('3');
+  dibujaTablaHidden();
+  
 }
 
 function dibujaTabla(){
