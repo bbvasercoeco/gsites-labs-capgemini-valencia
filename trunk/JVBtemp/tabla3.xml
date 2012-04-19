@@ -297,7 +297,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('tttwesadf');
+ alert('gggeeee');
   dibujaTablaHidden();
  alert('2');
   dibujaTabla();
@@ -331,8 +331,8 @@ var formattedValue = data.getValue(_filaDescartadas, col);
   	var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
 alert('6');
 alert(inicio+'*'+fin)
+	//for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
 	for (var fil = inicio; fil < fin; fill++) {
-    //for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
 alert('12');
         var formattedValue = "";
 		
@@ -360,7 +360,7 @@ alert('antes15');
 alert('15');
         }
   }
- alert('7');  
+alert('7');
 	html += '<tr class="filaUltima"><td colspan="'+_Col +'">';
 	if(data.getNumberOfRows() > numElePag){
     	if(pagActual > 1){
