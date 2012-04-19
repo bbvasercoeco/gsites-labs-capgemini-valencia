@@ -456,7 +456,7 @@ function dibujaTabla2(){
 alert('5');
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
         var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-        formattedValue = escapeHtml(formattedValue');
+        formattedValue = escapeHtml(formattedValue);
         
         html += '<th>';
         var enlaceString='<a href=\"\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\',1,true);\"';
