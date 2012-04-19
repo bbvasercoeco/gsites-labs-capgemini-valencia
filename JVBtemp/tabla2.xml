@@ -127,9 +127,9 @@ function sortTable(id, col, rev) {
   
   
   // Make it look pretty.
-alert('sin lo siguiente funciona');
+//alert('sin lo siguiente funciona');
   makePretty(tblEl, col);
-alert('funciona');
+//alert('funciona');
 
 
 
