@@ -381,7 +381,7 @@ alert('7');
 
 function dibujaTablaHidden(){
   var html = " ";
-  html += '<table id=\"tablaOculta\">';
+  html += '<table id=\"tablaOculta2\">';
   html += '<thead><tr>';
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
