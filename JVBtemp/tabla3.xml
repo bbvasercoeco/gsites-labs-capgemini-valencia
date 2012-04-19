@@ -380,7 +380,7 @@ var formattedValue = data.getValue(_filaDescartadas, col);
 
 function dibujaTablaHidden(){
   var html = " ";
-  html += '<table id=\"tablaOculta2\">';
+  html += '<table id=\"tablaOculta\">';
   html += '<thead><tr>';
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
