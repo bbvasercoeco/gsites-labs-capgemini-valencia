@@ -370,15 +370,13 @@ html += '<tr><td>';
   tableDiv.style.height = document.body.clientHeight + 'px';
 }
 
-function lala(){
-}
 
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   data = response.getDataTable();
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
-  dibujaTabla();
+  dibujaTabla2();
   
   /*
    var html = [];
@@ -387,8 +385,7 @@ function handleQueryResponse(response) {
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
     var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-//html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
-//html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"perico\">');
+html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
        formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
        html.push(formattedValue);
 	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
@@ -439,6 +436,117 @@ html.push('<tr>');
   tableDiv.style.height = document.body.clientHeight + 'px';
 */
 }
+
+function dibujaTabla2(){
+    
+
+  for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+    var formattedValue = data.getFormattedValue(_filaDescartadas, col);
+html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
+       formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
+       html.push(formattedValue);
+	   html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
+    html.push('</a></th>');
+  }
+
+
+
+
+
+  var html = " ";
+  html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
+  html += '<thead><tr>';
+  for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+        var enlaceString='<a href=\"\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\',1,true);\" >';
+        html += enlaceString;
+  }
+  html += '</tr></thead>';
+
+  
+
+/*
+            // var enlaceString='<a href=\"\" onclick=\"javascript:alert(\'yaaaa\');\" >';
+            
+            /*html += '<th><a href=\"\"'; 
+            html += 'onclick=\"this.blur();'; 
+            html += 'return'; 
+            html += ' sortTable(';
+            html += '\" \" );'; 
+            html += '\"';
+            html += '>';*/
+            html += 'SI SI que siiiii</a></th>';
+*/
+  
+  
+html += '<tbody id=\"offTblBdy\">';
+
+/*
+  for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+    var formattedValue = data.getFormattedValue(_filaDescartadas, col);
+
+html += '<th><a href=\"\"'; 
+html += 'onclick=\"this.blur();'; 
+html += 'return'; 
+html += ' sortTable(';
+html += '\" \" );'; 
+html += '\"';
+
+html += '>';
+ //      formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
+   //    html += formattedValue;
+//	   html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
+    html += 'enlaceeee</a></th>';
+  }
+  html += '</tr></thead>';
+  */
+  
+html += '<tbody id=\"offTblBdy\">';
+/*
+  var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
+  var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
+  for (var row = inicio; row < fin; row++) {
+    //if((row % 2) == 0)
+      // html.push('<tr class="filaDestacada">');
+    //else
+//       html.push('<tr class="fila">');
+     
+html.push('<tr>');
+
+    for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+
+      var formattedValue = data.getFormattedValue(row, col);
+      formattedValue = escapeHtml(formattedValue);
+
+        //html.push('<span style="color:red; font-size:24pt; font-weight:bold;">');
+        html.push('<td>');
+           html.push(formattedValue);
+        html.push('</td>');
+    }
+    html.push('</tr>');
+  }
+  html.push('<tr class="filaUltima"><td colspan="'+_Col +'">');
+  if(data.getNumberOfRows() > numElePag){
+     if(pagActual > 1){
+	    html.push('<a href="#" onclick="anteriores();"><< Anteriores</a>&nbsp;|&nbsp;');
+     }
+     html.push('P&aacute;gina '+pagActual+' de '+totPag);
+     if(pagActual < totPag){
+        html.push(' | <a href="#" onclick="siguientes();">Siguientes >></a>');
+     }
+  }
+*/
+
+html += '<tr><td>';
+
+  html += '</td></tr></tbody></table>';
+  var tableDiv = _gel('tablediv');
+  tableDiv.innerHTML = html;
+  tableDiv.style.width = document.body.clientWidth + 'px';
+  tableDiv.style.height = document.body.clientHeight + 'px';
+}
+
+
+
 
 function escapeHtml(text) {
   if (text == null) {
