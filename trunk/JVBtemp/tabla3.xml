@@ -263,7 +263,7 @@ function makePretty(tblEl, col) {
 	var _Col = 3;
 	var numElePag = 8;
 	var totPag = 1;
-	var data;
+	var matriz = new Array();
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
 
 function loadVisualizationAPI() {
@@ -300,11 +300,24 @@ function anteriores(){
 
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
-  data = response.getDataTable();
+  var data = response.getDataTable();
   
-  totPag = Math.ceil(data.getNumberOfRows() / numElePag);
- 
+	totPag = Math.ceil(data.getNumberOfRows() / numElePag);
+
 alert('1');
+	for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
+  		var formattedValue = "";
+		formattedValue += data.getValue(fil, 0);
+		if(formattedValue  != ""){
+			matriz[fil - _filaDescartadas - 1] = new Array();
+            for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+				var formattedValue = data.getValue(fil, col);
+				matriz[fil - _filaDescartadas - 1][col] = formattedValue;
+			}
+		}
+	}
+ 
+alert('2');
   dibujaTabla();
 //  dibujaTablaHidden();
   
@@ -372,7 +385,7 @@ var formattedValue = data.getValue(_filaDescartadas, col);
   }
   html += '</tbody></table>';
   var tableDiv = _gel('tablediv');
-  tableDiv.innerHTML += html;
+  tableDiv.innerHTML = html;
   tableDiv.style.width = document.body.clientWidth + 'px';
   tableDiv.style.height = document.body.clientHeight + 'px';
 }
