@@ -322,7 +322,7 @@ alert('5');
 	}
  
 alert('2');
-  dibujaTabla();
+//  dibujaTabla();
 //  dibujaTablaHidden();
   
 }
