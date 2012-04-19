@@ -281,7 +281,7 @@ var urlTable = prefs.getString("_table_query_url");
 //  var query = gadgetHelper.createQueryFromPrefs(prefs);
   
 //var opts = {dataType:'jsonp'};
-var opts = {out:'csv'};
+var opts = {dataType:'csv'};
 var query = new google.visualization.Query(urlTable, opts);
 query.setQuery("select * ");
   
@@ -304,7 +304,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('tt');
+ alert('xx');
   dibujaTablaHidden();
  alert('2');
 //  dibujaTabla();
