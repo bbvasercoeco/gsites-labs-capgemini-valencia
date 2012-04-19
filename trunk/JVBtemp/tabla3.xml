@@ -82,13 +82,7 @@ function sortTable(col, rev) {
   // Remember this column as the last one sorted.
   matriz.lastColumn = col;
 
-  // Set the table display style to "none" - necessary for Netscape 6 
-  // browsers.
-  var oldDsply = matriz.style.display;
-  matriz.style.display = "none";
-
-  // Sort the rows based on the content of the specified column using a
-  // selection sort.
+  // Sort the rows based on the content of the specified column using a selection sort.
   var tmpEl;
   var i, j;
   var minVal, minIdx;
@@ -248,7 +242,7 @@ function handleQueryResponse(response) {
  
 	dibujaTabla();
 	//dibujaTabla2();
-	//  dibujaTablaHidden();
+	//dibujaTablaHidden();
   
 }
 
