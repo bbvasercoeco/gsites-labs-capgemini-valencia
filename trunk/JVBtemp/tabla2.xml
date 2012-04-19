@@ -439,7 +439,6 @@ html.push('<tr>');
 }
 
 function dibujaTabla2(){
-alert('2');
     /*
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
                 var formattedValue = data.getFormattedValue(_filaDescartadas, col);
@@ -456,8 +455,10 @@ alert('2');
   html += '<thead><tr>';
 alert('3');
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+        html += '<td>';
         var enlaceString='<a href=\"\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\',1,true);\" >';
         html += enlaceString;
+        html += '</a></td>';
   }
 alert('4');
  
@@ -465,9 +466,7 @@ alert('4');
     html += '<tbody id=\"offTblBdy\">';
 
     html += '<tr><td>';
-alert('5');
     html += '</td></tr></tbody></table>';
-alert('6');
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html;
   tableDiv.style.width = document.body.clientWidth + 'px';
