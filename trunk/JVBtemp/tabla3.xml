@@ -305,6 +305,7 @@ function handleQueryResponse(response) {
 }
 
 function dibujaTabla(){
+alert('5');
   var html = " ";
   html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
   html += '<thead><tr>';
@@ -323,7 +324,7 @@ function dibujaTabla(){
         html += '</a></th>';
   }
 
- 
+ alert('6');
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
 
