@@ -462,9 +462,9 @@ html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\
         var enlaceString='<a href=\"\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\',1,true);\" >';
         html += enlaceString;
   }
-  html += '</tr></thead>';
-
-  
+ 
+    html += '</tr></thead>';
+    html += '<tbody id=\"offTblBdy\">';
 
 /*
             // var enlaceString='<a href=\"\" onclick=\"javascript:alert(\'yaaaa\');\" >';
@@ -480,7 +480,7 @@ html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\
 */
   
 
-    html += '<tbody id=\"offTblBdy\">';
+    
 
 /*
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
