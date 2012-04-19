@@ -472,11 +472,11 @@ function dibujaTabla2(){
                 html += '<tr class="fila">';
 */
 
-    for (var fil = 0; fil < data.getNumberOfRows(); fil++) {
+    for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
         html += '<tr>';
         for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
             
-            var formattedValue = data.getFormattedValue(row, col);
+            var formattedValue = data.getFormattedValue(fil, col);
             formattedValue = escapeHtml(formattedValue);
             
             html += '<td>';
