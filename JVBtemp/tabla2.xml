@@ -439,21 +439,10 @@ html.push('<tr>');
 }
 
 function dibujaTabla2(){
-    /*
-            for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
-                var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-                html.push('<th><a href=\"\" onclick=\"this.blur(); return sortTable(\"offTblBdy\",1,true);\" title=\"fsfasdfsd'+formattedValue+'\">');
-                formattedValue = escapeHtml(formattedValue+'&nbsp;&nbsp;&nbsp;&nbsp;');
-                    html.push(formattedValue);
-                    html.push('<img src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png"/>');
-                html.push('</a></th>');
-            }
-    */
-
   var html = " ";
   html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
   html += '<thead><tr>';
-alert('3');
+
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
         var formattedValue = data.getFormattedValue(_filaDescartadas, col);
         formattedValue = escapeHtml(formattedValue);
@@ -464,16 +453,56 @@ alert('3');
         html +=  ' title=\"';
         html += formattedValue+'\">';
         html += formattedValue;
-        html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
+        //html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
         html += '</a></th>';
   }
-alert('4');
+
  
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
 
-    html += '<tr><td>';
-    html += '</td></tr></tbody></table>';
+/*
+        var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
+        var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
+
+        for (var row = inicio; row < fin; row++) {
+            if((row % 2) == 0)
+                html += '<tr class="filaDestacada">';
+            else
+                html += '<tr class="fila">';
+*/
+
+    for (var fil = 0; fil < data.getNumberOfRows(); fil++) {
+        html += '<tr>';
+        for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+            
+            var formattedValue = data.getFormattedValue(row, col);
+            formattedValue = escapeHtml(formattedValue);
+            
+            html += '<td>';
+                var temp = formattedValue;
+                html += temp;
+            html += '</td>';
+            
+        }
+        html += '</tr>';
+  }
+ 
+ /* 
+  html.push('<tr class="filaUltima"><td colspan="'+_Col +'">');
+  if(data.getNumberOfRows() > numElePag){
+     if(pagActual > 1){
+	    html.push('<a href="#" onclick="anteriores();"><< Anteriores</a>&nbsp;|&nbsp;');
+     }
+     html.push('P&aacute;gina '+pagActual+' de '+totPag);
+     if(pagActual < totPag){
+        html.push(' | <a href="#" onclick="siguientes();">Siguientes >></a>');
+     }
+  }
+
+*/
+  
+  html += '</tbody></table>';
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html;
   tableDiv.style.width = document.body.clientWidth + 'px';
