@@ -500,10 +500,9 @@ html += '>';
     html += 'enlaceeee</a></th>';
   }
   html += '</tr></thead>';
-  */
-  
-html += '<tbody id=\"offTblBdy\">';
-/*
+
+
+
   var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
   var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
   for (var row = inicio; row < fin; row++) {
