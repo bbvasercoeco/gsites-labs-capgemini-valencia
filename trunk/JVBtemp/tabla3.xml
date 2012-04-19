@@ -297,7 +297,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('ee1');
+ alert('tt1');
   dibujaTablaHidden();
  alert('2');
   dibujaTabla();
@@ -305,7 +305,7 @@ function handleQueryResponse(response) {
 }
 
 function dibujaTabla(){
-alert('5');
+
   var html = " ";
   html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
   html += '<thead><tr>';
@@ -324,13 +324,12 @@ alert('5');
         html += '</a></th>';
   }
 
- alert('6');
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
-
+alert('5');
 	var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
   	var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
-  
+alert('6');  
 	for (var fil = inicio; fil < fin; fill++) {
     //for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
     
@@ -352,7 +351,7 @@ alert('5');
             html += '</tr>';
         }
   }
-  
+ alert('7');  
 	html += '<tr class="filaUltima"><td colspan="'+_Col +'">';
 	if(data.getNumberOfRows() > numElePag){
     	if(pagActual > 1){
@@ -364,18 +363,18 @@ alert('5');
         	html += ' | <a href="#" onclick="siguientes();">Siguientes >></a>';
 		}
   }
- 
+ alert('8');
   html += '</tbody></table>';
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML += html;
   tableDiv.style.width = document.body.clientWidth + 'px';
   tableDiv.style.height = document.body.clientHeight + 'px';
-  
+ alert('9');
 }
 
 function dibujaTablaHidden(){
   var html = " ";
-  html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"tablaOculta\">';
+  html += '<table id=\"tablaOculta\">';
   html += '<thead><tr>';
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
