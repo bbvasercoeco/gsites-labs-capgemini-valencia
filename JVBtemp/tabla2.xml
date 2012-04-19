@@ -33,9 +33,9 @@
         tr {background: white; border-bottom: solid #E2E2E2; height: 50px;}
 	tr.alternateRow {background: #F3F3F3; border-bottom:solid #E2E2E2; height: 50px;}
         
-	td.sortedColumn {background-color: #f0f0f0;}
+	/*td.sortedColumn {background-color: #f0f0f0;}
 	th.sortedColumn { background-color: #b0b0b0;}
-	tr.alternateRow td.sortedColumn { background-color: #d0d0d0; } 
+	tr.alternateRow td.sortedColumn { background-color: #d0d0d0; } */
 </style>
 
 <script>
@@ -321,19 +321,24 @@ function dibujaTabla2(){
     html += '<tbody id=\"offTblBdy\">';
 
     for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
-        html += '<tr>';
-        for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
-            
-            var formattedValue = data.getFormattedValue(fil, col);
-            formattedValue = escapeHtml(formattedValue);
-            
-            html += '<td>';
-                var temp = formattedValue;
-                html += temp;
-            html += '</td>';
-            
+    
+        var formattedValue = "";
+        formattedValue += data.getFormattedValue(fil, 0);
+        if(formattedValue  != ""){
+            html += '<tr>';
+            for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+                
+                var formattedValue = data.getFormattedValue(fil, col);
+                formattedValue = escapeHtml(formattedValue);
+                
+                html += '<td>';
+                    var temp = formattedValue;
+                    html += temp;
+                html += '</td>';
+                
+            }
+            html += '</tr>';
         }
-        html += '</tr>';
   }
  
   html += '</tbody></table>';
