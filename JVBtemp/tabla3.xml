@@ -330,14 +330,8 @@ function dibujaTabla2(){
   html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
   html += '<thead><tr>';
 
-//  for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
-alert('11');
-  for (var col = 0; col < matriz[0].length; col++){
-        //var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-//var formattedValue = data.getValue(_filaDescartadas, col);
-//        formattedValue = escapeHtml(formattedValue);
-alert('22');
-        html += '<th>';
+	for (var col = 0; col < matriz[0].length; col++){
+    	html += '<th>';
         var enlaceString='<a href=\"#\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\','+col+',true);\"';
         html += enlaceString;
         html +=  ' title=\"';
@@ -350,8 +344,8 @@ alert('22');
 alert('33');
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
-	var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
-  	var fin = Math.min(inicio + numElePag,data.getNumberOfRows());
+	var inicio = (pagActual - 1) * numElePag;
+  	var fin = Math.min(inicio + numElePag, matriz.length);
 	//for (var fil = _filaDescartadas+1; fil < data.getNumberOfRows(); fil++) {
 	//for (var fil = inicio; fil < fin; fil++) {
 	for (var fil = 0; fil < matriz.length; fil++){ 
@@ -362,13 +356,8 @@ alert('33');
 		
         if(matriz[fil][col] != ""){
             html += '<tr>';
-            //for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
             for (var col = 0; col < matriz[0].length; col++){ 
-				//var formattedValue = data.getFormattedValue(fil, col);
-				//var formattedValue = data.getValue(fil, col);
-                //formattedValue = escapeHtml(formattedValue);
                 html += '<td>';
-                //    var temp = formattedValue;
                     html += matriz[fil][col];
                 html += '</td>';
                 
@@ -378,7 +367,7 @@ alert('33');
         }
   }
 	html += '<tr class="filaUltima"><td colspan="'+_Col +'">';
-	if(data.getNumberOfRows() > numElePag){
+	if( matriz.length > numElePag){
     	if(pagActual > 1){
 	    	html += '<a href="#" onclick="anteriores();"><< Anteriores</a>&nbsp;|&nbsp;';
      	}
