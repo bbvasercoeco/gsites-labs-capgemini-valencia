@@ -317,7 +317,7 @@ alert('1');
 		}
 	}
  
-alert(matriz[2][0]);
+alert(matriz[0][0]);
 dibujaTabla2();
 //  dibujaTabla();
 //  dibujaTablaHidden();
@@ -331,11 +331,12 @@ function dibujaTabla2(){
   html += '<thead><tr>';
 
 //  for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
+alert('11');
   for (var col = 0; col < matriz[0].length; col++){
         //var formattedValue = data.getFormattedValue(_filaDescartadas, col);
 //var formattedValue = data.getValue(_filaDescartadas, col);
 //        formattedValue = escapeHtml(formattedValue);
-        
+alert('22');
         html += '<th>';
         var enlaceString='<a href=\"#\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\','+col+',true);\"';
         html += enlaceString;
@@ -346,7 +347,7 @@ function dibujaTabla2(){
         //html += '<img src=\"http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JVBtemp/img/t.png\"/>';
         html += '</a></th>';
   }
-
+alert('33');
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
 	var inicio = ((_filaDescartadas + 1) + ((pagActual - 1) * numElePag));
