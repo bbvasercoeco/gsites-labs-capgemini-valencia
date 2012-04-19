@@ -377,8 +377,6 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
   
-  alert('1');
-  
   dibujaTabla2();
   
   /*
@@ -456,18 +454,20 @@ alert('2');
   var html = " ";
   html += '<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\">';
   html += '<thead><tr>';
+alert('3');
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
         var enlaceString='<a href=\"\" onclick=\"javascript:this.blur(); return sortTable(\'offTblBdy\',1,true);\" >';
         html += enlaceString;
   }
+alert('4');
  
     html += '</tr></thead>';
     html += '<tbody id=\"offTblBdy\">';
 
     html += '<tr><td>';
-
+alert('5');
     html += '</td></tr></tbody></table>';
-    
+alert('6');
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html;
   tableDiv.style.width = document.body.clientWidth + 'px';
