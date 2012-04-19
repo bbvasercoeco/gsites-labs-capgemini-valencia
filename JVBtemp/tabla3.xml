@@ -280,7 +280,8 @@ var urlTable = prefs.getString("_table_query_url");
   gadgetHelper = new google.visualization.GadgetHelper();
 //  var query = gadgetHelper.createQueryFromPrefs(prefs);
   
-var opts = {dataType:'jsonp'};
+//var opts = {dataType:'jsonp'};
+var opts = {out:'csv'};
 var query = new google.visualization.Query(urlTable, opts);
 query.setQuery("select * ");
   
