@@ -297,7 +297,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('gggeeee');
+ alert('qqqqqqqqqq');
   dibujaTablaHidden();
  alert('2');
   dibujaTabla();
@@ -359,6 +359,7 @@ alert('antes15');
             html += temString;
 alert('15');
         }
+alert('16');
   }
 alert('7');
 	html += '<tr class="filaUltima"><td colspan="'+_Col +'">';
@@ -387,7 +388,7 @@ function dibujaTablaHidden(){
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
         //var formattedValue = data.getFormattedValue(_filaDescartadas, col);
 var formattedValue = data.getValue(_filaDescartadas, col);
-        formattedValue = escapeHtml(formattedValue);
+        //formattedValue = escapeHtml(formattedValue);
         
         html += '<th>';
         var enlaceString='<a href=\"#\" onclick=\"javascript:this.blur(); return sortTable(\'tablaHidden\','+col+',true);\"';
