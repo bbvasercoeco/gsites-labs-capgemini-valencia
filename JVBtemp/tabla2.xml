@@ -463,6 +463,7 @@ function dibujaTabla2(){
     html += '<tr><td>';
 
     html += '</td></tr></tbody></table>';
+    
   var tableDiv = _gel('tablediv');
   tableDiv.innerHTML = html;
   tableDiv.style.width = document.body.clientWidth + 'px';
