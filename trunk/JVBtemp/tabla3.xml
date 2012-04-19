@@ -278,6 +278,9 @@ function sendQuery() {
   numElePag = prefs.getInt("_NumElemPorPagina");
   gadgetHelper = new google.visualization.GadgetHelper();
   var query = gadgetHelper.createQueryFromPrefs(prefs);
+  
+query.setQuery("select * ");
+
   query.send(handleQueryResponse);
 }
 
@@ -297,7 +300,7 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('jjjj');
+ alert('gggg');
   dibujaTablaHidden();
  alert('2');
 //  dibujaTabla();
