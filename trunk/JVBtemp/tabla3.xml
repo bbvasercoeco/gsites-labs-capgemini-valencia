@@ -297,10 +297,10 @@ function handleQueryResponse(response) {
   
   totPag = Math.ceil(data.getNumberOfRows() / numElePag);
  
- alert('qqqqqqqqqq');
+ alert('gfds');
   dibujaTablaHidden();
  alert('2');
-  dibujaTabla();
+//  dibujaTabla();
  alert('3');
 }
 
@@ -387,7 +387,8 @@ function dibujaTablaHidden(){
 
   for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
         //var formattedValue = data.getFormattedValue(_filaDescartadas, col);
-var formattedValue = data.getValue(_filaDescartadas, col);
+		//var formattedValue = data.getValue(_filaDescartadas, col);
+var formattedValue = data.getRange(_filaDescartadas, col);
         //formattedValue = escapeHtml(formattedValue);
         
         html += '<th>';
@@ -408,13 +409,15 @@ var formattedValue = data.getValue(_filaDescartadas, col);
     
         var formattedValue = "";
         //formattedValue += data.getFormattedValue(fil, 0);
-formattedValue += data.getValue(fil, 0);
+		//formattedValue += data.getValue(fil, 0);
+formattedValue += data.getRange(fil, 0);
         if(formattedValue  != ""){
             html += '<tr>';
             for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
                 
                 //var formattedValue = data.getFormattedValue(fil, col);
-var formattedValue = data.getValue(fil, col);
+				//var formattedValue = data.getValue(fil, col);
+var formattedValue = data.getRange(fil, col);
                 formattedValue = escapeHtml(formattedValue);
                 
                 html += '<td>';
