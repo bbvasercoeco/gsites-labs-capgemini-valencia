@@ -10,6 +10,8 @@
 <Require feature="dynamic-height"/>   
 
     </ModulePrefs>  
+<Content type="html" view="configuration" preferred_height="480">
+<![CDATA[	
 <script type="text/javascript">	
 gadgets.util.registerOnLoadHandler(makeNormalRequest);
 function makeNormalRequest() {  
@@ -32,5 +34,5 @@ output(obj.text);
 }
 
 </script>
-
+ ]]>
 </Module>
