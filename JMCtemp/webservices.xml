@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Module>
+<ModulePrefs
+   title="breadcrumbs"
+   height="50"
+   description="Script calls to Web Services"
+  
+   >
+<Require feature="dynamic-height"/>   
+
+    </ModulePrefs>  
 <script type="text/javascript">	
 gadgets.util.registerOnLoadHandler(makeNormalRequest);
 function makeNormalRequest() {  
