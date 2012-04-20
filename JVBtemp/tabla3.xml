@@ -94,6 +94,13 @@ function handleQueryResponse(response) {
   
   var data = "";
   data = response.getDataTable();
+
+
+    var table = new google.visualization.Table(document.getElementById('tablediv'));
+    var formatter = new google.visualization.NumberFormat( {prefix: '$', negativeColor: 'red', negativeParens: true});
+    formatter.format(data, 1); // Apply formatter to second column
+    table.draw(data, {allowHtml: true, showRowNumber: true});
+  
   
   alert(data.getValue(1, 0));
   
