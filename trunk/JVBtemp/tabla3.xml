@@ -92,10 +92,12 @@ function anteriores(){
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
-alert(response.getMessage());
-  var data = response.getDataTable();
+  var data = "";
+  data = response.getDataTable();
   
+alert(data);  
   alert(data.getValue(1, 0));
+  
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 		var formattedValue = data.getValue(_filaDescartadas, col);
 		cabecera[col] = formattedValue;
