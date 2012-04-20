@@ -91,6 +91,8 @@ function anteriores(){
 
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
+  
+alert(response.getMessage());
   var data = response.getDataTable();
   
   alert(data.getValue(1, 0));
