@@ -94,9 +94,6 @@ function handleQueryResponse(response) {
   
   var data = "";
   data = response.getDataTable();
-
-  google.visualization.draw(data, {allowHtml: true, showRowNumber: true});
-  
   
   alert(data.getValue(1, 0));
   
