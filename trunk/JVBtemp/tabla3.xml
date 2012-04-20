@@ -92,10 +92,15 @@ function anteriores(){
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
+  
+  alert(response.getReasons());
+  alert(response.getDetailedMessage());
+  alert(response.hasWarning()());
+  
+  
   var data = "";
   data = response.getDataTable();
   
-alert(data);  
   alert(data.getValue(1, 0));
   
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
