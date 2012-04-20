@@ -11,19 +11,23 @@
 
     </ModulePrefs>  
 <Content type="html" view="configuration" preferred_height="480">
-<![CDATA[	
+<![CDATA[
+
+<input type="text">Jordi</input>
+	
 <script type="text/javascript">	
 // gadgets.util.registerOnLoadHandler(makeNormalRequest);
 function makeNormalRequest() {  
- var params = Xml.element("GetGeoIP", [
+ /* var params = Xml.element("GetGeoIP", [
                   Xml.attribute("xmlns", "http://www.webservicex.net/"),
                   Xml.element("IPAddress", [
                     "72.14.228.129"
 
                   ])
-                ]);
+                ]); */
+params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;				
 				
- var url = "http://www.webservicex.net/geoipservice.asmx?wsdl";				
+ var url ="http://graargh.returnstrue.com/buh/makerequest.php" //"http://www.webservicex.net/geoipservice.asmx?wsdl";				
 gadgets.io.makeRequest(url, response, params);
 }
 
