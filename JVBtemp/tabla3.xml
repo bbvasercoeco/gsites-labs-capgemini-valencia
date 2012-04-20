@@ -92,12 +92,6 @@ function anteriores(){
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
-  
-  alert(response.getReasons());
-  alert(response.getDetailedMessage());
-  alert(response.hasWarning()());
-  
-  
   var data = "";
   data = response.getDataTable();
   
