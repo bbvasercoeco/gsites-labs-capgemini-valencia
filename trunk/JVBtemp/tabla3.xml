@@ -96,7 +96,7 @@ function handleQueryResponse(response) {
   var data = "";
   data = response.getDataTable();
   
-  alert(data.getValue(1, 0));
+  alert(data.getValue(-1, 0));
   
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 		var formattedValue = data.getValue(_filaDescartadas, col);
