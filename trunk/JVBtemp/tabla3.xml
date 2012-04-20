@@ -92,10 +92,12 @@ function anteriores(){
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
-  replace  '{ "rawText": "SomeText\\u000a"  }';
-  
   var data = "";
-  data = response.getDataTable();
+//  data = response.getDataTable();
+  
+  var range = response.getDataTable().getDataRange().getValues();  
+  var dataObjects = rangeToObjects(range);
+  data = dataObjects;//[1]['headerA']);
   
   alert(data.getValue(1, 0));
   
