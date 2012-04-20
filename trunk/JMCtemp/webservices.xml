@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Module>
+<script type="text/javascript">	
+gadgets.util.registerOnLoadHandler(makeNormalRequest);
+function makeNormalRequest() {  
+ var params = Xml.element("GetGeoIP", [
+                  Xml.attribute("xmlns", "http://www.webservicex.net/"),
+                  Xml.element("IPAddress", [
+                    "72.14.228.129"
+
+                  ])
+                ]);
+				
+ var url = "http://www.webservicex.net/geoipservice.asmx?wsdl";				
+gadgets.io.makeRequest(url, response, params);
+}
+
+function response(obj){
+
+output(obj.text);
+
+}
+
+</script>
+
+</Module>
