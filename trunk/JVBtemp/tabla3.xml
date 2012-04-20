@@ -93,13 +93,9 @@ function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
   var data = "";
-//  data = response.getDataTable();
+  data = response.getDataTable();
   
-  var range = response.getDataTable().getDataRange().getValues();  
-  var dataObjects = rangeToObjects(range);
-  data = dataObjects;//[1]['headerA']);
-  
-  alert(data.getValue(1, 0));
+    alert(data.getValue(1, 0));
   
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
 		var formattedValue = data.getValue(_filaDescartadas, col);
