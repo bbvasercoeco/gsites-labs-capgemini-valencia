@@ -23,10 +23,10 @@
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
-                    Root del Site: <input type="text" id="VarrootSite" value="http://www.marca.es"  onchange="registra('VarrootSite')"/>                   
+                    Root del Site: <input type="text" id="VarrootSite" value="gsiteslabscapgeminivalencia"  onchange="registra('VarrootSite')"/>                   
                 </td>
             </tr>
-			
+	</table>		
 <script type="text/javascript">           
             // Get userprefs
             var prefs = new gadgets.Prefs();           
@@ -65,7 +65,7 @@
 			font-size:13px;
 			color:#009EE5;
 			fon-weight: normal;
-			text-decoration:underline;		
+			text-decoration:none;		
 			text-transform: capitalize;
 		} 
 		a:active.linkBreadCrumb {
