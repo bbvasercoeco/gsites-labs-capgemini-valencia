@@ -23,15 +23,11 @@
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
-                    Root del Site: <input type="text" id="VarrootSite" value=" + <script type="text/javascript">   $("#VarrootSite").val()</script> + " onchange="registra('VarrootSite')"/>                   
+                    Root del Site: <input type="text" id="VarrootSite"  onLoad="registra('VarrootSite')"/>                   
                 </td>
             </tr>
 		</table>	
-<script type="text/javascript">    
-document.getElementById(VarrootSite)= document.getElementById(VarrootSite).value;
 
-</script>		
-		
 <script type="text/javascript">           
             // Get userprefs
             var prefs = new gadgets.Prefs();           
