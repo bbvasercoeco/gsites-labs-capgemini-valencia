@@ -59,7 +59,23 @@
 	
 function loadVisualizationAPI() {
   google.load("visualization", "1");
-  google.setOnLoadCallback(sendQuery);
+  //google.setOnLoadCallback(sendQuery);
+  
+    alert('3');
+    var spreadsheetId = '0AnG-1cgywSuPdHVZMmhMWF80blVwWHFFb2UzOFk1OEE';//Change it to your Spreadsheet ID
+    alert('4');
+    //var dataArray = getData(spreadsheetId);
+  alert('5');
+  var ss = SpreadsheetApp.openById(spreadsheetId);
+  alert('6');
+  var sheet = ss.getSheets()[0].getDataRange();
+  alert('7');
+  dataArray = sheet.getValues();
+  alert('8');
+    alert('rrr:' + dataArray.getValue[1]);
+  alert('5');
+  
+  
 }
 
 function sendQuery() {
