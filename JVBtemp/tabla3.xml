@@ -102,8 +102,14 @@ function anteriores(){
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
-  //var data = "";
+  var data = response.getDataTable();
   
+  var chart = new google.visualization.Table(document.getElementById('chart_div'));
+    chart.draw(data, options);
+
+  
+  //var data = "";
+/*  
   alert('XxX');
   var data = response.getDataTable();
   alert('ggg');
@@ -132,6 +138,7 @@ function handleQueryResponse(response) {
 	dibujaTabla();
 	//dibujaTabla2();
 	//dibujaTablaHidden();
+*/
   
 }
 
@@ -350,6 +357,11 @@ function escapeHtml(text) {
   return _hesc(text);
 }
 </script>
+
+ <div id="chart_div"></div>
+
+
+
 ]]>
 </Content>
 </Module>
