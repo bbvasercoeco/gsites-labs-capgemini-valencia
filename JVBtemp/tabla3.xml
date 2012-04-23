@@ -89,11 +89,18 @@ function anteriores(){
   dibujaTabla();
 }
 
+function getData(spreadsheetId){
+ var ss = SpreadsheetApp.openById(spreadsheetId);
+  var sheet = ss.getSheets()[0].getDataRange();
+  return sheet.getValues();
+}
+
+
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
   //var data = "";
-  alert('111');
+  alert('6969696969');
     //var data = new google.visualization.DataTable();
   var data = response.getDataTable();
   alert('3');
