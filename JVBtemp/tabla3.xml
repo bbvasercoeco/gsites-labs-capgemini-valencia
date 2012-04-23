@@ -59,31 +59,29 @@
 	
 function loadVisualizationAPI() {
   google.load("visualization", "1");
-  //google.setOnLoadCallback(sendQuery);
+  google.setOnLoadCallback(sendQuery);
   
-    alert('883');
-    var spreadsheetId = "0AnG-1cgywSuPdHVZMmhMWF80blVwWHFFb2UzOFk1OEE";//Change it to your Spreadsheet ID
-var dataArray = getData(spreadsheetId);
-alert('4');
-//    var ss = SpreadsheetApp.openById(spreadsheetId);
-//    var sheet = ss.getSheets()[0].getDataRange();
-//    dataArray = sheet.getValues();
-
-    alert('rrr:' + dataArray.getValue[1]);
+    //      var spreadsheetId = "0AnG-1cgywSuPdHVZMmhMWF80blVwWHFFb2UzOFk1OEE";//Change it to your Spreadsheet ID
+    //      var dataArray = getData(spreadsheetId);
+    //      var ss = SpreadsheetApp.openById(spreadsheetId);
+    //      var sheet = ss.getSheets()[0].getDataRange();
+    //      dataArray = sheet.getValues();
+    //      alert('rrr:' + dataArray.getValue[1]);
 }
 
 function sendQuery() {
-  var prefs = new _IG_Prefs(); // User preferences
-  _filaDescartadas = prefs.getInt("_filaDescartadas");
-  _Col = prefs.getInt("_Col");
- //var urlTable = prefs.getString("_table_query_url");
-  numElePag = prefs.getInt("_NumElemPorPagina");
-  gadgetHelper = new google.visualization.GadgetHelper();
- var query = gadgetHelper.createQueryFromPrefs(prefs);
+    var prefs = new _IG_Prefs(); // User preferences
+    _filaDescartadas = prefs.getInt("_filaDescartadas");
+    _Col = prefs.getInt("_Col");
+    var urlTable = prefs.getString("_table_query_url");
+    numElePag = prefs.getInt("_NumElemPorPagina");
+    gadgetHelper = new google.visualization.GadgetHelper();
+    var query = gadgetHelper.createQueryFromPrefs(prefs);
   
 	//var opts = {dataType:'jsonp'};
 	//var opts = {dataType:'csv'};
-	//var query = new google.visualization.Query(urlTable, opts);
+    var opts = {sendMethod: 'xhr'};
+var query = new google.visualization.Query(urlTable, opts);
 	//query.setQuery("select * ");
   
   query.send(handleQueryResponse);
@@ -105,21 +103,11 @@ function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
   //var data = "";
-    //var data = new google.visualization.DataTable();
+  
+  alert('ddd');
   var data = response.getDataTable();
-  alert('3');
-    var spreadsheetId = '0AnG-1cgywSuPdHVZMmhMWF80blVwWHFFb2UzOFk1OEE';//Change it to your Spreadsheet ID
-    alert('4');
-  //var dataArray = getData(spreadsheetId);
-  alert('5');
-  var ss = SpreadsheetApp.openById(spreadsheetId);
-  alert('6');
-  var sheet = ss.getSheets()[0].getDataRange();
-  alert('7');
-  dataArray = sheet.getValues();
-  alert('8');
-    alert('rrr:' + dataArray.getValue[1]);
-  alert('5');
+  alert('ggg');
+  
     alert(data.getValue(1, 0));
   
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
