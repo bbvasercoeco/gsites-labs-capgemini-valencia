@@ -34,7 +34,7 @@
             function registra(variable)
             {	
                 prefs.set(variable,document.getElementById(variable).value);
-				document.getElementById(variable).innerHTML = document.getElementById(variable).value;  
+				  
 			
             }  
 			
