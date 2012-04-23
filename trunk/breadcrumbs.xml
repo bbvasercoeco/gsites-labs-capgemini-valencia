@@ -3,48 +3,12 @@
 <ModulePrefs
    title="breadcrumbs"
    height="50"
-   description="Script que genera los breadcrumbs de forma automÃ¡tica"
-  
-   >
-<Require feature="dynamic-height"/>   
-<Require feature="setprefs" />   
-    </ModulePrefs>  
-	
-<UserPref name="VarrootSite" display_name="Root del Site" required="true" />
-<Content type="html" view="configuration" preferred_height="480">
-
- <![CDATA[
- <style>
-    input#VarrootSite {
-           width: 300px;
-          }
-		  
-  </style>
-  <table width="100%" border="0" id="tablaconfig">           
-            <tr>       
-                <td>
-                    Root del Site: <input type="text" id="VarrootSite" value="gsiteslabscapgeminivalencia"  onchange="registra('VarrootSite')"/>                   
-                </td>
-            </tr>
-	</table>		
-<script type="text/javascript">           
-            // Get userprefs
-            var prefs = new gadgets.Prefs();           
-            function registra(variable)
-            {	
-                prefs.set(variable,document.getElementById(variable).value);
-				
-			
-            }  
-			
-            gadgets.window.adjustHeight();
-        </script>   
- ]]>
- </Content>
+   description="Script que genera los breadcrumbs de forma automatica"
+   />
  <Content type="html">
  <![CDATA[
  
-	<div id="title-crumbs">valor de title</div>
+	<div id="titleCrumbs">breadcrumb</div>
 	
 	<style>		
 		#title-crumbs {
@@ -60,7 +24,8 @@
 			text-decoration:none;
 			text-transform: capitalize;
 		}
-		a:hover.linkBreadCrumb {
+		a:hover.linkBreadCrumb,
+		a:active.linkBreadCrumb {
 			font-style: normal;
 			font-size:13px;
 			color:#009EE5;
@@ -68,28 +33,16 @@
 			text-decoration:none;		
 			text-transform: capitalize;
 		} 
-		a:active.linkBreadCrumb {
-			font-style: normal;
-			font-size:13px;
-			color:#009EE5;
-			fon-weight: normal;			
-			text-transform: capitalize;
-			text-decoration:none;
-		} 
 		
 	</style>
 	
-	<script type="text/javascript">	
-		var prefs = new gadgets.Prefs();
+	<script type="text/javascript">
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
-		
+
 		function showBreadcrumbs()
 		{
-			// Construct the breadcrumb string
-			
-		    var rootSite = prefs.getString("VarrootSite");			
-		    //alert(rootSite);
-			//alert("aki entro");
+			//Construct the breadcrumb string
+			var rootSite="home";
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
@@ -105,7 +58,7 @@
 				}
 				if (parametros[i] == rootSite) 
 				{	
-					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace("-"," ") + "  \'>home</a>";
 				
 					for(j=i+1;j<parametros.length;++j)
 					{   
@@ -124,7 +77,7 @@
 					}
 				}
 			}
-			document.getElementById("title-crumbs").innerHTML = s;    
+			document.getElementById("titleCrumbs").innerHTML = s;    
 		}
 	</script>
  ]]>
