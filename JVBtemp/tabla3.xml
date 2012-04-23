@@ -102,13 +102,15 @@ function anteriores(){
 function handleQueryResponse(response) {
 
 
-alert(response.toJSON());
+
   if (!gadgetHelper.validateResponse(response)) { return; }
   
   
-  var data = new array(10);
+ 
   
   data = response.getDataTable();
+
+alert(data.toJSON());
   
   var chart = new google.visualization.Table(document.getElementById('chart_div'));
     //chart.draw(data, options);
@@ -122,6 +124,8 @@ alert(response.toJSON());
   
     
   var data = response.getDataTable();
+
+
   alert('ggg');
   
     alert(data.getValue(1, 0));
