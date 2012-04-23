@@ -102,10 +102,13 @@ function anteriores(){
 function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
+  alert('re');
+  
   var data = response.getDataTable();
   
   var chart = new google.visualization.Table(document.getElementById('chart_div'));
-    chart.draw(data, options);
+    //chart.draw(data, options);
+    chart.draw(data);
 
   
   //var data = "";
