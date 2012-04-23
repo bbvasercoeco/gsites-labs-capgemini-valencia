@@ -49,6 +49,7 @@
 			var barra = "/";
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
 			var indexroot = parametros.indexOf(rootSite);
+			alert('debug para IE8: '+indexroot);
 			
 			for (i=0;i<parametros.length;i++)
 			{				
