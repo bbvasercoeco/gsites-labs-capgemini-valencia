@@ -28,7 +28,7 @@
             </tr>
 		</table>	
 <script type="text/javascript">    
-document.getElementById('VarrootSite')= document.getElementById('VarrootSite').value;
+document.getElementById(VarrootSite)= document.getElementById(VarrootSite).value;
 
 </script>		
 		
