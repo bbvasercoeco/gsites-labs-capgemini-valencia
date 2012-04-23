@@ -93,7 +93,7 @@ function handleQueryResponse(response) {
   if (!gadgetHelper.validateResponse(response)) { return; }
   
   //var data = "";
-  alert('1');
+  alert('2');
   var data = new google.visualization.DataTable();
   data = response.getDataTable();
   
