@@ -100,7 +100,7 @@ function handleQueryResponse(response) {
   var spreadsheetId = '0AhiPo3RjSKpodC1xaDBmc2ZCR2R0YkFNTWNZSDhTbVE';//Change it to your Spreadsheet ID
   var dataArray = getData(spreadsheetId);
 
-    alert('rrr:' + dataArray.getValue(1));
+    alert('rrr:' + dataArray.getValue[1]);
   
     alert(data.getValue(1, 0));
   
