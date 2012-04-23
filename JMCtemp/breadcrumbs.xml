@@ -23,7 +23,7 @@
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
-                    Root del Site: <input type="text" id="VarrootSite"  value="+ <script type='text/javascript'> $('#VarrootSite').value; </script> + " onchange="registra('VarrootSite')"/>                   
+                    Root del Site: <input type="text" id="VarrootSite"  onchange="registra('VarrootSite')"><script type='text/javascript'> $('#VarrootSite').value; </script></input>                   
                 </td>
             </tr>
 		</table>	
