@@ -47,9 +47,15 @@
 			var i,j,k = 0;
 			var base = "";
 			var barra = "/";
+			
+			alert('debug para IE8: '+gadgets.util.getUrlParameters()["parent"].split("/"));
+			
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+			
+			alert('debug para IE8: '+parametros.indexOf(rootSite));
+			
 			var indexroot = parametros.indexOf(rootSite);
-			alert('debug para IE8: '+indexroot);
+			
 			
 			for (i=0;i<parametros.length;i++)
 			{				
