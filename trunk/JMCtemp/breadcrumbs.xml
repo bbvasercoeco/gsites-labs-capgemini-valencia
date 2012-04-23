@@ -23,7 +23,7 @@
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
-                    Root del Site: <input type="text" id="VarrootSite"  onLoad="registra('VarrootSite')"/>                   
+                    Root del Site: <input type="text" id="VarrootSite" onload=registra('VarrootSite')') onchange="registra('VarrootSite')"/>                   
                 </td>
             </tr>
 		</table>	
