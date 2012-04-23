@@ -20,23 +20,27 @@
           }
 		  
   </style>
-  <table width="100%" border="0" id="tablaconfig">           
-            <tr>       
-                <td>
-                    Root del Site: <input type="text" id="VarrootSite"  onchange="registra('VarrootSite')"><script type='text/javascript'> $('#VarrootSite').value; </script></input>                   
-                </td>
-            </tr>
-		</table>	
-
+<div id="content_div"></div> 
 <script type="text/javascript">           
             // Get userprefs
-            var prefs = new gadgets.Prefs();           
+			var html="";
+            var prefs = new gadgets.Prefs();
+			var VarrootSite=prefs.getString("VarrootSite");	
+			
+			 html += '<table width="100%" border="0" id="tablaconfig"> ';         
+             html += '<tr><td>';       
+             html += 'Root del Site: <input type="text" id="VarrootSite"  onchange="registra('VarrootSite')"/>';                   
+             html += ' </td></tr></table>';
+			 
+			document.getElementById("content_div").innerHTML = html;           
+            
+			 
+            		
             function registra(variable)
             {	
                 prefs.set(variable,document.getElementById(variable).value);
 				  
-			
-            }  
+			}  
 			
             gadgets.window.adjustHeight();
         </script>   
