@@ -58,8 +58,8 @@
     
 	
 function loadVisualizationAPI() {
-  google.load("visualization", "1");
-  google.setOnLoadCallback(sendQuery);
+    google.load("visualization", "1", {"packages": ["table"]});
+    google.setOnLoadCallback(sendQuery);
   
     //      var spreadsheetId = "0AnG-1cgywSuPdHVZMmhMWF80blVwWHFFb2UzOFk1OEE";//Change it to your Spreadsheet ID
     //      var dataArray = getData(spreadsheetId);
@@ -75,14 +75,14 @@ function sendQuery() {
     _Col = prefs.getInt("_Col");
     var urlTable = prefs.getString("_table_query_url");
     numElePag = prefs.getInt("_NumElemPorPagina");
-//    gadgetHelper = new google.visualization.GadgetHelper();
-//    var query = gadgetHelper.createQueryFromPrefs(prefs);
+    gadgetHelper = new google.visualization.GadgetHelper();
+    var query = gadgetHelper.createQueryFromPrefs(prefs);
   
 	//var opts = {dataType:'jsonp'};
 	//var opts = {dataType:'csv'};
-var opts = {sendMethod: 'xhr'};
-var query = new google.visualization.Query(urlTable, opts);
-query.setQuery("select * ");
+        //var opts = {sendMethod: 'xhr'};
+        //var query = new google.visualization.Query(urlTable, opts);
+        //query.setQuery("select * ");
   
   query.send(handleQueryResponse);
 }
