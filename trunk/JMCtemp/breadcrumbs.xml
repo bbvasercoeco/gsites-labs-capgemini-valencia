@@ -20,27 +20,24 @@
           }
 		  
   </style>
-<div id="content_div"></div> 
+  
+  <table width="100%" border="0" id="tablaconfig">           
+            <tr>       
+                <td>
+                    Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__"   onchange="registra('VarrootSite')"/>                   
+                </td>
+            </tr>
+  </table>	
+  
 <script type="text/javascript">           
             // Get userprefs
-			var html="";
-            var prefs = new gadgets.Prefs();
-			var VarrootSite=prefs.getString("VarrootSite");	
-			
-			 html += '<table width="100%" border="0" id="tablaconfig"> ';         
-             html += '<tr><td>';       
-             html += 'Root del Site: <input type="text" id="VarrootSite"  onchange="registra('VarrootSite')"/>';                   
-             html += ' </td></tr></table>';
-			 
-			document.getElementById("content_div").innerHTML = html;           
-            
-			 
-            		
+            var prefs = new gadgets.Prefs();           
             function registra(variable)
             {	
                 prefs.set(variable,document.getElementById(variable).value);
-				  
-			}  
+				
+			
+            }  
 			
             gadgets.window.adjustHeight();
         </script>   
@@ -84,6 +81,8 @@
 		function showBreadcrumbs()
 		{
 			// Construct the breadcrumb string
+			
+			
 			
 		    var rootSite = prefs.getString("VarrootSite");			
 		    alert(rootSite);
