@@ -94,7 +94,8 @@ function handleQueryResponse(response) {
   
   //var data = "";
   alert('1');
-  var data = response.getDataTable();
+  var data = new google.visualization.DataTable();
+  data = response.getDataTable();
   
     alert(data.getValue(1, 0));
   
