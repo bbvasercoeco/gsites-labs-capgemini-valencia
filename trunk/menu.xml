@@ -6,7 +6,7 @@
 #cabeceramenu {
 	width: 960px;
 	height: 65px;
-	background-image:url(http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/fondomenu.png);	
+	background-image:url(https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/fondomenu.png);	
 	margin:0;
 	padding: 0;
 	background-repeat: no-repeat;
@@ -31,7 +31,7 @@
 	height: 34px;
 } 
 #button li a.barralateral {  
-	background-image: url("http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/barralateralmenu.png");
+	background-image: url("https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/barralateralmenu.png");
     background-position: right 0;
     background-repeat: no-repeat;
 } 
