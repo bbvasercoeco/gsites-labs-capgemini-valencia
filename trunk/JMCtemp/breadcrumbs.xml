@@ -26,7 +26,7 @@
                     Root del Site: <input type="text" id="VarrootSite" value="http://www.marca.es"  onchange="registra('VarrootSite')"/>                   
                 </td>
             </tr>
-			
+		</table>	
 <script type="text/javascript">           
             // Get userprefs
             var prefs = new gadgets.Prefs();           
