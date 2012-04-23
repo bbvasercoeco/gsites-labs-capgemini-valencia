@@ -23,10 +23,10 @@
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
-                    Root del Site: <input type="text" id="VarrootSite" value="http://www.marca.es"  onchange="registra('VarrootSite')"/>                   
+                    Root del Site: <input type="text" id="VarrootSite" value="gsiteslabscapgeminivalencia"  onchange="registra('VarrootSite')"/>                   
                 </td>
             </tr>
-			
+	</table>		
 <script type="text/javascript">           
             // Get userprefs
             var prefs = new gadgets.Prefs();           
@@ -88,8 +88,8 @@
 			// Construct the breadcrumb string
 			
 		    var rootSite = prefs.getString("VarrootSite");			
-		    alert(rootSite);
-			alert("aki entro");
+		    //alert(rootSite);
+			//alert("aki entro");
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
@@ -110,6 +110,7 @@
 					for(j=i+1;j<parametros.length;++j)
 					{   
 						var aux = parametros[j].replace(/-/g," ");
+						
 						if (aux.indexOf("?")>1)
 						{
 							var auxMov = aux.split("?");
@@ -119,7 +120,9 @@
 						{
 							var litEnlace = aux;
 						}
+						
 						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\'" + litEnlace + "\'> >&nbsp;" + litEnlace + "</a>";
+						
 						rootSite = rootSite + "/" + parametros[j];
 					}
 				}
