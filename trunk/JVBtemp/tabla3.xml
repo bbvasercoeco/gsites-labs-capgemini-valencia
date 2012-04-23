@@ -100,11 +100,15 @@ function anteriores(){
 
 
 function handleQueryResponse(response) {
+
+
+alert(response.toJSON());
   if (!gadgetHelper.validateResponse(response)) { return; }
   
-  alert('re');
   
-  var data = response.getDataTable();
+  var data = new array(10);
+  
+  data = response.getDataTable();
   
   var chart = new google.visualization.Table(document.getElementById('chart_div'));
     //chart.draw(data, options);
@@ -114,6 +118,9 @@ function handleQueryResponse(response) {
   //var data = "";
 /*  
   alert('XxX');
+  response.setColumns([1,{calc:cmToInches, type:'string', label:'Height in Inches'}]);
+  
+    
   var data = response.getDataTable();
   alert('ggg');
   
