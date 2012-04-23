@@ -88,8 +88,8 @@
 			// Construct the breadcrumb string
 			
 		    var rootSite = prefs.getString("VarrootSite");			
-		    alert(rootSite);
-			alert("aki entro");
+		    //alert(rootSite);
+			//alert("aki entro");
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
