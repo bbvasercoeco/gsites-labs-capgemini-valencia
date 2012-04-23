@@ -94,14 +94,15 @@ function handleQueryResponse(response) {
   
   //var data = "";
   alert('2');
-  var data = new google.visualization.DataTable();
-  data = response.getDataTable();
+    //var data = new google.visualization.DataTable();
+  var data = response.getDataTable();
+  alert('3');
   
   var spreadsheetId = '0AhiPo3RjSKpodC1xaDBmc2ZCR2R0YkFNTWNZSDhTbVE';//Change it to your Spreadsheet ID
   var dataArray = getData(spreadsheetId);
-
+alert('4');
     alert('rrr:' + dataArray.getValue[1]);
-  
+  alert('5');
     alert(data.getValue(1, 0));
   
 	for (var col = 0; col < Math.min(data.getNumberOfColumns(),_Col); col++) {
