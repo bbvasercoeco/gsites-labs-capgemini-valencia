@@ -22,8 +22,8 @@
 <style type="text/css">
         .header{ background: blue; color: white; font-size:18px; font-family: Arial, Helvetica, sans-serif;}
         .filaPar{background: white; border-bottom: solid #E2E2E2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
-        .filaImpar{background: #F3F3F3; border-bottom:solid #E2E2E2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
-        .filaSeleccionada{background: white; border-bottom: solid #A22E282; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+        .filaImpar{background: #D3D3D3; border-bottom:solid #E2E2E2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+        .filaSeleccionada{background: white; border-bottom: solid #A22E212; height: 50px; font-family: Arial, Helvetica, sans-serif;}
         .filaHover{background: white; border-bottom: solid #B2B2B2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
 </style>
 
@@ -52,9 +52,9 @@
     function handleQueryResponse(response) {
         if (!gadgetHelper.validateResponse(response)) { return; }
             data = response.getDataTable();
-alert('2');
+alert('5');
         var view = new google.visualization.DataView(data);
-        view.setColumns([0, _Col]);
+        view.setColumns([1, _Col+1]);
 
     var cssClassNames = {
         'headerRow': 'header',
