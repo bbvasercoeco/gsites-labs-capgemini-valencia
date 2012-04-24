@@ -52,9 +52,9 @@
     function handleQueryResponse(response) {
         if (!gadgetHelper.validateResponse(response)) { return; }
             data = response.getDataTable();
-alert('9');
+alert('4');
         var view = new google.visualization.DataView(data);
-        view.setColumns([{0:_Col}]);
+        view.setColumns([0;_Col]);
 
     var cssClassNames = {
         'headerRow': 'header',
