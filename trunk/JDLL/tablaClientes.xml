@@ -130,7 +130,7 @@
   formatter.format(data, [0, 3]); // Apply formatter and set the formatted value of the first column.
 
   var formatter2 = new google.visualization.PatternFormat('{3}        <a href="#"><img src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/flecha.png"/></a>');
-  formatter2.format(data, [0, 3]); 
+  formatter2.format(data, [1, 3]); 
   
   var view = new google.visualization.DataView(data);
         var columnasAmostrar = [];
