@@ -49,12 +49,22 @@
         query.send(handleQueryResponse);
     }
 
+    function enlace(dataTable, rowNum) {
+        return '<span class="jajajaja">'+ dataTable.getValue(rowNum, 0) +'</span>';
+    }
+
+
     function handleQueryResponse(response) {
         if (!gadgetHelper.validateResponse(response)) { return; }
             data = response.getDataTable();
         var view = new google.visualization.DataView(data);
-//alert('2222 _Col:'+_Col);
-        //view.setColumns(5,2,0,_Col);
+alert('17 _Col:'+_Col);
+        var columnasAmostrar = [];
+        for(i=0 ; i < _Col ; i++) { columnasAmostrar.push(i); }
+        
+        columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
+        
+        view.setColumns(columnasAmostrar);
 
     var cssClassNames = {
         'headerRow': 'header',
