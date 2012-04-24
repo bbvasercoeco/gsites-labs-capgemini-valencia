@@ -58,11 +58,11 @@
         if (!gadgetHelper.validateResponse(response)) { return; }
             data = response.getDataTable();
         var view = new google.visualization.DataView(data);
-alert('6666 _Col:'+_Col);
+alert('17 _Col:'+_Col);
         var columnasAmostrar = [];
         for(i=0 ; i < _Col ; i++) { columnasAmostrar.push(i); }
         
-        columnasAmostrar.push({ calc: enlace, type: 'string', label: 'blabla']});
+        columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
         
         view.setColumns(columnasAmostrar);
 
