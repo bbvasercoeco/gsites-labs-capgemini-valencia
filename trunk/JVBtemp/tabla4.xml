@@ -77,8 +77,8 @@
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
         var options = {'showRowNumber': true, 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
         
-        //chart.draw(data, options);
-        chart.draw(data);
+        chart.draw(data, options);
+        //chart.draw(data);
     }
 </script>
 ]]>
