@@ -52,7 +52,7 @@
 		#tablediv table tr,
 		#tablediv table	tr td,
 		.formateoCelda {
-			font-family: Arial, Helvetica, sans-serif;
+			font-family: Arial, Helvetica, sans-serif !important;
 		}
 		
 		.header {
@@ -67,7 +67,7 @@
 			background: linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-8 */
 			color: white; 
-			font-size:14px; 
+			font-size:15px; 
 			font-weight: bold;
 			text-align: center;
 			font-family: Arial, Helvetica, sans-serif;
