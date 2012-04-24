@@ -18,11 +18,15 @@
 </div>
 
 <style type="text/css">
+        .header{
+            background: blue; color: white; font-size:18px; font-family:Arial;
+        }
+        
 	table { border-collapse:collapse; width:100%;}
 	table#tablaOculta{visibility:hidden;}
 	td, th {  font-family: Arial, Helvetica, sans-serif;  font-size: 10pt;  padding: 2px 0.5em;  white-space: nowrap;}
-	td.numeric {  text-align: right;}
-	th {  background: blue; color: white; font-size:18px; font-family:Arial;}
+
+
 	th.mainHeader {  background-color: #808080;  color: #ffffff;  text-align: left;}
 	th a {  color: white;  text-decoration: none;}
 	th a:visited {  color: white;}
@@ -58,7 +62,7 @@
             data = response.getDataTable();
             
     var cssClassNames = {
-        'headerRow': 'italic-darkblue-font large-font bold-font',
+        'headerRow': 'header',
         'tableRow': '',
         'oddTableRow': 'beige-background',
         'selectedTableRow': 'orange-background large-font',
@@ -68,7 +72,7 @@
         'rowNumberCell': 'underline-blue-font'};
         
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
-        var options = {'showRowNumber': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
+        var options = {'showRowNumber': true, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
         
         //chart.draw(data, options);
         chart.draw(data);
