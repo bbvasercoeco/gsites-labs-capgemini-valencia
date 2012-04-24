@@ -63,7 +63,7 @@
     function handleQueryResponse(response) {
         if (!gadgetHelper.validateResponse(response)) { return; }
             data = response.getDataTable();
-            
+alert('1');
     var cssClassNames = {
         'headerRow': 'header',
         'tableRow': '',
