@@ -54,7 +54,6 @@
             data = response.getDataTable();
         var view = new google.visualization.DataView(data);
 //alert('2222 _Col:'+_Col);
-        view.setRows(0,_Col);
         //view.setColumns(0,_Col);
 
     var cssClassNames = {
