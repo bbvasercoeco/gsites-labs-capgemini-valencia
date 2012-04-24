@@ -8,6 +8,7 @@
 </ModulePrefs>
   
 <UserPref name="_table_query_url" display_name="Data source url" required="true"/>
+<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
   
 <Content type="html"><![CDATA[
 
@@ -43,6 +44,7 @@
     
     var gadgetHelper = null;
     _IG_RegisterOnloadHandler(loadVisualizationAPI);
+    var numElePag = 8;
 	
     function loadVisualizationAPI() {
         google.load("visualization", "1", {"packages": ["table"]});
@@ -52,6 +54,7 @@
     function sendQuery() {
         var prefs = new _IG_Prefs(); // User preferences
         //var urlTable = prefs.getString("_table_query_url");
+        numElePag = prefs.getInt("_NumElemPorPagina");
         gadgetHelper = new google.visualization.GadgetHelper();
         var query = gadgetHelper.createQueryFromPrefs(prefs);
         query.send(handleQueryResponse);
@@ -72,7 +75,7 @@
         'rowNumberCell': 'underline-blue-font'};
         
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
-        var options = {'showRowNumber': true, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
+        var options = {'showRowNumber': true, 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
         
         //chart.draw(data, options);
         chart.draw(data);
