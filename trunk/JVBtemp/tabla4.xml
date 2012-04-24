@@ -54,7 +54,9 @@
             data = response.getDataTable();
 alert('5');
         var view = new google.visualization.DataView(data);
-        view.setColumns([1, _Col+1]);
+        view.setColumns([0]);
+        view.setColumns([_Col]);
+        
 
     var cssClassNames = {
         'headerRow': 'header',
