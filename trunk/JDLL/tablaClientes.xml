@@ -13,6 +13,8 @@
   
 <Content type="html"><![CDATA[
 
+//http://code.google.com/p/gsites-labs-capgemini-valencia/source/browse/trunk/JDLL/tablaClientes.xml
+
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
 <div id="tablediv" style="overflow: auto;">
