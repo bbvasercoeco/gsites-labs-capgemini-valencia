@@ -13,11 +13,10 @@
   
 <Content type="html"><![CDATA[
 
-
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
 <div id="tablediv" style="overflow: auto;">
-	<!--<img src="http://www.google.com/ig/images/spinner.gif"/>-->
+	<img src="http://www.google.com/ig/images/spinner.gif"/>
 </div>
 
 <style type="text/css">
@@ -50,22 +49,12 @@
         query.send(handleQueryResponse);
     }
 
-    function enlace(dataTable, rowNum) {
-        return '<span class="jajajaja">'+ dataTable.getValue(rowNum, 0) +'</span>';
-    }
-
-
     function handleQueryResponse(response) {
         if (!gadgetHelper.validateResponse(response)) { return; }
-        data = response.getDataTable();
+            data = response.getDataTable();
         var view = new google.visualization.DataView(data);
-		//alert('17 _Col:'+_Col);
-        var columnasAmostrar = [];
-        for(i=0 ; i < _Col ; i++) { columnasAmostrar.push(i); }
-        
-        columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
-        
-        view.setColumns(columnasAmostrar);
+//alert('2222 _Col:'+_Col);
+        //view.setColumns(5,2,0,_Col);
 
     var cssClassNames = {
         'headerRow': 'header',
