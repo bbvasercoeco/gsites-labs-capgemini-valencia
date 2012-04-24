@@ -20,14 +20,39 @@
 </div>
 
 <style type="text/css">
-        .filaPar{background: white; border-bottom: solid #E2E2E2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
-        .filaImpar{background: #D3D3D3; border-bottom:solid #E2E2E2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
-        .filaSeleccionada{background: white; border-bottom: solid #A22E212; height: 50px; font-family: Arial, Helvetica, sans-serif;}
-        .filaHover{background: white; border-bottom: solid #B2B2B2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+        .filaPar {
+			background: white; 
+			border-bottom: 1px solid #E2E2E2; 
+			height: 50px; 
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size:14px;
+		}
+        .filaImpar {
+			background: #D3D3D3; 
+			border-bottom: 1px solid #E2E2E2; 
+			height: 50px; 
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size:14px;
+		}
+        .filaSeleccionada{
+			background: white; 
+			border-bottom: 1px solid #A22E212; 
+			height: 50px; 
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size:14px;
+		}
+        .filaHover{
+			background: #DFE3E5; 
+			border-bottom: 1px solid #B2B2B2; 
+			height: 50px;
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size:14px;
+		}
 		#tablediv table,
 		#tablediv table tr,
-		#tablediv table	tr td {
-			font-family: Arial, Helvetica, sans-serif;
+		#tablediv table	tr td,
+		.formateoCelda {
+			font-family: Verdana, Arial, Helvetica, sans-serif;
 		}
 		
 		.header {
@@ -43,7 +68,10 @@
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-8 */
 			color: white; 
 			font-size:16px; 
-			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			text-align: center;
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			height: 35px;
 		}
 </style>
 <!--[if gte IE 9]>
@@ -60,12 +88,14 @@
     var numElePag = 8;
     var _Col = 3;
 	
-    function loadVisualizationAPI() {
+    function loadVisualizationAPI() 
+	{
         google.load("visualization", "1", {"packages": ["table"]});
         google.setOnLoadCallback(sendQuery);
     }
 
-    function sendQuery() {
+    function sendQuery() 
+	{
         var prefs = new _IG_Prefs(); // User preferences
         //var urlTable = prefs.getString("_table_query_url");
         numElePag = prefs.getInt("_NumElemPorPagina");
@@ -75,32 +105,42 @@
         query.send(handleQueryResponse);
     }
 
-    function enlace(data, rowNum) {
-        return '<span class="jajajaja">'+ data.getValue(rowNum, 0) +'</span>';
+    function enlace(data, rowNum) 
+	{
+        return '<span class="enlace">'+ data.getValue(rowNum, 0) +'</span>';
     }
 
 
-    function handleQueryResponse(response) {
-        if (!gadgetHelper.validateResponse(response)) { return; }
-            data = response.getDataTable();
-        var view = new google.visualization.DataView(data);
-//alert('25 _Col:'+_Col);
-        var columnasAmostrar = [];
-        for(i=0 ; i < _Col ; i++) { columnasAmostrar.push(i); }
+    function handleQueryResponse(response) 
+	{
+        if (!gadgetHelper.validateResponse(response)) 
+		{ 
+			return; 
+		}
         
-//        columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
+		data = response.getDataTable();
+        var view = new google.visualization.DataView(data);
+        var columnasAmostrar = [];
+        
+		for(i=0 ; i < _Col ; i++) 
+		{ 
+			columnasAmostrar.push(i); 
+		}
+        
+		// columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
         
         view.setColumns(columnasAmostrar);
 
-    var cssClassNames = {
-        'headerRow': 'header',
-        'tableRow': 'filaPar',
-        'oddTableRow': 'filaImpar',
-        'selectedTableRow': 'filaSeleccionada',
-        'hoverTableRow': 'filaHover',
-        'headerCell': '',
-        'tableCell': '',
-        'rowNumberCell': ''};
+		var cssClassNames = {
+			'headerRow': 'header',
+			'tableRow': 'filaPar',
+			'oddTableRow': 'filaImpar',
+			'selectedTableRow': 'filaSeleccionada',
+			'hoverTableRow': 'filaHover',
+			'headerCell': '',
+			'tableCell': 'formateoCelda',
+			'rowNumberCell': ''
+		};
         
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
         var options = {'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
