@@ -56,6 +56,17 @@
     function handleQueryResponse(response) {
         if (!gadgetHelper.validateResponse(response)) { return; }
             data = response.getDataTable();
+            
+    var cssClassNames = {
+        'headerRow': 'italic-darkblue-font large-font bold-font',
+        'tableRow': '',
+        'oddTableRow': 'beige-background',
+        'selectedTableRow': 'orange-background large-font',
+        'hoverTableRow': '',
+        'headerCell': 'gold-border',
+        'tableCell': '',
+        'rowNumberCell': 'underline-blue-font'};
+        
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
         var options = {'showRowNumber': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
         
