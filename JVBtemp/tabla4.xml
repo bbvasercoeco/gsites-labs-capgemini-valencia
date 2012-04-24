@@ -20,25 +20,11 @@
 </div>
 
 <style type="text/css">
-        .header{ background: blue; color: white; font-size:18px; font-family:Arial;}
-        .filaPar{background: white; border-bottom: solid #E2E2E2; height: 50px;}
-        .filaImpar{background: #F3F3F3; border-bottom:solid #E2E2E2; height: 50px;}
-        
-	table { border-collapse:collapse; width:100%;}
-	table#tablaOculta{visibility:hidden;}
-	td, th {  font-family: Arial, Helvetica, sans-serif;  font-size: 10pt;  padding: 2px 0.5em;  white-space: nowrap;}
-
-
-	th.mainHeader {  background-color: #808080;  color: #ffffff;  text-align: left;}
-	th a {  color: white;  text-decoration: none;}
-	th a:visited {  color: white;}
-	th a:active, th a:hover { color: #800000; text-decoration: underline;}
-
-       
-	.filaUltima{background: white; height: 50px; valign:center; text-align: right;}
-	/*td.sortedColumn {background-color: #f0f0f0;}
-	th.sortedColumn { background-color: #b0b0b0;}
-	tr.alternateRow td.sortedColumn { background-color: #d0d0d0; } */
+        .header{ background: blue; color: white; font-size:18px; font-family: Arial, Helvetica, sans-serif;}
+        .filaPar{background: white; border-bottom: solid #E2E2E2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+        .filaImpar{background: #F3F3F3; border-bottom:solid #E2E2E2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+        .filaSeleccionada{background: white; border-bottom: solid #A22E282; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+        .filaHover{background: white; border-bottom: solid #B2B2B2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
 </style>
 
 <script>
@@ -74,14 +60,14 @@ alert('2');
         'headerRow': 'header',
         'tableRow': 'filaPar',
         'oddTableRow': 'filaImpar',
-        'selectedTableRow': '',
-        'hoverTableRow': '',
+        'selectedTableRow': 'filaSeleccionada',
+        'hoverTableRow': 'filaHover',
         'headerCell': '',
         'tableCell': '',
         'rowNumberCell': ''};
         
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
-        var options = {'showRowNumber': true, 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
+        var options = {'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
         
         chart.draw(view, options);
     }
