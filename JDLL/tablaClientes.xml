@@ -50,11 +50,13 @@
 		}
 		#tablediv table,
 		#tablediv table tr,
-		#tablediv table	tr td,
+		#tablediv table	tr td {
+			font-family: Arial, Helvetica, sans-serif !important;
+		}		
 		.formateoCelda {
 			font-family: Arial, Helvetica, sans-serif !important;
+			padding-left: 5px !important;
 		}
-		
 		.header {
 			background: #1e5799; /* Old browsers */
 			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
