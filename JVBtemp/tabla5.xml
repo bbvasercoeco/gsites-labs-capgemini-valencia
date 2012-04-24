@@ -49,8 +49,8 @@
         query.send(handleQueryResponse);
     }
 
-    function enlace(dataTable, rowNum) {
-        return '<span class="jajajaja">'+ dataTable.getValue(rowNum, 0) +'</span>';
+    function enlace(data, rowNum) {
+        return '<span class="jajajaja">'+ data.getValue(rowNum, 0) +'</span>';
     }
 
 
