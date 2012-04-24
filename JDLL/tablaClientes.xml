@@ -24,28 +24,28 @@
 			background: white; 
 			border-bottom: 1px solid #E2E2E2; 
 			height: 50px; 
-			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-family:  Arial, Helvetica, sans-serif;
 			font-size:14px;
 		}
         .filaImpar {
-			background: #D3D3D3; 
+			background: #DFE3E5; 
 			border-bottom: 1px solid #E2E2E2; 
 			height: 50px; 
-			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-family: Arial, Helvetica, sans-serif;
 			font-size:14px;
 		}
         .filaSeleccionada{
 			background: white; 
 			border-bottom: 1px solid #A22E212; 
 			height: 50px; 
-			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-family: Arial, Helvetica, sans-serif;
 			font-size:14px;
 		}
         .filaHover{
-			background: #DFE3E5; 
+			background: #F0EEE2; 
 			border-bottom: 1px solid #B2B2B2; 
 			height: 50px;
-			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-family: Arial, Helvetica, sans-serif;
 			font-size:14px;
 		}
 		#tablediv table,
@@ -67,10 +67,10 @@
 			background: linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-8 */
 			color: white; 
-			font-size:16px; 
+			font-size:14px; 
 			font-weight: bold;
 			text-align: center;
-			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-family: Arial, Helvetica, sans-serif;
 			height: 35px;
 		}
 </style>
