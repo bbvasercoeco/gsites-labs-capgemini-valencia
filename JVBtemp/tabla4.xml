@@ -66,8 +66,9 @@
     function handleQueryResponse(response) {
         if (!gadgetHelper.validateResponse(response)) { return; }
             data = response.getDataTable();
-alert('5');
-            data.setColumns([0, _Col]);
+alert('2');
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, _Col]);
 
     var cssClassNames = {
         'headerRow': 'header',
@@ -82,7 +83,7 @@ alert('5');
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
         var options = {'showRowNumber': true, 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
         
-        chart.draw(data, options);
+        chart.draw(view, options);
     }
 </script>
 ]]>
