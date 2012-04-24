@@ -19,9 +19,9 @@
 </div>
 
 <style type="text/css">
-        .header{
-            background: blue; color: white; font-size:18px; font-family:Arial;
-        }
+        .header{ background: blue; color: white; font-size:18px; font-family:Arial;}
+        .filaPar{background: white; border-bottom: solid #E2E2E2; height: 50px;}
+        .filaImpar{background: #F3F3F3; border-bottom:solid #E2E2E2; height: 50px;}
         
 	table { border-collapse:collapse; width:100%;}
 	table#tablaOculta{visibility:hidden;}
@@ -32,8 +32,8 @@
 	th a {  color: white;  text-decoration: none;}
 	th a:visited {  color: white;}
 	th a:active, th a:hover { color: #800000; text-decoration: underline;}
-        tr {background: white; border-bottom: solid #E2E2E2; height: 50px;}
-	tr.alternateRow {background: #F3F3F3; border-bottom:solid #E2E2E2; height: 50px;}
+
+       
 	.filaUltima{background: white; height: 50px; valign:center; text-align: right;}
 	/*td.sortedColumn {background-color: #f0f0f0;}
 	th.sortedColumn { background-color: #b0b0b0;}
@@ -66,8 +66,8 @@
 alert('1');
     var cssClassNames = {
         'headerRow': 'header',
-        'tableRow': '',
-        'oddTableRow': 'beige-background',
+        'tableRow': 'filaPar',
+        'oddTableRow': 'filaImpar',
         'selectedTableRow': 'orange-background large-font',
         'hoverTableRow': '',
         'headerCell': 'gold-border',
@@ -75,7 +75,7 @@ alert('1');
         'rowNumberCell': 'underline-blue-font'};
         
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
-        var options = {'showRowNumber': true, 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
+        var options = {'showRowNumber': true, 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
         
         chart.draw(data, options);
         //chart.draw(data);
