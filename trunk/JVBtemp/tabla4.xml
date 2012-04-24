@@ -9,6 +9,7 @@
   
 <UserPref name="_table_query_url" display_name="Data source url" required="true"/>
 <UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
+<UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
   
 <Content type="html"><![CDATA[
 
@@ -45,6 +46,7 @@
     var gadgetHelper = null;
     _IG_RegisterOnloadHandler(loadVisualizationAPI);
     var numElePag = 8;
+    var _Col = 3;
 	
     function loadVisualizationAPI() {
         google.load("visualization", "1", {"packages": ["table"]});
@@ -55,6 +57,7 @@
         var prefs = new _IG_Prefs(); // User preferences
         //var urlTable = prefs.getString("_table_query_url");
         numElePag = prefs.getInt("_NumElemPorPagina");
+        _Col = prefs.getInt("_Col");
         gadgetHelper = new google.visualization.GadgetHelper();
         var query = gadgetHelper.createQueryFromPrefs(prefs);
         query.send(handleQueryResponse);
@@ -63,7 +66,9 @@
     function handleQueryResponse(response) {
         if (!gadgetHelper.validateResponse(response)) { return; }
             data = response.getDataTable();
-alert('1');
+alert('5');
+            data.setColumns([0, _Col]);
+
     var cssClassNames = {
         'headerRow': 'header',
         'tableRow': 'filaPar',
@@ -78,7 +83,6 @@ alert('1');
         var options = {'showRowNumber': true, 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
         
         chart.draw(data, options);
-        //chart.draw(data);
     }
 </script>
 ]]>
