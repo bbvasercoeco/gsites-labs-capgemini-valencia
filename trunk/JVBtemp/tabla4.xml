@@ -74,11 +74,11 @@ alert('2');
         'headerRow': 'header',
         'tableRow': 'filaPar',
         'oddTableRow': 'filaImpar',
-        'selectedTableRow': 'orange-background large-font',
+        'selectedTableRow': '',
         'hoverTableRow': '',
-        'headerCell': 'gold-border',
+        'headerCell': '',
         'tableCell': '',
-        'rowNumberCell': 'underline-blue-font'};
+        'rowNumberCell': ''};
         
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
         var options = {'showRowNumber': true, 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
