@@ -57,9 +57,9 @@
 
     function handleQueryResponse(response) {
         if (!gadgetHelper.validateResponse(response)) { return; }
-            data = response.getDataTable();
+        data = response.getDataTable();
         var view = new google.visualization.DataView(data);
-alert('17 _Col:'+_Col);
+		//alert('17 _Col:'+_Col);
         var columnasAmostrar = [];
         for(i=0 ; i < _Col ; i++) { columnasAmostrar.push(i); }
         
