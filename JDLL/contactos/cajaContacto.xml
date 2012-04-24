@@ -16,10 +16,10 @@
 		<Require feature="setprefs"/>
 	</ModulePrefs>  
 	<UserPref name="VarNombreProyecto" display_name="Nombre proyecto:" default_value="International Transaction Services"/>
-	<UserPref name="VarNombreResponsable" display_name="Nombre y apellidos del reponsable:" default_value="Jesús Andión Acedos"/>
-	<UserPref name="VarTelefono" display_name="Número de teléfono:" default_value=""/>
+	<UserPref name="VarNombreResponsable" display_name="Nombre y apellidos del reponsable:" default_value="Jesús Andión Acedos"/>	
 	<UserPref name="VarCargo" display_name="VarCargo:" default_value="Managing Director"/>	
 	<UserPref name="Varemail" display_name="Correo:" default_value="jesus.acedos@grupobbva.com"/>		
+	<UserPref name="VarTelefono" display_name="Número de teléfono:" default_value=""/>
 	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#002B45"/>
 	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
 	<Content type="html">
@@ -123,9 +123,10 @@
 			
 			html+='<h2>'+VarNombreProyecto+'</h2>';	
 			html+='<h1>'+VarNombreResponsable+'</h1>';	
-			html+='<h3>'+VarCargo+'</h3>';				
+			html+='<h3>'+VarCargo+'</h3>';							
 			html+='<h4><a href=\'#\' onclick=\'javascript:' + strMail + '\'>' + Varemail + '</a></h4>';
-
+			html+='<h3>'+VarTelefono+'</h3>';				
+			
 			html+='</div>';
 			html+='</td></tr></table>';
 			document.getElementById("content_div").innerHTML = html;
@@ -193,6 +194,11 @@
 			<tr>		
 				<td>
 					Correo: <input type="text" id="Varemail" value="__UP_Varemail__" onchange="registra('Varemail')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Teléfono: <input type="text" id="VarTelefono" value="__UP_VarTelefono__" onchange="registra('VarTelefono')">					
 				</td>
 			</tr>			
 		</table>
