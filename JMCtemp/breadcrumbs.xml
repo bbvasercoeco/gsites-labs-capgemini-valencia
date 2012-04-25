@@ -78,6 +78,16 @@
 		var prefs = new gadgets.Prefs();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
+	function indice (parametros, rootSite){
+			
+				for(var i=0; i<parametros.length; i++){
+					if(parametros[i]== rootSite)
+					{
+					return i;
+					}
+					  
+				}	
+			}	
 		function showBreadcrumbs()
 		{
 			// Construct the breadcrumb string
@@ -95,16 +105,7 @@
 			var indexroot = indice(parametros, rootSite);   //parametros.indexOf(rootSite);
 			
 			
-			function indice (parametros, rootSite){
 			
-				for(var i=0; i<parametros.length; i++){
-					if(parametros[i]== rootSite)
-					{
-					return i;
-					}
-					  
-				}	
-			}
 			
 			
 			for (i=0;i<parametros.length;i++)
