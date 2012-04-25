@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
 <ModulePrefs
-   title="breadcrumbs"
+   title="breadcrumbs2.0"
    height="50"
    description="Script que genera los breadcrumbs de forma automática"
   
@@ -54,6 +54,14 @@
 			color:#3F78B2;
 			text-transform: capitalize;
 		}
+		.currentBreadCrumb{
+		fon-weight: bold;
+		font-size:13px;
+		color:#4D90FE;
+		text-decoration:none;
+		text-transform: capitalize;		
+		}
+		
 		a.linkBreadCrumb,
 		a:visited.linkBreadCrumb {
 			fon-weight: normal;
@@ -134,7 +142,7 @@
 						rootSite = rootSite + "/" + parametros[j];
 						}else{
 						
-						s = s + "<span class=\'linkBreadCrumb\' + parametros[j] + barra + \' > >&nbsp;" + litEnlace + "</span>";
+						s = s + "<span class=\'currentBreadCrumb\' + parametros[j] + barra + \' > >&nbsp;" + litEnlace + "</span>";
 
 						
 						}
