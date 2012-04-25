@@ -142,7 +142,7 @@
 						rootSite = rootSite + "/" + parametros[j];
 						}else{
 						
-						s = s + "> <span class=\'currentBreadCrumb\' + parametros[j] + barra + \' > &nbsp;" + litEnlace + "</span>";
+						s = s + " > <span class=\'currentBreadCrumb\' + parametros[j] + barra + \' > &nbsp;" + litEnlace + "</span>";
 
 						
 						}
