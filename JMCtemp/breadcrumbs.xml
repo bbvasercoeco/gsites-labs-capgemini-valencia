@@ -92,7 +92,20 @@
 			var base = "";
 			var barra = "/";
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
-			var indexroot = parametros.indexOf(rootSite);
+			var indexroot = indice(parametros, rootSite);   //parametros.indexOf(rootSite);
+			
+			
+			function indice (parametros, rootSite){
+			
+				for(i=0; i<parametros.length();i++){
+					if(parametros[i]== rootSite)
+					{
+					return i;
+					}
+					  
+				}	
+			}
+			
 			
 			for (i=0;i<parametros.length;i++)
 			{				
