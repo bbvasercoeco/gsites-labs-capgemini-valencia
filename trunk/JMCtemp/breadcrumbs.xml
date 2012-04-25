@@ -97,7 +97,7 @@
 			
 			function indice (parametros, rootSite){
 			
-				for(i=0; i<parametros.length();i++){
+				for(var i=0; i<parametros.length; i++){
 					if(parametros[i]== rootSite)
 					{
 					return i;
