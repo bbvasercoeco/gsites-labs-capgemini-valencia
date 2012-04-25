@@ -70,7 +70,7 @@
 		.currentBreadCrumb {
 			fon-weight: bold;
 			font-size:13px;
-			color:#000099;
+			color:#009EE5;
 			text-decoration:none;
 			text-transform: capitalize;		
 		}		
