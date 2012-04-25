@@ -24,28 +24,28 @@
         .filaPar {
 			background: white; 
 			border-bottom: 1px solid #E2E2E2; 
-			height: 50px; 
+			height: 45px; 
 			font-family:  Arial, Helvetica, sans-serif;
 			font-size:14px;
 		}
         .filaImpar {
 			background: #DFE3E5; 
 			border-bottom: 1px solid #E2E2E2; 
-			height: 50px; 
+			height: 45px; 
 			font-family: Arial, Helvetica, sans-serif;
 			font-size:14px;
 		}
         .filaSeleccionada{
 			background: white; 
 			border-bottom: 1px solid #A22E212; 
-			height: 50px; 
+			height: 45px; 
 			font-family: Arial, Helvetica, sans-serif;
 			font-size:14px;
 		}
         .filaHover{
 			background: #F0EEE2; 
 			border-bottom: 1px solid #B2B2B2; 
-			height: 50px;
+			height: 45px;
 			font-family: Arial, Helvetica, sans-serif;
 			font-size:14px;
 		}
@@ -140,8 +140,8 @@
 		//https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/detallecliente-cliglobal001
 		//https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-CLIGLOBAL001
 
-		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/detallecliente-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
+		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0} {1} {2} {3}</a> ');
+		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
 		formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
 		
 		//var formatterArrow = new google.visualization.PatternFormat('{2} <img src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/flecha_puntos_tabla.png" />');
