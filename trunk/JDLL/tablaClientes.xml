@@ -116,12 +116,6 @@
         var query = gadgetHelper.createQueryFromPrefs(prefs);
         query.send(handleQueryResponse);
     }
-/*
-    function enlace(data, rowNum) 
-	{
-        return '<span class="enlace">'+ data.getValue(rowNum, 0) +'</span>';
-    }
-*/
 
     function handleQueryResponse(response) 
 	{
@@ -130,8 +124,7 @@
 			return; 
 		}
         
-		data = response.getDataTable();
-        
+		data = response.getDataTable();        
         
 		// columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
 		/* */
