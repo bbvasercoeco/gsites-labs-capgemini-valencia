@@ -98,7 +98,7 @@
     _IG_RegisterOnloadHandler(loadVisualizationAPI);
     var numElePag = 8;
     var _Col = 3;
-	var detallePagina = prefs.getInt("_NumElemPorPagina");
+	//var detallePagina = prefs.getInt("varURLdetallePagina");
 	
     function loadVisualizationAPI() 
 	{
@@ -136,7 +136,7 @@
 		// columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
 		/* */
 		//https://developers.google.com/chart/interactive/docs/reference#DataView
-        var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/detalleCliente-{0}" target"_top">{0}</a> <img src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/flecha.png"/>');
+        var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/detallecliente-{0}" target"_top">{0}</a> ');
 		formatter.format(data, [0, 0]); // Apply formatter and set the formatted value of the first column.
  
   		var view = new google.visualization.DataView(data);
