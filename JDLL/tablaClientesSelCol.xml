@@ -29,7 +29,7 @@
 
 		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-		<div id="tablediv" style="overflow: auto;">
+		<div id="tablediv" style="overflow: auto;">prueba 1
 			<img src="https://www.google.com/ig/images/spinner.gif"/>
 		</div>
 
