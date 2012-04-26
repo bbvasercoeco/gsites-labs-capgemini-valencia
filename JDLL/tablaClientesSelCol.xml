@@ -137,8 +137,8 @@
 				//var query = new google.visualization.Query(VarTableQueryUrl);
 				//https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG01QXV3ejU5T2JlQU5jdk9VOVItWHc#gid=0
 				var opts = {sendMethod: 'xhr'};
-				var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG01QXV3ejU5T2JlQU5jdk9VOVItWHc#gid=0', opts);
-				//query.setQuery('select *');
+				var query = new google.visualization.Query('http://spreadsheets.google.com/tq?key=0AoYEewut2JmZdG01QXV3ejU5T2JlQU5jdk9VOVItWHc');
+				query.setQuery('select *');
 				query.send(handleQueryResponse);  
 			}
 
