@@ -100,12 +100,17 @@
 			
 			var someBoolPref = prefs.getBool("BoolPrefName");			
 			var gadgetHelper = null;
-			_IG_RegisterOnloadHandler(loadVisualizationAPI);				
+			gadgets.util.registerOnLoadHandler(loadVisualizationAPI)
+			//_IG_RegisterOnloadHandler(loadVisualizationAPI);				
 			//var prefs = new _IG_Prefs(); // User preferences
 			var prefs = new gadgets.Prefs();
+			
+			var VarTableQueryUrl = prefs.getString("VarTableQueryUrl");		
 			var numElePag = prefs.getInt("VarNumElemPorPagina");
 			var VarCol = prefs.getInt("VarCol");
-			var urlTable = prefs.getString("VarTableQueryUrl");				
+			var VarListaColumnas = prefs.getBool("VarListaColumnas");					
+			var VarNPrimeras = prefs.getBool("VarNPrimeras");				
+			var VarSelListaColumnas = prefs.getString("VarSelListaColumnas");				
 			
 			alert(numElePag + VarCol + urlTable );
 			function loadVisualizationAPI() 
