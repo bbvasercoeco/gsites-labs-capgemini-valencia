@@ -121,7 +121,7 @@
 			var VarNPrimeras = prefs.getBool("VarNPrimeras");				
 			var VarSelListaColumnas = prefs.getString("VarSelListaColumnas");				
 			
-			alert(numElePag + VarCol +VarTableQueryUrl );
+			//alert(numElePag + VarCol +VarTableQueryUrl );
 			function loadVisualizationAPI() 
 			{
 				google.load("visualization", "1", {"packages": ["table"]});
