@@ -151,12 +151,12 @@
 				}
 
 				//alert('formatter.format(data, [0,1,2], 2); y  formatter.format(data, [0,1,2,3], 3);');
-				if (!gadgetHelper.validateResponse(response)) 
+				/*if (!gadgetHelper.validateResponse(response)) 
 				{ 
 					//alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
 					return; 
 				}
-				
+				*/
 				data = response.getDataTable();        
 				
 				// columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
