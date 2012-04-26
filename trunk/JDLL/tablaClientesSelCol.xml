@@ -7,7 +7,16 @@
 		<Require feature="locked-domain" />
 	</ModulePrefs>
   
-	<UserPref name="VarTableQueryUrl" display_name="Data source url" required="true"/>
+	<UserPref name="_table_query_url" display_name="Data source url" required="true"/>
+	<UserPref name="_table_query_refresh_interval" display_name="Data refresh interval (minutes)"
+    default_value="0" datatype="enum" required="false">
+    <EnumValue value="0" display_value="Do not refresh"/>
+
+    <EnumValue value="60" display_value="1"/>
+    <EnumValue value="300" display_value="5"/>
+    <EnumValue value="1800" display_value="30"/>
+  </UserPref>
+
 	<UserPref name="VarNumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
 	<UserPref name="VarCol" datatype="bool" default_value="4" display_name="Escoger primeras n columnas:" />
 	<UserPref name="VarListaColumnas" default_value="4" display_name="Mostrar las columnas:" />
@@ -98,31 +107,30 @@
 		<![endif]-->
 		<script type="text/javascript">    
 			
-			//var someBoolPref = prefs.getBool("BoolPrefName");			
-			//var gadgetHelper = null;
+			
 			gadgets.util.registerOnLoadHandler(loadVisualizationAPI)
+			
 			//_IG_RegisterOnloadHandler(loadVisualizationAPI);				
 			//var prefs = new _IG_Prefs(); // User preferences
 			var prefs = new gadgets.Prefs();
 			
-			var VarTableQueryUrl = prefs.getString("VarTableQueryUrl");		
+			//var VarTableQueryUrl = prefs.getString("VarTableQueryUrl");		
 			var numElePag = prefs.getInt("VarNumElemPorPagina");
 			var VarCol = prefs.getInt("VarCol");
 			var VarListaColumnas = prefs.getBool("VarListaColumnas");					
 			var VarNPrimeras = prefs.getBool("VarNPrimeras");				
 			var VarSelListaColumnas = prefs.getString("VarSelListaColumnas");				
 			
-			alert(numElePag + VarCol + VarTableQueryUrl );
+			alert(numElePag + VarCol  );
 			function loadVisualizationAPI() 
 			{
 				google.load("visualization", "1", {"packages": ["table"]});
 				google.setOnLoadCallback(sendQuery);
+				
 			}
 
 			function sendQuery() 
 			{		
-			
-				
 				gadgetHelper = new google.visualization.GadgetHelper();
 				var query = gadgetHelper.createQueryFromPrefs(prefs);
 				query.send(handleQueryResponse);
@@ -130,9 +138,16 @@
 
 			function handleQueryResponse(response) 
 			{
+				if (response.isError()) 
+				{
+					alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+					return;
+				}
+
 				//alert('formatter.format(data, [0,1,2], 2); y  formatter.format(data, [0,1,2,3], 3);');
 				if (!gadgetHelper.validateResponse(response)) 
 				{ 
+					alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
 					return; 
 				}
 				
