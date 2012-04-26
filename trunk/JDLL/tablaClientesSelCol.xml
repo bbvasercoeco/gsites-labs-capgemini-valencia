@@ -98,8 +98,8 @@
 		<![endif]-->
 		<script type="text/javascript">    
 			
-			var someBoolPref = prefs.getBool("BoolPrefName");			
-			var gadgetHelper = null;
+			//var someBoolPref = prefs.getBool("BoolPrefName");			
+			//var gadgetHelper = null;
 			gadgets.util.registerOnLoadHandler(loadVisualizationAPI)
 			//_IG_RegisterOnloadHandler(loadVisualizationAPI);				
 			//var prefs = new _IG_Prefs(); // User preferences
