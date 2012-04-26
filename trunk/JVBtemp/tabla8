@@ -75,7 +75,7 @@ function sendQuery() {
     _Col = prefs.getInt("_Col");
     var urlTable = prefs.getString("_table_query_url");
     numElePag = prefs.getInt("_NumElemPorPagina");
-    //gadgetHelper = new google.visualization.GadgetHelper();
+    gadgetHelper = new google.visualization.GadgetHelper();
     //var query = gadgetHelper.createQueryFromPrefs(prefs);
   
 	var opts = {dataType:'jsonp'};
