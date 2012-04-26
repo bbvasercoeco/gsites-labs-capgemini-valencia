@@ -114,14 +114,14 @@
 			//var prefs = new _IG_Prefs(); // User preferences
 			var prefs = new gadgets.Prefs();
 			
-			//var VarTableQueryUrl = prefs.getString("VarTableQueryUrl");		
+			var VarTableQueryUrl = prefs.getString("_table_query_url");		
 			var numElePag = prefs.getInt("VarNumElemPorPagina");
 			var VarCol = prefs.getInt("VarCol");
 			var VarListaColumnas = prefs.getBool("VarListaColumnas");					
 			var VarNPrimeras = prefs.getBool("VarNPrimeras");				
 			var VarSelListaColumnas = prefs.getString("VarSelListaColumnas");				
 			
-			alert(numElePag + VarCol  );
+			alert(numElePag + VarCol +VarTableQueryUrl );
 			function loadVisualizationAPI() 
 			{
 				google.load("visualization", "1", {"packages": ["table"]});
@@ -131,9 +131,15 @@
 
 			function sendQuery() 
 			{		
-				gadgetHelper = new google.visualization.GadgetHelper();
-				var query = gadgetHelper.createQueryFromPrefs(prefs);
-				query.send(handleQueryResponse);
+				//gadgetHelper = new google.visualization.GadgetHelper();
+				//var query = gadgetHelper.createQueryFromPrefs(prefs);
+				//query.send(handleQueryResponse);
+				//var query = new google.visualization.Query(VarTableQueryUrl);
+				
+				var opts = {sendMethod: 'xhr'};
+				var query = new google.visualization.Query(VarTableQueryUrl, opts);
+				query.setQuery('select *');
+				query.send(handleQueryResponse);  
 			}
 
 			function handleQueryResponse(response) 
@@ -147,7 +153,7 @@
 				//alert('formatter.format(data, [0,1,2], 2); y  formatter.format(data, [0,1,2,3], 3);');
 				if (!gadgetHelper.validateResponse(response)) 
 				{ 
-					alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+					//alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
 					return; 
 				}
 				
