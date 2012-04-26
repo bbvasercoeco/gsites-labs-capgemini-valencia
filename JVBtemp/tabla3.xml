@@ -75,14 +75,14 @@ function sendQuery() {
     _Col = prefs.getInt("_Col");
     var urlTable = prefs.getString("_table_query_url");
     numElePag = prefs.getInt("_NumElemPorPagina");
-    //gadgetHelper = new google.visualization.GadgetHelper();
-    //var query = gadgetHelper.createQueryFromPrefs(prefs);
+    gadgetHelper = new google.visualization.GadgetHelper();
+    var query = gadgetHelper.createQueryFromPrefs(prefs);
   
-	var opts = {dataType:'jsonp'};
+	//var opts = {dataType:'jsonp'};
 	//var opts = {dataType:'csv'};
         //var opts = {sendMethod: 'xhr'};
-        var query = new google.visualization.Query(urlTable, opts);
-        query.setQuery("select * ");
+        //var query = new google.visualization.Query(urlTable, opts);
+        //query.setQuery("select * ");
   
   query.send(handleQueryResponse);
 }
