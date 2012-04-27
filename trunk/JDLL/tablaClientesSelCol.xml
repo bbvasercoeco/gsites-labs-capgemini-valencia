@@ -151,7 +151,7 @@
 			columnasAmostrar.push(i);
 		}
 		
-		console.debug('version 22');
+		console.debug('version 23');
 		console.debug('listaColumnas: '+listaColumnas);
 		console.debug('columnasAmostrar: '+columnasAmostrar);
 		console.debug('listaColumnas.length: '+listaColumnas.length);
@@ -170,10 +170,10 @@
 		
 		//mostrar el array de lista de columnas;
   
-        view.setColumns(columnasAmostrar);
+        //view.setColumns(columnasAmostrar);
 		
 		//view.setColumns(arrayColumnas);
-		
+		view.setColumns([0,2]);
 		
 		chart.draw(view, options);
 	}
