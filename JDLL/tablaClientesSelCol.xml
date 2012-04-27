@@ -82,7 +82,7 @@
 	}
 </style>
 
-<div id="chart_div">prueba 12</div>
+<div id="tablediv">prueba 13</div>
 
 <script type="text/javascript"> 
     
@@ -118,7 +118,8 @@
 		var opts = {dataType:'jsonp'};
 		
 		var query = new google.visualization.Query(urlTable, opts);
-		query.setQuery("select A,B ");
+		//query.setQuery("select A,B ");
+		query.setQuery("select * ");
 	  
 		query.send(handleQueryResponse);
 	}
@@ -140,22 +141,23 @@
 			'rowNumberCell': ''
 		};
          
-        //var chart = new google.visualization.Table(document.getElementById('tablediv'));
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));		
 
-        var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
-        
-        
-
-		var chart = new google.visualization.Table(document.getElementById('chart_div'));
-		
+        var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
+		/*
+		var columnasAmostrar = [0,1,2,3];
+        
+		for(i=0 ; i < _Col ; i++) 
+		{ 
+			columnasAmostrar.push(i);
+		}
+  
+        view.setColumns(columnasAmostrar);
+		*/
+		
 		chart.draw(view, options);
-		
-		
-
-		//chart.draw(data);
-		
 	}
 
 </script>
