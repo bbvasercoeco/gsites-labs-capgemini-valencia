@@ -153,8 +153,10 @@
 		
 		console.debug('version 18');
 		console.debug(listaColumnas);
+		console.debug(columnasAmostrar);
+		console.debug(listaColumnas.length);
 		
-		for(j=0; j<listaColumnas.lenght; j++)
+		for(j=0; j<listaColumnas.length; j++)
 		{
 			
 			console.debug('extrayendo lista columnas');
