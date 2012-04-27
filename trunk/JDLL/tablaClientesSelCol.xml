@@ -6,31 +6,29 @@
 		<Require feature="idi"/>
 		<Require feature="locked-domain" />
 	</ModulePrefs>
-  
+
 	<UserPref name="_table_query_url" display_name="Data source url" required="true"/>
-	<UserPref name="_table_query_refresh_interval" display_name="Data refresh interval (minutes)"
-    default_value="0" datatype="enum" required="false">
-    <EnumValue value="0" display_value="Do not refresh"/>
-
-    <EnumValue value="60" display_value="1"/>
-    <EnumValue value="300" display_value="5"/>
-    <EnumValue value="1800" display_value="30"/>
-  </UserPref>
-
+	<UserPref name="_filaDescartadas" default_value="0" display_name="Descartar primeras n filas:" required="true"/>
+	<UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
+	<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
+	
+	
 	<UserPref name="VarNumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
 	<UserPref name="VarCol" datatype="bool" default_value="4" display_name="Escoger primeras n columnas:" />
 	<UserPref name="VarListaColumnas" default_value="4" display_name="Mostrar las columnas:" />
 	<UserPref name="VarNPrimeras" datatype="bool" default_value="4" display_name="Mostrar las columnas:" />
 	<UserPref name="VarSelListaColumnas" datatype="bool" default_value="4" display_name="Mostrar las columnas:" />
+	 
 	
+  
 
 <Content type="html">
 	<![CDATA[
 
 		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-		<div id="tablediv" style="overflow: auto;">prueba 1
-			<img src="https://www.google.com/ig/images/spinner.gif"/>
+		<div id="tablediv" style="overflow: auto;">prueba 2
+			<!--<img src="https://www.google.com/ig/images/spinner.gif"/>-->
 		</div>
 
 		<style type="text/css">
@@ -107,73 +105,27 @@
 		<![endif]-->
 		<script type="text/javascript">    
 			
-			
-			gadgets.util.registerOnLoadHandler(loadVisualizationAPI)
-			
-			//_IG_RegisterOnloadHandler(loadVisualizationAPI);				
-			var prefs = new _IG_Prefs(); // User preferences
-			//var prefs = new gadgets.Prefs();
-			
-			var VarTableQueryUrl = prefs.getString("_table_query_url");		
-			var numElePag = prefs.getInt("VarNumElemPorPagina");
-			var VarCol = prefs.getInt("VarCol");
-			var VarListaColumnas = prefs.getBool("VarListaColumnas");					
-			var VarNPrimeras = prefs.getBool("VarNPrimeras");				
-			var VarSelListaColumnas = prefs.getString("VarSelListaColumnas");				
-			
-			//alert(numElePag + VarCol +VarTableQueryUrl );
+			_IG_RegisterOnloadHandler(loadVisualizationAPI);
+    
 			function loadVisualizationAPI() 
 			{
 				google.load("visualization", "1", {"packages": ["table"]});
-				google.setOnLoadCallback(sendQuery);
-				
+				google.setOnLoadCallback(sendQuery);			  
 			}
 
 			function sendQuery() 
-			{		
-				//var prefs = new _IG_Prefs(); // User preferences
-				//_filaDescartadas = prefs.getInt("_filaDescartadas");
-				//_Col = prefs.getInt("_Col");
-				var urlTable = prefs.getString("_table_query_url");
-				numElePag = prefs.getInt("VarNumElemPorPagina");
-				gadgetHelper = new google.visualization.GadgetHelper();
-				
-
-				var opts = {dataType:'jsonp'};
-
-				var query = new google.visualization.Query(urlTable, opts);
-				query.setQuery("select A,B ");
-
-				query.send(handleQueryResponse);
-				
-				/*
+			{
 				var prefs = new _IG_Prefs(); // User preferences
 				_filaDescartadas = prefs.getInt("_filaDescartadas");
 				_Col = prefs.getInt("_Col");
 				var urlTable = prefs.getString("_table_query_url");
 				numElePag = prefs.getInt("_NumElemPorPagina");
 				gadgetHelper = new google.visualization.GadgetHelper();
-				//var query = gadgetHelper.createQueryFromPrefs(prefs);
-
-				var opts = {dataType:'jsonp'};
-
+				//var query = gadgetHelper.createQueryFromPrefs(prefs);			  
+				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);
-				query.setQuery("select A,B ");
-
+				query.setQuery("select A,B ");			  
 				query.send(handleQueryResponse);
-			
-				*/
-				/*
-				//gadgetHelper = new google.visualization.GadgetHelper();
-				//var query = gadgetHelper.createQueryFromPrefs(prefs);
-				//query.send(handleQueryResponse);
-				//var query = new google.visualization.Query(VarTableQueryUrl);
-				//https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG01QXV3ejU5T2JlQU5jdk9VOVItWHc#gid=0
-				var opts = {sendMethod: 'xhr'};
-				var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG01QXV3ejU5T2JlQU5jdk9VOVItWHc#gid=0');
-				query.setQuery('select *');
-				query.send(handleQueryResponse); 
-				*/				
 			}
 
 			function handleQueryResponse(response) 
@@ -200,10 +152,10 @@
 				//https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/detallecliente-cliglobal001
 				//https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-CLIGLOBAL001
 
-				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-{0}" target="_parent" title="Ver detalle de {0}">{0}</a> ');
+				//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-{0}" target="_parent" title="Ver detalle de {0}">{0}</a> ');
 				//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
 				
-				formatter.format(data, [0,1,2,3], 0); 
+				//formatter.format(data, [0,1,2,3], 0); 
 				//formatter.format(data, [0,1,2,3], 3); 
 				
 				//var formatterArrow = new google.visualization.PatternFormat('{2} <img src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/flecha_puntos_tabla.png" />');
@@ -213,7 +165,7 @@
 				
 				var columnasAmostrar = [];
 				
-				for(i=0 ; i < VarCol ; i++) 
+				for(i=0 ; i < _Col ; i++) 
 				{ 
 					columnasAmostrar.push(i);
 				}
