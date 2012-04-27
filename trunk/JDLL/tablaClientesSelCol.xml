@@ -1,194 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="TablaPaginada"
-	description="Tabla cargada desde docs con paginacion y parametrizada."
-	author_affiliation="Capgemini">
-		<Require feature="idi"/>
-		<Require feature="locked-domain" />
-	</ModulePrefs>
-
-	<UserPref name="_table_query_url" display_name="Data source url" required="true"/>
-	<UserPref name="_filaDescartadas" default_value="0" display_name="Descartar primeras n filas:" required="true"/>
-	<UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
-	<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
-	
-	<!--
-	<UserPref name="VarNumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
-	<UserPref name="VarCol" datatype="bool" default_value="4" display_name="Escoger primeras n columnas:" />
-	<UserPref name="VarListaColumnas" default_value="4" display_name="Mostrar las columnas:" />
-	<UserPref name="VarNPrimeras" datatype="bool" default_value="4" display_name="Mostrar las columnas:" />
-	<UserPref name="VarSelListaColumnas" datatype="bool" default_value="4" display_name="Mostrar las columnas:" />
-	 -->
-	
+  <ModulePrefs title="TablaPaginada"
+  description="Tabla cargada desde docs con paginacion y parametrizada."
+  author_affiliation="Capgemini">
+<Require feature="idi"/>
+<Require feature="locked-domain" />
+</ModulePrefs>
   
+<UserPref name="_table_query_url" display_name="Data source url" required="true"/>
+<UserPref name="_filaDescartadas" default_value="0" display_name="Descartar primeras n filas:" required="true"/>
+<UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
+<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
+  
+<Content type="html"><![CDATA[
 
-<Content type="html">
-	<![CDATA[
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 
-		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-		<div id="tablediv" style="overflow: auto;">prueba 3
-			<!--<img src="https://www.google.com/ig/images/spinner.gif"/>-->
-		</div>
 
-		<style type="text/css">
-			.filaPar {
-				background: white; 
-				border-bottom: 1px solid #E2E2E2; 
-				height: 45px; 
-				font-family:  Arial, Helvetica, sans-serif;
-				font-size:14px;
-			}
-			.filaImpar {
-				background: #DFE3E5; 
-				border-bottom: 1px solid #E2E2E2; 
-				height: 45px; 
-				font-family: Arial, Helvetica, sans-serif;
-				font-size:14px;
-			}
-			.filaSeleccionada{
-				background: white; 
-				border-bottom: 1px solid #A22E212; 
-				height: 45px; 
-				font-family: Arial, Helvetica, sans-serif;
-				font-size:14px;
-			}
-			.filaHover{
-				background: #F0EEE2; 
-				border-bottom: 1px solid #B2B2B2; 
-				height: 45px;
-				font-family: Arial, Helvetica, sans-serif;
-				font-size:14px;
-			}
-			#tablediv table,
-			#tablediv table tr,
-			#tablediv table	tr td {
-				font-family: Arial, Helvetica, sans-serif !important;
-			}		
-			.formateoCelda {
-				font-family: Arial, Helvetica, sans-serif !important;
-				padding-left: 5px !important;
-			}
-			.header {
-				background: #1e5799; /* Old browsers */
-				/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-				background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGI5ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-				background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
-				background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
-				background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
-				background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
-				background: linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-8 */
-				color: white; 
-				font-size:15px; 
-				font-weight: bold;
-				text-align: center;
-				font-family: Arial, Helvetica, sans-serif;
-				height: 35px;
-			}
-			a.enlaceTabla,
-			a:active.enlaceTabla,
-			a:visited.enlaceTabla {
-				color: #3F78B2;
-			}
-			a:hover.enlaceTabla {
-				color: #009EE5;
-			}
-		</style>
-		<!--[if gte IE 9]>
-		<style type="text/css">
-			.gradient {
-			   filter: none;
-			}
-		</style>
-		<![endif]-->
-		<script type="text/javascript">    
-			
-			_IG_RegisterOnloadHandler(loadVisualizationAPI);
+
+<style type="text/css">
+	table { border-collapse:collapse; width:100%;}
+	table#tablaOculta{visibility:hidden;}
+	td, th {  font-family: Arial, Helvetica, sans-serif;  font-size: 10pt;  padding: 2px 0.5em;  white-space: nowrap;}
+	td.numeric {  text-align: right;}
+	th {  background: blue; color: white; font-size:18px; font-family:Arial;}
+	th.mainHeader {  background-color: #808080;  color: #ffffff;  text-align: left;}
+	th a {  color: white;  text-decoration: none;}
+	th a:visited {  color: white;}
+	th a:active, th a:hover { color: #800000; text-decoration: underline;}
+        
+        tr {background: white; border-bottom: solid #E2E2E2; height: 50px;}
+	tr.alternateRow {background: #F3F3F3; border-bottom:solid #E2E2E2; height: 50px;}
+        
+	.filaUltima{background: white; height: 50px; valign:center; text-align: right;}
+		
+	/*td.sortedColumn {background-color: #f0f0f0;}
+	th.sortedColumn { background-color: #b0b0b0;}
+	tr.alternateRow td.sortedColumn { background-color: #d0d0d0; } */
+</style>
+
+<div id="chart_div">prueba 5</div>
+
+<script>
     
-			function loadVisualizationAPI() 
-			{
-				google.load("visualization", "1", {"packages": ["table"]});
-				google.setOnLoadCallback(sendQuery);			  
-			}
+	var pagActual = 1;
+	var gadgetHelper = null;
+	var _filaDescartadas = 0;
+	var _Col = 3;
+	var numElePag = 8;
+	var totPag = 1;
+	var cabecera = new Array();
+	var matriz = new Array();
+	var ultimaColumnaOrdenada = -1;
+	var ultimaColumnaOrder = true;
+	_IG_RegisterOnloadHandler(loadVisualizationAPI);
+    
+	
+function loadVisualizationAPI() {
+    google.load("visualization", "1", {"packages": ["table"]});
+    google.setOnLoadCallback(sendQuery);
+  
+    //      var spreadsheetId = "0AnG-1cgywSuPdHVZMmhMWF80blVwWHFFb2UzOFk1OEE";//Change it to your Spreadsheet ID
+    //      var dataArray = getData(spreadsheetId);
+    //      var ss = SpreadsheetApp.openById(spreadsheetId);
+    //      var sheet = ss.getSheets()[0].getDataRange();
+    //      dataArray = sheet.getValues();
+    //      alert('rrr:' + dataArray.getValue[1]);
+}
 
-			function sendQuery() 
-			{
-				var prefs = new _IG_Prefs(); // User preferences
-				_filaDescartadas = prefs.getInt("_filaDescartadas");
-				_Col = prefs.getInt("_Col");
-				var urlTable = prefs.getString("_table_query_url");
-				numElePag = prefs.getInt("_NumElemPorPagina");
-				gadgetHelper = new google.visualization.GadgetHelper();
-				//var query = gadgetHelper.createQueryFromPrefs(prefs);			  
-				var opts = {dataType:'jsonp'};				
-				var query = new google.visualization.Query(urlTable, opts);
-				query.setQuery("select A,B ");			  
-				query.send(handleQueryResponse);
-			}
+function sendQuery() {
+    var prefs = new _IG_Prefs(); // User preferences
+    _filaDescartadas = prefs.getInt("_filaDescartadas");
+    _Col = prefs.getInt("_Col");
+    var urlTable = prefs.getString("_table_query_url");
+    numElePag = prefs.getInt("_NumElemPorPagina");
+    gadgetHelper = new google.visualization.GadgetHelper();
+    //var query = gadgetHelper.createQueryFromPrefs(prefs);
+  
+	var opts = {dataType:'jsonp'};
+	
+    var query = new google.visualization.Query(urlTable, opts);
+    query.setQuery("select A,B ");
+  
+  query.send(handleQueryResponse);
+}
 
-			function handleQueryResponse(response) 
-			{
-				if (response.isError()) 
-				{
-					alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-					return;
-				}
+function siguientes(){
+  pagActual++;
+  dibujaTabla();
+}
 
-				//alert('formatter.format(data, [0,1,2], 2); y  formatter.format(data, [0,1,2,3], 3);');
-				/*if (!gadgetHelper.validateResponse(response)) 
-				{ 
-					//alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-					return; 
-				}
-				*/
-				data = response.getDataTable();        
-				
-				// columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
-				/* */
-				//https://developers.google.com/chart/interactive/docs/reference#DataView
-				//https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/detallecliente-CLIGLOBAL001
-				//https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/detallecliente-cliglobal001
-				//https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-CLIGLOBAL001
+function anteriores(){
+  pagActual--;
+  dibujaTabla();
+}
 
-				//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-{0}" target="_parent" title="Ver detalle de {0}">{0}</a> ');
-				//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
-				
-				//formatter.format(data, [0,1,2,3], 0); 
-				//formatter.format(data, [0,1,2,3], 3); 
-				
-				//var formatterArrow = new google.visualization.PatternFormat('{2} <img src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/flecha_puntos_tabla.png" />');
-				//formatterArrow.format(data, [0,1,2], 2); // Apply formatter and set the formatted value of the first column.
-		 
-				var view = new google.visualization.DataView(data);
-				
-				var columnasAmostrar = [];
-				
-				for(i=0 ; i < _Col ; i++) 
-				{ 
-					columnasAmostrar.push(i);
-				}
-		  
-				view.setColumns(columnasAmostrar);
 
-				var cssClassNames = {
-					'headerRow': 'header',
-					'tableRow': 'filaPar',
-					'oddTableRow': 'filaImpar',
-					'selectedTableRow': 'filaSeleccionada',
-					'hoverTableRow': 'filaHover',
-					'headerCell': '',
-					'tableCell': 'formateoCelda',
-					'rowNumberCell': ''
-				};
-				 
-				var chart = new google.visualization.Table(document.getElementById('tablediv'));
-				var options = {'sortColumn': 1, 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
-				
-				chart.draw(view, options);
-			}
-		</script>
-	]]>
+
+function handleQueryResponse(response) {
+  if (!gadgetHelper.validateResponse(response)) { return; }
+  data = response.getDataTable();
+  
+  var chart = new google.visualization.Table(document.getElementById('chart_div'));
+    //chart.draw(data, options);
+    chart.draw(data);
+
+ 
+}
+
+
+function escapeHtml(text) {
+  if (text == null) {
+    return '';
+  }
+  return _hesc(text);
+}
+</script>
+
+ 
+
+
+
+]]>
 </Content>
 </Module>
