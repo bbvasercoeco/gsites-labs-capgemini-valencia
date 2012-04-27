@@ -83,7 +83,7 @@
 	}
 </style>
 
-<div id="tablediv">prueba 16</div>
+<div id="tablediv">prueba 17</div>
 
 <script type="text/javascript"> 
     
@@ -151,10 +151,16 @@
 			columnasAmostrar.push(i);
 		}
 		
+		console.debug('version 17');
+		
 		for(j=0; j<listaColumnas.lenght; j++)
 		{
+			
+			console.debug('extrayendo lista columnas');
 			indexaux = listaColumnas[j];
+			console.debug(indexaux);
 			arrayColumnas.push(indexaux);
+			console.debug(arrayColumnas[j]);
 		}
 		
 		
