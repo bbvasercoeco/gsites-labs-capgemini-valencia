@@ -12,13 +12,13 @@
 	<UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
 	<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
 	
-	
+	<!--
 	<UserPref name="VarNumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
 	<UserPref name="VarCol" datatype="bool" default_value="4" display_name="Escoger primeras n columnas:" />
 	<UserPref name="VarListaColumnas" default_value="4" display_name="Mostrar las columnas:" />
 	<UserPref name="VarNPrimeras" datatype="bool" default_value="4" display_name="Mostrar las columnas:" />
 	<UserPref name="VarSelListaColumnas" datatype="bool" default_value="4" display_name="Mostrar las columnas:" />
-	 
+	 -->
 	
   
 
@@ -27,7 +27,7 @@
 
 		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-		<div id="tablediv" style="overflow: auto;">prueba 2
+		<div id="tablediv" style="overflow: auto;">prueba 3
 			<!--<img src="https://www.google.com/ig/images/spinner.gif"/>-->
 		</div>
 
