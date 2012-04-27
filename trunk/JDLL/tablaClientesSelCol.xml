@@ -163,9 +163,9 @@
 			indexaux = listaColumnas[j];
 			console.debug('indexaux: '+indexaux);
 			arrayColumnas.push(indexaux);
-			console.debug('arrayColumnas[j]: '+arrayColumnas[j]);
+			console.debug('arrayColumnas['+j+']: '+arrayColumnas[j]);
 		}
-		
+		console.debug('arrayColumnas: '+arrayColumnas);
 		
 		
 		//mostrar el array de lista de columnas;
