@@ -11,6 +11,7 @@
 <UserPref name="_filaDescartadas" default_value="0" display_name="Descartar primeras n filas:" required="true"/>
 <UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
 <UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
+<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" required="true"/>
   
 <Content type="html"><![CDATA[
 
@@ -82,7 +83,7 @@
 	}
 </style>
 
-<div id="tablediv">prueba 13</div>
+<div id="tablediv">prueba 14</div>
 
 <script type="text/javascript"> 
     
@@ -96,6 +97,13 @@
 	var matriz = new Array();
 	var ultimaColumnaOrdenada = -1;
 	var ultimaColumnaOrder = true;
+	var VarListaColumnas = "";
+	var prefs = new _IG_Prefs(); // User preferences
+	var _filaDescartadas = prefs.getInt("_filaDescartadas");
+	var	_Col = prefs.getInt("_Col");
+	var urlTable = prefs.getString("_table_query_url");
+	var	numElePag = prefs.getInt("_NumElemPorPagina");
+		
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
 	
 	function loadVisualizationAPI() 
@@ -106,11 +114,7 @@
 
 	function sendQuery() 
 	{
-		var prefs = new _IG_Prefs(); // User preferences
-		_filaDescartadas = prefs.getInt("_filaDescartadas");
-		_Col = prefs.getInt("_Col");
-		var urlTable = prefs.getString("_table_query_url");
-		numElePag = prefs.getInt("_NumElemPorPagina");
+		
 		
 		gadgetHelper = new google.visualization.GadgetHelper();
 		//var query = gadgetHelper.createQueryFromPrefs(prefs);
