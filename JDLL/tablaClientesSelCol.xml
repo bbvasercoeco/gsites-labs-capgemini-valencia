@@ -88,14 +88,14 @@
 <script type="text/javascript"> 
     
 	var gadgetHelper = null;
-	var _filaDescartadas = 0;
-	
+		
 	var prefs = new _IG_Prefs(); // User preferences
 	var _filaDescartadas = prefs.getInt("_filaDescartadas");
 	var	_Col = prefs.getInt("_Col");
 	var urlTable = prefs.getString("_table_query_url");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
-		
+	var VarListaColumnas = prefs.getString("VarListaColumnas");
+	
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
 	
 	function loadVisualizationAPI() 
@@ -140,15 +140,30 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
-		
 		var columnasAmostrar = [];
+		var arrayColumnas = [];
         
+		var listaColumnas = VarListaColumnas.split(",");
+		
+		
 		for(i=0 ; i < _Col ; i++) 
 		{ 
 			columnasAmostrar.push(i);
 		}
+		
+		for(j=0; j<listaColumnas.lenght; j++)
+		{
+			indexaux = listaColumnas[j];
+			arrayColumnas.push(indexaux);
+		}
+		
+		
+		
+		//mostrar el array de lista de columnas;
   
-        view.setColumns(columnasAmostrar);
+        //view.setColumns(columnasAmostrar);
+		
+		view.setColumns(arrayColumnas);
 		
 		
 		chart.draw(view, options);
