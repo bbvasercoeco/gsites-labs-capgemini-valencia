@@ -151,7 +151,8 @@
 			columnasAmostrar.push(i);
 		}
 		
-		console.debug('version 17');
+		console.debug('version 18');
+		console.debug(listaColumnas);
 		
 		for(j=0; j<listaColumnas.lenght; j++)
 		{
