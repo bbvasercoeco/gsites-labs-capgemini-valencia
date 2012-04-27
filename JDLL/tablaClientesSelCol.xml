@@ -146,8 +146,8 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
-		/*
-		var columnasAmostrar = [0,1,2,3];
+		
+		var columnasAmostrar = [];
         
 		for(i=0 ; i < _Col ; i++) 
 		{ 
@@ -155,7 +155,7 @@
 		}
   
         view.setColumns(columnasAmostrar);
-		*/
+		
 		
 		chart.draw(view, options);
 	}
