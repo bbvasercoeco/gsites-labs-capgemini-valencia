@@ -173,8 +173,8 @@
   
         //view.setColumns(columnasAmostrar);
 		
-		//view.setColumns(arrayColumnas);
-		view.setColumns([0,2]);
+		view.setColumns(arrayColumnas);
+		//view.setColumns([0,2]);
 		
 		chart.draw(view, options);
 	}
