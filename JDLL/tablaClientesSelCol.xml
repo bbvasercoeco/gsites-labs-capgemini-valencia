@@ -82,7 +82,7 @@
 	}
 </style>
 
-<div id="tablediv">prueba 8</div>
+<div id="chart_div">prueba 9</div>
 
 <script type="text/javascript"> 
     
@@ -124,29 +124,12 @@
 
 	function handleQueryResponse(response) 
 	{
-		if (!gadgetHelper.validateResponse(response)) 
-		{ 
-			return; 
-		}
-		
+		if (!gadgetHelper.validateResponse(response)) { return; }
 		data = response.getDataTable();
-  
-		var cssClassNames = {
-			'headerRow': 'header',
-			'tableRow': 'filaPar',
-			'oddTableRow': 'filaImpar',
-			'selectedTableRow': 'filaSeleccionada',
-			'hoverTableRow': 'filaHover',
-			'headerCell': '',
-			'tableCell': 'formateoCelda',
-			'rowNumberCell': ''
-		};
-         
-        var chart = new google.visualization.Table(document.getElementById('tablediv'));
-        //var options = {'sortColumn': 1, 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
-        
-        //chart.draw(view, options);
-		chart.draw(view);
+
+		var chart = new google.visualization.Table(document.getElementById('chart_div'));
+		//chart.draw(data, options);
+		chart.draw(data);
 		
 	}
 
