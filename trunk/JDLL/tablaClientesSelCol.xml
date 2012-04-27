@@ -151,19 +151,19 @@
 			columnasAmostrar.push(i);
 		}
 		
-		console.debug('version 19');
-		console.debug(listaColumnas);
-		console.debug(columnasAmostrar);
-		console.debug(listaColumnas.length);
+		console.debug('version 20');
+		console.debug('listaColumnas: '+listaColumnas);
+		console.debug('columnasAmostrar: '+columnasAmostrar);
+		console.debug('listaColumnas.length: '+listaColumnas.length);
 		
 		for(j=0; j<listaColumnas.length; j++)
 		{
 			
 			console.debug('extrayendo lista columnas');
 			indexaux = listaColumnas[j];
-			console.debug(indexaux);
+			console.debug('indexaux: '+indexaux);
 			arrayColumnas.push(indexaux);
-			console.debug(arrayColumnas[j]);
+			console.debug('arrayColumnas[j]: '+arrayColumnas[j]);
 		}
 		
 		
