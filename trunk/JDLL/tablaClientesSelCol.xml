@@ -82,7 +82,7 @@
 	}
 </style>
 
-<div id="chart_div">prueba 6</div>
+<div id="tablediv">prueba 7</div>
 
 <script type="text/javascript"> 
     
@@ -131,10 +131,22 @@
 		
 		data = response.getDataTable();
   
-		var chart = new google.visualization.Table(document.getElementById('chart_div'));
-    
-		//chart.draw(data, options);
-		chart.draw(data);
+		var cssClassNames = {
+			'headerRow': 'header',
+			'tableRow': 'filaPar',
+			'oddTableRow': 'filaImpar',
+			'selectedTableRow': 'filaSeleccionada',
+			'hoverTableRow': 'filaHover',
+			'headerCell': '',
+			'tableCell': 'formateoCelda',
+			'rowNumberCell': ''
+		};
+         
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));
+        var options = {'sortColumn': 1, 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
+        
+        chart.draw(view, options);
+		
 	}
 
 </script>
