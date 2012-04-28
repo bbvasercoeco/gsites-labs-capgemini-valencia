@@ -10,7 +10,7 @@
 <UserPref name="_table_query_url" display_name="Data source url" required="true"/>
 <UserPref name="_filaDescartadas" default_value="0" display_name="Descartar primeras n filas:" required="true"/>
 <UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" />
-<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
+<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:"/>
 <UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
   
 <Content type="html"><![CDATA[
@@ -83,7 +83,7 @@
 	}
 </style>
 
-<div id="tablediv">prueba 24</div>
+<div id="tablediv">prueba 25</div>
 
 <script type="text/javascript"> 
     
@@ -140,7 +140,7 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
-		console.debug('version 27');
+		console.debug('version 28');
 		
 		if (_Col!="")
 		{
