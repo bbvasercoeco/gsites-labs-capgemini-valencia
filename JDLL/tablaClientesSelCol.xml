@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Tabla Cliente"
-	description="Tabla cargada desde docs con paginacion y parametrizada."
+	<ModulePrefs title="Tabla desde docs"
+	description="Tabla cargada con paginacion y parametrizada."
 	author_affiliation="Capgemini">
 	<Require feature="idi"/>
 	<Require feature="locked-domain" />
@@ -13,8 +13,6 @@
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
 	
-	
-
 <Content type="html"><![CDATA[
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -153,17 +151,17 @@
 		if (_Col!="")
 		{
 			var columnasAmostrar = [];
+			
 			for(i=0 ; i < _Col ; i++) 
 			{ 
 				columnasAmostrar.push(i);
 			}
-			console.debug('_Col es diferente de "": view.setColumns(columnasAmostrar) : '+columnasAmostrar);
+			//console.debug('_Col es diferente de "": view.setColumns(columnasAmostrar) : '+columnasAmostrar);
 			view.setColumns(columnasAmostrar);
 		}
 		else if (varListaColumnas!="")
 			{
-				
-				console.debug('varListaColumnas: '+varListaColumnas);	
+				//console.debug('varListaColumnas: '+varListaColumnas);	
 				var listaColumnas = varListaColumnas.split(",");
 					
 				if (listaColumnas.length > 0)
@@ -171,18 +169,16 @@
 					var arrayColumnas = [];
 					for(j=0; j<listaColumnas.length; j++)
 					{
-						console.debug('extrayendo lista columnas');		
+						//console.debug('extrayendo lista columnas');		
 						indexaux = parseInt(listaColumnas[j]);
-						console.debug('indexaux: '+indexaux);
+						//console.debug('indexaux: '+indexaux);
 						arrayColumnas.push(indexaux);
-						console.debug('arrayColumnas['+j+']: '+arrayColumnas[j]);
+						//console.debug('arrayColumnas['+j+']: '+arrayColumnas[j]);
 					}
-					console.debug('varListaColumnas!="" , arrayColumnas: '+arrayColumnas);			
+					//console.debug('varListaColumnas!="" , arrayColumnas: '+arrayColumnas);			
 					view.setColumns(arrayColumnas);
 				}
 			}
-		
-		//view.setColumns([0,2]);
 		
 		chart.draw(view, options);
 	}
