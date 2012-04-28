@@ -12,11 +12,11 @@
 <UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" />
 <UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:"/>
 <UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-
+<!--
 <UserPref name="VarRadio_Col" default_value="" display_name="Escoger primeras n columnas" />
 <UserPref name="VarRadioListaColumnas" default_value="" display_name="Lista de columnas a mostrar" />
 <UserPref name="VarRadioTodas" default_value="" display_name="Todas las columnas" />
-
+-->
 
 
 
