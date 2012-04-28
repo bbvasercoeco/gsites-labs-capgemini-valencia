@@ -17,6 +17,9 @@
 <UserPref name="VarRadioListaColumnas" default_value="" display_name="Lista de columnas a mostrar" />
 <UserPref name="VarRadioTodas" default_value="" display_name="Todas las columnas" />
 
+
+
+
 <Content type="html"><![CDATA[
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -86,7 +89,7 @@
 		color: #009EE5;
 	}
 	img.loading {
-		margin: 10% 0 0 40%;
+		margin: 5% 0 0 40%;
 	}
 </style>
 
@@ -180,7 +183,7 @@
 		
 		//view.setColumns([0,2]);
 		
-		//chart.draw(view, options);
+		chart.draw(view, options);
 	}
 
 </script>
