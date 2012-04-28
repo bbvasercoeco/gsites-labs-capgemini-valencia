@@ -148,7 +148,7 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
-		console.debug('version 29');
+		console.debug('version 30');
 		
 		if (_Col!="")
 		{
