@@ -7,18 +7,17 @@
 	<Require feature="locked-domain" />
 </ModulePrefs>
   
-<UserPref name="_table_query_url" display_name="Data source url" required="true"/>
-<UserPref name="_filaDescartadas" default_value="0" display_name="Descartar primeras n filas:" required="true"/>
-<UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" />
-<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:"/>
-<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-<!--
-<UserPref name="VarRadio_Col" default_value="" display_name="Escoger primeras n columnas" />
-<UserPref name="VarRadioListaColumnas" default_value="" display_name="Lista de columnas a mostrar" />
-<UserPref name="VarRadioTodas" default_value="" display_name="Todas las columnas" />
--->
-
-
+	<UserPref name="_table_query_url" display_name="Data source url" />
+	
+	<UserPref name="_NumElemPorPagina" display_name="Número de elementos por página:" />
+	<UserPref name="_Col" display_name="Escoger primeras n columnas:" />	
+	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
+	
+	<!--
+	<UserPref name="VarRadio_Col" default_value="" display_name="Escoger primeras n columnas" />
+	<UserPref name="VarRadioListaColumnas" default_value="" display_name="Lista de columnas a mostrar" />
+	<UserPref name="VarRadioTodas" default_value="" display_name="Todas las columnas" />
+	-->
 
 <Content type="html"><![CDATA[
 
@@ -100,7 +99,7 @@
 	var gadgetHelper = null;
 		
 	var prefs = new _IG_Prefs(); // User preferences
-	var _filaDescartadas = prefs.getInt("_filaDescartadas");
+	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
 	var	_Col = prefs.getInt("_Col");
 	var urlTable = prefs.getString("_table_query_url");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
