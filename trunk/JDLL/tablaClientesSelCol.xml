@@ -148,7 +148,7 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
-		console.debug('version 30');
+		console.debug('version 31');
 		
 		if (_Col!="")
 		{
@@ -162,7 +162,7 @@
 		}
 		else if (varListaColumnas!="")
 			{
-				var listaColumnas = VarListaColumnas.split(",");
+				var listaColumnas = varListaColumnas.split(",");
 				
 				if (listaColumnas.length > 0)
 				{
