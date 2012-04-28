@@ -93,7 +93,10 @@
 <script type="text/javascript"> 
     
 	var gadgetHelper = null;
-		
+	
+	var varListaColumnas = "";
+	var	_Col = ""; 
+	
 	var prefs = new _IG_Prefs(); // User preferences
 	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
 	var	_Col = prefs.getInt("_Col");
