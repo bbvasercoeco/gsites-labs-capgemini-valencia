@@ -117,7 +117,10 @@
 		
 		var query = new google.visualization.Query(urlTable, opts);
 		//query.setQuery("select A,B ");
-		query.setQuery("select * ");
+		var idCliquery = idCliente();
+		
+		//var querytosend = "select *  where A 
+		query.setQuery("select * where A=CLIGLOBAL001");
 	  
 		query.send(handleQueryResponse);
 	}
