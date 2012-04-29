@@ -146,14 +146,21 @@
 	function idCliente()
 	{
 		console.debug('idCliente <--');
+		
 		var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");
+		
 		console.debug('arrayParametros:' + arrayParametros);
+		
 		var indexFicha = indiceCadena(arrayParametros,"ficha-");
 		
 		console.debug('indexFicha:' + indexFicha);
-		var arrayidCliente = arrayParametros[indexFicha].indexOf("-");
+		
+		var arrayidCliente = arrayParametros[indexFicha].split("-");
+		
 		console.debug('arrayidCliente:' + arrayidCliente);
+		
 		console.debug('idCliente -->');
+		
 		return arrayidCliente[1];
 		
 	}
