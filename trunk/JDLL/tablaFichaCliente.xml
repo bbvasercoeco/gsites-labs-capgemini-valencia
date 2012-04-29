@@ -193,7 +193,7 @@
 				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('version 46');
+				console.debug('version 47');
 				
 				if (_Col!="")
 				{
