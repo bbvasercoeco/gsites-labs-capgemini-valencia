@@ -120,7 +120,7 @@
 		var idCliquery = idCliente();
 		
 		//var querytosend = "select *  where A 
-		query.setQuery("select * where A=CLIGLOBAL001");
+		query.setQuery("select * where A like 'CLIGLOBAL001'");
 	  
 		query.send(handleQueryResponse);
 	}
