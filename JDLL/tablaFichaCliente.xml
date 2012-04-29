@@ -126,7 +126,13 @@
 	{		
 		for(var i=0; i<parametros.length; i++)
 		{
-			if(parametros[i]== cadena)
+			/*if(parametros[i]== cadena)
+			{
+				return i;
+			} 
+			*/
+			console.debug('parametros['+i-'].indexOf(cadena):' + parametros[i].indexOf(cadena));
+			if(parametros[i].indexOf(cadena))
 			{
 				return i;
 			} 
@@ -137,7 +143,8 @@
 	{
 		var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");
 		console.debug('arrayParametros:' + arrayParametros);
-		var indexFicha = indiceCadena(arrayParametros,"ficha-");		
+		var indexFicha = indiceCadena(arrayParametros,"ficha-");
+		
 		console.debug('indexFicha:' + indexFicha);
 		var arrayidCliente = arrayParametros[indexFicha].indexOf("-");
 		console.debug('arrayidCliente:' + arrayidCliente);
