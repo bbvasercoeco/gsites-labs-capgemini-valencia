@@ -147,9 +147,8 @@
 			
 			// Abre el detalle de la url
 			function detalle(id)
-			{	
-				var idCliente = paramtoquery("ficha-");
-				window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase();
+			{				
+				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
 			}
 			
 			//obtiene el valor del parametro que le pasamos por url: 
