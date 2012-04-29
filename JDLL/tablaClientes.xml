@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Tabla desde docs"
-	description="Tabla cargada con paginacion y parametrizada."
-	author_affiliation="Capgemini">
-	<Require feature="idi"/>
-	<Require feature="locked-domain" />
-</ModulePrefs>
-  
-	<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
+	<ModulePrefs title="Tabla listado de clientes"
+		description="Tabla cargada con paginacion y parametrizada."
+		author_affiliation="Capgemini">
+		<Require feature="idi"/>
+		<Require feature="locked-domain" />
+	</ModulePrefs>
 	
+	<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-	
-<Content type="html"><![CDATA[
+
+	<Content type="html"><![CDATA[
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
@@ -95,8 +94,7 @@
 	var varListaColumnas = "";
 	var	_Col = ""; 
 	
-	var prefs = new _IG_Prefs(); // User preferences
-	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
+	var prefs = new _IG_Prefs(); // User preferences	
 	var	_Col = prefs.getInt("_Col");
 	var urlTable = prefs.getString("_table_query_url");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
@@ -130,10 +128,9 @@
 	
 		data = response.getDataTable();
 		
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
+		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
 		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
 		formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
-		
 		
 		var cssClassNames = {
 			'headerRow': 'header',
