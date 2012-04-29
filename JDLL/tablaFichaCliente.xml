@@ -120,8 +120,9 @@
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("ficha-");				
-				//var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
-				
+				var querytosend2 = "select *  where A like '" + idCliquery.toUpperCase() + "'";
+				console.debug('querytosend2: '+querytosend2);
+				console.debug(idCliquery.toUpperCase());
 				query.setQuery("select * where A like 'CLIGLOBAL001'");
 				
 				//query.setQuery(querytosend);			  
@@ -192,7 +193,7 @@
 				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('version 45');
+				console.debug('version 46');
 				
 				if (_Col!="")
 				{
