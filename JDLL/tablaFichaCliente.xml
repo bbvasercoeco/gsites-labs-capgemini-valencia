@@ -120,12 +120,12 @@
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("ficha-");				
-				var querytosend2 = "select *  where A like '" + idCliquery.toUpperCase() + "'";
-				console.debug('querytosend2: '+querytosend2);
+				var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
+				console.debug('querytosend: '+querytosend);
 				console.debug(idCliquery.toUpperCase());
 				//query.setQuery("select * where A like 'CLIGLOBAL001'");
 				
-				query.setQuery(querytosend2);			  
+				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 			}
 
@@ -172,9 +172,8 @@
 			{
 				if (!gadgetHelper.validateResponse(response)) { return; }
 			
-				data = response.getDataTable();
-				
-				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle({0});" >{0}</a> ');
+				data = response.getDataTable();				
+				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" >{0}</a> ');
 				formatter.format(data, [8,8]); // Apply formatter and set the formatted value of the first column.
 				
 				var cssClassNames = {
@@ -189,11 +188,10 @@
 				};
 				 
 				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-
 				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('version 47');
+				console.debug('version 48');
 				
 				if (_Col!="")
 				{
