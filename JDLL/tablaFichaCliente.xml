@@ -135,7 +135,7 @@
 			} 
 			*/
 			console.debug('parametros['+i+'].indexOf(cadena):' + parametros[i].indexOf(cadena));
-			if(parametros[i].indexOf(cadena)>0)
+			if(parametros[i].indexOf(cadena)>-1)
 			{
 				return i;
 			} 
@@ -184,7 +184,7 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
-		console.debug('version 36');
+		console.debug('version 37');
 		
 		if (_Col!="")
 		{
