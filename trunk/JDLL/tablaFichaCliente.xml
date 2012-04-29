@@ -119,8 +119,9 @@
 		//query.setQuery("select A,B ");
 		var idCliquery = idCliente();
 		
-		//var querytosend = "select *  where A 
-		query.setQuery("select * where A like 'CLIGLOBAL001'");
+		var querytosend = "select *  where A like '" + idCliquery + "'";
+		//query.setQuery("select * where A like 'CLIGLOBAL001'");
+		query.setQuery(querytosend);
 	  
 		query.send(handleQueryResponse);
 	}
@@ -199,7 +200,7 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
-		console.debug('version 43');
+		console.debug('version 44');
 		
 		if (_Col!="")
 		{
