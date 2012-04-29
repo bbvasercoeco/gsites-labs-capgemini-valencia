@@ -124,7 +124,7 @@
 				
 				query.setQuery("select * where A like 'CLIGLOBAL001'");
 				
-				query.setQuery(querytosend);			  
+				//query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 			}
 
