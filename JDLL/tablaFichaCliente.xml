@@ -123,9 +123,9 @@
 				var querytosend2 = "select *  where A like '" + idCliquery.toUpperCase() + "'";
 				console.debug('querytosend2: '+querytosend2);
 				console.debug(idCliquery.toUpperCase());
-				query.setQuery("select * where A like 'CLIGLOBAL001'");
+				//query.setQuery("select * where A like 'CLIGLOBAL001'");
 				
-				//query.setQuery(querytosend);			  
+				query.setQuery(querytosend2);			  
 				query.send(handleQueryResponse);
 			}
 
