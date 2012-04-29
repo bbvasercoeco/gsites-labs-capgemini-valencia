@@ -124,6 +124,9 @@
 
 	function indiceCadena (parametros, cadena)
 	{		
+		console.debug('indiceCadena <--');
+		console.debug('parametros: '+ parametros);
+		console.debug('cadena: '+ cadena);
 		for(var i=0; i<parametros.length; i++)
 		{
 			/*if(parametros[i]== cadena)
@@ -131,7 +134,7 @@
 				return i;
 			} 
 			*/
-			console.debug('parametros['+i-'].indexOf(cadena):' + parametros[i].indexOf(cadena));
+			console.debug('parametros['+i+'].indexOf(cadena):' + parametros[i].indexOf(cadena));
 			if(parametros[i].indexOf(cadena))
 			{
 				return i;
