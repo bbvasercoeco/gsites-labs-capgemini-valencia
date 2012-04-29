@@ -138,12 +138,14 @@
 			if(parametros[i].indexOf(cadena)>-1)
 			{
 				return i;
+				console.debug('indiceCadena -->');
 			} 
 		}	
 	}
 	
 	function idCliente()
 	{
+		console.debug('idCliente <--');
 		var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");
 		console.debug('arrayParametros:' + arrayParametros);
 		var indexFicha = indiceCadena(arrayParametros,"ficha-");
@@ -151,7 +153,8 @@
 		console.debug('indexFicha:' + indexFicha);
 		var arrayidCliente = arrayParametros[indexFicha].indexOf("-");
 		console.debug('arrayidCliente:' + arrayidCliente);
-		var idCliente = arrayidCliente[1];		
+		console.debug('idCliente -->');
+		return arrayidCliente[1];
 		
 	}
 	
