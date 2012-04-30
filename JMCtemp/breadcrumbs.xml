@@ -53,12 +53,6 @@
 			font-size:13px;
 			color:#3F78B2;
 			text-transform: capitalize;
-			z-index: 0;
-			position:absolute;
-		}
-		#title-crumbs .linkBreadCrumb{
-		z-index: 0;
-			position:absolute;
 		}
 		a.linkBreadCrumb,
 		a:visited.linkBreadCrumb {
@@ -141,7 +135,6 @@
 					}
 				}
 			}
-			
 			document.getElementById("title-crumbs").innerHTML = s;    
 		}
 	</script>
