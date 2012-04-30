@@ -64,7 +64,8 @@
         margin:0;
         padding: 0;
         background-repeat: no-repeat;
-		
+		position:relative;
+		z-index: 2 ;
 }
 #button {  
         padding: 5px 0 0 5px;
