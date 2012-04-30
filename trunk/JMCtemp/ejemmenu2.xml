@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<title>Menú horizontal desplegable Css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="all" type="text/css" href="menu-h.css" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" media="all" type="text/css" href="menu-h-ie.css" />
+<![endif]-->
+
+</head>
+<body>
+<div class="menu" style="z-index: 2;">
+<ul>
+<li><a class="hide" href="#">DEMOS</a>
+
+<!--[if lte IE 6]>
+<a href="#">DEMOS
+<table><tr><td>
+<![endif]-->
+
+	<ul>
+	<li><a href="test.html" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+
+	<li><a class="hide" href="test.html" target="destino" title="Título">DESPLEGAR &gt;</a>
+
+    <!--[if lte IE 6]>
+    <a class="sub" href="#" title="Título">DESPLEGAR &gt;
+    <table><tr><td>
+    <![endif]-->
+
+		<ul>
+			<li><a href="test.html" target="destino" title="Título">demo</a></li>
+			<li><a href="test.html" target="destino" title="Título">demo</a></li>
+			<li><a href="test.html" target="destino" title="Título">demo</a></li>
+		</ul>
+
+	<!--[if lte IE 6]>
+	</td></tr></table>
+    </a>
+    <![endif]-->
+
+	</li>
+
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	</ul>
+
+<!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+
+</li>
+
+<li><a class="hide" href="#">MENUS</a>
+
+<!--[if lte IE 6]>
+<a href="#">MENUS
+<table><tr><td>
+<![endif]-->
+
+	<ul>
+
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	</ul>
+
+<!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+
+</li>
+
+<li><a class="hide" href="#">LAYOUTS</a>
+
+<!--[if lte IE 6]>
+<a href="#">LAYOUTS
+<table><tr><td>
+<![endif]-->
+
+	<ul>
+
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	</ul>
+
+<!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+
+</li>
+
+<li><a class="hide" href="#">BOXES</a>
+
+<!--[if lte IE 6]>
+<a href="#">BOXES
+<table><tr><td>
+<![endif]-->
+
+	<ul>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	</ul>
+
+<!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+
+</li>
+
+<li><a class="hide" href="#">MOZILLA</a>
+
+<!--[if lte IE 6]>
+<a href="#">MOZILLA
+<table><tr><td>
+<![endif]-->
+
+	<ul>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	</ul>
+
+<!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+
+</li>
+
+<li><a class="hide" href="#">EXPLORER</a>
+
+<!--[if lte IE 6]>
+<a href="#">EXPLORER
+<table><tr><td>
+<![endif]-->
+
+	<ul>
+
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	</ul>
+
+<!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+
+</li>
+
+<li><a class="hide" href="#">OPACITY</a>
+
+<!--[if lte IE 6]>
+<a href="#">OPACITY
+<table><tr><td>
+<![endif]-->
+
+	<ul>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+	<li><a href="test.html" target="destino" title="Título">demo</a></li>
+
+	<li><a class="hide" href="#" title="titulo">&lt; DESPLEGAR</a>
+
+    <!--[if lte IE 6]>
+    <a class="sub" href="#">&lt; DESPLEGAR
+    <table><tr><td>
+    <![endif]-->
+
+		<ul class="left">
+			<li><a href="test.html" target="destino" title="Título">demo</a></li>
+			<li><a href="test.html" target="destino" title="Título">demo</a></li>
+			<li><a href="test.html" target="destino" title="Título">demo</a></li>
+
+		</ul>
+
+	<!--[if lte IE 6]>
+	</td></tr></table>
+    </a>
+    <![endif]-->
+
+	</li>
+	</ul>
+
+<!--[if lte IE 6]>
+</td></tr></table>
+</a>
+<![endif]-->
+
+</li>
+</ul>
+
+</div>
+
+<div>
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs
+   title="breadcrumbs"
+   height="50"
+   description="Script que genera los breadcrumbs de forma automÃ¡tica"
+  
+   >
+<Require feature="dynamic-height"/>   
+<Require feature="setprefs" />   
+    </ModulePrefs>  
+	
+<UserPref name="VarrootSite" display_name="Root del Site" required="true" />
+<Content type="html" view="configuration" preferred_height="480">
+
+ <![CDATA[
+ <style>
+    input#VarrootSite {
+           width: 300px;
+          }
+		  
+  </style>
+  
+  <table width="100%" border="0" id="tablaconfig">           
+            <tr>       
+                <td>
+                    Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__"   onchange="registra('VarrootSite')"/>                   
+                </td>
+            </tr>
+  </table>	
+  
+<script type="text/javascript">           
+            // Get userprefs
+            var prefs = new gadgets.Prefs();           
+            function registra(variable)
+            {	
+                prefs.set(variable,document.getElementById(variable).value);
+				
+			
+            }  
+			
+            gadgets.window.adjustHeight();
+        </script>   
+ ]]>
+ </Content>
+ <Content type="html">
+ <![CDATA[
+ 
+	<div id="title-crumbs">valor de title</div>
+	
+	<style>		
+		#title-crumbs {
+			font-size:13px;
+			color:#3F78B2;
+			text-transform: capitalize;
+		}
+		a.linkBreadCrumb,
+		a:visited.linkBreadCrumb {
+			fon-weight: normal;
+			font-size:13px;
+			color:#3F78B2;
+			text-decoration:none;
+			text-transform: capitalize;
+		}
+		a:hover.linkBreadCrumb,
+		a:active.linkBreadCrumb {
+			font-style: normal;
+			font-size:13px;
+			color:#009EE5;
+			fon-weight: normal;
+			text-decoration:none;		
+			text-transform: capitalize;
+		} 
+		
+	</style>
+	
+	<script type="text/javascript">	
+		var prefs = new gadgets.Prefs();
+		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+		
+	function indice (parametros, rootSite){
+			
+				for(var i=0; i<parametros.length; i++){
+					if(parametros[i]== rootSite)
+					{
+					return i;
+					}
+					  
+				}	
+			}	
+		function showBreadcrumbs()
+		{
+			// Construct the breadcrumb string
+			
+			
+			
+		    var rootSite = prefs.getString("VarrootSite");			
+		    // alert(rootSite);
+			// alert("aki entro");
+			var s ="";
+			var i,j,k = 0;
+			var base = "";
+			var barra = "/";
+			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+			var indexroot = indice(parametros, rootSite);   //parametros.indexOf(rootSite);
+			
+			
+			
+			
+			
+			for (i=0;i<parametros.length;i++)
+			{				
+				if(i<indexroot)
+				{
+					base = base + parametros[i]+ "/";				
+				}
+				if (parametros[i] == rootSite) 
+				{	
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
+				
+					for(j=i+1;j<parametros.length;++j)
+					{   
+						var aux = parametros[j].replace(/-/g," ");
+						if (aux.indexOf("?")>1)
+						{
+							var auxMov = aux.split("?");
+							var litEnlace = auxMov[0]
+						}
+						else
+						{
+							var litEnlace = aux;
+						}
+						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\'" + litEnlace + "\'> >&nbsp;" + litEnlace + "</a>";
+						rootSite = rootSite + "/" + parametros[j];
+					}
+				}
+			}
+			document.getElementById("title-crumbs").innerHTML = s;    
+		}
+	</script>
+ ]]>
+ 
+ </Content>
+</Module>
+</div>
+<p><a href="about:blank" target='destino'>Restaurar</a></p>
+<!-- ©2000 Emprear.com -->
+</body>
+</html>
