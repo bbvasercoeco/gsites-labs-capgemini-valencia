@@ -172,7 +172,7 @@
 </style>
 <div id="cabeceramenu">
         <ul id="sddm" >
-                <li><a href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home"  onmouseover="mopen('m1')"  onmouseout="mclosetime()" class="first" target="_parent" title="home"><img src="https://test-mlp.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a><div id="m1" style="z-index:2;"
+                <li><a href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home"  onmouseover="mopen('m1')"  onmouseout="mclosetime()" class="first" target="_parent" title="home"><img src="https://test-mlp.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a><div id="m1" style="z-index:2;position:absolute;"
             onmouseover="mcancelclosetime()" 
             onmouseout="mclosetime()">
         <a href="#">HTML Drop Down</a>
