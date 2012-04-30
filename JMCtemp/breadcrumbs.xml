@@ -56,6 +56,10 @@
 			z-index: 0;
 			position:absolute;
 		}
+		.linkBreadCrumb{
+		z-index: 0;
+			position:absolute;
+		}
 		a.linkBreadCrumb,
 		a:visited.linkBreadCrumb {
 			fon-weight: normal;
