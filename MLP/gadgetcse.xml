@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
+<ModulePrefs title="menu portal Google Sites Labs - Capgemini Valencia" />
+<Content type="html"><![CDATA[
 <form action="http://www.google.com/cse" id="cse-search-box" target="_blank">
   <div>
     <input type="hidden" name="cx" value="011079130885249389707:0ocphfqgbku" />
@@ -21,4 +23,5 @@
     customSearchControl.draw('cse', options);
   }, true);
 </script>
+]]></Content>
 </Module>
