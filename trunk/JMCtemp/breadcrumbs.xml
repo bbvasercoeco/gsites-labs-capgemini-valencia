@@ -142,7 +142,7 @@
 					}
 				}
 			}
-			document.getElementById("title-crumbs").style.zIndex="1";
+			
 			document.getElementById("title-crumbs").innerHTML = s;    
 			
 		}
