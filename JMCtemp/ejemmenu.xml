@@ -6,7 +6,8 @@
 #sddm
 {	margin: 0;
 	padding: 0;
-	z-index: 30}
+	z-index: 30
+	z-index: 1;}
 
 #sddm li
 {	margin: 0;
@@ -61,6 +62,7 @@
         margin:0;
         padding: 0;
         background-repeat: no-repeat;
+		z-index: 1;
 }
 #button {  
         padding: 5px 0 0 5px;
@@ -160,8 +162,8 @@
         color: #999;
 }
 </style>
-<div id="cabeceramenu" style="z-index: 1;">
-        <ul id="sddm" style="z-index: 1;">
+<div id="cabeceramenu">
+        <ul id="sddm">
                 <li><a href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home"  onmouseover="mopen('m1')"  onmouseout="mclosetime()" class="first" target="_parent" title="home"><img src="https://test-mlp.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a><div id="m1" 
             onmouseover="mcancelclosetime()" 
             onmouseout="mclosetime()">
