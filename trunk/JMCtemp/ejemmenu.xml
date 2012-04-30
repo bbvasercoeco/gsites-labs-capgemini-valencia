@@ -7,7 +7,7 @@
 {	margin: 0;
 	padding: 0;
 	z-index: 2;
-	position:absolute;
+	
 	}
 
 #sddm li
@@ -16,8 +16,6 @@
 	list-style: none;
 	float: left;
 	font: bold 11px arial
-	z-index:2;
-			position:absolute;
 	}
 
 #sddm li a
@@ -28,10 +26,7 @@
 	background: #5970B2;
 	color: #FFF;
 	text-align: center;
-	text-decoration: none
-	z-index:2;
-	position:absolute;
-			}
+	text-decoration: none}
 
 #sddm li a:hover
 {	background: #49A3FF}
@@ -42,12 +37,10 @@
 	margin: 0;
 	padding: 0;
 	background: #EAEBD8;
-	border: 1px solid #5970B2
-	z-index:2;
-			position:absolute;}
+	border: 1px solid #5970B2}
 
 	#sddm div a
-	{	
+	{	position: relative;
 		display: block;
 		margin: 0;
 		padding: 5px 10px;
@@ -57,9 +50,7 @@
 		text-decoration: none;
 		background: #EAEBD8;
 		color: #2875DE;
-		font: 11px arial
-		z-index:2;
-			position:absolute;}
+		font: 11px arial}
 
 	#sddm div a:hover
 	{	background: #49A3FF;
@@ -74,7 +65,7 @@
         padding: 0;
         background-repeat: no-repeat;
 		position:relative;
-		z-index: 2 ;
+	
 }
 #button {  
         padding: 5px 0 0 5px;
