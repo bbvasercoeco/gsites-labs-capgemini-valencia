@@ -46,15 +46,13 @@
  <Content type="html">
  <![CDATA[
  
-	<div id="title-crumbs" style="z-index:1;position:absolute">valor de title</div>
+	<div id="title-crumbs">valor de title</div>
 	
 	<style>		
 		#title-crumbs {
 			font-size:13px;
 			color:#3F78B2;
 			text-transform: capitalize;
-			z-index:1;
-			position:absolute;
 		}
 		a.linkBreadCrumb,
 		a:visited.linkBreadCrumb {
@@ -63,8 +61,6 @@
 			color:#3F78B2;
 			text-decoration:none;
 			text-transform: capitalize;
-			z-index:1;
-			position:absolute;
 		}
 		a:hover.linkBreadCrumb,
 		a:active.linkBreadCrumb {
@@ -74,8 +70,6 @@
 			fon-weight: normal;
 			text-decoration:none;		
 			text-transform: capitalize;
-			z-index:1;
-			position:absolute;
 		} 
 		
 	</style>
@@ -123,7 +117,7 @@
 				if (parametros[i] == rootSite) 
 				{	
 					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
-				    
+				
 					for(j=i+1;j<parametros.length;++j)
 					{   
 						var aux = parametros[j].replace(/-/g," ");
@@ -138,13 +132,10 @@
 						}
 						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\'" + litEnlace + "\'> >&nbsp;" + litEnlace + "</a>";
 						rootSite = rootSite + "/" + parametros[j];
-						
 					}
 				}
 			}
-			
 			document.getElementById("title-crumbs").innerHTML = s;    
-			
 		}
 	</script>
  ]]>
