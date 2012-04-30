@@ -123,7 +123,7 @@
 				if (parametros[i] == rootSite) 
 				{	
 					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
-				    s.style.zindex="1";
+				    
 					for(j=i+1;j<parametros.length;++j)
 					{   
 						var aux = parametros[j].replace(/-/g," ");
@@ -138,10 +138,11 @@
 						}
 						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\'" + litEnlace + "\'> >&nbsp;" + litEnlace + "</a>";
 						rootSite = rootSite + "/" + parametros[j];
-						s.style.zindex="1";
+						
 					}
 				}
 			}
+			s.style.zIndex="1";
 			document.getElementById("title-crumbs").innerHTML = s;    
 		}
 	</script>
