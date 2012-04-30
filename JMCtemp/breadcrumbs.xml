@@ -46,7 +46,7 @@
  <Content type="html">
  <![CDATA[
  
-	<div id="title-crumbs" style="z-index:1;position:relative">valor de title</div>
+	<div id="title-crumbs" style="z-index:1;position:absolute">valor de title</div>
 	
 	<style>		
 		#title-crumbs {
@@ -54,7 +54,7 @@
 			color:#3F78B2;
 			text-transform: capitalize;
 			z-index:1;
-			position:relative;
+			position:absolute;
 		}
 		a.linkBreadCrumb,
 		a:visited.linkBreadCrumb {
@@ -64,7 +64,7 @@
 			text-decoration:none;
 			text-transform: capitalize;
 			z-index:1;
-			position:relative;
+			position:absolute;
 		}
 		a:hover.linkBreadCrumb,
 		a:active.linkBreadCrumb {
@@ -75,7 +75,7 @@
 			text-decoration:none;		
 			text-transform: capitalize;
 			z-index:1;
-			position:relative;
+			position:absolute;
 		} 
 		
 	</style>
