@@ -292,5 +292,8 @@ function mcancelclosetime()
 document.onclick = mclose; 
 
 </script>
-]]></Content>
+]]>
+
+
+</Content>
 </Module>
