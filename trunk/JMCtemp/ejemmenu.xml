@@ -52,6 +52,8 @@
 	#sddm div a:hover
 	{	background: #49A3FF;
 		color: #FFF}
+		
+		
 #cabeceramenu {
         width: 960px;
         height: 65px;
@@ -159,7 +161,7 @@
 }
 </style>
 <div id="cabeceramenu">
-        <ul id="button">
+        <ul id="sddm">
                 <li><a href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home"  onmouseover="mopen('m1')"  onmouseout="mclosetime()" class="first" target="_parent" title="home"><img src="https://test-mlp.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a><div id="m1" 
             onmouseover="mcancelclosetime()" 
             onmouseout="mclosetime()">
