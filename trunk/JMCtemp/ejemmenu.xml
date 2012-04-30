@@ -7,7 +7,7 @@
 {	margin: 0;
 	padding: 0;
 	z-index: 2;
-	position:relative;
+	position:absolute;
 	}
 
 #sddm li
@@ -17,7 +17,7 @@
 	float: left;
 	font: bold 11px arial
 	z-index:2;
-			position:relative;
+			position:absolute;
 	}
 
 #sddm li a
@@ -30,7 +30,7 @@
 	text-align: center;
 	text-decoration: none
 	z-index:2;
-	position:relative;
+	position:absolute;
 			}
 
 #sddm li a:hover
@@ -44,10 +44,10 @@
 	background: #EAEBD8;
 	border: 1px solid #5970B2
 	z-index:2;
-			position:relative;}
+			position:absolute;}
 
 	#sddm div a
-	{	position: relative;
+	{	
 		display: block;
 		margin: 0;
 		padding: 5px 10px;
@@ -59,7 +59,7 @@
 		color: #2875DE;
 		font: 11px arial
 		z-index:2;
-			position:relative;}
+			position:absolute;}
 
 	#sddm div a:hover
 	{	background: #49A3FF;
