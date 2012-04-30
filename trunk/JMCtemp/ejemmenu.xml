@@ -3,64 +3,7 @@
 <ModulePrefs title="menu portal Google Sites Labs - Capgemini Valencia" />
 <Content type="html"><![CDATA[
 <style> 
-#sddm
-{	margin: 0;
-	padding: 0;
-	z-index:1;
-	position:absolute;
-	}
 
-#sddm li
-{	margin: 0;
-	padding: 0;
-	list-style: none;
-	float: left;
-	font: bold 11px arial;
-
-	}
-
-#sddm li a
-{	display: block;
-	margin: 0 1px 0 0;
-	padding: 4px 10px;
-	width: 60px;
-	background: #5970B2;
-	color: #FFF;
-	text-align: center;
-	text-decoration: none;
-	}
-
-#sddm li a:hover
-{	background: #49A3FF
-}
-
-#sddm div
-{	position: absolute;
-	visibility: hidden;
-	margin: 0;
-	padding: 0;
-	background: #EAEBD8;
-	border: 1px solid #5970B2;
-	}
-
-	#sddm div a
-	{	position: relative;
-		display: block;
-		margin: 0;
-		padding: 5px 10px;
-		width: auto;
-		white-space: nowrap;
-		text-align: left;
-		text-decoration: none;
-		background: #EAEBD8;
-		color: #2875DE;
-		font: 11px arial;
-		}
-
-	#sddm div a:hover
-	{	background: #49A3FF;
-		color: #FFF;
-		}
 		
 		
 #cabeceramenu {
@@ -172,7 +115,7 @@
 }
 
 
-.menu {font-family: arial, sans-serif; width:750px; height:30px; position:relative; font-size:11px; z-index:100;}
+.menu {font-family: arial, sans-serif; width:750px; height:30px; position:absolute; font-size:11px; z-index:100;}
 .menu ul li a, .menu ul li a:visited {display:block; text-decoration:none; color:#000;width:104px; height:20px; text-align:center; color:#fff; border:1px solid #fff; background:#5A2E2E; line-height:20px; font-size:11px; overflow:hidden;}
 .menu ul {padding:0; margin:0; list-style: none;}
 .menu ul li {float:left; position:relative;}
@@ -293,7 +236,154 @@ document.onclick = mclose;
 
 </script>
 ]]>
+<div>
 
+
+<Module>
+<ModulePrefs
+   title="breadcrumbs"
+   height="50"
+   description="Script que genera los breadcrumbs de forma automÃ¡tica"
+  
+   >
+<Require feature="dynamic-height"/>
+<Require feature="setprefs" />
+    </ModulePrefs>  
+	
+<UserPref name="VarrootSite" display_name="Root del Site" required="true" />
+<Content type="html" view="configuration" preferred_height="480">
+
+ <![CDATA[
+ <style>
+    input#VarrootSite {
+           width: 300px;
+          }
+		  
+  </style>
+  
+  <table width="100%" border="0" id="tablaconfig">           
+            <tr>       
+                <td>
+                    Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__"   onchange="registra('VarrootSite')"/>                   
+                </td>
+            </tr>
+  </table>	
+  
+<script type="text/javascript">           
+            // Get userprefs
+            var prefs = new gadgets.Prefs();           
+            function registra(variable)
+            {	
+                prefs.set(variable,document.getElementById(variable).value);
+				
+			
+            }  
+			
+            gadgets.window.adjustHeight();
+        </script>   
+ ]]>
+ </Content>
+ <Content type="html">
+ <![CDATA[
+ 
+	<div id="title-crumbs">valor de title</div>
+	
+	<style>		
+		#title-crumbs {
+			font-size:13px;
+			color:#3F78B2;
+			text-transform: capitalize;
+		}
+		a.linkBreadCrumb,
+		a:visited.linkBreadCrumb {
+			fon-weight: normal;
+			font-size:13px;
+			color:#3F78B2;
+			text-decoration:none;
+			text-transform: capitalize;
+		}
+		a:hover.linkBreadCrumb,
+		a:active.linkBreadCrumb {
+			font-style: normal;
+			font-size:13px;
+			color:#009EE5;
+			fon-weight: normal;
+			text-decoration:none;		
+			text-transform: capitalize;
+		} 
+		
+	</style>
+	
+	<script type="text/javascript">	
+		var prefs = new gadgets.Prefs();
+		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+		
+	function indice (parametros, rootSite){
+			
+				for(var i=0; i<parametros.length; i++){
+					if(parametros[i]== rootSite)
+					{
+					return i;
+					}
+					  
+				}	
+			}	
+		function showBreadcrumbs()
+		{
+			// Construct the breadcrumb string
+			
+			
+			
+		    var rootSite = prefs.getString("VarrootSite");			
+		    // alert(rootSite);
+			// alert("aki entro");
+			var s ="";
+			var i,j,k = 0;
+			var base = "";
+			var barra = "/";
+			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+			var indexroot = indice(parametros, rootSite);   //parametros.indexOf(rootSite);
+			
+			
+			
+			
+			
+			for (i=0;i<parametros.length;i++)
+			{				
+				if(i<indexroot)
+				{
+					base = base + parametros[i]+ "/";				
+				}
+				if (parametros[i] == rootSite) 
+				{	
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
+				
+					for(j=i+1;j<parametros.length;++j)
+					{   
+						var aux = parametros[j].replace(/-/g," ");
+						if (aux.indexOf("?")>1)
+						{
+							var auxMov = aux.split("?");
+							var litEnlace = auxMov[0]
+						}
+						else
+						{
+							var litEnlace = aux;
+						}
+						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\'" + litEnlace + "\'> >&nbsp;" + litEnlace + "</a>";
+						rootSite = rootSite + "/" + parametros[j];
+					}
+				}
+			}
+			document.getElementById("title-crumbs").innerHTML = s;    
+		}
+	</script>
+ ]]>
+ 
+ </Content>
+</Module>
+
+</div>
 
 </Content>
 </Module>
