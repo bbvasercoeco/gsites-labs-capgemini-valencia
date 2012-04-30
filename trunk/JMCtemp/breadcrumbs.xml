@@ -46,7 +46,7 @@
  <Content type="html">
  <![CDATA[
  
-	<div id="title-crumbs" style="z-index:1">valor de title</div>
+	<div id="title-crumbs" style="z-index:1;position:relative">valor de title</div>
 	
 	<style>		
 		#title-crumbs {
