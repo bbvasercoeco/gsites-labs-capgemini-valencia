@@ -210,7 +210,7 @@ function mopen(id)
 	ddmenuitem = document.getElementById(id);
 	ddmenuitem.style.visibility = 'visible';
 	ddmenuitem.style.zIndex="2";
-
+	gadgets.window.adjustHeight();
 }
 // close showed layer
 function mclose()
@@ -392,12 +392,7 @@ document.onclick = mclose;
 
 
 
-<content type="html" style="z-index:0;">
-<![CDATA[
-<iframe src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" frameborder="0" scrolling="no"/>
 
-]]>
-</content>
 
 
 </Content>
