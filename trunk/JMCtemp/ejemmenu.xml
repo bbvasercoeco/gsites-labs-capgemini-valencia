@@ -386,13 +386,13 @@ document.onclick = mclose;
 </div>-->
 
 <div>
-<?xml version="1.0" encoding="UTF-8" ?> 
+
 <Module>
   <ModulePrefs title="Breadcrumbs"
   directory_title="Breadcrumbs"
   description="iframe"
-  author="Jordi" 
-> 
+  author="Jordi" > 
+  
   </ModulePrefs>
 <Content type="url"  href="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml"/>
 </Module></div>
