@@ -239,6 +239,32 @@ function mcancelclosetime()
 document.onclick = mclose; 
 
 </script>
+//Pruebas Jordi
+
+<script type="text/javascript">
+var contador = 0;
+while($("iframe"))contador++;
+alert (contador);
+
+for(var i=2; i<=contador;i++){
+$("iframe").style("top","-100px");
+$("iframe").style("z-index","-1px");
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ]]>
 <!--<div>
@@ -389,6 +415,7 @@ document.onclick = mclose;
 </Module>
 
 </div>-->
+
 
 
 
