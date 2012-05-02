@@ -385,7 +385,7 @@ document.onclick = mclose;
 
 </div>-->
 
-<div>
+<!--<div>
 
 <Module>
   <ModulePrefs title="Breadcrumbs"
@@ -393,8 +393,8 @@ document.onclick = mclose;
   description="iframe"
   author="Jordi" > 
   
-  </ModulePrefs>
+  </ModulePrefs>-->
 <Content type="url"  href="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml"/>
-</Module></div>
+<!--</Module></div>-->
 </Content>
 </Module>
