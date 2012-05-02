@@ -396,7 +396,7 @@ document.onclick = mclose;
   </ModulePrefs>
 <content type="html" style="z-index:0;">
 <![CDATA[
-<iframe src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" frameborder="0"/>
+<iframe src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" frameborder="0" scrolling="no"/>
 
 ]]>
 </content>
