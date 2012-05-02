@@ -244,7 +244,7 @@ document.onclick = mclose;
 
 
 
-<script>
+<script type="text/javascript">
 
 var contador = 0;
 while($("iframe"))contador++;
