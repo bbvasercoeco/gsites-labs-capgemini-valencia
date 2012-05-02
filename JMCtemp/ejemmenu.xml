@@ -2,8 +2,8 @@
 <Module>
 <ModulePrefs title="menu portal Google Sites Labs - Capgemini Valencia" 
 width="100%"
-height="100%"/>
-<Content type="html"><![CDATA[
+height="480"/>
+<Content type="html" preferred_height="480"><![CDATA[
 <style> 
 
 		
