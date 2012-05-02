@@ -241,10 +241,11 @@ function mcancelclosetime()
 document.onclick = mclose; 
 
 </script>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
 
 
-<script type="text/javascript">
+
+<script>
+
 var contador = 0;
 while($("iframe"))contador++;
 alert (contador);
