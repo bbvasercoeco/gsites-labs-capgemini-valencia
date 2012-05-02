@@ -393,10 +393,10 @@ document.onclick = mclose;
   description="iframe"
   author="Jordi" > 
   
-  </ModulePrefs>-->
-<content type="html" href="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" style="z-index:0;">
+  </ModulePrefs>
+<content type="html" style="z-index:0;">
 <![CDATA[
-<iframe src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml"><p>no se encuentran datos</p> </iframe>
+<iframe src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml"><p>no se encuentran datos</p> </iframe>
 
 ]]>
 </content>
