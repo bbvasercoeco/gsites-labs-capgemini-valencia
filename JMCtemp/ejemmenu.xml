@@ -14,6 +14,7 @@
         padding: 0;
         background-repeat: no-repeat;
 		position:relative;
+		z-index:2;
 	
 }
 #button {  
@@ -235,7 +236,7 @@ function mcancelclosetime()
 document.onclick = mclose; 
 
 </script>
-<iframe src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" frameborder="0" scrolling="no"/>
+
 ]]>
 <!--<div>
 
