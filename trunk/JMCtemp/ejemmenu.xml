@@ -387,20 +387,14 @@ document.onclick = mclose;
 
 
 
-<Module>
-  <ModulePrefs title="Breadcrumbs"
-  directory_title="Breadcrumbs"
-  description="iframe"
-  author="Jordi" > 
-  
-  </ModulePrefs>
+
 <content type="html" style="z-index:0;">
 <![CDATA[
 <iframe src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" frameborder="0" scrolling="no"/>
 
 ]]>
 </content>
-</Module>
+
 
 </Content>
 </Module>
