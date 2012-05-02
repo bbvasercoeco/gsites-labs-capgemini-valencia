@@ -245,16 +245,18 @@ document.onclick = mclose;
 
 
 <script type="text/javascript">
+gadgets.util.registerOnLoadHandler(estilosIframes);
 
+function estilosIframes(){
 var contador = 0;
 while($("iframe"))contador++;
 alert (contador);
 
-for(var i=2; i<=contador;i++){
-$("iframe").style("top","-100px");
-$("iframe").style("z-index","-1px");
+ for(var i=2; i<=contador;i++){
+  $("iframe").style("top","-100px");
+  $("iframe").style("z-index","-1px");
+ }
 }
-
 </script>
 
 
