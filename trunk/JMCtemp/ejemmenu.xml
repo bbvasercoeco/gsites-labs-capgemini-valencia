@@ -394,7 +394,7 @@ document.onclick = mclose;
   author="Jordi" > 
   
   </ModulePrefs>-->
-<iframe type="url"  src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" style="z-index:0;"/>
+<iframe name="Breadcrumbs"  src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" style="z-index:0;"/>
 <!--</Module></div>-->
 </Content>
 </Module>
