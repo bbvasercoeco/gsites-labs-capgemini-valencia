@@ -235,6 +235,7 @@ function mcancelclosetime()
 document.onclick = mclose; 
 
 </script>
+<iframe src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" frameborder="0" scrolling="no"/>
 ]]>
 <!--<div>
 
