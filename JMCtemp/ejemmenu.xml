@@ -239,7 +239,8 @@ function mcancelclosetime()
 document.onclick = mclose; 
 
 </script>
-//Pruebas Jordi
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
 
 <script type="text/javascript">
 var contador = 0;
