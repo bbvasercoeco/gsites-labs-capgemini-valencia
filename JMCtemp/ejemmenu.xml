@@ -19,9 +19,9 @@ height="480"/>
         background-repeat: no-repeat;
 		position:absolute;
 		z-index:300;
-		overflow-x:hidden;
+		overflow-x:auto;
 		overflow-y:auto;
-		outline: medium none;
+		
 	
 }
 #button {  
