@@ -209,6 +209,7 @@ function mopen(id)
 	// get new layer and show it
 	ddmenuitem = document.getElementById(id);
 	ddmenuitem.style.visibility = 'visible';
+	ddmenuitem.style.height="100%";
 	ddmenuitem.style.zIndex="2";
 	
 }
