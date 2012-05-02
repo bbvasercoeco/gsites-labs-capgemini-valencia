@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Module>
 <ModulePrefs
    title="breadcrumbs"
@@ -6,8 +6,8 @@
    description="Script que genera los breadcrumbs de forma automÃ¡tica"
   
    >
-<Require feature="dynamic-height"/>   
-<Require feature="setprefs" />   
+<Require feature="dynamic-height"/>
+<Require feature="setprefs" />
     </ModulePrefs>  
 	
 <UserPref name="VarrootSite" display_name="Root del Site" required="true" />
