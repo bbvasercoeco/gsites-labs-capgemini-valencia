@@ -385,7 +385,7 @@ document.onclick = mclose;
 
 </div>-->
 
-<!--<div>
+
 
 <Module>
   <ModulePrefs title="Breadcrumbs"
@@ -394,7 +394,13 @@ document.onclick = mclose;
   author="Jordi" > 
   
   </ModulePrefs>-->
-<iframe name="Breadcrumbs"  src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" style="z-index:0;"/>
-<!--</Module></div>-->
+<content type="html" href="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" style="z-index:0;">
+<![CDATA[
+<iframe src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml"><p>no se encuentran datos</p> </iframe>
+
+]]>
+</content>
+</Module>
+
 </Content>
 </Module>
