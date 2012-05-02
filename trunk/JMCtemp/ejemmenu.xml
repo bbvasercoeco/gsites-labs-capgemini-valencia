@@ -384,8 +384,17 @@ document.onclick = mclose;
 </Module>
 
 </div>-->
+
 <div>
-<gadget width="738" height="200" src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml" id="destino" name="destino"><p>no se encuentran datos</p></gadget>
-</div>
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="Breadcrumbs"
+  directory_title="Breadcrumbs"
+  description="iframe"
+  author="Jordi" 
+> 
+  </ModulePrefs>
+<Content type="url"  href="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/breadcrumbs.xml"/>
+</Module></div>
 </Content>
 </Module>
