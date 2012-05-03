@@ -157,13 +157,17 @@
 	
 	function handleQueryResponse(response) 
 	{
+		console.debug('handleQueryResponse <-- ');
 		if (!gadgetHelper.validateResponse(response)) { return; }
 	
 		data = response.getDataTable();
 		
 		var valoresColumna = data.getValue(1,1);
 		
-		document.getElementById('tablediv').innerHTML(valoresColumna);
+		
+		
+		//document.getElementById('tablediv').innerHTML (valoresColumna);
+		document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
 		
 	}
 
