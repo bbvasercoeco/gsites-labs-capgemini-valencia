@@ -4,7 +4,7 @@
    title="breadcrumbs2.0"
    height="50"
    description="Script que genera los breadcrumbs de forma automática"
-  
+   
    >
 <Require feature="dynamic-height"/>   
 <Require feature="setprefs" />   
