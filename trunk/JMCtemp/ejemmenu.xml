@@ -242,7 +242,7 @@ document.onclick = mclose;
 
 <script type="text/javascript">
 gadgets.util.registerOnLoadHandler(estilosIframes);
-
+console.debug('version 1');
 function estilosIframes(){
 
 //var contador = parent.document.getElementsByTagName('iframe');
