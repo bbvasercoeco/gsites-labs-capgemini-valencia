@@ -5,9 +5,7 @@ width="100%"
 height="480"/>
 <Content type="html" preferred_height="480"><![CDATA[
 
-<style> 
-
-		
+<style> 	
 		
 #cabeceramenu {
         width: 960px;
@@ -211,9 +209,9 @@ function mopen(id)
 	// get new layer and show it
 	ddmenuitem = document.getElementById(id);
 	ddmenuitem.style.visibility = 'visible';
-	ddmenuitem.style.height="100%";
-	ddmenuitem.style.zIndex="2";
-	
+	// ddmenuitem.style.height="100%";
+	ddmenuitem.style.zIndex="300";
+	ddmenuitem.style.overflowY="auto";
 }
 // close showed layer
 function mclose()
