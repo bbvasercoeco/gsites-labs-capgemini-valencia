@@ -245,7 +245,7 @@ gadgets.util.registerOnLoadHandler(estilosIframes);
 
 function estilosIframes(){
 
-var contador = window.parent.$('iframe'); //document.getElementsByTagName('iframe');
+var contador = window.parent.document.getElementsByTagName('iframe'); //document.getElementsByTagName('iframe');
 var pim = contador.length;
 alert(pim);
 alert(contador);
