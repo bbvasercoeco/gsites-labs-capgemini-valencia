@@ -147,7 +147,7 @@ height="480"/>
             onmouseout="mclosetime()" style="position:absolute;
 		z-index:300;overflow-x:hidden;
 		overflow-y:auto;
-		outline: medium none;">
+		outline: medium none; top:-110px; visibility:visible;">
         <a href="#">HTML Drop Down</a>
         <a href="#">DHTML Menu</a>
         <a href="#">JavaScript DropDown</a>
