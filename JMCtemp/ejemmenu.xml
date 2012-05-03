@@ -143,10 +143,7 @@ height="480"/>
         <div class="menu" ><ul>
                 <li><a href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home"  onmouseover="mopen('m1')"  onmouseout="mclosetime()" class="first" target="_parent" title="home"><img src="https://test-mlp.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a><div id="m1" 
             onmouseover="mcancelclosetime()" 
-            onmouseout="mclosetime()" style="position:absolute;
-		z-index:300;overflow-x:hidden;
-		overflow-y:auto;
-		outline: medium none; top:110px; visibility:visible;">
+            onmouseout="mclosetime()" >
         <a href="#">HTML Drop Down</a>
         <a href="#">DHTML Menu</a>
         <a href="#">JavaScript DropDown</a>
@@ -244,35 +241,6 @@ function mcancelclosetime()
 document.onclick = mclose; 
 
 </script>
-
-
-
-/*<script type="text/javascript">
-gadgets.util.registerOnLoadHandler(estilosIframes);
-
-function estilosIframes(){
-var contador = document.getElementsByTagName("iframe");
-
- for(var i=2; i<=contador;i++){
-  $("iframe").style("top","-100px");
-  $("iframe").style("z-index","-1px");
- }
-}
-</script>*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ]]>
 <!--<div>
 
