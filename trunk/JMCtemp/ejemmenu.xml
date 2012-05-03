@@ -245,8 +245,8 @@ gadgets.util.registerOnLoadHandler(estilosIframes);
 // console.debug('version 1');
 
 function estilosIframes(){
-
-var parent = window.parent.document.getElementById('sites-canvas-wrapper');
+alert(window.parent)
+var parent = window.parent.getElementById('sites-canvas-wrapper');
 var contador = parent.getElementsByTagName("iframe");
 
 //var contador = gadgets.util.parent.document.getElementsByTagName('iframe');
