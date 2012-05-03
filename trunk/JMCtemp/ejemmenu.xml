@@ -246,7 +246,7 @@ gadgets.util.registerOnLoadHandler(estilosIframes);
 
 function estilosIframes(){
 alert(window.parent)
-var parent = window.parent.getElementById('sites-canvas-wrapper');
+var parent = window.parent.getElementsByTagName("iframe");
 var contador = parent.getElementsByTagName("iframe");
 
 //var contador = gadgets.util.parent.document.getElementsByTagName('iframe');
