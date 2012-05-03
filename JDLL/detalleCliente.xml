@@ -165,7 +165,7 @@
 		
 		var valoresColumna = data.getValue(1,1);
 		console.debug('data <-- '+data);
-		console.debug('data.getValue(1,1 <-- '+data.getValue(1,1);
+		console.debug('data.getValue(1,1 <-- '+data.getValue(1,1));
 		
 		
 		document.getElementById('tablediv').innerHTML(valoresColumna.toString());
