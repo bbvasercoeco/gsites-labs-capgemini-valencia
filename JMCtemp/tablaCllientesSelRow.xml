@@ -97,7 +97,7 @@ var varListaFilas = "";
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
 	var varListaFilas = prefs.getString("VarListaFilas");
 
-
+</script>
 
 
 
