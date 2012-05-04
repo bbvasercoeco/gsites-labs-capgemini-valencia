@@ -166,7 +166,7 @@ function sendQuery()
 				if (listaFilas.length > 0)
 				{
 					var arrayFilas = [];
-					for(j=listaFilas[0]; j<listaFilas.length; j++)
+					for(j=listaFilas[0].value; j<(listaFilas.length-1).value; j++)
 					{
 						//console.debug('extrayendo lista filas');		
 						indexaux = parseInt(listaFilas[j]);
