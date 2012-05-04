@@ -163,7 +163,7 @@ function sendQuery()
 				//console.debug('varListaFilas: '+varListaFilas);	
 				var listaFilas = varListaFilas.split("-");
 					alert(listaFilas[0]);
-					alert(listaFilas.length-1);
+					alert(listaFilas[listaFilas.length-1]);
 				if (listaFilas.length > 0)
 				{
 					var arrayFilas = [];
