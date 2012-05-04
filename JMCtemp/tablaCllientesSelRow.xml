@@ -11,7 +11,7 @@
 	
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 	<UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
-	<UserPref name="VarListaFilas" default_value="" display_name="Lista de filas a mostrar (números de fila separados por comas):" />
+	<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
 	
 <Content type="html"><![CDATA[
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -161,12 +161,12 @@ function sendQuery()
 		else if (varListaFilas!="")
 			{
 				//console.debug('varListaFilas: '+varListaFilas);	
-				var listaFilas = varListaFilas.split(",");
+				var listaFilas = varListaFilas.split("-");
 					
 				if (listaFilas.length > 0)
 				{
 					var arrayFilas = [];
-					for(j=0; j<listaFilas.length; j++)
+					for(j=listaFilas[0]; j<listaFilas.length; j++)
 					{
 						//console.debug('extrayendo lista filas');		
 						indexaux = parseInt(listaFilas[j]);
