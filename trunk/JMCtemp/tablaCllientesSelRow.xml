@@ -162,12 +162,12 @@ function sendQuery()
 			{
 				//console.debug('varListaFilas: '+varListaFilas);	
 				var listaFilas = varListaFilas.split("-");
-					alert(listaFilas[0]);
-					alert(listaFilas[listaFilas.length-1]);
+					/*alert(listaFilas[0]);
+					alert(listaFilas[listaFilas.length-1]);*/
 				if (listaFilas.length > 0)
 				{
 					var arrayFilas = [];
-					for(j=listaFilas[0].value; j<(listaFilas.length-1).value; j++)
+					for(j=listaFilas[0]; j<(listaFilas[listaFilas.length-1]); j++)
 					{
 						//console.debug('extrayendo lista filas');		
 						indexaux = parseInt(listaFilas[j]);
