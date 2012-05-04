@@ -190,8 +190,7 @@
 				}
 			}
 		
-		chart.draw(view, options);
-	}
+		
 		if (_Row!="")
 		{
 			var filasAmostrar = [];
