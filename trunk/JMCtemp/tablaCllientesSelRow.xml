@@ -126,7 +126,7 @@ function sendQuery()
 		
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
 		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
-		formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
+		formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first row.
 		
 		
 		var cssClassNames = {
@@ -151,11 +151,11 @@ function sendQuery()
 		{
 			var filasAmostrar = [];
 			
-			for(i=0 ; i < _Col ; i++) 
+			for(i=0 ; i < _Row ; i++) 
 			{ 
 				filasAmostrar.push(i);
 			}
-			//console.debug('_Col es diferente de "": view.setColumns(filasAmostrar) : '+filasAmostrar);
+			//console.debug('_Row es diferente de "": view.setRows(filasAmostrar) : '+filasAmostrar);
 			view.setRows(filasAmostrar);
 		}
 		else if (varListaFilas!="")
