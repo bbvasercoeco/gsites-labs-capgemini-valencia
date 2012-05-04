@@ -170,9 +170,9 @@ function sendQuery()
 					for(j=listaFilas[0]; j<listaFilas[listaFilas.length-1]; j++)
 					{
 						//console.debug('extrayendo lista filas');		
-						indexaux = parseInt(listaFilas[j]);
+						//indexaux = parseInt(listaFilas[j]);
 						//console.debug('indexaux: '+indexaux);
-						arrayFilas.push(indexaux);
+						arrayFilas.push(listaFilas[j]);
 						//console.debug('arrayFilas['+j+']: '+arrayFilas[j]);
 					}
 					//console.debug('varListaFilas!="" , arrayFilas: '+arrayFilas);			
