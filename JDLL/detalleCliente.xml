@@ -164,11 +164,14 @@
 		
 		
 		var valoresColumna = data.getValue(1,1);
+		
+		console.debug('version 1');
+		console.debug('data.getValue(1,1) <-- '+dat
 		console.debug('data <-- '+data);
-		console.debug('data.getValue(1,1 <-- '+data.getValue(1,1));
+		console.debug('data.getValue(1,1) <-- '+data.getValue(1,1));
 		
 		
-		document.getElementById('tablediv').innerHTML(valoresColumna.toString());
+		document.getElementById('tablediv').innerHTML = valoresColumna;
 		//document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
 		
 	}
