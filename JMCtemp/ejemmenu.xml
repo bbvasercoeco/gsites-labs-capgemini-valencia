@@ -245,7 +245,8 @@ gadgets.util.registerOnLoadHandler(estilosIframes);
 // console.debug('version 1');
 
 function estilosIframes(){
-var contador = document.referrer("https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jordi").getElementsByTagName('iframe');
+var origen = "https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jordi" ;
+var contador = document.referrer(origen).getElementsByTagName('iframe');
 alert(contador);
  for(var i=2; i<=contador; i++){
   $("iframe").style("top","-100px");
