@@ -176,7 +176,7 @@ function sendQuery()
 						console.debug('arrayFilas['+j+']: '+arrayFilas[j]);
 					}
 					console.debug('varListaFilas!="" , arrayFilas: '+arrayFilas);	*/		
-					view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-2]));
+					view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 				}
 			}
 		
