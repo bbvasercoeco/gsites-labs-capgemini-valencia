@@ -77,10 +77,9 @@ function sendQuery() {
     //var query = gadgetHelper.createQueryFromPrefs(prefs);
   
 	var opts = {dataType:'jsonp'};
-	//var opts = {dataType:'csv'};
-        //var opts = {sendMethod: 'xhr'};
-        var query = new google.visualization.Query(urlTable, opts);
-        query.setQuery("select A,B ");
+	
+    var query = new google.visualization.Query(urlTable, opts);
+    query.setQuery("select A,B ");
   
   query.send(handleQueryResponse);
 }
