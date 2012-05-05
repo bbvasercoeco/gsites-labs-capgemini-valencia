@@ -12,7 +12,9 @@
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
 	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-):" />
-
+	<UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
+	<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
+	
 	<Content type="html">
 		<![CDATA[
 
@@ -83,11 +85,11 @@
 				color: #009EE5;
 			}
 			img.loading {
-				margin: 5% 0 0 40%;
+				margin: 5% 0 0 7%;
 			}
 		</style>
 
-		<div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
+		<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 		<script type="text/javascript"> 
 			
@@ -174,8 +176,8 @@
 				if (!gadgetHelper.validateResponse(response)) { return; }
 			
 				data = response.getDataTable();
-				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" >{0}</a> ');
-				formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
+				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {1}">{1}</a> ');
+				formatter.format(data, [0,1,2,3], 1); // Apply formatter and set the formatted value of the first column.
 				
 				var cssClassNames = {
 					'headerRow': 'header',
@@ -223,8 +225,27 @@
 							view.setColumns(arrayColumnas);
 						}
 					}
-				
-				chart.draw(view, options);
+					
+				if (_Row!="")
+				{
+					var filasAmostrar = [];
+					
+					for(i=0 ; i < _Row ; i++) 
+					{ 
+						filasAmostrar.push(i);
+					}
+
+					view.setRows(filasAmostrar);
+				}
+				else if (varListaFilas!="")
+					{				
+						var listaFilas = varListaFilas.split("-");
+						if (listaFilas.length > 0)
+						{   
+							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
+						}
+					}
+						chart.draw(view, options);
 			}
 
 		</script>
