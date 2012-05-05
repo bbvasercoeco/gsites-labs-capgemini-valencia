@@ -194,7 +194,7 @@
 				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('version 45');
+				console.debug('version 46');
 				
 				if (_Col!="")
 				{
@@ -245,7 +245,8 @@
 							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 						}
 					}
-						chart.draw(view, options);
+						
+			chart.draw(view, options);
 			}
 
 		</script>
