@@ -157,7 +157,7 @@
 		var view = new google.visualization.DataView(data);
 		var columnasAmostrar = [];
 		var filasAmostrar = [];
-		console.debug('version 31');
+		//console.debug('version 31');
 		
 		
                         for(var i=0;i<32;i++) 
