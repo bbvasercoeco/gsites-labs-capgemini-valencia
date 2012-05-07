@@ -171,11 +171,12 @@
 									{
 										filasAmostrar.push(i);
 									}
-									view.setRows(filasAmostrar);
+									
 								}
 							
 						}
 					    view.setColumns(columnasAmostrar);	
+						view.setRows(filasAmostrar);
                        // console.debug(columnasAmostrar);
                         
 						
