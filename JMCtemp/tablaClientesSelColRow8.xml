@@ -163,7 +163,7 @@
                         
                         for(i=0;i<columnasAmostrar.length;i++) 
                         {    
-							if (columnasAmostrar[i] != "order"){
+							if (columnasAmostrar[i] != 'order'){
 									columnasAmostrar.push(i);
 									//alert(columnasAmostrar[i]);
 								}
