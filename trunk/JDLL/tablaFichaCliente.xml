@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Tabla listado de clientes"
+	<ModulePrefs title="Tabla listado de clientes. tablaFichaCliente.xml"
 		description="Tabla cargada con paginacion y parametrizada."
 		author_affiliation="Capgemini">
 		<Require feature="idi"/>
@@ -164,7 +164,7 @@
 				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('tablaFichaCliente.xml version 48');
+				console.debug('tablaFichaCliente.xml version 49');
 				
 				if (_Col!="")
 				{
