@@ -9,9 +9,7 @@
 	
 	<UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
-	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-	<UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
 	<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
 	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
 
@@ -167,8 +165,6 @@
 			</ul>
 		</div>
 		
-		
-		
 		<script type="text/javascript"> 
 			
 			console.debug('detalleCliente.xml version 6');
@@ -177,14 +173,10 @@
 			var varListaColumnas = "";
 			var	_Col = ""; 			
 			var prefs = new _IG_Prefs(); // User preferences	
-			var	_Col = prefs.getInt("_Col");
-			var urlTable = prefs.getString("_table_query_url");
-			var	numElePag = prefs.getInt("_NumElemPorPagina");
-			var varListaColumnas = prefs.getString("VarListaColumnas");			
-			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
-			var	_Row = prefs.getInt("_Row");
-			var varListaFilas = prefs.getString("VarListaFilas"); 
 			
+			var urlTable = prefs.getString("_table_query_url");
+			var	numElePag = prefs.getInt("_NumElemPorPagina");				
+			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 			
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
@@ -239,8 +231,7 @@
 			{
 				if (!gadgetHelper.validateResponse(response)) { return; }
 			
-				data = response.getDataTable();				
-				
+				data = response.getDataTable();		
 				
 				document.getElementById('idCliente').innerHTML = data.getValue(0,0);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);
@@ -249,7 +240,6 @@
 				document.getElementById('idDetalle').innerHTML = data.getValue(0,4);
 				document.getElementById('idPaises').innerHTML = data.getValue(0,5);
 				document.getElementById('idFormato').innerHTML = data.getValue(0,6);
-				
 				
 			}
 
