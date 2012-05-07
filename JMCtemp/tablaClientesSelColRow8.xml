@@ -172,7 +172,7 @@
 								
 						}
 						view.setColumns(columnasAmostrar);
-						for (var x=2;x<=64;x++)
+						for (var x=2;x<=63;x++)
 									{
 									filasAmostrar.push(x);
 									}
