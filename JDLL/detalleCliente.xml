@@ -146,7 +146,7 @@
 		</style>
 		
 		<h2>
-			Ficha Cliente <span id="nombreCliente"></span>
+			Ficha Cliente <span id="nombreCliente"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<div style="text-align:right"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></div>
 			<hr>
 		</h2>			
@@ -156,12 +156,12 @@
 				<img border="0" src="https://sites.google.com/site/gsiteslabscapgeminivalencia/_/rsrc/1336402017428/home/labs/jose/listado-clientes/ficha-idglobal0001/logo%20airbus.png">
 			</div>
 			<ul id="datosFicha">
-				<li>Código Cliente: <span id="idCliente"></span></li>
-				<li>Producto: <span id="idProducto"></span></li>
-				<li>Servicio: <span id="idServicio"></span></li>
-				<li>Formato: <span id="idFormato"></span></li>
-				<li>Detalle: <span id="idDetalle"></span></li>
-				<li>Países: <span id="idPaises"></span></li>
+				<li>Código Cliente: <span id="idCliente"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Producto: <span id="idProducto"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Servicio: <span id="idServicio"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Formato: <span id="idFormato"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Detalle: <span id="idDetalle"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Países: <span id="idPaises"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 			</ul>
 		</div>
 		
