@@ -97,10 +97,52 @@
 				text-align: left;
 				width: 240px;
 			}
+			#imagenCliente img {
+				margin-right: 40px;
+			}
 			hr {
 				background-color: #CCCCCC;
 				border-width: 0;
 				height: 1px;
+			}
+			ul#datosFicha {
+				 border-collapse: collapse;
+				color: #666666;
+				font-family: arial,sans-serif;
+				font-size: 13px;
+				font-style: normal;
+				font-variant: normal;
+				font-weight: normal;
+				letter-spacing: normal;
+				line-height: 17px;
+				text-align: left;
+				text-indent: 0;
+				text-transform: none;
+				white-space: normal;
+				word-spacing: 0;
+			}
+			ul#datosFicha li {
+				 border-collapse: collapse;
+				color: #0b5394;
+				font-family: arial,sans-serif;
+				font-size: 13px;
+				font-style: normal;
+				font-variant: normal;
+				font-weight: normal;
+				letter-spacing: normal;
+				line-height: 17px;
+				text-align: left;
+				text-indent: 0;
+				text-transform: none;
+				white-space: normal;
+				word-spacing: 0;
+			}
+			ul#datosFicha li span {
+				font-family: trebuchet ms,sans-serif;
+				font-size: small;
+				line-height: 17px;
+				text-align: justify;
+				color: #666666;
 			}
 		</style>
 		<div id="tablediv2">tablediv2</div>
