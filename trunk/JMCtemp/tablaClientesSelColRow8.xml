@@ -162,12 +162,12 @@
                         for(var i=0;i<32;i++) 
                         {    
 							if (columnasAmostrar[i] != 'order'){
-									//columnasAmostrar.push(i);
-									view.addColumn(columnasAmostrar[i]);	
+									columnasAmostrar.addColumn(i);
+									
 								}
 							
 						}
-						
+					    view.setColumns(columnasAmostrar);	
                        // console.debug(columnasAmostrar);
                         
             
