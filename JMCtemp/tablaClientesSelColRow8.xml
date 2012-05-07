@@ -170,6 +170,7 @@
 									{
 									filasAmostrar.push(x);
 									x++;
+									alert (x);
 									}
 									
 						  }
