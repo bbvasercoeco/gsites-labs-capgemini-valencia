@@ -164,13 +164,13 @@
                         for(var i=0;i<32;i++) 
                         {    
 						  for(var j=0;j<4;j++)
-						  {			var aux=0;
+						  {		
 									columnasAmostrar.push(j);
-									if (x<64 && aux<8)
+									if (x<64)
 									{
 									filasAmostrar.push(x);
 									x++;
-									aux++;
+									
 									//alert (x);		
 									}
 						 }
