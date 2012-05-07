@@ -167,9 +167,9 @@
 									columnasAmostrar.push(j);
 									//break;
 									
-									for(var i=0;i<filasAmostrar.length;i++)
+									for(var x=0;x<filasAmostrar.length;x++)
 									{
-										filasAmostrar.push(i);
+										filasAmostrar.push(x);
 									}
 									
 								}
