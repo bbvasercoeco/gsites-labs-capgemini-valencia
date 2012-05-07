@@ -247,23 +247,7 @@
 						}
 					}
 				
-				var components = [
-					  {
-						type: 'igoogle', 
-						datasource: data,
-						gadget: 'https://www.google.com/ig/modules/pie-chart.xml',
-						userprefs: {'3d': 1}},
-						{type: 'html', datasource: data},
-						{type: 'csv', datasource: data},
-						{type: 'htmlcode', datasource: data,
-						gadget: 'https://www.google.com/ig/modules/pie-chart.xml',
-						userprefs: {'3d': 1},
-					   style: 'width: 800px; height: 700px; border: 3px solid purple;'}
-				  ];
-
-				var container = document.getElementById('toolbar_div');
-				google.visualization.drawToolbar(container, components);
-
+				
 				
 				chart.draw(view, options);
 			}
