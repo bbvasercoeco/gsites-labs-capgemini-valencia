@@ -165,7 +165,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 6');
+			console.debug('detalleCliente.xml version 7');
 			
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
