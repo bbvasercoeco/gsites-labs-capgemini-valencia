@@ -175,7 +175,7 @@
 						 
 						   for (var i=0;i<65;i++){
 							
-										filasAmostrar.push(j);
+										filasAmostrar.push(i);
 									} 		
 						 
 					    view.setColumns(columnasAmostrar);	
