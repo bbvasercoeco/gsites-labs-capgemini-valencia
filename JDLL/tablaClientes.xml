@@ -195,7 +195,7 @@
 				
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('version B 3');
+				console.debug('version B 4');
 				
 				if (_Col!="")
 				{
