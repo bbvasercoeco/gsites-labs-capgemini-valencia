@@ -152,9 +152,7 @@
 		</h2>			
 
 		<div id="detalleFicha">
-			<div id="imagenCliente">
-				<img border="0" src="https://sites.google.com/site/gsiteslabscapgeminivalencia/_/rsrc/1336402017428/home/labs/jose/listado-clientes/ficha-idglobal0001/logo%20airbus.png">
-			</div>
+			<div id="imagenCliente"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 			<ul id="datosFicha">
 				<li>Código Cliente: <span id="idCliente"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Producto: <span id="idProducto"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
@@ -241,6 +239,10 @@
 				document.getElementById('idPaises').innerHTML = data.getValue(0,5);
 				document.getElementById('idFormato').innerHTML = data.getValue(0,6);
 				
+				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,7) +'">';
+			
+			
+			
 			}
 
 		</script>
