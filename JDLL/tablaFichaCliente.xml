@@ -11,10 +11,8 @@
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá el detalle del proyecto (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-xxxx/detalleProyecto- ):" />
-	<UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
-	<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
-	
+	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
+
 	<Content type="html">
 		<![CDATA[
 
@@ -26,28 +24,28 @@
 				border-bottom: 1px solid #E2E2E2; 
 				height: 45px; 
 				font-family:  Arial, Helvetica, sans-serif;
-				font-size:14px;
+				font-size:13px;
 			}
 			.filaImpar {
 				background: #DFE3E5; 
 				border-bottom: 1px solid #E2E2E2; 
 				height: 45px; 
 				font-family: Arial, Helvetica, sans-serif;
-				font-size:14px;
+				font-size:13px;
 			}
 			.filaSeleccionada{
 				background: white; 
 				border-bottom: 1px solid #A22E212; 
 				height: 45px; 
 				font-family: Arial, Helvetica, sans-serif;
-				font-size:14px;
+				font-size:13px;
 			}
 			.filaHover{
 				background: #F0EEE2; 
 				border-bottom: 1px solid #B2B2B2; 
 				height: 45px;
 				font-family: Arial, Helvetica, sans-serif;
-				font-size:14px;
+				font-size:13px;
 			}
 			#tablediv table,
 			#tablediv table tr,
@@ -59,9 +57,9 @@
 				padding-left: 5px !important;
 			}
 			.header {
-				background-color: #2966B0;		
+				background-color: #2966B0;	
 				color: white; 
-				font-size:15px; 
+				font-size:14px; 
 				font-weight: bold;
 				text-align: center;
 				font-family: Arial, Helvetica, sans-serif;
@@ -93,11 +91,6 @@
 			var	numElePag = prefs.getInt("_NumElemPorPagina");
 			var varListaColumnas = prefs.getString("VarListaColumnas");			
 			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
-			var	_Row = prefs.getInt("_Row");
-			var varListaFilas = prefs.getString("VarListaFilas");
-			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
-			
-			
 			
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
@@ -114,7 +107,7 @@
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("ficha-");				
-				var querytosend = "select *  where A like '" + idCliquery + "'";
+				var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 			}
@@ -198,25 +191,7 @@
 							view.setColumns(arrayColumnas);
 						}
 					}
-				if (_Row!="")
-				{
-					var filasAmostrar = [];
-					
-					for(i=0 ; i < _Row ; i++) 
-					{ 
-						filasAmostrar.push(i);
-					}
-
-					view.setRows(filasAmostrar);
-				}
-				else if (varListaFilas!="")
-					{				
-						var listaFilas = varListaFilas.split("-");
-						if (listaFilas.length > 0)
-						{   
-							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
-						}
-					}
+				
 				chart.draw(view, options);
 			}
 
