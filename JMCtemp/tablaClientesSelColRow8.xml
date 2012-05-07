@@ -170,29 +170,7 @@
                         //console.debug('_Col es diferente de "": view.setColumns(columnasAmostrar) : '+columnasAmostrar);
                         view.setColumns(columnasAmostrar);
                 
-                else if (varListaColumnas!="")
-                        {
-                                //console.debug('varListaColumnas: '+varListaColumnas); 
-                                var listaColumnas = varListaColumnas.split(",");
-                                        
-                                if (listaColumnas.length > 0)
-                                {
-                                        var arrayColumnas = new Array(32);
-                                        for(j=0; j<listaColumnas.length; j++)
-                                        {
-                                                //console.debug('extrayendo lista columnas');           
-                                                indexaux = parseInt(listaColumnas[j]);
-                                                //console.debug('indexaux: '+indexaux);
-                                                arrayColumnas.push(indexaux);
-                                                //console.debug('arrayColumnas['+j+']: '+arrayColumnas[j]);
-                                        }
-                                        //console.debug('varListaColumnas!="" , arrayColumnas: '+arrayColumnas);                        
-                                        view.setColumns(arrayColumnas);
-                                }
-                        
-                
-                
-                if (_Row!="")
+				  if (_Row!="")
                 {
                         var filasAmostrar = new Array(8);
                         
@@ -224,10 +202,35 @@
                                         view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
                                 }
                         }
+				
+				
+                }else if (varListaColumnas!="")
+                        {
+                                //console.debug('varListaColumnas: '+varListaColumnas); 
+                                var listaColumnas = varListaColumnas.split(",");
+                                        
+                                if (listaColumnas.length > 0)
+                                {
+                                        var arrayColumnas = new Array(32);
+                                        for(j=0; j<listaColumnas.length; j++)
+                                        {
+                                                //console.debug('extrayendo lista columnas');           
+                                                indexaux = parseInt(listaColumnas[j]);
+                                                //console.debug('indexaux: '+indexaux);
+                                                arrayColumnas.push(indexaux);
+                                                //console.debug('arrayColumnas['+j+']: '+arrayColumnas[j]);
+                                        }
+                                        //console.debug('varListaColumnas!="" , arrayColumnas: '+arrayColumnas);                        
+                                        view.setColumns(arrayColumnas);
+                                }
+                        
+						}//del 1er else if
+                
+              
                 
 				
-					}//del 1er else if
-				}// del 1er if
+					
+				
                 chart.draw(view, options);
 				
         }
