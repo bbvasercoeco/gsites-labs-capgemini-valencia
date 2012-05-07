@@ -163,7 +163,8 @@
                         var columnasAmostrar = new Array(32);
                         
                         for(i=0 ; i < columnasAmostrar.length ; i++) 
-                        {       if (columnasAmostrar[i]!= "order"){
+                        {    alert(columnasAmostrar[i]);
+							if (columnasAmostrar[i]!= "order"){
 									columnasAmostrar.push(i);
 								}
 						}
