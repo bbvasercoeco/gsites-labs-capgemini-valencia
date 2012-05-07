@@ -74,7 +74,7 @@
 				color: #009EE5;
 			}
 			img.loading {
-				margin: 5% 0 0 40%;
+				margin: 0;
 			}
 			h2 {
 				color: #0B5394;
@@ -230,7 +230,7 @@
 				if (!gadgetHelper.validateResponse(response)) { return; }
 			
 				data = response.getDataTable();		
-				
+				/*
 				document.getElementById('idCliente').innerHTML = data.getValue(0,0);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);
 				document.getElementById('idProducto').innerHTML = data.getValue(0,2);
@@ -240,7 +240,7 @@
 				document.getElementById('idFormato').innerHTML = data.getValue(0,6);
 				
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,7) +'">';
-			
+			*/
 			
 			
 			}
