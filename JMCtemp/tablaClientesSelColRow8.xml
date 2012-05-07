@@ -155,11 +155,11 @@
 
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
-		var columnasAmostrar = new Array(32);
+		var columnasAmostrar = [];
 		console.debug('version 31');
 		
 		
-                        for(i=0;i<columnasAmostrar.length;i++) 
+                        for(i=0;i<32;i++) 
                         {    
 							if (columnasAmostrar[i] != 'order'){
 									columnasAmostrar.push(i);
