@@ -163,9 +163,10 @@
                         var columnasAmostrar = new Array(32);
                         
                         for(i=0 ; i < columnasAmostrar.length ; i++) 
-                        {    alert(columnasAmostrar[i]);
+                        {    
 							if (columnasAmostrar[i]!= "order"){
 									columnasAmostrar.push(i);
+									alert(columnasAmostrar[i]);
 								}
 						}
                         //console.debug('_Col es diferente de "": view.setColumns(columnasAmostrar) : '+columnasAmostrar);
