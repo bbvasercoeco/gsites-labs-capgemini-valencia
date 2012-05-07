@@ -80,11 +80,12 @@
 			}
 			h2 {
 				color: #0B5394;
-				font-family:trebuchet ms,sans-serif;
+				font-family: trebuchet ms,sans-serif;
 				font-size: x-large;
 				line-height:18px;
 				margin-left: 5px;
 				width: 99%;
+				font-weight: normal;
 			}
 			h2 div {
 				display:inline;
@@ -95,7 +96,7 @@
 				float: left;
 				margin-left: 10px;
 				text-align: left;
-				width: 240px;
+				width: 280px;
 			}
 			#imagenCliente img {
 				margin-right: 40px;
@@ -106,7 +107,7 @@
 				height: 1px;
 			}
 			ul#datosFicha {
-				 border-collapse: collapse;
+				border-collapse: collapse;
 				color: #666666;
 				font-family: arial,sans-serif;
 				font-size: 13px;
@@ -122,7 +123,7 @@
 				word-spacing: 0;
 			}
 			ul#datosFicha li {
-				 border-collapse: collapse;
+				border-collapse: collapse;
 				color: #0b5394;
 				font-family: arial,sans-serif;
 				font-size: 13px;
@@ -145,30 +146,27 @@
 				color: #666666;
 			}
 		</style>
-		<div id="tablediv2">tablediv2</div>
-		<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
-		<div id="tablediv3">
-			
-			<h2>
-				Ficha Cliente <span id="nombreCliente"></span>
-				<div style="text-align:right"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></div>
-				<hr>
-			</h2>			
+		
+		<h2>
+			Ficha Cliente <span id="nombreCliente"></span>
+			<div style="text-align:right"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></div>
+			<hr>
+		</h2>			
 
-			<div id="detalleFicha">
-				<div id="imagenCliente">
-					<img border="0" src="https://sites.google.com/site/gsiteslabscapgeminivalencia/_/rsrc/1336402017428/home/labs/jose/listado-clientes/ficha-idglobal0001/logo%20airbus.png">
-				</div>
-				<ul id="datosFicha">
-					<li>Código Cliente: <span id="idCliente"></span></li>
-					<li>Producto: <span id="idProducto"></span></li>
-					<li>Servicio: <span id="idServicio"></span></li>
-					<li>Formato: <span id="idFormato"></span></li>
-					<li>Detalle: <span id="idDetalle"></span></li>
-					<li>Países: <span id="idPaises"></span></li>
-				</ul>
+		<div id="detalleFicha">
+			<div id="imagenCliente">
+				<img border="0" src="https://sites.google.com/site/gsiteslabscapgeminivalencia/_/rsrc/1336402017428/home/labs/jose/listado-clientes/ficha-idglobal0001/logo%20airbus.png">
 			</div>
+			<ul id="datosFicha">
+				<li>Código Cliente: <span id="idCliente"></span></li>
+				<li>Producto: <span id="idProducto"></span></li>
+				<li>Servicio: <span id="idServicio"></span></li>
+				<li>Formato: <span id="idFormato"></span></li>
+				<li>Detalle: <span id="idDetalle"></span></li>
+				<li>Países: <span id="idPaises"></span></li>
+			</ul>
 		</div>
+		
 		
 		
 		<script type="text/javascript"> 
@@ -243,69 +241,6 @@
 			
 				data = response.getDataTable();				
 				
-				var cssClassNames = {
-					'headerRow': 'header',
-					'tableRow': 'filaPar',
-					'oddTableRow': 'filaImpar',
-					'selectedTableRow': 'filaSeleccionada',
-					'hoverTableRow': 'filaHover',
-					'headerCell': '',
-					'tableCell': 'formateoCelda',
-					'rowNumberCell': ''
-				};
-				 
-				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
-				var view = new google.visualization.DataView(data);
-				
-				if (_Col!="")
-				{
-					var columnasAmostrar = [];
-					
-					for(i=0 ; i < _Col ; i++) 
-					{ 
-						columnasAmostrar.push(i);
-					}
-					view.setColumns(columnasAmostrar);
-				}
-				else if (varListaColumnas!="")
-					{
-						var listaColumnas = varListaColumnas.split(",");
-							
-						if (listaColumnas.length > 0)
-						{
-							var arrayColumnas = [];
-							for(j=0; j<listaColumnas.length; j++)
-							{
-								indexaux = parseInt(listaColumnas[j]);
-								arrayColumnas.push(indexaux);
-							}
-							view.setColumns(arrayColumnas);
-						}
-					}
-					
-				if (_Row!="")
-				{
-					var filasAmostrar = [];
-					
-					for(i=0 ; i < _Row ; i++) 
-					{ 
-						filasAmostrar.push(i);
-					}
-
-					view.setRows(filasAmostrar);
-				}
-				
-				else if (varListaFilas!="")
-					{				
-						var listaFilas = varListaFilas.split("-");
-						if (listaFilas.length > 0)
-						{   
-							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
-						}
-					}
-				
-				chart.draw(view, options);
 				
 				document.getElementById('idCliente').innerHTML = data.getValue(0,0);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);
