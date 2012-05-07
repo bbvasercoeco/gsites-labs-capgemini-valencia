@@ -94,7 +94,7 @@
 			var varListaColumnas = prefs.getString("VarListaColumnas");			
 			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 			var	_Row = prefs.getInt("_Row");
-			var varListaFilas = prefs.getString("VarListaFilas");
+			var varListaFilas = prefs.getString("VarListaFilas"); 
 			
 			
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
