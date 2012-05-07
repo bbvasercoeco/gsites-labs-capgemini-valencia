@@ -169,15 +169,16 @@
 									
 						  }
 							
-							
+								
 						}
-						for (var x=2;x<=65;x++)
+						view.setColumns(columnasAmostrar);
+						for (var x=2;x<=64;x++)
 									{
 									filasAmostrar.push(x);
 									}
 									 		 
 						
-					    view.setColumns(columnasAmostrar);	
+					    
 						view.setRows(filasAmostrar);
                        // console.debug(columnasAmostrar);
                         
