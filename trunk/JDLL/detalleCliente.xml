@@ -125,7 +125,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 2');
+			console.debug('detalleCliente.xml version 3');
 			
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
@@ -261,8 +261,10 @@
 				
 				//chart.draw(view, options);
 				
+				
+				console.debug('valoresColumna');
 				var valoresColumna = data.getValue(1,1);
-		
+				console.debug('data.getValue(1,1):'+ data.getValue(1,1));
 		
 				
 				document.getElementById('tablediv2').innerHTML = valoresColumna;
