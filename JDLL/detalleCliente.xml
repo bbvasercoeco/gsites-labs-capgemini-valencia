@@ -83,6 +83,10 @@
 			font-size:x-large
 			line-height:18px
 			}
+			h2 div {
+				display:inline;
+				float:right;
+			}
 		</style>
 		<div id="tablediv2">tablediv2</div>
 		<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
@@ -94,14 +98,18 @@
 				<hr>
 			</h2>			
 
-			<ul>
-				<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Código Cliente:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;
-				<span id="idCliente"></li>
-				<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Producto o servicio:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;Host to Host</span></li>
-				<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Detalle:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;</span><span style="font-family:trebuchet ms,sans-serif;font-size:small;line-height:17px;text-align:justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&nbsp;</span></li>
-				<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Países:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;Francia, Gran Bretaña, Hong Kong, Italia, Alemania, Bélgica, España, Holanda, México, Chile, Perú, Venezuela.</span></li>
-			</ul>
-				
+			<div id="detalleFicha">
+				<div style="display:block;text-align:left">
+					<img border="0" style="display:block;margin-right:auto;text-align:left" src="https://sites.google.com/site/gsiteslabscapgeminivalencia/_/rsrc/1336402017428/home/labs/jose/listado-clientes/ficha-idglobal0001/logo%20airbus.png">
+				</div>
+				<ul>
+					<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Código Cliente:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;
+					<span id="idCliente"></li>
+					<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Producto o servicio:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;Host to Host</span></li>
+					<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Detalle:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;</span><span style="font-family:trebuchet ms,sans-serif;font-size:small;line-height:17px;text-align:justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&nbsp;</span></li>
+					<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Países:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;Francia, Gran Bretaña, Hong Kong, Italia, Alemania, Bélgica, España, Holanda, México, Chile, Perú, Venezuela.</span></li>
+				</ul>
+			</div>
 		</div>
 		
 		
