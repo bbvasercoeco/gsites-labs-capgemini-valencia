@@ -8,9 +8,6 @@
 	</ModulePrefs>
 	
 	<UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
-	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
-	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-	<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
 	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
 
 	<Content type="html">
@@ -18,61 +15,7 @@
 
 		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-		<style type="text/css">
-			 .filaPar {
-				background: white; 
-				border-bottom: 1px solid #E2E2E2; 
-				height: 45px; 
-				font-family:  Arial, Helvetica, sans-serif;
-				font-size:13px;
-			}
-			.filaImpar {
-				background: #DFE3E5; 
-				border-bottom: 1px solid #E2E2E2; 
-				height: 45px; 
-				font-family: Arial, Helvetica, sans-serif;
-				font-size:13px;
-			}
-			.filaSeleccionada{
-				background: white; 
-				border-bottom: 1px solid #A22E212; 
-				height: 45px; 
-				font-family: Arial, Helvetica, sans-serif;
-				font-size:13px;
-			}
-			.filaHover{
-				background: #F0EEE2; 
-				border-bottom: 1px solid #B2B2B2; 
-				height: 45px;
-				font-family: Arial, Helvetica, sans-serif;
-				font-size:13px;
-			}
-			#tablediv table,
-			#tablediv table tr,
-			#tablediv table	tr td {
-				font-family: Arial, Helvetica, sans-serif !important;
-			}		
-			.formateoCelda {
-				font-family: Arial, Helvetica, sans-serif !important;
-				padding-left: 5px !important;
-			}
-			.header {
-				background-color: #2966B0;	
-				color: white; 
-				font-size:14px; 
-				font-weight: bold;
-				text-align: center;
-				font-family: Arial, Helvetica, sans-serif;
-				height: 35px;
-			}
-			a.enlaceTabla,
-			a:active.enlaceTabla,
-			a:visited.enlaceTabla {
-				color: #3F78B2;
-			}
-			a:hover.enlaceTabla {
-				color: #009EE5;
-			}
+		<style type="text/css">			 
 			img.loading {
 				margin: 0 0 0 20px;
 			}
@@ -167,13 +110,9 @@
 			
 			console.debug('detalleCliente.xml version 9');
 			
-			var gadgetHelper = null;			
-			var varListaColumnas = "";
-			var	_Col = ""; 			
-			var prefs = new _IG_Prefs(); // User preferences	
-			
-			var urlTable = prefs.getString("_table_query_url");
-			var	numElePag = prefs.getInt("_NumElemPorPagina");				
+			var gadgetHelper = null;	
+			var prefs = new _IG_Prefs(); // User preferences			
+			var urlTable = prefs.getString("_table_query_url");		
 			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 			
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
