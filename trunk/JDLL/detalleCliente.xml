@@ -165,7 +165,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 8');
+			console.debug('detalleCliente.xml version 9');
 			
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
@@ -230,7 +230,7 @@
 				if (!gadgetHelper.validateResponse(response)) { return; }
 			
 				data = response.getDataTable();		
-				/*
+				
 				document.getElementById('idCliente').innerHTML = data.getValue(0,0);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);
 				document.getElementById('idProducto').innerHTML = data.getValue(0,2);
@@ -240,9 +240,7 @@
 				document.getElementById('idFormato').innerHTML = data.getValue(0,6);
 				
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,7) +'">';
-			*/
-			
-			
+						
 			}
 
 		</script>
