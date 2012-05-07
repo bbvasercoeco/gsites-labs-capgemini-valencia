@@ -107,7 +107,14 @@
 			function loadVisualizationAPI() 
 			{
 				google.load("visualization", "1", {"packages": ["table"]});
-				google.setOnLoadCallback(sendQuery);
+				//google.setOnLoadCallback(sendQuery);
+				google.setOnLoadCallback(draw);
+			}
+
+			function draw() 
+			{
+				sendQuery();
+				drawToolbar();
 			}
 
 			function sendQuery() 
@@ -183,10 +190,19 @@
 				};
 				 
 				var chart = new google.visualization.Table(document.getElementById('tablediv'));
-				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				
+				var options = { 
+					"containerId": "tablediv",
+					'page': 'enable', 
+					'pageSize': numElePag, 
+					'alternatingRowStyle': true, 
+					'allowHtml': true, 
+					'cssClassNames': cssClassNames
+				};		
+				
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('version B 1');
+				console.debug('version B 2');
 				
 				if (_Col!="")
 				{
@@ -237,9 +253,30 @@
 							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 						}
 					}
-						
-			chart.draw(view, options);
+				
+				var components = [
+					  {
+						type: 'igoogle', 
+						datasource: data,
+						gadget: 'https://www.google.com/ig/modules/pie-chart.xml',
+						userprefs: {'3d': 1}},
+						{type: 'html', datasource: data},
+						{type: 'csv', datasource: data},
+						{type: 'htmlcode', datasource: data,
+						gadget: 'https://www.google.com/ig/modules/pie-chart.xml',
+						userprefs: {'3d': 1},
+					   style: 'width: 800px; height: 700px; border: 3px solid purple;'}
+				  ];
+
+				var container = document.getElementById('toolbar_div');
+				google.visualization.drawToolbar(container, components);
+
+				
+				chart.draw(view, options);
 			}
+
+			
+			
 
 		</script>
 		]]>
