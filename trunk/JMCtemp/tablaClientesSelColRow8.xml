@@ -93,19 +93,19 @@
     
         var gadgetHelper = null;
         
-        var varListaColumnas = "";
-        var     _Col = ""; 
+      /*  var varListaColumnas = "";
+       var     _Col = ""; 
         var varListaFilas = "";
-        var     _Row = ""; 
+        var     _Row = ""; */
         
         var prefs = new _IG_Prefs(); // User preferences
         //var _filaDescartadas = prefs.getInt("_filaDescartadas");
-        var     _Col = prefs.getInt("_Col");
-        var     _Row = prefs.getInt("_Row");
+       // var     _Col = prefs.getInt("_Col");
+       // var     _Row = prefs.getInt("_Row");
         var urlTable = prefs.getString("_table_query_url");
-        var     numElePag = prefs.getInt("_NumElemPorPagina");
-        var varListaColumnas = prefs.getString("VarListaColumnas");
-        var varListaFilas = prefs.getString("VarListaFilas");
+      //  var     numElePag = prefs.getInt("_NumElemPorPagina");
+       // var varListaColumnas = prefs.getString("VarListaColumnas");
+       // var varListaFilas = prefs.getString("VarListaFilas");
         
         _IG_RegisterOnloadHandler(loadVisualizationAPI);
         
