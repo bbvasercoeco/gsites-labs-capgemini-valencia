@@ -165,17 +165,20 @@
 						  for(var j=0;j<4;j++)
 						  {
 									columnasAmostrar.push(j);
-									//break;			
+									
+									for (var x=0;x<65;x++)
+									{		
+											for (var z=0 z<8;z++)
+											{
+											filasAmostrar.push(x);
+											}
+									} 		
 						  }
 							
 							
 						}
 						 
-						for (var x=0;x<65;x++)
-						{							
-						    filasAmostrar.push(x);
-						} 		
-						 
+						
 					    view.setColumns(columnasAmostrar);	
 						view.setRows(filasAmostrar);
                        // console.debug(columnasAmostrar);
