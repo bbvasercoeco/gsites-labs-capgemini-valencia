@@ -107,16 +107,9 @@
 			function loadVisualizationAPI() 
 			{
 				google.load("visualization", "1", {"packages": ["table"]});
-				//google.setOnLoadCallback(sendQuery);
-				google.setOnLoadCallback(draw);
+				google.setOnLoadCallback(sendQuery);				
 			}
-
-			function draw() 
-			{
-				sendQuery();
-				drawToolbar();
-			}
-
+			
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
@@ -202,7 +195,7 @@
 				
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('version B 2');
+				console.debug('version B 3');
 				
 				if (_Col!="")
 				{
