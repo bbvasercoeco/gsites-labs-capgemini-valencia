@@ -157,6 +157,7 @@
 		var view = new google.visualization.DataView(data);
 		var columnasAmostrar = [];
 		var filasAmostrar = [];
+		var x=0;
 		//console.debug('version 31');
 		
 		
@@ -165,20 +166,16 @@
 						  for(var j=0;j<4;j++)
 						  {
 									columnasAmostrar.push(j);
-									
+								for (x;x<64;x++)
+									{
+									filasAmostrar.push(x);
+									}
 									
 						  }
 							
 								
 						}
 						view.setColumns(columnasAmostrar);
-						for (var x=0;x<64;x++)
-									{
-									filasAmostrar.push(x);
-									}
-									 		 
-						
-					    
 						view.setRows(filasAmostrar);
                        // console.debug(columnasAmostrar);
                         
