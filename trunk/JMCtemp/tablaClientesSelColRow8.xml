@@ -158,10 +158,10 @@
                 
         console.debug('version 31');
                 
-						//var columnas = 32;
+						var columnas = 32;
                         var columnasAmostrar =[32];
                         
-                        for(i=0 ; i < columnasAmostrar.length ; i++) 
+                        for(i=0 ; i < columnas; i++) 
                         {    
 							if (columnasAmostrar[i]!= "order"){
 									columnasAmostrar.push(i);
