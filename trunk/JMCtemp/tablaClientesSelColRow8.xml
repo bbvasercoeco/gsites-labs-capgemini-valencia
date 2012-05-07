@@ -172,8 +172,8 @@
 							
 							
 						}
-						 for(var i=0;i<65;i++)
-						 {  for (var j=0;j<8;j++){
+						 for(var i=0;i<8;i++)
+						 {  for (var j=0;j<65;j++){
 										filasAmostrar.push(j);
 									} 		
 						 }
