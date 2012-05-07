@@ -88,7 +88,11 @@
 				<tbody>
 				<tr>
 					<td style="width:3px;height:28px"><br></td>
-					<td style="width:602px;height:28px"><span style="border-collapse:separate"><span style="line-height:18px"><span style="font-size:x-large">Ficha Cliente Airbus</span></span></span></td>
+					<td style="width:602px;height:28px"><span style="border-collapse:separate"><span style="line-height:18px"><span style="font-size:x-large">Ficha Cliente 
+					
+					<div id="nombreCliente"></div>
+					
+					</span></span></span></td>
 					<td style="width:321px;height:28px">
 					<div style="text-align:right"><a href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas" imageanchor="1"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></a></div>
 					<div></div>
@@ -125,7 +129,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 5');
+			console.debug('detalleCliente.xml version 6');
 			
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
@@ -260,14 +264,11 @@
 				chart.draw(view, options);
 				
 				
-				console.debug('valoresColumna');
-				console.debug('data: '+ data);
-				var valoresColumna = data.getValue(0,0);
 				
 				console.debug('data.getValue(0,0):'+ data.getValue(0,0));
 		
 				
-				document.getElementById('tablediv2').innerHTML = valoresColumna;
+				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);
 				
 				//document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
 			}
