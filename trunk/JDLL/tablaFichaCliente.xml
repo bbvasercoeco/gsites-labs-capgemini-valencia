@@ -84,6 +84,8 @@
 
 		<script type="text/javascript"> 
 			
+			console.debug('tablaFichaCliente.xml version 50');
+			
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
 			var	_Col = ""; 			
@@ -169,8 +171,6 @@
 				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('tablaFichaCliente.xml version 49');
-				
 				if (_Col!="")
 				{
 					var columnasAmostrar = [];
@@ -196,7 +196,27 @@
 							view.setColumns(arrayColumnas);
 						}
 					}
-				
+					
+				if (_Row!="")
+				{
+					var filasAmostrar = [];
+					
+					for(i=0 ; i < _Row ; i++) 
+					{ 
+						filasAmostrar.push(i);
+					}
+
+					view.setRows(filasAmostrar);
+				}
+				else if (varListaFilas!="")
+					{				
+						var listaFilas = varListaFilas.split("-");
+						if (listaFilas.length > 0)
+						{   
+							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
+						}
+					}
+					
 				chart.draw(view, options);
 			}
 
