@@ -1,220 +1,276 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Tabla desde docs"
-	description="Tabla cargada con paginacion y parametrizada."
-	author_affiliation="Capgemini">
-	<Require feature="idi"/>
-	<Require feature="locked-domain" />
-</ModulePrefs>
-  
-	<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
+	<ModulePrefs title="Tabla listado de clientes. tablaFichaCliente.xml"
+		description="Tabla cargada con paginacion y parametrizada."
+		author_affiliation="Capgemini">
+		<Require feature="idi"/>
+		<Require feature="locked-domain" />
+	</ModulePrefs>
 	
+	<UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-	
-<Content type="html"><![CDATA[
+	<UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
+	<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
+	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
 
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<Content type="html">
+		<![CDATA[
 
-<style type="text/css">
-	 .filaPar {
-		background: white; 
-		border-bottom: 1px solid #E2E2E2; 
-		height: 45px; 
-		font-family:  Arial, Helvetica, sans-serif;
-		font-size:14px;
-	}
-	.filaImpar {
-		background: #DFE3E5; 
-		border-bottom: 1px solid #E2E2E2; 
-		height: 45px; 
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:14px;
-	}
-	.filaSeleccionada{
-		background: white; 
-		border-bottom: 1px solid #A22E212; 
-		height: 45px; 
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:14px;
-	}
-	.filaHover{
-		background: #F0EEE2; 
-		border-bottom: 1px solid #B2B2B2; 
-		height: 45px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:14px;
-	}
-	#tablediv table,
-	#tablediv table tr,
-	#tablediv table	tr td {
-		font-family: Arial, Helvetica, sans-serif !important;
-	}		
-	.formateoCelda {
-		font-family: Arial, Helvetica, sans-serif !important;
-		padding-left: 5px !important;
-	}
-	.header {
-		background: #1e5799; /* Old browsers */		
-		color: white; 
-		font-size:15px; 
-		font-weight: bold;
-		text-align: center;
-		font-family: Arial, Helvetica, sans-serif;
-		height: 35px;
-	}
-	a.enlaceTabla,
-	a:active.enlaceTabla,
-	a:visited.enlaceTabla {
-		color: #3F78B2;
-	}
-	a:hover.enlaceTabla {
-		color: #009EE5;
-	}
-	img.loading {
-		margin: 5% 0 0 40%;
-	}
-</style>
+		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-<div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
+		<style type="text/css">
+			 .filaPar {
+				background: white; 
+				border-bottom: 1px solid #E2E2E2; 
+				height: 45px; 
+				font-family:  Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			.filaImpar {
+				background: #DFE3E5; 
+				border-bottom: 1px solid #E2E2E2; 
+				height: 45px; 
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			.filaSeleccionada{
+				background: white; 
+				border-bottom: 1px solid #A22E212; 
+				height: 45px; 
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			.filaHover{
+				background: #F0EEE2; 
+				border-bottom: 1px solid #B2B2B2; 
+				height: 45px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			#tablediv table,
+			#tablediv table tr,
+			#tablediv table	tr td {
+				font-family: Arial, Helvetica, sans-serif !important;
+			}		
+			.formateoCelda {
+				font-family: Arial, Helvetica, sans-serif !important;
+				padding-left: 5px !important;
+			}
+			.header {
+				background-color: #2966B0;	
+				color: white; 
+				font-size:14px; 
+				font-weight: bold;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				height: 35px;
+			}
+			a.enlaceTabla,
+			a:active.enlaceTabla,
+			a:visited.enlaceTabla {
+				color: #3F78B2;
+			}
+			a:hover.enlaceTabla {
+				color: #009EE5;
+			}
+			img.loading {
+				margin: 5% 0 0 40%;
+			}
+		</style>
 
-	<h2>
+		<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+
+		<h2>
 		
-		<table border="0" bordercolor="#888" cellspacing="0" style="color:rgb(11,83,148);font-family:trebuchet ms,sans-serif;font-weight:normal;font-size:large;border-collapse:collapse;border-top-color:rgb(255,255,255);border-right-color:rgb(255,255,255);border-bottom-color:rgb(255,255,255);border-left-color:rgb(255,255,255);border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px">
+			<table border="0" bordercolor="#888" cellspacing="0" style="color:rgb(11,83,148);font-family:trebuchet ms,sans-serif;font-weight:normal;font-size:large;border-collapse:collapse;border-top-color:rgb(255,255,255);border-right-color:rgb(255,255,255);border-bottom-color:rgb(255,255,255);border-left-color:rgb(255,255,255);border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px">
+				<tbody>
+				<tr>
+					<td style="width:3px;height:28px"><br></td>
+					<td style="width:602px;height:28px"><span style="border-collapse:separate"><span style="line-height:18px"><span style="font-size:x-large">Ficha Cliente Airbus</span></span></span></td>
+					<td style="width:321px;height:28px">
+					<div style="text-align:right"><a href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas" imageanchor="1"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></a></div>
+					<div></div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			
+			<hr>
+			
+		</h2>
+
+
+		<table border="0" bordercolor="#888" cellspacing="0" style="border-collapse:collapse;border-top-color:rgb(136,136,136);border-right-color:rgb(136,136,136);border-bottom-color:rgb(136,136,136);border-left-color:rgb(136,136,136);border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px">
 			<tbody>
 			<tr>
-				<td style="width:3px;height:28px"><br></td>
-				<td style="width:602px;height:28px"><span style="border-collapse:separate"><span style="line-height:18px"><span style="font-size:x-large">Ficha Cliente Airbus</span></span></span></td>
-				<td style="width:321px;height:28px">
-				<div style="text-align:right"><a href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas" imageanchor="1"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></a></div>
-				<div></div>
+				<td style="width:222px;height:180px">&nbsp;<img border="0" height="159" src="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-cliglobal001/logo%20airbus.png?height=159&amp;width=200" width="200">
+					<div style="display:block;text-align:left"><br></div>
+					<div style="display:block;text-align:left"></div>
 				</td>
+				<td style="width:511px;height:180px">&nbsp;<br>
+					<ul>
+						<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Código Cliente:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;VWAGBEBB004</span></li>
+						<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Producto o servicio:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;Host to Host</span></li>
+						<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Detalle:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;</span><span style="font-family:trebuchet ms,sans-serif;font-size:small;line-height:17px;text-align:justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&nbsp;</span></li>
+						<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Países:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;Francia, Gran Bretaña, Hong Kong, Italia, Alemania, Bélgica, España, Holanda, México, Chile, Perú, Venezuela.</span></li>
+					</ul>
+				</td>			
 			</tr>
 			</tbody>
 		</table>
+
 		
-		<hr>
 		
-	</h2>
-
-	
-	<table border="0" bordercolor="#888" cellspacing="0" style="border-collapse:collapse;border-top-color:rgb(136,136,136);border-right-color:rgb(136,136,136);border-bottom-color:rgb(136,136,136);border-left-color:rgb(136,136,136);border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px">
-		<tbody>
-		<tr>
-			<td style="width:222px;height:180px">&nbsp;<img border="0" height="159" src="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-cliglobal001/logo%20airbus.png?height=159&amp;width=200" width="200">
-				<div style="display:block;text-align:left"><br></div>
-				<div style="display:block;text-align:left"></div>
-			</td>
-			<td style="width:511px;height:180px">&nbsp;<br>
-				<ul>
-					<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Código Cliente:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;VWAGBEBB004</span></li>
-					<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Producto o servicio:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;Host to Host</span></li>
-					<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Detalle:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;</span><span style="font-family:trebuchet ms,sans-serif;font-size:small;line-height:17px;text-align:justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&nbsp;</span></li>
-					<li><font color="#0b5394" style="font-family:trebuchet ms,sans-serif;font-size:small">Países:</font><span style="font-family:trebuchet ms,sans-serif;font-size:small">&nbsp;Francia, Gran Bretaña, Hong Kong, Italia, Alemania, Bélgica, España, Holanda, México, Chile, Perú, Venezuela.</span></li>
-				</ul>
-			</td>			
-		</tr>
-		</tbody>
-	</table>
-
-
-<script type="text/javascript"> 
-    
-	var gadgetHelper = null;
-	
-	var varListaColumnas = "";
-	var	_Col = ""; 
-	
-	var prefs = new _IG_Prefs(); // User preferences
-	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
-	var	_Col = prefs.getInt("_Col");
-	var urlTable = prefs.getString("_table_query_url");
-	var	numElePag = prefs.getInt("_NumElemPorPagina");
-	var varListaColumnas = prefs.getString("VarListaColumnas");
-	
-	_IG_RegisterOnloadHandler(loadVisualizationAPI);
-	
-	function loadVisualizationAPI() 
-	{
-		google.load("visualization", "1", {"packages": ["table"]});
-		google.setOnLoadCallback(sendQuery);
-	}
-
-	function sendQuery() 
-	{
-		gadgetHelper = new google.visualization.GadgetHelper();
-		//var query = gadgetHelper.createQueryFromPrefs(prefs);
-	  
-		var opts = {dataType:'jsonp'};
-		
-		var query = new google.visualization.Query(urlTable, opts);
-		
-		//query.setQuery("select A,B ");
-		query.setQuery("select * ");
-		query.send(handleQueryResponse);
-		
-		/*		
-		var values = SpreadsheetApp.getActiveSheet().getRange(2, 3, 6, 4).getValues();
-		Browser.msgBox(values[0][0]);	
-
-		var data = new google.visualization.DataTable();
-		getValue(rowIndex, columnIndex);
-		*/
-		
-	}
-
-	function myClickHandler()
-	{
-		var selection = myVis.getSelection();
-
-		for (var i = 0; i < selection.length; i++) {
-			var item = selection[i];
-			if (item.row != null && item.column != null) {
-			  message += '{row:' + item.row + ',column:' + item.column + '}';
-			} else if (item.row != null) {
-			  message += '{row:' + item.row + '}';
-			} else if (item.column != null) {
-			  message += '{column:' + item.column + '}';
+		<script type="text/javascript"> 
+			
+			console.debug('detalleCliente.xml version 0');
+			
+			var gadgetHelper = null;			
+			var varListaColumnas = "";
+			var	_Col = ""; 			
+			var prefs = new _IG_Prefs(); // User preferences	
+			var	_Col = prefs.getInt("_Col");
+			var urlTable = prefs.getString("_table_query_url");
+			var	numElePag = prefs.getInt("_NumElemPorPagina");
+			var varListaColumnas = prefs.getString("VarListaColumnas");			
+			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
+			var	_Row = prefs.getInt("_Row");
+			var varListaFilas = prefs.getString("VarListaFilas"); 
+			
+			
+			_IG_RegisterOnloadHandler(loadVisualizationAPI);
+			
+			function loadVisualizationAPI() 
+			{
+				google.load("visualization", "1", {"packages": ["table"]});
+				google.setOnLoadCallback(sendQuery);
 			}
-		  }
-		  if (message == '') {
-			message = 'nothing';
-		  }
-		  alert('You selected ' + message);
-	}
-	
-	
-	
-	function handleQueryResponse(response) 
-	{
-		console.debug('handleQueryResponse <-- ');
-		if (!gadgetHelper.validateResponse(response)) { return; }
-	
-		data = response.getDataTable();
-		
-		
-		var valoresColumna = data.getValue(1,1);
-		
-		console.debug('version 1');
-		
-		
-		console.debug('data.getValue(1,1) <-- '+data.getValue(1,1));
-		
-		
-		document.getElementById('tablediv').innerHTML = valoresColumna;
-		//document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
-		
-	}
-	
-	
-	
-	
 
-	
-	
+			function sendQuery() 
+			{
+				gadgetHelper = new google.visualization.GadgetHelper();
+				//var query = gadgetHelper.createQueryFromPrefs(prefs);	
+				var opts = {dataType:'jsonp'};				
+				var query = new google.visualization.Query(urlTable, opts);				
+				var idCliquery = paramtoquery("ficha-");				
+				var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
+				query.setQuery(querytosend);			  
+				query.send(handleQueryResponse);
+			}
 
-</script>
-]]>
-</Content>
+			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
+			function indiceCadena (parametros, cadena)
+			{	
+				for(var i=0; i<parametros.length; i++)
+				{					
+					if(parametros[i].indexOf(cadena)>-1)
+					{
+						return i;
+					} 
+				}	
+			}
+			
+			// Abre el detalle de la url
+			function detalle(id)
+			{	
+				var idCliente = paramtoquery("ficha-");
+				window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase() + "/detalle-proyecto-" + id.toLowerCase();
+			}
+			
+			//obtiene el valor del parametro que le pasamos por url: 
+			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
+			function paramtoquery(param)
+			{
+				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
+				var indexFicha = indiceCadena(arrayParametros,param);		
+				var arrayidCliente = arrayParametros[indexFicha].split("-");		
+				return arrayidCliente[1];		
+			}
+			
+			function handleQueryResponse(response) 
+			{
+				if (!gadgetHelper.validateResponse(response)) { return; }
+			
+				data = response.getDataTable();				
+				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" >{0}</a> ');
+				formatter.format(data, [8,8]); // Apply formatter and set the formatted value of the first column.
+				
+				var cssClassNames = {
+					'headerRow': 'header',
+					'tableRow': 'filaPar',
+					'oddTableRow': 'filaImpar',
+					'selectedTableRow': 'filaSeleccionada',
+					'hoverTableRow': 'filaHover',
+					'headerCell': '',
+					'tableCell': 'formateoCelda',
+					'rowNumberCell': ''
+				};
+				 
+				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
+				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				var view = new google.visualization.DataView(data);
+				
+				if (_Col!="")
+				{
+					var columnasAmostrar = [];
+					
+					for(i=0 ; i < _Col ; i++) 
+					{ 
+						columnasAmostrar.push(i);
+					}
+					view.setColumns(columnasAmostrar);
+				}
+				else if (varListaColumnas!="")
+					{
+						var listaColumnas = varListaColumnas.split(",");
+							
+						if (listaColumnas.length > 0)
+						{
+							var arrayColumnas = [];
+							for(j=0; j<listaColumnas.length; j++)
+							{
+								indexaux = parseInt(listaColumnas[j]);
+								arrayColumnas.push(indexaux);
+							}
+							view.setColumns(arrayColumnas);
+						}
+					}
+					
+				if (_Row!="")
+				{
+					var filasAmostrar = [];
+					
+					for(i=0 ; i < _Row ; i++) 
+					{ 
+						filasAmostrar.push(i);
+					}
+
+					view.setRows(filasAmostrar);
+				}
+				
+				else if (varListaFilas!="")
+					{				
+						var listaFilas = varListaFilas.split("-");
+						if (listaFilas.length > 0)
+						{   
+							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
+						}
+					}
+				
+				//chart.draw(view, options);
+				
+				var valoresColumna = data.getValue(1,1);
+		
+		
+				
+				document.getElementById('tablediv').innerHTML = valoresColumna;
+				
+				//document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
+			}
+
+		</script>
+		]]>
+	</Content>
 </Module>
