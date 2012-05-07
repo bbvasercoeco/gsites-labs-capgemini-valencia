@@ -11,8 +11,10 @@
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
-
+	<UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
+	<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
+	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />	
+	
 	<Content type="html">
 		<![CDATA[
 
@@ -90,6 +92,9 @@
 			var urlTable = prefs.getString("_table_query_url");
 			var	numElePag = prefs.getInt("_NumElemPorPagina");
 			var varListaColumnas = prefs.getString("VarListaColumnas");			
+			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
+			var	_Row = prefs.getInt("_Row");
+			var varListaFilas = prefs.getString("VarListaFilas");
 			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 			
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
@@ -189,6 +194,26 @@
 								arrayColumnas.push(indexaux);
 							}
 							view.setColumns(arrayColumnas);
+						}
+					}
+				
+				if (_Row!="")
+				{
+					var filasAmostrar = [];
+					
+					for(i=0 ; i < _Row ; i++) 
+					{ 
+						filasAmostrar.push(i);
+					}
+
+					view.setRows(filasAmostrar);
+				}
+				else if (varListaFilas!="")
+					{				
+						var listaFilas = varListaFilas.split("-");
+						if (listaFilas.length > 0)
+						{   
+							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 						}
 					}
 				
