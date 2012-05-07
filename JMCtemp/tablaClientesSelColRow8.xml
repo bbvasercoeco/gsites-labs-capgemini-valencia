@@ -9,11 +9,11 @@
   
         <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
         
-        <UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
-        <UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />   
+        <!--  <UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
+      <UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />   
         <UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
         <UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />      
-        <UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
+        <UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />-->
 <Content type="html"><![CDATA[
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -153,27 +153,26 @@
          
         var chart = new google.visualization.Table(document.getElementById('tablediv'));                
 
-        var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};               
-                var view = new google.visualization.DataView(data);
+	    var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};               
+        var view = new google.visualization.DataView(data);
                 
-                console.debug('version 31');
+        console.debug('version 31');
                 
-                if (_Col!="")
-                {
+                
                         var columnasAmostrar = new Array(32);
                         
                         for(i=0 ; i < columnasAmostrar.length ; i++) 
                         {    
 							if (columnasAmostrar[i].toString()!= "order"){
 									columnasAmostrar.push(i);
-									alert(columnasAmostrar[i]);
+									//alert(columnasAmostrar[i]);
 								}
 						}
                         //console.debug('_Col es diferente de "": view.setColumns(columnasAmostrar) : '+columnasAmostrar);
                         view.setColumns(columnasAmostrar);
             
 			
-				}
+				
 			
 			     chart.draw(view, options);
 				
