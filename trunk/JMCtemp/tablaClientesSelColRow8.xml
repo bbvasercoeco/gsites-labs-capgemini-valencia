@@ -163,11 +163,13 @@
                         {    
 							if (columnasAmostrar[i] != 'order'){
 									columnasAmostrar.push(i);
-									//alert(columnasAmostrar[i]);
+									
 								}
+							
 						}
+						view.addColumn(columnasAmostrar);	
                        // console.debug(columnasAmostrar);
-                        view.setColumns(columnasAmostrar);
+                        
             
 			
 				
@@ -176,7 +178,7 @@
 		
 		chart.draw(view, options);
 	}
-
+	
 </script>
 ]]>
 </Content>
