@@ -81,7 +81,7 @@
 		</style>
 		<div id="tablediv2"></div>
 		<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
-
+		<div id="tablediv3">
 		<h2>
 		
 			<table border="0" bordercolor="#888" cellspacing="0" style="color:rgb(11,83,148);font-family:trebuchet ms,sans-serif;font-weight:normal;font-size:large;border-collapse:collapse;border-top-color:rgb(255,255,255);border-right-color:rgb(255,255,255);border-bottom-color:rgb(255,255,255);border-left-color:rgb(255,255,255);border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px">
@@ -120,7 +120,7 @@
 			</tr>
 			</tbody>
 		</table>
-
+		</div>
 		
 		
 		<script type="text/javascript"> 
@@ -267,7 +267,7 @@
 				
 				document.getElementById('tablediv2').innerHTML = valoresColumna;
 				
-				document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
+				//document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
 			}
 
 		</script>
