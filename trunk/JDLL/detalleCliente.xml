@@ -74,7 +74,7 @@
 				color: #009EE5;
 			}
 			img.loading {
-				margin: 0;
+				margin: 0 0 0 20px;
 			}
 			h2 {
 				color: #0B5394;
@@ -146,7 +146,7 @@
 		</style>
 		
 		<h2>
-			Ficha Cliente <span id="nombreCliente"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span>
+			Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<div style="text-align:right"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></div>
 			<hr>
 		</h2>			
@@ -154,18 +154,18 @@
 		<div id="detalleFicha">
 			<div id="imagenCliente"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 			<ul id="datosFicha">
-				<li>Código Cliente: <span id="idCliente"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Producto: <span id="idProducto"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Servicio: <span id="idServicio"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Formato: <span id="idFormato"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Detalle: <span id="idDetalle"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Países: <span id="idPaises"><img class="loading" width="5" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Código Cliente: <span id="idCliente"><img class="loading" width="15" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Producto: <span id="idProducto"><img class="loading" width="15" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Servicio: <span id="idServicio"><img class="loading" width="15" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Formato: <span id="idFormato"><img class="loading" width="15" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Detalle: <span id="idDetalle"><img class="loading" width="15" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Países: <span id="idPaises"><img class="loading" width="15" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 			</ul>
 		</div>
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 7');
+			console.debug('detalleCliente.xml version 8');
 			
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
