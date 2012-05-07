@@ -168,9 +168,9 @@
 									
 									for (var x=0;x<65;x++)
 									{		
-											for (var z=0 z<8;z++)
+											for (var z=0; z<8;z++)
 											{
-											filasAmostrar.push(x);
+											filasAmostrar.push(z);
 											}
 									} 		
 						  }
