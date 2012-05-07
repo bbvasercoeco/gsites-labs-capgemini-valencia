@@ -263,7 +263,9 @@
 				
 				
 				console.debug('valoresColumna');
+				console.debug('data: '+ data);
 				var valoresColumna = data.getValue(1,1);
+				
 				console.debug('data.getValue(1,1):'+ data.getValue(1,1));
 		
 				
