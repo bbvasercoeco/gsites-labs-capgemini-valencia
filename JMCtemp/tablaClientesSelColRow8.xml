@@ -167,16 +167,16 @@
 									columnasAmostrar.push(j);
 									//break;
 										
-									
+						  		
 									
 								}
-						  		
-							
-						}
-						for(var x=0;x<8;x++)
+						 for(var x=0;x<8;x++)
 									{
 										filasAmostrar.push(x);
-									}
+									} 		
+							
+						}
+						
 					    view.setColumns(columnasAmostrar);	
 						view.setRows(filasAmostrar);
                        // console.debug(columnasAmostrar);
