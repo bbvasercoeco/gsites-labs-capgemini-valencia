@@ -156,12 +156,12 @@
 	    var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};               
         var view = new google.visualization.DataView(data);
                 
-        console.debug('version 31');
+       // console.debug('version 31');
                 
-						var columnas = 32;
-                        var columnasAmostrar =[32];
+						
+                        var columnasAmostrar = new Array (32);
                         
-                        for(i=0 ; i < columnas; i++) 
+                        for(i=0;i<columnasAmostrar.length;i++) 
                         {    
 							if (columnasAmostrar[i]!= "order"){
 									columnasAmostrar.push(i);
