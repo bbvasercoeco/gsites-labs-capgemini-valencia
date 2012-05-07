@@ -156,7 +156,7 @@
 	    var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};               
         var view = new google.visualization.DataView(data);
                 
-       // console.debug('version 31');
+        console.debug('version 31');
                 
 						
                         var columnasAmostrar = new Array (32);
@@ -168,7 +168,7 @@
 									//alert(columnasAmostrar[i]);
 								}
 						}
-                        //console.debug('_Col es diferente de "": view.setColumns(columnasAmostrar) : '+columnasAmostrar);
+                        console.debug(columnasAmostrar);
                         view.setColumns(columnasAmostrar);
             
 			
