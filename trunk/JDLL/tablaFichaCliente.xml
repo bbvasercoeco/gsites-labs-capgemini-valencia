@@ -84,7 +84,7 @@
 
 		<script type="text/javascript"> 
 			
-			console.debug('tablaFichaCliente.xml version 52');
+			console.debug('tablaFichaCliente.xml version 53');
 			
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
@@ -208,7 +208,7 @@
 
 					view.setRows(filasAmostrar);
 				}
-				/*
+				
 				else if (varListaFilas!="")
 					{				
 						var listaFilas = varListaFilas.split("-");
@@ -217,7 +217,7 @@
 							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 						}
 					}
-				*/	
+				
 				chart.draw(view, options);
 			}
 
