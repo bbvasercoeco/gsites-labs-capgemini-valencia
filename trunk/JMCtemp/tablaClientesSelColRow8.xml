@@ -159,7 +159,7 @@
         console.debug('version 31');
                 
                 
-                        var columnasAmostrar = new Array(32);
+                        var columnasAmostrar = new Array[32];
                         
                         for(i=0 ; i < columnasAmostrar.length ; i++) 
                         {    
