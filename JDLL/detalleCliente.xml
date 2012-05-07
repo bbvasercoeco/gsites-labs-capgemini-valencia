@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Tabla listado de clientes. detallleCliente.xml"
-		description="Tabla cargada con paginacion y parametrizada."
+	<ModulePrefs title="Datos del cliente. Ficha cliente. detallleCliente.xml"
+		description=""
 		author_affiliation="Capgemini">
 		<Require feature="idi"/>
 		<Require feature="locked-domain" />
@@ -90,7 +90,6 @@
 		
 		<h2>
 			Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></span>
-			<div style="text-align:right"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></div>
 			<hr>
 		</h2>			
 
@@ -146,14 +145,7 @@
 					} 
 				}	
 			}
-			
-			// Abre el detalle de la url
-			function detalle(id)
-			{	
-				var idCliente = paramtoquery("ficha-");
-				window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase() + "/detalle-proyecto-" + id.toLowerCase();
-			}
-			
+						
 			//obtiene el valor del parametro que le pasamos por url: 
 			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
 			function paramtoquery(param)
