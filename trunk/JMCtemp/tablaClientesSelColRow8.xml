@@ -169,7 +169,14 @@
 						}
                         //console.debug('_Col es diferente de "": view.setColumns(columnasAmostrar) : '+columnasAmostrar);
                         view.setColumns(columnasAmostrar);
-                
+            
+			
+				}
+			
+			
+			
+			
+			/*    
 				  if (_Row!="")
                 {
                         var filasAmostrar = new Array(8);
