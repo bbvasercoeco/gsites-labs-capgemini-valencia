@@ -173,8 +173,8 @@
 							
 						}
 						 for(var i=0;i<65;i++)
-						 {  for (j=0;j<8;j++){
-										filasAmostrar.push(x);
+						 {  for (var j=0;j<8;j++){
+										filasAmostrar.push(j);
 									} 		
 						 }
 					    view.setColumns(columnasAmostrar);	
