@@ -157,19 +157,20 @@
 		var view = new google.visualization.DataView(data);
 		var columnasAmostrar = [];
 		var filasAmostrar = [];
-		var x=1;
+		var x=0;
 		//console.debug('version 31');
 		
 		
                         for(var i=0;i<32;i++) 
                         {    
 						  for(var j=0;j<4;j++)
-						  {
+						  {			var aux=0;
 									columnasAmostrar.push(j);
-									if (x<64)
+									if (x<64 && aux<8)
 									{
 									filasAmostrar.push(x);
 									x++;
+									aux++;
 									//alert (x);		
 									}
 						 }
