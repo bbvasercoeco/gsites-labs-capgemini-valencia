@@ -189,7 +189,7 @@
                                         //console.debug('varListaColumnas!="" , arrayColumnas: '+arrayColumnas);                        
                                         view.setColumns(arrayColumnas);
                                 }
-                        }
+                        
                 
                 
                 if (_Row!="")
@@ -225,6 +225,8 @@
                                 }
                         }
                 
+				
+					}//del 1er else if
 				}// del 1er if
                 chart.draw(view, options);
 				
