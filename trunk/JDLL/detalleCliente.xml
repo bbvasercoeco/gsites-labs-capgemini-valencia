@@ -79,7 +79,7 @@
 				margin: 5% 0 0 40%;
 			}
 		</style>
-
+		<div id="tablediv2"></div>
 		<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 		<h2>
@@ -125,7 +125,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 0');
+			console.debug('detalleCliente.xml version 1');
 			
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
@@ -265,9 +265,9 @@
 		
 		
 				
-				document.getElementById('tablediv').innerHTML = valoresColumna;
+				document.getElementById('tablediv2').innerHTML = valoresColumna;
 				
-				//document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
+				document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
 			}
 
 		</script>
