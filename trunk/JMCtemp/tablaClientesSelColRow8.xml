@@ -148,11 +148,11 @@
 
 	    var options = { 'page': 'enable', 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};               
         var view = new google.visualization.DataView(data);
-                
-        console.debug('version 31');
+        var columnasAmostrar = new Array (32);      
+       // console.debug('version 31');
                 
 						
-                        var columnasAmostrar = new Array (32);
+                        
                         
                         for(i=0;i<columnasAmostrar.length;i++) 
                         {    
@@ -161,7 +161,7 @@
 									//alert(columnasAmostrar[i]);
 								}
 						}
-                        console.debug(columnasAmostrar);
+                       // console.debug(columnasAmostrar);
                         view.setColumns(columnasAmostrar);
             
 			
