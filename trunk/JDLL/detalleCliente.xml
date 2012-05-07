@@ -109,7 +109,7 @@
 			
 			<h2>
 				Ficha Cliente <span id="nombreCliente"></span>
-				<div style="text-align:right"><a href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas" imageanchor="1"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></a></div>
+				<div style="text-align:right"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/boton_volver.png"></div>
 				<hr>
 			</h2>			
 
@@ -265,15 +265,15 @@
 				
 				chart.draw(view, options);
 				
-				
-				
-				console.debug('data.getValue(0,0):'+ data.getValue(0,0));
-		
-				
 				document.getElementById('idCliente').innerHTML = data.getValue(0,0);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);
+				document.getElementById('idProducto').innerHTML = data.getValue(0,2);
+				document.getElementById('idServicio').innerHTML = data.getValue(0,3);				
+				document.getElementById('idDetalle').innerHTML = data.getValue(0,4);
+				document.getElementById('idPaises').innerHTML = data.getValue(0,5);
+				document.getElementById('idFormato').innerHTML = data.getValue(0,6);
 				
-				//document.getElementById('tablediv').innerHTML = 'Fred Flinstone';
+				
 			}
 
 		</script>
