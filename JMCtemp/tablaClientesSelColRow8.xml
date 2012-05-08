@@ -161,7 +161,7 @@
 		
 	for (var columna=0;columna<32;columna++){
 		for(var j=0;j<4;j++){
-		     dataAux.addColumn('number',j);
+		     dataAux.addColumn('number',$(j));
 		
 		/*for(var fila=0;fila<8;fila++){
 			dataAux.addRows(fila);
