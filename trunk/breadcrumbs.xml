@@ -2,7 +2,7 @@
 <Module>
 <ModulePrefs
    title="breadcrumbs. breadcrumbs.xml"
-   height="30"
+   height="35"
    description="Script que genera los breadcrumbs de forma automatica">
 
    <Require feature="dynamic-height"/>   	
@@ -52,7 +52,7 @@
 		var prefs = new gadgets.Prefs();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
-		console.debug('breadcrumbs.xml version 6');
+		//console.debug('breadcrumbs.xml version 6');
 		
 		function indice (parametros, rootSite)
 		{	
@@ -87,11 +87,7 @@
 				
 					for(j=i+1;j<parametros.length;++j)
 					{   
-						var aux = parametros[j].replace(/-/g," ");
-						console.debug('aux: '+aux);
-						console.debug('j: '+j);
-						console.debug('aux.indexOf(ficha):'+aux.indexOf("ficha"));
-						console.debug('aux.indexOf(detalle proyecto): '+aux.indexOf("detalle proyecto"));
+						var aux = parametros[j].replace(/-/g," ");						
 						
 						if (aux.indexOf("?")>1)
 						{
@@ -103,7 +99,6 @@
 							if (aux.indexOf("ficha")>-1)
 							{								
 								var litEnlace = "Ficha";
-								console.debug('entrado en ficha, litEnlace = Ficha: ' + litEnlace );
 							}
 							else if (aux.indexOf("detalle proyecto")>-1)
 							{								
@@ -112,7 +107,6 @@
 							else
 							{								
 								var litEnlace = aux;
-								console.debug('entrado en else, litEnlace = aux: ' + litEnlace );
 							}
 						}
 						if (j<parametros.length-1)
