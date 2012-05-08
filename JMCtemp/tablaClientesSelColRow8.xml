@@ -156,7 +156,7 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		
 		var dataAux = new google.visualization.DataTable();
-		var fila = 0;
+		var fila = 1;
 		var contador = 0;
 		dataAux.addRows(64);
 		
