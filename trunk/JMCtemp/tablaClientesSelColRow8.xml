@@ -180,7 +180,7 @@
 							}
 								
 						*/   
-							 filasAmostrar.push(1);
+							 filasAmostrar.push(2);
 						view.setColumns(columnasAmostrar);
 						view.setRows(filasAmostrar);
                        // console.debug(columnasAmostrar);
