@@ -170,12 +170,24 @@
 		}
 	}	
 	
-	//for(fila=0;fila<63;fila++)
-		//	 {
-			 dataAux.setCell(0,0,data.getValue(1,1));
-			 //contador++;
-			// fila++;
-			// }
+	for(fila=0;fila<8;fila++)
+	{
+		for (col=0; col<5; col++)
+		{
+				dataAux.setCell(fila,col,dataAux.getValue(fila,col));
+				dataAux.setCell(fila,col+4*1,dataAux.getValue(fila+1,col));
+				dataAux.setCell(fila,col+4*2,dataAux.getValue(fila+2,col));
+				dataAux.setCell(fila,col+4*3,dataAux.getValue(fila+3,col));
+				dataAux.setCell(fila,col+4*4,dataAux.getValue(fila+4,col));
+				dataAux.setCell(fila,col+4*5,dataAux.getValue(fila+5,col));
+				dataAux.setCell(fila,col+4*6,dataAux.getValue(fila+6,col));
+				dataAux.setCell(fila,col+4*7,dataAux.getValue(fila+7,col));
+				
+		
+		
+		}
+			
+	}
 		
 	
 		var view = new google.visualization.DataView(dataAux);
