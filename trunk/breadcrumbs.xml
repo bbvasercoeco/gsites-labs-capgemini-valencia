@@ -112,7 +112,7 @@
 							else
 							{								
 								var litEnlace = aux;
-								console debug('entrado en else, litEnlace = aux: ' + litEnlace );
+								console.debug('entrado en else, litEnlace = aux: ' + litEnlace );
 							}
 						}
 						if (j<parametros.length-1)
