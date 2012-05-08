@@ -174,12 +174,12 @@
 						
 								
 						}
-							if(x<63){
-							   for(z=0;z<8;<z++){
+							
+							   for(x=0;x<8;<x++){
 								filasAmostrar.push(x);
-								x++;
+								
 								}
-							}	
+							
 								
 								
 						view.setColumns(columnasAmostrar);
