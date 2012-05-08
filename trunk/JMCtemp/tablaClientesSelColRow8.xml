@@ -173,7 +173,7 @@
 	for(fila=0;fila<8;fila++)
 	{
 		for (col=0; col<5; col++)
-	 
+		{	 
 				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
 				dataAux.setCell(fila,col+4*1,data.getValue(fila+1,col));
 				dataAux.setCell(fila,col+4*2,data.getValue(fila+2,col));
