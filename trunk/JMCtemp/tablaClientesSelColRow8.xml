@@ -174,15 +174,12 @@
 						
 								
 						}
-							for(x;x<64;x++)
+							for(x=0;x<(8%64);x++)
 								{
-								contador=0;
-								if(contador<8){
 								filasAmostrar.push(x);
-								contador++;}
 								}
-								x+=8;	
-								}
+								
+								
 						view.setColumns(columnasAmostrar);
 						view.setRows(filasAmostrar);
                        // console.debug(columnasAmostrar);
