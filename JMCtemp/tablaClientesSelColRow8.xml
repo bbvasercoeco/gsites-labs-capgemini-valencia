@@ -164,7 +164,7 @@
 		
 		for(var j=0;j<4;j++){
 		     dataAux.addColumn('string',data.getColumnLabel(j));
-			 /*contador=0; 
+			 //contador=0; 
 			
 			 
 		}
@@ -175,7 +175,7 @@
 			 dataAux.setCell(0,0,data.getValue(1,1));
 			 //contador++;
 			// fila++;
-			// }*/
+			// }
 		
 	
 		var view = new google.visualization.DataView(dataAux);
