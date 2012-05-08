@@ -158,7 +158,7 @@
 		var dataAux = new google.visualization.DataTable();
 		var fila = 0;
 		var contador = 0;
-		dataAux.addRows(64);
+		dataAux.addRows();
 	
 	for (var columna=0;columna<32;columna++){
 		
@@ -173,15 +173,15 @@
 	for(fila=0;fila<8;fila++)
 	{
 		for (col=0; col<5; col++)
-		{
-				dataAux.setCell(fila,col,dataAux.getValue(fila,col));
-				dataAux.setCell(fila,col+4*1,dataAux.getValue(fila+1,col));
-				dataAux.setCell(fila,col+4*2,dataAux.getValue(fila+2,col));
-				dataAux.setCell(fila,col+4*3,dataAux.getValue(fila+3,col));
-				dataAux.setCell(fila,col+4*4,dataAux.getValue(fila+4,col));
-				dataAux.setCell(fila,col+4*5,dataAux.getValue(fila+5,col));
-				dataAux.setCell(fila,col+4*6,dataAux.getValue(fila+6,col));
-				dataAux.setCell(fila,col+4*7,dataAux.getValue(fila+7,col));
+	 
+				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				dataAux.setCell(fila,col+4*1,data.getValue(fila+1,col));
+				dataAux.setCell(fila,col+4*2,data.getValue(fila+2,col));
+				dataAux.setCell(fila,col+4*3,data.getValue(fila+3,col));
+				dataAux.setCell(fila,col+4*4,data.getValue(fila+4,col));
+				dataAux.setCell(fila,col+4*5,data.getValue(fila+5,col));
+				dataAux.setCell(fila,col+4*6,data.getValue(fila+6,col));
+				dataAux.setCell(fila,col+4*7,data.getValue(fila+7,col));
 				
 		
 		
