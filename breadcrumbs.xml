@@ -52,7 +52,7 @@
 		var prefs = new gadgets.Prefs();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
-		console.debug('breadcrumbs.xml version 4');
+		console.debug('breadcrumbs.xml version 5');
 		
 		function indice (parametros, rootSite)
 		{	
@@ -89,6 +89,7 @@
 					{   
 						var aux = parametros[j].replace(/-/g," ");
 						console.debug('aux: '+aux);
+						console.debug('j: '+j);
 						console.debug('aux.indexOf(ficha):'+aux.indexOf("ficha"));
 						console.debug('aux.indexOf(detalle proyecto): '+aux.indexOf("detalle proyecto"));
 						
@@ -102,6 +103,7 @@
 							if (aux.indexOf("ficha")>-1)
 							{								
 								var litEnlace = "Ficha";
+								console debug('entrado en ficha, litEnlace = Ficha: ' + litEnlace );
 							}
 							else if (aux.indexOf("detalle proyecto")>-1)
 							{								
@@ -110,6 +112,7 @@
 							else
 							{								
 								var litEnlace = aux;
+								console debug('entrado en else, litEnlace = aux: ' + litEnlace );
 							}
 						}
 						if (j<parametros.length-1)
