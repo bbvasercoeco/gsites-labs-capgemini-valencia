@@ -158,18 +158,10 @@
 		var dataAux = new google.visualization.DataTable();
 		
 		
-		/*for(var i=0;i<32;i++) 
-                        {    
-							for(var j=0;j<4;j++)
-							{		
-									dataAux.addColumn(j);
-								
-							}
-							
-						}*/
+		
+	for (var columna=0;columna<32;columna++){
 		for(var fila=0;fila<63;fila++){
-			for (var columna=0;columna<32;columna++){
-					//data.getValue(fila,columna);
+			//data.getValue(fila,columna);
 					dataAux.setCell(data.getValue(fila),data.getValue(columna));
 			
 			}
@@ -177,11 +169,6 @@
 
 		
 		var view = new google.visualization.DataView(dataAux);
-		
-						
-			
-		  
-		
 		chart.draw(view, options);
 	}
 	
