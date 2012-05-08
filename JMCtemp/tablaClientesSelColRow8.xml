@@ -156,7 +156,7 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		var columnasAmostrar = [];
-		var filasAmostrar = [0-8];
+		// var filasAmostrar = [0-8];
 		var x=0;
 		var z=0;
 		var contador=0;
@@ -171,13 +171,11 @@
 								
 							}
 							
-						
-								
-						}/*
+						}
+						/*
 							for (i=1; i<8;i++)	{
 							   for(x=i-1;x<8*i;x++){
-								 filasAmostrar.push(x);
-								
+								 filasAmostrar.push(x);								
 								}
 							}
 								
