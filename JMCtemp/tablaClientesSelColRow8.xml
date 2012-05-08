@@ -168,10 +168,10 @@
 			 if((fila<63) && (contador<8))
 			 {
 			 dataAux.setCell(fila,j,data.getValue(fila,j));
-			
-			 }
 			 contador++;
 			 fila++;
+			 }
+			 
 		}
 	}	
 		
