@@ -158,7 +158,7 @@
 		var dataAux = new google.visualization.DataTable();
 		var fila = 0;
 		var contador = 0;
-		dataAux.addRows();
+		dataAux.addRows(8);
 	
 	for (var columna=0;columna<32;columna++){
 		
