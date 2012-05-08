@@ -90,7 +90,7 @@
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 16');
+    console.debug('version 17');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -172,7 +172,7 @@
 	
 	for(fila=0;fila<8;fila++)
 	{
-		for (col=0; col<5; col++)
+		for (col=0; col<4; col++)
 		{	 
 				
 				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
