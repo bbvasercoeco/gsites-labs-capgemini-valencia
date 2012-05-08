@@ -162,7 +162,7 @@
 	for (var columna=0;columna<32;columna++){
 		for(var fila=0;fila<63;fila++){
 			//data.getValue(fila,columna);
-					dataAux.setCell(data.getValue(fila),data.getValue(columna));
+					dataAux.setCell(data.getValue(fila,columna),data.getValue(fila,columna));
 			
 			}
 		}
