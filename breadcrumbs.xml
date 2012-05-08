@@ -3,42 +3,14 @@
 <ModulePrefs
    title="breadcrumbs. breadcrumbs.xml"
    height="30"
-   description="Script que genera los breadcrumbs de forma automatica"
->
-	<Require feature="dynamic-height"/>   
-	<Require feature="setprefs" />   
+   description="Script que genera los breadcrumbs de forma automatica">
+
+   <Require feature="dynamic-height"/>   	
+   
 </ModulePrefs>  
 	
 <UserPref name="VarrootSite" display_name="Root del Site" required="true" default_value="home" />
-<Content type="html" view="configuration" preferred_height="480">
 
- <![CDATA[
- <style>
-    input#VarrootSite 
-	{
-        width: 300px;
-    }		  
-  </style>
-  
-  <table width="100%" border="0" id="tablaconfig">           
-		<tr>       
-			<td>
-				Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__"   onchange="registra('VarrootSite')"/>                   
-			</td>
-		</tr>
-  </table>	
-  
-<script type="text/javascript">           
-	// Get userprefs
-	var prefs = new gadgets.Prefs();           
-	function registra(variable)
-	{	
-		prefs.set(variable,document.getElementById(variable).value);
-	}  	
-	gadgets.window.adjustHeight();
-</script>   
- ]]>
- </Content>
  <Content type="html">
  <![CDATA[
  
