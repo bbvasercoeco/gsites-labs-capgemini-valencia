@@ -166,10 +166,10 @@
 						  for(var j=0;j<4;j++)
 						  {		
 									columnasAmostrar.push(j);
-									if (x<64)
+									for(x=0;x<8;x++)
 									{
 									filasAmostrar.push(x);
-									x++;
+									// x++;
 									
 									//alert (x);		
 									}
