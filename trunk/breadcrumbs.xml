@@ -52,7 +52,7 @@
 		var prefs = new gadgets.Prefs();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
-		console.debug('breadcrumbs.xml version 3');
+		console.debug('breadcrumbs.xml version 4');
 		
 		function indice (parametros, rootSite)
 		{	
@@ -98,21 +98,17 @@
 							var litEnlace = auxMov[0];
 						}
 						else
-						{
-							
-							if (aux.indexOf("ficha")>1)
-							{
-								
+						{							
+							if (aux.indexOf("ficha")>-1)
+							{								
 								var litEnlace = "Ficha";
 							}
-							else if (aux.indexOf("detalle proyecto")>1)
-							{
-								
+							else if (aux.indexOf("detalle proyecto")>-1)
+							{								
 								var litEnlace = "Detalle Proyecto";
 							}							
 							else
-							{
-								
+							{								
 								var litEnlace = aux;
 							}
 						}
