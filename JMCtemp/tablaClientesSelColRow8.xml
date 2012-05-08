@@ -156,19 +156,28 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		
 		var dataAux = new google.visualization.DataTable();
-		
+		var fila = 0;
+		var contador = 0;
 		
 		
 	for (var columna=0;columna<32;columna++){
 		for(var j=0;j<4;j++){
 		     dataAux.addColumn('string',data.getColumnLabel(j));
-		
-		for(var fila=0;fila<63;fila++){
+			 if((fila<63) && contador<8)
+			 {
+			 dataAux.addRows([data.getRowProperties(fila)]);
+			 contador++;
+			 fila++;
+			 }
+			contador=0; 
+		}
+	}	
+		/*for(var fila=0;fila<8;fila++){
+		    
 			dataAux.addRows([data.getRowProperties(fila)]);
-			
-			}
-		}	
-	}
+			fila=aux;
+			}*/
+	
 		var view = new google.visualization.DataView(dataAux);
 		
 		
