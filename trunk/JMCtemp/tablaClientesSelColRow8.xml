@@ -156,13 +156,13 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		var columnasAmostrar = [];
-		var filasAmostrar = [];
+		var filasAmostrar = [0-8];
 		var x=0;
 		var z=0;
 		var contador=0;
 		//console.debug('version 31');
 		
-		//data[i] + data [i*] + 
+	 
                         for(var i=0;i<32;i++) 
                         {    
 							for(var j=0;j<4;j++)
@@ -173,7 +173,7 @@
 							
 						
 								
-						}
+						}/*
 							for (i=1; i<8;i++)	{
 							   for(x=i-1;x<8*i;x++){
 								 filasAmostrar.push(x);
@@ -181,14 +181,15 @@
 								}
 							}
 								
-								
-					/*	view.setColumns(columnasAmostrar);
-						view.setRows(filasAmostrar);*/
+						*/   
+							 filasAmostrar.push(0);
+						view.setColumns(columnasAmostrar);
+						view.setRows(filasAmostrar);
                        // console.debug(columnasAmostrar);
                         
 						
 			
-			     
+		  
 		
 		chart.draw(view, options);
 	}
