@@ -163,13 +163,14 @@
 	for (var columna=0;columna<32;columna++){
 		for(var j=0;j<4;j++){
 		     dataAux.addColumn('string',data.getColumnLabel(j));
+			 contador=0; 
 			 if((fila<63) && (contador<8))
 			 {
 			 dataAux.addRows([data.getRowProperties(fila)]);
 			 contador++;
 			 fila++;
 			 }
-			contador=0; 
+			
 		}
 	}	
 		/*for(var fila=0;fila<8;fila++){
