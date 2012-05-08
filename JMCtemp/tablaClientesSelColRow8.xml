@@ -156,7 +156,7 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		
 		var dataAux = new google.visualization.DataTable();
-		
+		var view = new google.visualization.DataView(dataAux);
 		
 		
 	for (var columna=0;columna<32;columna++){
@@ -168,7 +168,7 @@
 		}
 
 		
-		var view = new google.visualization.DataView(dataAux);
+		
 		chart.draw(view, options);
 	}
 	
