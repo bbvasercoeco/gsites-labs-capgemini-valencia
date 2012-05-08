@@ -175,7 +175,7 @@
 								
 						}
 							
-							   for(x=0;x<8;<x++){
+							   for(x=0;x<8;x++){
 								filasAmostrar.push(x);
 								
 								}
