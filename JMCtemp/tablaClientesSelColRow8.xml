@@ -176,7 +176,7 @@
 						}
 							for(x=0;x<(8%64);x++)
 								{
-								filasAmostrar.push(x);
+								filasAmostrar.push(x%64);
 								}
 								
 								
