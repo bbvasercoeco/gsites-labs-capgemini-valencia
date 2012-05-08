@@ -90,7 +90,7 @@
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 12');
+    console.debug('version 13');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -182,9 +182,7 @@
 				dataAux.setCell(fila,col+4*5,data.getValue(fila+5,col));
 				dataAux.setCell(fila,col+4*6,data.getValue(fila+6,col));
 				dataAux.setCell(fila,col+4*7,data.getValue(fila+7,col));
-				
-		
-		
+			
 		}
 			
 	}
