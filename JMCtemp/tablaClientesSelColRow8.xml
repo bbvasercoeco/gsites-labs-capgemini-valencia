@@ -158,7 +158,7 @@
 		var dataAux = new google.visualization.DataTable();
 		var fila = 0;
 		var contador = 0;
-		
+		dataAux.addRows(64);
 		
 	for (var columna=0;columna<32;columna++){
 		for(var j=0;j<4;j++){
@@ -166,7 +166,7 @@
 			 contador=0; 
 			 if((fila<63) && (contador<8))
 			 {
-			 dataAux.addRows(data.getValue(fila,j));
+			 dataAux.setCell([data.getValue(fila,j)]);
 			 contador++;
 			 fila++;
 			 }
