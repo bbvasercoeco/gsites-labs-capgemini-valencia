@@ -52,7 +52,7 @@
 		var prefs = new gadgets.Prefs();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
-		console.debug('breadcrumbs.xml version 1');
+		console.debug('breadcrumbs.xml version 2');
 		
 		function indice (parametros, rootSite)
 		{	
@@ -88,23 +88,27 @@
 					for(j=i+1;j<parametros.length;++j)
 					{   
 						var aux = parametros[j].replace(/-/g," ");
+						console.debug('aux: '+aux);
 						if (aux.indexOf("?")>1)
 						{
 							var auxMov = aux.split("?");
-							var litEnlace = auxMov[0]
+							var litEnlace = auxMov[0];
 						}
 						else
 						{
 							if (aux.indexOf("ficha")>1)
 							{
+								console.debug('aux.indexOf(ficha):'+aux.indexOf("ficha"));
 								var litEnlace = "Ficha";
 							}
 							else if (aux.indexOf("detalle proyecto")>1)
 							{
+								console.debug('aux.indexOf(detalle proyecto): '+aux.indexOf("detalle proyecto"));
 								var litEnlace = "Detalle Proyecto";
 							}							
 							else
 							{
+								
 								var litEnlace = aux;
 							}
 						}
