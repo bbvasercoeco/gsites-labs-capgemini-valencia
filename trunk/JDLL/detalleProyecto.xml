@@ -105,7 +105,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 9');
+			console.debug('detalleProyecto.xml version 1');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -162,8 +162,9 @@
 			
 				data = response.getDataTable();		
 				
+				//data.setFormattedValue(0, 2, 'dd-MM-yyyy');
 				document.getElementById('nombreProyecto').innerHTML = data.getValue(0,1);
-				document.getElementById('fechaProyecto').innerHTML = data.getValue(0,2);
+				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,2);
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,3);
 				document.getElementById('descripcionProyecto').innerHTML = data.getValue(0,4);				
 				document.getElementById('gestorProyecto').innerHTML = data.getValue(0,5);
