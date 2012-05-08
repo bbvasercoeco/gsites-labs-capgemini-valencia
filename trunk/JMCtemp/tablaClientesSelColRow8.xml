@@ -163,11 +163,11 @@
 		for(var j=0;j<4;j++){
 		     dataAux.addColumn(j);
 		
-		for(var fila=0;fila<8;fila++){
+		/*for(var fila=0;fila<8;fila++){
 			dataAux.addRows(fila);
 					//dataAux.setCell(data.getValue(fila,columna),data.getValue(fila,columna));
 			
-			}
+			}*/
 		}	
 	}
 		var view = new google.visualization.DataView(dataAux);
