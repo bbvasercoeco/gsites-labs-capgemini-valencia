@@ -154,6 +154,11 @@
         var chart = new google.visualization.Table(document.getElementById('tablediv'));		
 
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+		
+		
+		alert(data);
+		
+		
 		var view = new google.visualization.DataView(data);
 		var columnasAmostrar = [];
 	    var filasAmostrar = [];
@@ -161,10 +166,11 @@
 		var z=0;
 		var contador=0;
 		//console.debug('version 31');
-		 
+		
+	 
                         for(var i=0;i<32;i++) 
                         {    
-							for(var j=0+i*j;j<4+i*j;j++)
+							for(var j=0;j<4;j++)
 							{		
 									columnasAmostrar.push(j);
 								
@@ -179,7 +185,7 @@
 							}
 								
 						*/   
-						filasAmostrar.push(2);
+							 filasAmostrar.push(2);
 						view.setColumns(columnasAmostrar);
 						view.setRows(filasAmostrar);
                        // console.debug(columnasAmostrar);
