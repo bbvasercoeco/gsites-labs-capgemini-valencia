@@ -166,7 +166,7 @@
 						  for(var j=0;j<4;j++)
 						  {		
 									columnasAmostrar.push(j);
-									for(x=0;x<8;x++)
+									for(x=0;x<64;x++)
 									{
 									filasAmostrar.push(x);
 									// x++;
