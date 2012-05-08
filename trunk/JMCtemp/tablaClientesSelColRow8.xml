@@ -158,6 +158,8 @@
 		var columnasAmostrar = [];
 		var filasAmostrar = [];
 		var x=0;
+		var z=0;
+		var contador=0;
 		//console.debug('version 31');
 		
 		
@@ -172,12 +174,12 @@
 						
 								
 						}
-							for(x=0;x<8;x++)
+							for(x=0;x<64;x++)
 									{
+									contador=0;
+									if(contador<8)								
 									filasAmostrar.push(x);
-									// x++;
-									
-									//alert (x);		
+									contador++;		
 									}
 						view.setColumns(columnasAmostrar);
 						view.setRows(filasAmostrar);
