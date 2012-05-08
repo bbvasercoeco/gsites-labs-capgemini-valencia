@@ -178,7 +178,7 @@
 								{
 								for (z=0;z<8;z++){
 								filasAmostrar.push(x);
-								x++;}
+								}
 								}
 								
 								
