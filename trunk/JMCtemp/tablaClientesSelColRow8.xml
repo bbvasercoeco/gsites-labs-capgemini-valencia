@@ -173,7 +173,7 @@
 	//for(fila=0;fila<63;fila++)
 		//	 {
 			 dataAux.setCell(0,0,data.getValue(1,1));
-			 /+/contador++;
+			 //contador++;
 			// fila++;
 			// }*/
 		
