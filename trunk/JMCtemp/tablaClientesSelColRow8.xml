@@ -164,7 +164,7 @@
 		     dataAux.addColumn('string',data.getColumnLabel(j));
 		
 		for(var fila=0;fila<63;fila++){
-			dataAux.addRows(data.getRowProperty(fila));
+			dataAux.addRows(data.getRowProperties(fila));
 			
 			}
 		}	
