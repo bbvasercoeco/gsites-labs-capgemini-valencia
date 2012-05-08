@@ -174,9 +174,11 @@
 						
 								
 						}
-							for(x=0;x<(8%64);x++)
+							for(x=0;x<64;x++)
 								{
-								filasAmostrar.push(x%64);
+								for (z=0;z<8;z++){
+								filasAmostrar.push(x);
+								x++;}
 								}
 								
 								
