@@ -156,17 +156,21 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		
 		var dataAux = new google.visualization.DataTable();
-		var view = new google.visualization.DataView(dataAux);
+		
 		
 		
 	for (var columna=0;columna<32;columna++){
+		for(var j=0;j<4;j++){
+		     dataAux.addColumn(j);
+		
 		for(var fila=0;fila<63;fila++){
-			//data.getValue(fila,columna);
-					dataAux.setCell(data.getValue(fila,columna),data.getValue(fila,columna));
+			dataAux.addRow(fila);
+					//dataAux.setCell(data.getValue(fila,columna),data.getValue(fila,columna));
 			
 			}
-		}
-
+		}	
+	}
+		var view = new google.visualization.DataView(dataAux);
 		
 		
 		chart.draw(view, options);
