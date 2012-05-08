@@ -8,39 +8,9 @@
 	<Require feature="dynamic-height"/>   
 	<Require feature="setprefs" />   
 </ModulePrefs>  
-	
 <UserPref name="VarrootSite" display_name="Root del Site" required="true" default_value="home"/>
-<Content type="html" view="configuration" preferred_height="480">
-
- <![CDATA[
- <style>
-    input#VarrootSite 
-	{
-           width: 500px;
-    }		  
-  </style>
-  
-  <table width="100%" border="0" id="tablaconfig">           
-		<tr>       
-			<td>
-				Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__"   onchange="registra('VarrootSite')"/>                   
-			</td>
-		</tr>
-  </table>	
-  
-<script type="text/javascript">           
-	// Get userprefs
-	var prefs = new gadgets.Prefs();           
-	function registra(variable)
-	{	
-		prefs.set(variable,document.getElementById(variable).value);
-	}  	
-	gadgets.window.adjustHeight();
-</script>   
- ]]>
- </Content>
- <Content type="html">
- <![CDATA[
+<Content type="html">
+<![CDATA[
  
 	<div id="title-crumbs">breadcrumb</div>
 	
@@ -82,10 +52,11 @@
 		
 		function indice (parametros, rootSite)
 		{	
-			for(var i=0; i<parametros.length; i++){
+			for(var i=0; i<parametros.length; i++)
+			{
 				if(parametros[i]== rootSite)
 				{
-				return i;
+					return i;
 				} 
 			}	
 		}
