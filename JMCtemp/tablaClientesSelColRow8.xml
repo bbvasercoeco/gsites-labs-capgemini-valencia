@@ -176,16 +176,12 @@
 		{	 
 				
 				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
-				console.debug('data.getValue(fila,col): '+data.getValue(fila,col));
-				dataAux.setCell(fila,col+4*1,data.getValue(fila+8*1,col));
-				console.debug('data.getValue(fila+8*1,col): '+data.getValue(fila+8*1,col));
-				dataAux.setCell(fila,col+4*2,data.getValue(fila+8*2,col));
-				dataAux.setCell(fila,col+4*3,data.getValue(fila+8*3,col));
-				dataAux.setCell(fila,col+4*4,data.getValue(fila+8*4,col));
-				dataAux.setCell(fila,col+4*5,data.getValue(fila+8*5,col));
-				dataAux.setCell(fila,col+4*6,data.getValue(fila+8*6,col));
-				dataAux.setCell(fila,col+4*7,data.getValue(fila+8*7,col));
-			
+				//console.debug('data.getValue(fila,col): '+data.getValue(fila,col));
+			for(var i=0;i<8;i++){	
+				dataAux.setCell(fila,col+4*i,data.getValue(fila+8*i,col));
+				//console.debug('data.getValue(fila+8*1,col): '+data.getValue(fila+8*1,col));
+				
+			}
 		}
 			
 	}
