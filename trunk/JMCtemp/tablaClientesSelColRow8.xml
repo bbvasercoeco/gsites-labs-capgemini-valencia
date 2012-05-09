@@ -45,7 +45,7 @@
 ]]>
 </Content>
 <Content type="html"><![CDATA[
-<div id="VarColumna"></div>
+
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
 <style type="text/css">
@@ -118,7 +118,7 @@
 </style>
 
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
-
+<div id="VarColumna"></div>
 <script type="text/javascript"> 
     console.debug('version 51');
 	var gadgetHelper = null;
