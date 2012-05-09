@@ -242,9 +242,10 @@
   </tr>
 </table>
 
- <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+ 
 
 		<script type="text/javascript">
+		 console.debug('detalleCliente.xml version 28');
       google.load('visualization', '1', {packages: ['table']});
     
 
@@ -300,7 +301,7 @@
     function setQueryFromUser() {
       setQuery(queryInput.value);
     }
-    console.debug('detalleCliente.xml version 27');
+   
     </script>
 	
 		
