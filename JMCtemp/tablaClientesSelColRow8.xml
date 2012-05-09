@@ -163,7 +163,7 @@
 	for (var columna=0;columna<8;columna++){
 		
 		for(var j=0;j<4;j++){
-			alert(data.getColumnLabel(j).toString());
+			alert(data.getColumnId(j));
 		     dataAux.addColumn('string',data.getColumnLabel(j));
 			 
 			
@@ -171,7 +171,7 @@
 		}
 	}	
 	console.debug('version 35');
-	/*for(fila=0;fila<8;fila++)
+	for(fila=0;fila<8;fila++)
 	{
 		for (col=0; col<4; col++)
 		{	 
@@ -185,7 +185,7 @@
 			}
 		}
 			
-	}*/
+	}
 		
 	
 		var view = new google.visualization.DataView(dataAux);
