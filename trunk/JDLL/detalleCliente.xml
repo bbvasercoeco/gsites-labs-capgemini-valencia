@@ -87,6 +87,8 @@
 			}
 		</style>
 		
+		<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
+		
 		<h2>
 			Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<hr>
@@ -106,7 +108,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 9');
+			console.debug('detalleCliente.xml version 10');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -169,7 +171,13 @@
 				document.getElementById('idFormato').innerHTML = data.getValue(0,6);
 				
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,7) +'">';
-						
+			
+				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
+				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				var view = new google.visualization.DataView(data);
+				
+				chart.draw(view, options);
+				
 			}
 
 		</script>
