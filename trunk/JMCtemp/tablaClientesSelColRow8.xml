@@ -164,7 +164,7 @@
 		
 		for(var j=0;j<4;j++){
 			data.getColumnLabel(j);
-		     dataAux.addColumn('string',data.getColumnLabel(j));
+		     dataAux.setCell(1,data.getColumnLabel(j));
 			 //contador=0; 
 			
 			 
