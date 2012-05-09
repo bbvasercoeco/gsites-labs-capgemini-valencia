@@ -108,7 +108,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 12');
+			console.debug('detalleCliente.xml version 13');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -187,7 +187,7 @@
 				 
 				/* para mostrar la tabla de la que obtendremos los datos */ 
 				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				var options = { 'page': 'enable', 'pageSize': 20, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				var _Col = 13;
 				var columnasAmostrar = [];
