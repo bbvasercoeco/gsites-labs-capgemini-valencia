@@ -165,7 +165,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 16');
+			console.debug('detalleCliente.xml version 17');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -190,9 +190,10 @@
 				query.setQuery(querytosend);
 				query.send(handleQueryResponse);
 				
+				var query2 = new google.visualization.Query(urlTable, opts);
 				var queryProducto = "select *  where A like '" + idCliquery.toUpperCase() + "'  group by D,C";
-				queryProducto.setQuery(querytosend);
-				queryProducto.send(handleQueryProducto);
+				query2.setQuery(queryProducto);
+				query2.send(handleQueryProducto);
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
