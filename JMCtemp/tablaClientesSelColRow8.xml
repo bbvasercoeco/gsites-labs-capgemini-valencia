@@ -120,7 +120,7 @@
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 46');
+    console.debug('version 47');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -253,7 +253,7 @@
 	
 	}
 }	
-	console.debug('version 46');
+	console.debug('version 47');
 </script>
 ]]>
 </Content>
