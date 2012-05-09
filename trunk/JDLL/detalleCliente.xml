@@ -14,7 +14,61 @@
 
 		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-		<style type="text/css">			 
+		<style type="text/css">	
+.filaPar {
+				background: white; 
+				border-bottom: 1px solid #E2E2E2; 
+				height: 45px; 
+				font-family:  Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			.filaImpar {
+				background: #DFE3E5; 
+				border-bottom: 1px solid #E2E2E2; 
+				height: 45px; 
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			.filaSeleccionada{
+				background: white; 
+				border-bottom: 1px solid #A22E212; 
+				height: 45px; 
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			.filaHover{
+				background: #F0EEE2; 
+				border-bottom: 1px solid #B2B2B2; 
+				height: 45px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:13px;
+			}
+			#tablediv table,
+			#tablediv table tr,
+			#tablediv table	tr td {
+				font-family: Arial, Helvetica, sans-serif !important;
+			}		
+			.formateoCelda {
+				font-family: Arial, Helvetica, sans-serif !important;
+				padding-left: 5px !important;
+			}
+			.header {
+				background-color: #2966B0;	
+				color: white; 
+				font-size:14px; 
+				font-weight: bold;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				height: 35px;
+			}
+			a.enlaceTabla,
+			a:active.enlaceTabla,
+			a:visited.enlaceTabla {
+				color: #3F78B2;
+			}
+			a:hover.enlaceTabla {
+				color: #009EE5;
+			}		
 			img.loading {
 				margin: 0 0 0 20px;
 			}
@@ -108,7 +162,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 13');
+			console.debug('detalleCliente.xml version 14');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
