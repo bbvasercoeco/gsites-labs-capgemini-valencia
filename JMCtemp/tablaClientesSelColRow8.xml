@@ -176,8 +176,8 @@
 		for (col=0; col<4; col++)
 		{	 
 				
-				dataAux.setColumnLabel(col,dataAux.setCell(fila,col+4*0,data.getValue(fila,col)));
-				//dataAux.addColumn('string',data.getColumnLabel(col));
+				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				dataAux.setFormattedValue(fila,col+4*0,data.getColumnLabel(col));
 				//console.debug('data.getValue(fila,col): '+data.getValue(fila,col));
 			for(var i=0;i<8;i++){	
 				dataAux.setCell(fila,col+4*i,data.getValue(fila+8*i,col));
