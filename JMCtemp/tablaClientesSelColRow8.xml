@@ -138,7 +138,7 @@
 	var varListaColumnas = prefs.getString("VarListaColumnas");
 	var varListaFilas = prefs.getString("VarListaFilas");*/
 	
-	var VisualizaColumna = gadgets.getPrefs('VarColumna');
+	var VisualizaColumna = gadgets.getPref('VarColumna');
 	alert(VisualizaColumna+" hola");
 	
 	
