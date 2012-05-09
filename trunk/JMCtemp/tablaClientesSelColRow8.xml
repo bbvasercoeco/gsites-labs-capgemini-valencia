@@ -191,7 +191,7 @@
 		var view = new google.visualization.DataView(dataAux);
 	    chart.draw(view, options);
 	}
-	
+	console.debug('version 36');
 </script>
 ]]>
 </Content>
