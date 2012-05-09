@@ -177,7 +177,7 @@
 				
 				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
 				
-			for(var i=1;i<9;i++){	
+			for(var i=0;i<8;i++){	
 				dataAux.setCell(fila,col+4*i,data.getValue(fila+8*i,col));
 				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
 				
