@@ -253,8 +253,7 @@
         
     // To see the data that this visualization uses, browse to
     // http://spreadsheets.google.com/pub?key=rYQm6lTXPH8dHA6XGhJVFsA
-    //var query = new google.visualization.Query(
-        'http://spreadsheets.google.com/tq?key=rYQm6lTXPH8dHA6XGhJVFsA&pub=1');
+    //var query = new google.visualization.Query('http://spreadsheets.google.com/tq?key=rYQm6lTXPH8dHA6XGhJVFsA&pub=1');
     
 	var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
