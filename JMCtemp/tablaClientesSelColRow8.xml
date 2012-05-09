@@ -35,7 +35,7 @@
             function registra(variable)
             {	alert(variable);
                 prefs.set(variable,document.getElementById('VarColumna').value);
-				
+				alert(document.getElementById('VarColumna').value);
 			
             }  
 			
