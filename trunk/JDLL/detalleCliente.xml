@@ -184,8 +184,17 @@
  
 
 		<script type="text/javascript">
-		 console.debug('detalleCliente.xml version 29');
-      google.load('visualization', '1', {packages: ['table']});
+		console.debug('detalleCliente.xml version 30');
+		_IG_RegisterOnloadHandler(loadVisualizationAPI);
+			
+			function loadVisualizationAPI() 
+			{
+				google.load("visualization", "1", {"packages": ["table"]});
+				 google.setOnLoadCallback(sendAndDraw);
+			}
+			
+	
+	//google.load('visualization', '1', {packages: ['table']});
     
 
     var isFirstTime = true;
@@ -193,17 +202,22 @@
     var data;
     var queryInput;
         
-    // To see the data that this visualization uses, browse to
-    // http://spreadsheets.google.com/pub?key=rYQm6lTXPH8dHA6XGhJVFsA
-    //var query = new google.visualization.Query('http://spreadsheets.google.com/tq?key=rYQm6lTXPH8dHA6XGhJVFsA&pub=1');
-    
-	var gadgetHelper = null;	
-			var prefs = new _IG_Prefs(); // User preferences			
-			var urlTable = prefs.getString("_table_query_url");	
-	var query = new google.visualization.Query(urlTable);
+ 
+	
+	
 	//
     function sendAndDraw() {
       // Send the query with a callback function.
+	  
+	  
+
+    
+	var gadgetHelper = null;	
+	var prefs = new _IG_Prefs(); // User preferences			
+	var urlTable = prefs.getString("_table_query_url");	
+	var query = new google.visualization.Query(urlTable);
+	
+	
       query.send(handleQueryResponse);
     }
     
@@ -229,7 +243,7 @@
     
     
 
-    google.setOnLoadCallback(sendAndDraw);
+   
 
     function init() {
       isFirstTime = false;
