@@ -136,8 +136,10 @@
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
 	var varListaColumnas = prefs.getString("VarListaColumnas");
 	var varListaFilas = prefs.getString("VarListaFilas");*/
-	var VisualizaColumna = prefs.getInt("_VarColumna");
-	alert (VisualizaColumna);
+	var VisualizaColumna = prefs.getString("_VarColumna");
+	var VisualizaColumnaAux = parseInt(VisualizaColumna);
+	alert (parseInt(VisualizaColumna));
+	alert (VisualizaColumnaAux);
 	
 	
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
