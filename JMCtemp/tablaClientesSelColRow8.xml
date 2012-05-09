@@ -8,13 +8,13 @@
 </ModulePrefs>
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
-<UserPref name="_VarColumna" display_name="Columna" required="false" />
+<UserPref name="VarColumna" display_name="Columna" required="false" />
 <Content type="html" view="configuration" preferred_height="480"><![CDATA[
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
                     Columna a visualizar: 
-					<select id="_VarColumna" onchange="registra(this.value)">
+					<select  onchange="registra(this.value)">
 						<option value="">--Columna--</option>
 						<option value="0">Columna 0</option>
 						<option value="4">Columna 4</option>
@@ -33,7 +33,7 @@
             var prefs = new gadgets.Prefs();           
             function registra(variable)
             {	alert(variable);
-                prefs.set(variable,document.getElementById("_VarColumna").value);
+                prefs.set(variable,document.getElementById('VarColumna').value);
 				
 			
             }  
@@ -117,7 +117,7 @@
 </style>
 
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
-<div id="_VarColumna"></div>
+<div id="VarColumna"></div>
 <script type="text/javascript"> 
     console.debug('version 46');
 	var gadgetHelper = null;
@@ -136,8 +136,8 @@
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
 	var varListaColumnas = prefs.getString("VarListaColumnas");
 	var varListaFilas = prefs.getString("VarListaFilas");*/
-	//alert (prefs.getString("_VarColumna"));
-	var VisualizaColumna = prefs.getString("_VarColumna");
+	
+	var VisualizaColumna = prefs.getInt("VarColumna");
 	alert(VisualizaColumna);
 	
 	
