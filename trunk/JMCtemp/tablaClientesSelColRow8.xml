@@ -13,7 +13,7 @@
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
-                    Columna a visualizar(0,4,8,12,16,20,24,28): 
+                    Columna a visualizar: 
 					<select id="VarColumna" onchange="registra('VarColumna')">
 						<option value="">--Columna--</option>
 						<option value="0">Columna 0</option>
@@ -40,8 +40,9 @@
 			
             gadgets.window.adjustHeight();
 	
-	</script>
-]]></Content>
+</script>
+]]>
+</Content>
 <Content type="html"><![CDATA[
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -127,13 +128,15 @@
 	var	_Row = ""; 
 	
 	var prefs = new _IG_Prefs(); // User preferences
-	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
-	var	_Col = prefs.getInt("_Col");
-	var	_Row = prefs.getInt("_Row");
 	var urlTable = prefs.getString("_table_query_url");
+	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
+	/*var	_Col = prefs.getInt("_Col");
+	var	_Row = prefs.getInt("_Row");
+	
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
 	var varListaColumnas = prefs.getString("VarListaColumnas");
-	var varListaFilas = prefs.getString("VarListaFilas");
+	var varListaFilas = prefs.getString("VarListaFilas");*/
+	var VisualizaColumna = prefs.getString("VarColumna");
 	
 	
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
@@ -188,8 +191,38 @@
 		
 	    dataAux.addRows(8);
 		
-	
+	if(VisualizaColumna == ""){
 	for (var columna=0;columna<8;columna++){
+		
+		for(var j=0;j<4;j++){
+			
+		     dataAux.addColumn('string',data.getValue(0,j));
+		
+			 
+		}
+	}	
+	
+	for(var fila=0;fila<8;fila++)
+	{
+		for (var col=VisualizaColumna; col<(VisualizaColumna+4); col++)
+		{	 
+				
+				//dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				
+			for(var i=0;i<8;i++){	
+				dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
+				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
+				
+			}
+		}
+			
+	}
+		
+	
+		var view = new google.visualization.DataView(dataAux);
+	    chart.draw(view, options);
+	}else{
+	for (var columna=0;columna<1;columna++){
 		
 		for(var j=0;j<4;j++){
 			
@@ -214,11 +247,9 @@
 		}
 			
 	}
-		
 	
-		var view = new google.visualization.DataView(dataAux);
-	    chart.draw(view, options);
 	}
+}	
 	console.debug('version 40');
 </script>
 ]]>
