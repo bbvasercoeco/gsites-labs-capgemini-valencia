@@ -31,7 +31,7 @@
   </table>	
 <script type="text/javascript"> 
 	// Get userprefs
-            var prefs = new gadgets.Prefs();           
+            var prefs = new _IG_Prefs();           
             function registra(variable)
             {	alert(variable);
                 prefs.set(variable,document.getElementById('VarColumna').value);
