@@ -90,7 +90,7 @@
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 38');
+    console.debug('version 39');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -160,23 +160,23 @@
 	    dataAux.addRows(8);
 		
 	
-	for (var columna=0;columna<8;columna++){
+/*	for (var columna=0;columna<8;columna++){
 		
 		for(var j=0;j<4;j++){
 			//alert(data.getColumnId(j));
 		     dataAux.addColumn('string',data.getColumnLabel(j));
-			 dataAux.setCell(0,j+4*0,data.getValue(0,j));
+		
 			
 			 
 		}
-	}	
+	}	*/
 	
 	for(fila=0;fila<8;fila++)
 	{
 		for (col=0; col<4; col++)
 		{	 
 				
-				dataAux.getColumnLabel(0).setCell(fila,col+4*0,data.getValue(fila,col));
+				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
 				
 			for(var i=0;i<8;i++){	
 				dataAux.setCell(fila,col+4*i,data.getValue(fila+8*i,col));
@@ -191,7 +191,7 @@
 		var view = new google.visualization.DataView(dataAux);
 	    chart.draw(view, options);
 	}
-	console.debug('version 38');
+	console.debug('version 39');
 </script>
 ]]>
 </Content>
