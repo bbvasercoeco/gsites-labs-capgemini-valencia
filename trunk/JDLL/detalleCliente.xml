@@ -143,6 +143,9 @@
 		
 		<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 		
+		<div id="tabledivProducto"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
+		
+		
 		<h2>
 			Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<hr>
@@ -162,7 +165,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 14');
+			console.debug('detalleCliente.xml version 16');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -184,8 +187,12 @@
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("ficha-");				
 				var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
-				query.setQuery(querytosend);			  
+				query.setQuery(querytosend);
 				query.send(handleQueryResponse);
+				
+				var queryProducto = "select *  where A like '" + idCliquery.toUpperCase() + "'  group by D,C";
+				queryProducto.setQuery(querytosend);
+				queryProducto.send(handleQueryProducto);
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
@@ -214,6 +221,12 @@
 			{
 				if (!gadgetHelper.validateResponse(response)) { return; }
 			
+				if (response.isError()) 
+				{
+					alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+					return;
+				}
+				
 				data = response.getDataTable();		
 				
 				document.getElementById('idCliente').innerHTML = data.getValue(0,0);
@@ -243,7 +256,7 @@
 				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
 				var options = { 'page': 'enable', 'pageSize': 20, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
-				var _Col = 13;
+				/*var _Col = 13;
 				var columnasAmostrar = [];
 				
 				for(i=0 ; i < _Col ; i++) 
@@ -251,7 +264,40 @@
 					columnasAmostrar.push(i);
 				}
 				
-				view.setColumns(columnasAmostrar);				
+				view.setColumns(columnasAmostrar);		*/		
+				chart.draw(view, options);
+				
+			}
+			
+			function handleQueryProducto(response) 
+			{
+				if (!gadgetHelper.validateResponse(response)) { return; }
+			
+				if (response.isError()) 
+				{
+					alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+					return;
+				}
+				
+				dataProducto = response.getDataTable();		
+				
+			
+				var cssClassNames = {
+					'headerRow': 'header',
+					'tableRow': 'filaPar',
+					'oddTableRow': 'filaImpar',
+					'selectedTableRow': 'filaSeleccionada',
+					'hoverTableRow': 'filaHover',
+					'headerCell': '',
+					'tableCell': 'formateoCelda',
+					'rowNumberCell': ''
+				};
+				 
+				/* para mostrar la tabla de la que obtendremos los datos */ 
+				var chart = new google.visualization.Table(document.getElementById('tabledivProducto'));		
+				var options = { 'page': 'enable', 'pageSize': 20, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				var view = new google.visualization.DataView(dataProducto);
+					
 				chart.draw(view, options);
 				
 			}
