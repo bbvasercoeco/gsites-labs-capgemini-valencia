@@ -144,7 +144,8 @@
 	
 	
 	//  _IG_RegisterOnloadHandler(loadVisualizationAPI);
-     RegisterOnloadHandler(loadVisualizationAPI);
+	gadgets.util.registerOnLoadHandler(loadVisualizationAPI);
+     
 	function loadVisualizationAPI() 
 	{
 		google.load("visualization", "1", {"packages": ["table"]});
