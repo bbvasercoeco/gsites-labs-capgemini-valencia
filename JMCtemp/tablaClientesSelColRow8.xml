@@ -171,12 +171,12 @@
 		}
 	}	
 	console.debug('version 35');
-	for(fila=-1;fila<7;fila++)
+	for(fila=0;fila<8;fila++)
 	{
 		for (col=0; col<4; col++)
 		{	 
 				
-				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				dataAux.setCell(fila,col+4*0,data.getValue(fila,col))..addColumn('string',data.getColumnLabel(j);
 				//console.debug('data.getValue(fila,col): '+data.getValue(fila,col));
 			for(var i=0;i<8;i++){	
 				dataAux.setCell(fila,col+4*i,data.getValue(fila+8*i,col));
