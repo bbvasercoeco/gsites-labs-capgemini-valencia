@@ -14,7 +14,7 @@
             <tr>       
                 <td>
                     Columna a visualizar: 
-					<select id="VarColumna" onchange="this.options[this.selectedIndex].value;">
+					<select id="VarColumna" onchange="registra(this.value)">
 						<option value="">--Columna--</option>
 						<option value="0">Columna 0</option>
 						<option value="4">Columna 4</option>
