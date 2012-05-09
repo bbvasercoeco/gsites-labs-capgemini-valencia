@@ -169,7 +169,7 @@
 			 
 		}
 	}	
-	
+	console.debug('version 26');
 	/*for(fila=0;fila<8;fila++)
 	{
 		for (col=0; col<4; col++)
