@@ -160,16 +160,16 @@
 	    dataAux.addRows(8);
 		
 	
-/*	for (var columna=0;columna<8;columna++){
+	for (var columna=0;columna<8;columna++){
 		
 		for(var j=0;j<4;j++){
-			//alert(data.getColumnId(j));
+			
 		     dataAux.addColumn('string',data.getColumnLabel(j));
 		
 			
 			 
 		}
-	}	*/
+	}	
 	
 	for(fila=0;fila<8;fila++)
 	{
