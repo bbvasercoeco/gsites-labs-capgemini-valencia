@@ -165,7 +165,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 17');
+			console.debug('detalleCliente.xml version 18');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -184,14 +184,16 @@
 				gadgetHelper = new google.visualization.GadgetHelper();
 				//var query = gadgetHelper.createQueryFromPrefs(prefs);	
 				var opts = {dataType:'jsonp'};				
-				var query = new google.visualization.Query(urlTable, opts);				
+							
 				var idCliquery = paramtoquery("ficha-");				
+				
+				var query = new google.visualization.Query(urlTable, opts);	
 				var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
 				query.setQuery(querytosend);
 				query.send(handleQueryResponse);
 				
 				var query2 = new google.visualization.Query(urlTable, opts);
-				var queryProducto = "select *  where A like '" + idCliquery.toUpperCase() + "'  group by D,C";
+				var queryProducto = "select *  where A like '" + idCliquery.toUpperCase() + "'  ";
 				query2.setQuery(queryProducto);
 				query2.send(handleQueryProducto);
 			}
@@ -272,13 +274,13 @@
 			
 			function handleQueryProducto(response) 
 			{
-				if (!gadgetHelper.validateResponse(response)) { return; }
+				/*if (!gadgetHelper.validateResponse(response)) { return; }
 			
 				if (response.isError()) 
 				{
 					alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
 					return;
-				}
+				}*/
 				
 				dataProducto = response.getDataTable();		
 				
