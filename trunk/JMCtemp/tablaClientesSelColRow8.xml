@@ -163,7 +163,7 @@
 	for (var columna=0;columna<8;columna++){
 		
 		for(var j=0;j<4;j++){
-			alert(data.getColumnLabel(j).value);
+			alert(data.getColumnLabel(3));
 		     dataAux.addColumn(data.getValue(0,j));
 			 //contador=0; 
 			
