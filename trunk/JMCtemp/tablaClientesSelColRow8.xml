@@ -128,7 +128,7 @@
 	var varListaFilas = "";
 	var	_Row = ""; 
 	
-	var prefs = new gadgets.Prefs(); // User preferences
+	var prefs =  new _IG_Prefs();  // User preferences
 	var urlTable = prefs.getString("_table_query_url");
 	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
 	/*var	_Col = prefs.getInt("_Col");
@@ -138,7 +138,7 @@
 	var varListaColumnas = prefs.getString("VarListaColumnas");
 	var varListaFilas = prefs.getString("VarListaFilas");*/
 	
-	var VisualizaColumna = prefs.getString("VarColumna");
+	var VisualizaColumna = prefs.getString('VarColumna');
 	alert(VisualizaColumna+" hola");
 	
 	
