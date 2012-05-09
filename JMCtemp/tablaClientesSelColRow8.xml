@@ -119,7 +119,7 @@
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 44');
+    console.debug('version 45');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -137,7 +137,7 @@
 	var varListaColumnas = prefs.getString("VarListaColumnas");
 	var varListaFilas = prefs.getString("VarListaFilas");*/
 	var VisualizaColumna = prefs.getString("VarColumna");
-	alert (parseInt(VisualizaColumna));
+	alert (VisualizaColumna);
 	
 	
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
@@ -251,7 +251,7 @@
 	
 	}
 }	
-	console.debug('version 44');
+	console.debug('version 45');
 </script>
 ]]>
 </Content>
