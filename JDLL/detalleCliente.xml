@@ -188,14 +188,16 @@
 				var idCliquery = paramtoquery("ficha-");				
 				
 				var query = new google.visualization.Query(urlTable, opts);	
-				var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
+				//var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
+				var querytosend = "select C,D group by D ";
 				query.setQuery(querytosend);
 				query.send(handleQueryResponse);
 				
+				/*
 				var query2 = new google.visualization.Query(urlTable, opts);
 				var queryProducto = "select C,D group by D ";
 				query2.setQuery(queryProducto);
-				query2.send(handleQueryProducto);
+				query2.send(handleQueryProducto);*/
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
