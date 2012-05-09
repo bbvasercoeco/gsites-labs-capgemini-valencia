@@ -165,7 +165,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 24');
+			console.debug('detalleCliente.xml version 25');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -261,7 +261,9 @@
 				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
 				var options = { 'page': 'enable', 'pageSize': 20, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
-				/*var _Col = 13;
+				/**/
+				
+				var _Col = 13;
 				var columnasAmostrar = [];
 				
 				for(i=0 ; i < _Col ; i++) 
@@ -269,7 +271,7 @@
 					columnasAmostrar.push(i);
 				}
 				
-				view.setColumns(columnasAmostrar);		*/		
+				view.setColumns(columnasAmostrar);				
 				chart.draw(view, options);
 				
 			}
