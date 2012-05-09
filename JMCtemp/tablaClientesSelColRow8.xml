@@ -156,7 +156,7 @@
         var options = { 'page': 'enable',  'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		
 		var dataAux = new google.visualization.DataTable();
-		var fila = 0;
+		
 	    dataAux.addRows(8);
 		
 	
@@ -170,9 +170,9 @@
 		}
 	}	
 	
-	for(fila=0;fila<8;fila++)
+	for(var fila=0;fila<8;fila++)
 	{
-		for (col=0; col<4; col++)
+		for (var col=0; col<4; col++)
 		{	 
 				
 				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
