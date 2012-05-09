@@ -164,14 +164,13 @@
 		
 		for(var j=0;j<4;j++){
 			
-		     dataAux.addColumn('string',"a");
+		     dataAux.addColumn('string',data.getValue(0,j));
 		
-			
 			 
 		}
 	}	
 	
-	for(fila=0;fila<8;fila++)
+	for(fila=1;fila<9;fila++)
 	{
 		for (col=0; col<4; col++)
 		{	 
