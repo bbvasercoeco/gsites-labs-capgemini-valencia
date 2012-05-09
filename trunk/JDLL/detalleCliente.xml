@@ -173,7 +173,7 @@
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,7) +'">';
 			
 				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				var options = { 'page': 'enable', 'pageSize': 20, 'alternatingRowStyle': true, 'allowHtml': true };		
 				var view = new google.visualization.DataView(data);
 				
 				chart.draw(view, options);
