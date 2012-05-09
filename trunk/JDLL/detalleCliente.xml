@@ -165,7 +165,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 20');
+			console.debug('detalleCliente.xml version 21');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -193,7 +193,7 @@
 				query.send(handleQueryResponse);
 				
 				var query2 = new google.visualization.Query(urlTable, opts);
-				var queryProducto = "select * group by D where A like '" + idCliquery.toUpperCase() + "'";
+				var queryProducto = "select C,D group by D ";
 				query2.setQuery(queryProducto);
 				query2.send(handleQueryProducto);
 			}
