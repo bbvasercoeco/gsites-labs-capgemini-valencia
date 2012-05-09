@@ -33,7 +33,7 @@
             var prefs = new gadgets.Prefs();           
             function registra(variable)
             {	alert(variable);
-                prefs.set(variable,document.getElementById(variable).value);
+                prefs.set(variable,document.getElementById('VarColumna').value);
 				
 			
             }  
@@ -136,7 +136,7 @@
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
 	var varListaColumnas = prefs.getString("VarListaColumnas");
 	var varListaFilas = prefs.getString("VarListaFilas");*/
-	var VisualizaColumna = prefs.getString("VarColumna");
+	var VisualizaColumna = prefs.getInt("VarColumna");
 	alert (VisualizaColumna);
 	
 	
