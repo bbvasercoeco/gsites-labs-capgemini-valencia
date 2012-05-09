@@ -165,7 +165,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleCliente.xml version 23');
+			console.debug('detalleCliente.xml version 24');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -189,7 +189,7 @@
 				
 				var query = new google.visualization.Query(urlTable, opts);	
 				//var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
-				var querytosend = "select C,D";
+				var querytosend = "select A";
 				query.setQuery(querytosend);
 				query.send(handleQueryResponse);
 				
