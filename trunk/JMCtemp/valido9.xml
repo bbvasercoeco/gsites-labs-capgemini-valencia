@@ -184,7 +184,8 @@
 	}
 		
 	
-		var view = new google.visualization.DataView(dataAux).setColumns([2]);
+		var view = new google.visualization.DataView(dataAux);
+		view.setColumns(dataAux.getColumnId('B'));
 	    chart.draw(view, options);
 	}
 	console.debug('version 90');
