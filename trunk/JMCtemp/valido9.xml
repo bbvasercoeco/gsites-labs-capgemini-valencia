@@ -86,7 +86,7 @@
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 94');
+    console.debug('version 95');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -185,10 +185,10 @@
 		
 	
 		var view = new google.visualization.DataView();
-		view.setColumns(dataAux.getColumnId('B'));
+		view.setColumns(0);
 	    chart.draw(view, options);
 	}
-	console.debug('version 94');
+	console.debug('version 95');
 </script>
 ]]>
 </Content>
