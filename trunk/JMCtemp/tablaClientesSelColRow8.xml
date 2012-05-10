@@ -9,40 +9,7 @@
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 <UserPref name="VarColumna" display_name="Columna" required="false" />
-<Content type="html" view="configuration" preferred_height="480"><![CDATA[
-  <table width="100%" border="0" id="tablaconfig">           
-            <tr>       
-                <td>
-                    Columna a visualizar(0,4,8,12,16,20,24,28): 
-					<select id="VarColumna" onchange="registra('VarColumna')">
-						<option value="">--Columna--</option>
-						<option value="0">Columna 0</option>
-						<option value="4">Columna 4</option>
-						<option value="8">Columna 8</option>
-						<option value="12">Columna 12</option>
-						<option value="16">Columna 16</option>
-						<option value="20">Columna 20</option>
-						<option value="24">Columna 24</option>
-						<option value="28">Columna 28</option>				
-					</select>                 
-                </td>
-            </tr>
-  </table>	
-<script type="text/javascript"> 
-	// Get userprefs
-            var prefs = new gadgets.Prefs();           
-            function registra(variable)
-            {	
-                prefs.set(variable,document.getElementById(variable).value);
-				
-			
-            }  
-			
-            gadgets.window.adjustHeight();
-	
-	</script>
-]]>
-</Content>
+
 <Content type="html"><![CDATA[
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
