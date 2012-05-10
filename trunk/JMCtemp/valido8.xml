@@ -168,7 +168,7 @@
 		
 	}	
 	
-	for(var fila=0;fila<8;fila++)
+	for(var fila=1;fila<9;fila++)
 	{
 		for (var col=0; col<1; col++)
 		{	 
