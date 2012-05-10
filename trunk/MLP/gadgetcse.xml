@@ -3,6 +3,7 @@
 <ModulePrefs title="menu portal Google Sites Labs - Capgemini Valencia" />
 <Content type="html"><![CDATA[
 
+/*
 <!-- Google CSE Search Box Begins  -->
 <form id="cref_iframe" action="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/marta/resultadosbusqueda">
   <input type="hidden" name="cref" value="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/MLP/solarcref_cse.xml" />
@@ -11,6 +12,18 @@
   <input type="submit" name="sa" value="Search" />
 </form>
 <script type="text/javascript" src="http://www.google.es/cse/brand?form=cref_iframe"></script>
+<!-- Google CSE Search Box Ends -->
+*/
+
+<!-- Google CSE Search Box Begins  -->
+<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
+<!-- The terms of service are available at http://www.google.com/cse/docs/tos.html -->
+<form id="cref" action="http://www.google.com/cse">
+  <input type="hidden" name="cref" value="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/MLP/solarcref_cse.xml" />
+  <input type="text" name="q" size="40" />
+  <input type="submit" name="sa" value="Search" />
+</form>
+<script type="text/javascript" src="http://www.google.es/cse/brand?form=cref"></script>
 <!-- Google CSE Search Box Ends -->
 ]]></Content>
 </Module>
