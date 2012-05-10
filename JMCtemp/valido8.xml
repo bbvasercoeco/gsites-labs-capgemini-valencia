@@ -86,7 +86,7 @@
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 50');
+    console.debug('version 51');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -172,13 +172,13 @@
 		for (var col=0; col<1; col++)
 		{	 
 				
-				dataAux.setCell(fila,col+4*0,data.getValue(1+fila,col));
+				//dataAux.setCell(fila,col+4*0,data.getValue(1+fila,col));
 				
-			/*for(var i=1;i<9;i++){	
+			for(var i=0;i<8;i++){	
 				dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
 				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
 				
-			}*/
+			}
 		}
 			
 	}
@@ -187,7 +187,7 @@
 		var view = new google.visualization.DataView(dataAux);
 	    chart.draw(view, options);
 	}
-	console.debug('version 50');
+	console.debug('version 51');
 </script>
 ]]>
 </Content>
