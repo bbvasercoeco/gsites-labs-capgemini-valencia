@@ -13,10 +13,7 @@
         </LookAndFeel>
     </CustomSearchEngine>
     <Annotations>
-        <Annotation about="http://www.solarenergy.org/*">
-            <Label name="solar_example"/>
-        </Annotation>
-        <Annotation about="http://www.solarfacts.net/*">
+        <Annotation about="https://sites.google.com/site/gsiteslabscapgeminivalencia/*">
             <Label name="solar_example"/>
         </Annotation>
     </Annotations>
