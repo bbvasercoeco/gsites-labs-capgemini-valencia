@@ -2,26 +2,18 @@
 <Module>
 <ModulePrefs title="menu portal Google Sites Labs - Capgemini Valencia" />
 <Content type="html"><![CDATA[
-<form action="http://www.google.com/cse" id="cse-search-box" target="_blank">
-  <div>
-    <input type="hidden" name="cx" value="011079130885249389707:0ocphfqgbku" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="31" />
-    <input type="submit" name="sa" value="Search" />
-  </div>
-</form>
 
-<script src="https://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
-  google.load('search', '1', {language : 'es', style : google.loader.themes.V2_DEFAULT});
-  google.setOnLoadCallback(function() {
-    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
-      '014400581442887330964:q0qotc_bdrg', customSearchOptions);
-    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-    var options = new google.search.DrawOptions();
-    options.setAutoComplete(true);
-    customSearchControl.draw('cse', options);
-  }, true);
-</script>
+<!-- Google CSE Search Box Begins  -->
+<form id="cref_iframe" action="http://www.guha.com/results.html">
+  <input type="hidden" name="cref" value="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/MLP/solarcref_cse.xml" />
+  <input type="hidden" name="cof" value="FORID:9" />
+  <input type="text" name="q" size="40" />
+  <input type="submit" name="sa" value="Search" />
+</form>
+<script type="text/javascript" src="http://www.google.es/cse/brand?form=cref_iframe"></script>
+<!-- Google CSE Search Box Ends -->
 ]]></Content>
 </Module>
+
+
+
