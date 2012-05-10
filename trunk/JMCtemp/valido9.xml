@@ -82,11 +82,11 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-109
+110
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 109');
+    console.debug('version 110');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -198,7 +198,7 @@
 		
 	    chart.draw(view, options);
 	}
-	console.debug('version 108');
+	console.debug('version 110');
 </script>
 ]]>
 </Content>
