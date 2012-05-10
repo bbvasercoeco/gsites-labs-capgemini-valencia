@@ -167,9 +167,9 @@
 		
 	}	
 	
-	for(var fila=0;fila<8;fila++)
+	for(var fila=1;fila<=8;fila++)
 	{
-		for (var col=0; col<4; col++)
+		for (var col=0; col<1; col++)
 		{	 
 				
 				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
@@ -187,7 +187,7 @@
 		var view = new google.visualization.DataView(dataAux);
 	    chart.draw(view, options);
 	}
-	console.debug('version 47');
+	console.debug('version 48');
 </script>
 ]]>
 </Content>
