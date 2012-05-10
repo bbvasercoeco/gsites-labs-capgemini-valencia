@@ -10,12 +10,11 @@
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 <UserPref name="VarColumna" display_name="Columna" required="false" />
 <Content type="html" view="configuration" preferred_height="480"><![CDATA[
-<div id="VarColumna"></div>
   <table width="100%" border="0" id="tablaconfig">           
             <tr>       
                 <td>
-                    Columna a visualizar: 
-					<select  onchange="registra(this.value)">
+                    Columna a visualizar(0,4,8,12,16,20,24,28): 
+					<select id="VarColumna" onchange="registra('VarColumna')">
 						<option value="">--Columna--</option>
 						<option value="0">Columna 0</option>
 						<option value="4">Columna 4</option>
@@ -31,20 +30,18 @@
   </table>	
 <script type="text/javascript"> 
 	// Get userprefs
-            var prefs = new gadgets.Prefs();        
+            var prefs = new gadgets.Prefs();           
             function registra(variable)
-            {	alert(variable);
-                prefs.set(variable,document.getElementById('VarColumna').value);
-				var prueba = document.getElementById('VarColumna').value;
-				alert (prueba+" esto es una prueba");
+            {	
+                prefs.set(variable,document.getElementById(variable).value);
+				
 			
             }  
 			
             gadgets.window.adjustHeight();
 	
-</script>
+	</script>
 ]]>
-</Content>
 <Content type="html"><![CDATA[
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -121,7 +118,7 @@
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 54');
+    console.debug('version 40');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -129,23 +126,18 @@
 	var varListaFilas = "";
 	var	_Row = ""; 
 	
-	var prefs =  new _IG_Prefs(); 	// User preferences
-	var urlTable = prefs.getString("_table_query_url");
+	var prefs = new _IG_Prefs(); // User preferences
 	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
-	/*var	_Col = prefs.getInt("_Col");
+	var	_Col = prefs.getInt("_Col");
 	var	_Row = prefs.getInt("_Row");
-	
+	var urlTable = prefs.getString("_table_query_url");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
 	var varListaColumnas = prefs.getString("VarListaColumnas");
-	var varListaFilas = prefs.getString("VarListaFilas");*/
-	
-	var VisualizaColumna = prefs.getInt("VarColumna");
-	alert(VisualizaColumna);
+	var varListaFilas = prefs.getString("VarListaFilas");
 	
 	
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
 	
-     
 	function loadVisualizationAPI() 
 	{
 		google.load("visualization", "1", {"packages": ["table"]});
@@ -196,7 +188,7 @@
 		
 	    dataAux.addRows(8);
 		
-	if(VisualizaColumna == ""){
+	
 	for (var columna=0;columna<8;columna++){
 		
 		for(var j=0;j<4;j++){
@@ -212,7 +204,7 @@
 		for (var col=0; col<4; col++)
 		{	 
 				
-				//dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
 				
 			for(var i=0;i<8;i++){	
 				dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
@@ -226,36 +218,8 @@
 	
 		var view = new google.visualization.DataView(dataAux);
 	    chart.draw(view, options);
-	}else{
-	for (var columna=0;columna<1;columna++){
-		
-		for(var j=0;j<4;j++){
-			
-		     dataAux.addColumn('string',data.getValue(0,j));
-		
-			 
-		}
-	}	
-	
-	for(var fila=0;fila<8;fila++)
-	{
-		for (var col=VisualizaColumna; col<(VisualizaColumna+4); col++)
-		{	 
-				
-				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
-				
-			for(var i=0;i<8;i++){	
-				dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
-				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
-				
-			}
-		}
-			
 	}
-	
-	}
-}	
-	console.debug('version 54');
+	console.debug('version 40');
 </script>
 ]]>
 </Content>
