@@ -149,9 +149,11 @@
 			<td>Query Table</td>
 		  </tr>
 		  <tr>
-			<td style="width: 50%; padding: 10px; vertical-align: top;">
+			<td style="width: 100%; padding: 10px; vertical-align: top;">
 			<div id="table"></div>
 			</td>
+		</tr>
+		<tr>
 			<td style="width: 50%; padding: 10px; vertical-align: top;">
 			<div id="querytable"></div>
 			<div style='font-size: 15px; font-weight: bold; padding: 5px;'><input
