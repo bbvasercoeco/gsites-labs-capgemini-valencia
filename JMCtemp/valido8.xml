@@ -167,12 +167,12 @@
 		
 	}	
 	
-	for(var fila=1;fila<=8;fila++)
+	for(var fila=0;fila<8;fila++)
 	{
 		for (var col=0; col<1; col++)
 		{	 
 				
-				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				dataAux.setCell(fila,col+4*0,data.getValue(1+fila,col));
 				
 			/*for(var i=1;i<9;i++){	
 				dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
