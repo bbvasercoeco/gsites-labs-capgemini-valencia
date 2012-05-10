@@ -159,9 +159,9 @@
 	
 	for (var columna=0;columna<8;columna++){
 		
-		for(var j=0;j<1;j++){
+		for(var j=0;j<4;j++){
 			
-		     dataAux.addColumn('string',data.getValue(0,j+1));
+		    dataAux.addColumn('string',data.getValue(0,j));}
 		
 			 
 		}
@@ -169,13 +169,13 @@
 	
 	for(var fila=0;fila<8;fila++)
 	{
-		for (var col=0; col<1; col++)
+		for (var col=0; col<4; col++)
 		{	 
 				
-				//dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
 				
 			for(var i=0;i<8;i++){	
-				dataAux.setCell(fila,col+i,data.getValue(1+(fila+8*i),col+1));
+				dataAux.setCell(fila,col+i,data.getValue(1+(fila+8*i),col));
 				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
 				
 			}
