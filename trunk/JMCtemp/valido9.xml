@@ -86,7 +86,7 @@
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 40');
+    console.debug('version 88');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -159,9 +159,9 @@
 	
 	for (var columna=0;columna<8;columna++){
 		
-		for(var j=1;j<2;j++){
+		for(var j=0;j<1;j++){
 			
-		     dataAux.addColumn('string',data.getValue(0,j));
+		     dataAux.addColumn('string',data.getValue(0,j+1));
 		
 			 
 		}
@@ -169,13 +169,13 @@
 	
 	for(var fila=0;fila<8;fila++)
 	{
-		for (var col=1; col<2; col++)
+		for (var col=0; col<1; col++)
 		{	 
 				
-				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				//dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
 				
 			for(var i=0;i<8;i++){	
-				dataAux.setCell(fila,col+i,data.getValue(1+(fila+8*i),col));
+				dataAux.setCell(fila,col+i,data.getValue(1+(fila+8*i),col+1));
 				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
 				
 			}
@@ -187,7 +187,7 @@
 		var view = new google.visualization.DataView(dataAux);
 	    chart.draw(view, options);
 	}
-	console.debug('version 40');
+	console.debug('version 88');
 </script>
 ]]>
 </Content>
