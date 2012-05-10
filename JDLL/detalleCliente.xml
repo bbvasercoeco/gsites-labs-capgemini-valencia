@@ -15,7 +15,7 @@
 		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
 		<style type="text/css">	
-.filaPar {
+			.filaPar {
 				background: white; 
 				border-bottom: 1px solid #E2E2E2; 
 				height: 45px; 
@@ -66,7 +66,7 @@
 			a:visited.enlaceTabla {
 				color: #3F78B2;
 			}
-			a:hover.enlaceTabla {
+			a:hover.enlaceTabla -+{
 				color: #009EE5;
 			}		
 			img.loading {
@@ -215,12 +215,12 @@
 	var gadgetHelper = null;	
 	var prefs = new _IG_Prefs(); // User preferences			
 	var urlTable = prefs.getString("_table_query_url");	
-	var query = new google.visualization.Query(urlTable);
+	//query = new google.visualization.Query(urlTable);
 	//var opts = {dataType:'jsonp'};				
 							
 						
 				
-				var query = new google.visualization.Query(urlTable, options);	
+				query = new google.visualization.Query(urlTable, options);	
 	
       query.send(handleQueryResponse);
     }
