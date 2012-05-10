@@ -161,7 +161,7 @@
 		
 		for(var j=0;j<4;j++){
 			
-		    dataAux.addColumn('string',data.getValue(0,j));}
+		    dataAux.addColumn('string',data.getValue(0,j));
 		
 			 
 		}
