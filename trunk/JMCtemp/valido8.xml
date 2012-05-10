@@ -168,7 +168,7 @@
 		
 	}	
 	
-/*	for(var fila=0;fila<8;fila++)
+	for(var fila=0;fila<8;fila++)
 	{
 		for (var col=0; col<1; col++)
 		{	 
@@ -182,7 +182,7 @@
 			}
 		}
 			
-	}*/
+	}
 		
 	
 		var view = new google.visualization.DataView(dataAux);
