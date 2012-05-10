@@ -82,7 +82,7 @@
 		
 		
 		<div style="margin-bottom: 10px; padding: 5px; border: 1px solid gray; background-color: buttonface;">
-		<span> version 1 <br>Configure the query<br>Tabla origen: http://spreadsheets.google.com/tq?key=rYQm6lTXPH8dHA6XGhJVFsA&pub=1</span>
+		<span> version 2 <br>Configure the query<br>Tabla origen: http://spreadsheets.google.com/tq?key=rYQm6lTXPH8dHA6XGhJVFsA&pub=1</span>
 		<form action="">
 		<table style="font-size: 12px; ">
 		  <tr>
