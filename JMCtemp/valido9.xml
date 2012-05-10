@@ -161,7 +161,7 @@
 		
 		for(var j=0;j<4;j++){
 			
-		    dataAux.addColumn('string',data.getValue(0,j));
+		    if(j=1){dataAux.addColumn('string',data.getValue(0,j));}
 		
 			 
 		}
@@ -172,12 +172,12 @@
 		for (var col=0; col<4; col++)
 		{	 
 				
-				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				if(col=1){ //dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
 				
 			for(var i=0;i<8;i++){	
 				dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
 				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
-				
+				}
 			}
 		}
 			
