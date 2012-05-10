@@ -4,7 +4,7 @@
 <Content type="html"><![CDATA[
 
 <!-- Google CSE Search Box Begins  -->
-<form id="cref_iframe" action="http://www.guha.com/results.html">
+<form id="cref_iframe" action="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/marta/resultadosbusqueda">
   <input type="hidden" name="cref" value="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/MLP/solarcref_cse.xml" />
   <input type="hidden" name="cof" value="FORID:9" />
   <input type="text" name="q" size="40" />
