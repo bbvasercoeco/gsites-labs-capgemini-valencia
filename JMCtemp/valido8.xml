@@ -169,7 +169,7 @@
 	
 	for(var fila=0;fila<8;fila++)
 	{
-		for (var col=0; col<1; col++)
+		for (var col=0; col<4; col++)
 		{	 
 				
 				dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
