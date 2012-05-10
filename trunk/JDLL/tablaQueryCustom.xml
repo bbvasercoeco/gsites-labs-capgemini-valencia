@@ -145,14 +145,16 @@
 		</div>
 		<table style='width: 100%;'>
 		  <tr style='font-size: 20px;'>
-			<td>Original Table</td>
-			<td>Query Table</td>
+			<td>Original Table</td>			
 		  </tr>
 		  <tr>
 			<td style="width: 100%; padding: 10px; vertical-align: top;">
 			<div id="table"></div>
 			</td>
 		</tr>
+		 <tr style='font-size: 20px;'>			
+			<td>Query Table</td>
+		  </tr>
 		<tr>
 			<td style="width: 50%; padding: 10px; vertical-align: top;">
 			<div id="querytable"></div>
