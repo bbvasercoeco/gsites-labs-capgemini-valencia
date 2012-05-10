@@ -35,7 +35,8 @@
             function registra(variable)
             {	alert(variable);
                 prefs.set(variable,document.getElementById('VarColumna').value);
-				alert(document.getElementById('VarColumna').value+"jordi");
+				var prueba = document.getElementById('VarColumna').value;
+				alert (prueba+" esto es una prueba");
 			
             }  
 			
@@ -128,8 +129,7 @@
 	var varListaFilas = "";
 	var	_Row = ""; 
 	
-	var prefs =  new _IG_Prefs(); 
-    var prefsaux = new gadgets.Prefs();     	// User preferences
+	var prefs =  new _IG_Prefs(); 	// User preferences
 	var urlTable = prefs.getString("_table_query_url");
 	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
 	/*var	_Col = prefs.getInt("_Col");
@@ -139,12 +139,12 @@
 	var varListaColumnas = prefs.getString("VarListaColumnas");
 	var varListaFilas = prefs.getString("VarListaFilas");*/
 	
-	var VisualizaColumna = prefsaux.getString("VarColumna");
+	var VisualizaColumna = prefs.getString("VarColumna");
 	alert(VisualizaColumna);
 	
 	
-	//  _IG_RegisterOnloadHandler(loadVisualizationAPI);
-	gadgets.util.registerOnLoadHandler(loadVisualizationAPI);
+	_IG_RegisterOnloadHandler(loadVisualizationAPI);
+	
      
 	function loadVisualizationAPI() 
 	{
