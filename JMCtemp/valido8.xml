@@ -122,7 +122,8 @@
 		var query = new google.visualization.Query(urlTable, opts);
 		//query.setQuery("select A,B ");
 		query.setQuery("select A ");
-		alert(query.setQuery("select A "));
+		var prueba = query.setQuery("select A ");
+		alert(prueba);
 		query.send(handleQueryResponse);
 	}
 
