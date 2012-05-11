@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-22
+23
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -198,15 +198,15 @@
 		var formatter7 = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{7}\');" title="Ver detalle de {7}">{7}</a>');
 		// }
 	
-		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[1,5,9,13,17,21,25,29]); 
-		
+		formatter.format(dataAux,[0],[1,5,9,13,17,21,25,29]); 
+		formatter.format(dataAux,[1],[1,5,9,13,17,21,25,29]); 
+		formatter.format(dataAux,[5],[1,5,9,13,17,21,25,29]); 
+		formatter.format(dataAux,[9],[1,5,9,13,17,21,25,29]); 
+		formatter.format(dataAux,[13],[1,5,9,13,17,21,25,29]); 
+		formatter.format(dataAux,[17],[1,5,9,13,17,21,25,29]); 
+		formatter.format(dataAux,[21],[1,5,9,13,17,21,25,29]); 
+		formatter.format(dataAux,[25],[1,5,9,13,17,21,25,29]); 
+		formatter.format(dataAux,[29],[1,5,9,13,17,21,25,29]); 
 		
 		 // Apply formatter and set the formatted value of the first column.
 		var view = new google.visualization.DataView(dataAux);
