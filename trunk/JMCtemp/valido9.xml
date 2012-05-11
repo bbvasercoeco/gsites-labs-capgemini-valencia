@@ -82,11 +82,11 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-112
+
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 110');
+    console.debug('version 54');
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -121,8 +121,8 @@
 		
 		var query = new google.visualization.Query(urlTable, opts);
 		//query.setQuery("select A,B ");
-		query.setQuery("select * ");
-	  
+		query.setQuery("select A ");
+		
 		query.send(handleQueryResponse);
 	}
 
@@ -159,23 +159,23 @@
 	
 	for (var columna=0;columna<8;columna++){
 		
-		for(var j=0;j<4;j++){
+		for(var j=0;j<1;j++){
 			
-		    dataAux.addColumn('string',data.getValue(0,j));
+		     dataAux.addColumn('string',data.getValue(0,j));
 		
-			 
-		}
+			} 
+		
 	}	
 	
 	for(var fila=0;fila<8;fila++)
 	{
-		for (var col=0; col<4; col++)
+		for (var col=0; col<1; col++)
 		{	 
 				
-				 dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				//dataAux.setCell(fila,col+4*0,data.getValue(1+fila,col));
 				
 			for(var i=0;i<8;i++){	
-				dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
+				dataAux.setCell(fila,col+i,data.getValue(1+(fila+8*i),col));
 				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
 				
 			}
@@ -184,21 +184,10 @@
 	}
 		
 	
-		/*var view = new google.visualization.DataView(dataAux);
-		view.setColumns([1,5,9,13,17,21,25,29]);*/
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" title="Ver detalle de {1}">{1}</a> {2} {3}');
-		formatter.format(dataAux,[0,1,2,3],1); // Apply formatter and set the formatted value of the first column.
 		var view = new google.visualization.DataView(dataAux);
-		view.setColumns([1,5,9,13,17,21,25,29]);
-		function detalle(id)
-			{				
-				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
-			}
-		
-		
 	    chart.draw(view, options);
 	}
-	console.debug('version 110');
+	console.debug('version 54');
 </script>
 ]]>
 </Content>
