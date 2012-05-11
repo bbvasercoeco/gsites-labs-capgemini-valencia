@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-8
+1
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -197,11 +197,11 @@
 		var formatter6 = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{6}\');" title="Ver detalle de {6}">{6}</a>');
 		var formatter7 = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{7}\');" title="Ver detalle de {7}">{7}</a>');
 		// }
-		formatter.format(dataAux,[1,5,9,13,17,21,25,29],0); 
+		formatter.format(dataAux,[1],0); 
 	
 		 // Apply formatter and set the formatted value of the first column.
 		var view = new google.visualization.DataView(dataAux);
-		view.setColumns([1,5,9,13,17,21,25,29]);
+		view.setColumns([0,1,5,9,13,17,21,25,29]);
 		function detalle(id)
 			{				
 				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
