@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-21
+23
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -189,7 +189,7 @@
 		// for(i=0;i<8;i++){
 		
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" title="Ver detalle de {0}">{0}</a>');
-		var formatter1 = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {1}">{1}</a>');
+		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {1}">{1}</a>');
 		var formatter2 = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{2}\');" title="Ver detalle de {2}">{2}</a>');
 		var formatter3 = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{3}\');" title="Ver detalle de {3}">{3}</a>');
 		var formatter4 = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{4}\');" title="Ver detalle de {4}">{4}</a>');
