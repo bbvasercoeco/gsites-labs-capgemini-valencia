@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-131
+132
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -206,10 +206,10 @@
 		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[0,1,2,3,4,5,6,7]); // Apply formatter and set the formatted value of the first column.
 		var view = new google.visualization.DataView(dataAux);
 		view.setColumns([1,5,9,13,17,21,25,29]);
-		function detalle(id0,id1,id2,id3,id4,id5,id6,id7)
-			{	for(i=0;i<8;i++){			
+		function detalle(id)
+			{				
 				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
-				}
+				
 			}
 		
 		
