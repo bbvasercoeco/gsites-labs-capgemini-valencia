@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-133
+134
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -186,8 +186,9 @@
 	
 		/*var view = new google.visualization.DataView(dataAux);
 		view.setColumns([1,5,9,13,17,21,25,29]);*/
-		for(i=0;i<8;i++){
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" title="Ver detalle de {0}">{0}[0]</a>');
+		// for(i=0;i<8;i++){
+		var view = new google.visualization.DataView(dataAux);
+		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" title="Ver detalle de {0}">{0}</a>');
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {1}">{1}</a>');
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{2}\');" title="Ver detalle de {2}">{2}</a>');
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{3}\');" title="Ver detalle de {3}">{3}</a>');
@@ -195,7 +196,7 @@
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{5}\');" title="Ver detalle de {5}">{5}</a>');
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{6}\');" title="Ver detalle de {6}">{6}</a>');
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{7}\');" title="Ver detalle de {7}">{7}</a>');
-		}
+		// }
 		formatter.format(dataAux,[1,5,9,13,17,21,25,29],0); 
 		formatter.format(dataAux,[1,5,9,13,17,21,25,29],1); 
 		formatter.format(dataAux,[1,5,9,13,17,21,25,29],2); 
@@ -204,7 +205,7 @@
 		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[0,1,2,3,4,5,6,7]); 
 		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[0,1,2,3,4,5,6,7]); 
 		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[0,1,2,3,4,5,6,7]); // Apply formatter and set the formatted value of the first column.
-		var view = new google.visualization.DataView(dataAux);
+		
 		view.setColumns([1,5,9,13,17,21,25,29]);
 		function detalle(id)
 			{				
