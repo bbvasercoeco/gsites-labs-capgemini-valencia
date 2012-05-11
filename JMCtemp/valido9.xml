@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-121
+123
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -187,20 +187,16 @@
 		/*var view = new google.visualization.DataView(dataAux);
 		view.setColumns([1,5,9,13,17,21,25,29]);*/
 		for(i=0;i<8;i++){
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}{1}{2}{3}{4}{5}{6}{7}\');" title="Ver detalle de {i}">{0}{1}{2}{3}{4}{5}{6}{7}</a>');}
+		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{"+i+"}\');" title="Ver detalle de {0}">{1}</a>');
+		
+		
+		}
 		formatter.format(dataAux,[1,5,9,13,17,21,25,29]); // Apply formatter and set the formatted value of the first column.
 		var view = new google.visualization.DataView(dataAux);
 		view.setColumns([1,5,9,13,17,21,25,29]);
 		function detalle(id0,id1,id2,id3,id4,id5,id6,id7)
 			{	for(i=0;i<8;i++){			
-				window.parent.location.href = urlDetalleFicha + id0.toLowerCase();
-				window.parent.location.href = urlDetalleFicha + id1.toLowerCase();
-				window.parent.location.href = urlDetalleFicha + id2.toLowerCase();
-				window.parent.location.href = urlDetalleFicha + id3.toLowerCase();
-				window.parent.location.href = urlDetalleFicha + id4.toLowerCase();
-				window.parent.location.href = urlDetalleFicha + id5.toLowerCase();
-				window.parent.location.href = urlDetalleFicha + id6.toLowerCase();
-				window.parent.location.href = urlDetalleFicha + id7.toLowerCase();
+				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
 				}
 			}
 		
