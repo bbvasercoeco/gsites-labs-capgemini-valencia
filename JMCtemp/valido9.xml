@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-8
+9
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -195,7 +195,7 @@
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{4}\');" title="Ver detalle de {4}">{4}</a>');
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{5}\');" title="Ver detalle de {5}">{5}</a>');
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{6}\');" title="Ver detalle de {6}">{6}</a>');
-		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{7}\');" title="Ver detalle de {7}">{7}</a>');
+		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{7}\');" title="Ver detalle de {7}">{7}</a>');
 		// }
 		formatter.format(dataAux,[1,5,9,13,17,21,25,29],[0,1,2,3,4,5,6,7]); 
 		 // Apply formatter and set the formatted value of the first column.
