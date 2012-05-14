@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-40
+41
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -189,7 +189,7 @@
 		view.setColumns([1,5,9,13,17,21,25,29]);*/
 		// for(i=0;i<8;i++){
 		var view = new google.visualization.DataView(dataAux);
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" title="Ver detalle de {0}">{0}</a>{1}{2}');
+		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle({0});" title="Ver detalle de {0}">{0}</a>');
 		
 		// }
 	
