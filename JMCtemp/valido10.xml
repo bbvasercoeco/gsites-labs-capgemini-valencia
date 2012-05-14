@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-57
+59
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -194,21 +194,21 @@
 		// }
 		
 		//formatter.format(dataAux,[0],[1,5,9,13,17,21,25,29]); 
-		//formatter.format(dataAux,[1],[1,5,9,13,17,21,25,29]);
-		formatter.format(dataAux,[1],[1]); 
-		formatter.format(dataAux,[4],[1,5,9,13,17,21,25,29]); 
+		formatter.format(dataAux,[1],[1,5,9,13,17,21,25,29]);
+		//formatter.format(dataAux,[1],[0,4]); 
+		//formatter.format(dataAux,[4],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[5],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[8],[1,5,9,13,17,21,25,29]); 
+		//formatter.format(dataAux,[8],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[9],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[12],[1,5,9,13,17,21,25,29]); 
+		//formatter.format(dataAux,[12],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[13],[1,5,9,13,17,21,25,29]);
-		formatter.format(dataAux,[16],[1,5,9,13,17,21,25,29]); 		
+		//formatter.format(dataAux,[16],[1,5,9,13,17,21,25,29]); 		
 		formatter.format(dataAux,[17],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[20],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[21],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[24],[1,5,9,13,17,21,25,29]); 
+		//formatter.format(dataAux,[20],[1,5,9,13,17,21,25,29]); 
+		//formatter.format(dataAux,[21],[1,5,9,13,17,21,25,29]); 
+		//formatter.format(dataAux,[24],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[25],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[28],[1,5,9,13,17,21,25,29]); 
+		//formatter.format(dataAux,[28],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[29],[1,5,9,13,17,21,25,29]); 
 		
 		 // Apply formatter and set the formatted value of the first column.
