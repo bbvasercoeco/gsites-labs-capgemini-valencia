@@ -197,7 +197,7 @@
 	}
 		
 	
-		/*var view = new google.visualization.DataView(dataAux);
+	/*	 var view = new google.visualization.DataView(dataAux);
 		view.setColumns([1,5,9,13,17,21,25,29]);*/
 	
 	// for(i=0;i<8;i++){
@@ -227,7 +227,7 @@
 		*/
 		 // Apply formatter and set the formatted value of the first column.
 		var view = new google.visualization.DataView(dataAux);
-		view.setColumns([1,5,9,13,17,25,29]);
+		view.setColumns([0,1,5,9,13,17,25,29]);
 		
 		function detalle(id)
 			{				
