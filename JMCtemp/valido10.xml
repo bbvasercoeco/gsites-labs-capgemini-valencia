@@ -227,7 +227,7 @@
 		*/
 		 // Apply formatter and set the formatted value of the first column.
 		var view = new google.visualization.DataView(dataAux);
-		view.setColumns([1,5,9,13,17,25,29]);
+		view.setColumns([0,5,9,13,17,25,29]);
 		
 		function detalle(id)
 			{				
