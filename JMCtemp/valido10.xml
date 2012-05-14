@@ -176,7 +176,17 @@
 				
 				
 			for(var i=0;i<8;i++){	
-				dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
+				
+				
+				if (col==1)
+				{
+				   dataAux.setCell(fila,col+4*i,"<a href=\"" + data.getValue(1+(fila+8*i) +"\" > " + data.getValue(1+(fila+8*i) + "</a>" ,col));
+				}
+				else {
+				     dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
+				}
+				
+				
 				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
 				
 			}
