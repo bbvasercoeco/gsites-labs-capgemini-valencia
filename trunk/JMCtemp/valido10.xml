@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-56
+57
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -195,7 +195,7 @@
 		
 		//formatter.format(dataAux,[0],[1,5,9,13,17,21,25,29]); 
 		//formatter.format(dataAux,[1],[1,5,9,13,17,21,25,29]);
-		formatter.format(dataAux,[1],[0]); 
+		formatter.format(dataAux,[1],[1]); 
 		formatter.format(dataAux,[4],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[5],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[8],[1,5,9,13,17,21,25,29]); 
