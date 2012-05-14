@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-33
+35
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -185,15 +185,16 @@
 	}
 		
 	
-		/*var view = new google.visualization.DataView(dataAux);
-		view.setColumns([1,5,9,13,17,21,25,29]);*/
+		var view = new google.visualization.DataView(dataAux);
+		chart.draw(view, options);
+		/*view.setColumns([1,5,9,13,17,21,25,29]);
 		// for(i=0;i<8;i++){
 		var view = new google.visualization.DataView(dataAux);
-		
+		var formatter1 = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" title="Ver detalle de {0}">{0}</a>');
 		
 		// }
 	
-		formatter.format(dataAux,[0],[1,5,9,13,17,21,25,29]); 
+		formatter1.format(dataAux,[0],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[1],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[5],[1,5,9,13,17,21,25,29]); 
 		formatter.format(dataAux,[9],[1,5,9,13,17,21,25,29]); 
@@ -206,9 +207,7 @@
 		 // Apply formatter and set the formatted value of the first column.
 		
 		view.setColumns([1,5,9,13,17,21,25,29]);
-		view.setColumns([0,4,8,12,16,20,24,28]);
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" title="Ver detalle de {0}">{1}</a>');
-		view.hideColumns([0,4,8,12,16,20,24,28]);
+		
 		function detalle(id)
 			{				
 				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
@@ -218,7 +217,7 @@
 		
 	    chart.draw(view, options);
 	}
-	console.debug('version 113');
+	console.debug('version 113');*/
 </script>
 ]]>
 </Content>
