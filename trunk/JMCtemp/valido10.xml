@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-35
+36
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -215,9 +215,9 @@
 			}
 		
 		
-	    chart.draw(view, options);
+	    chart.draw(view, options);*/
 	}
-	console.debug('version 113');*/
+	console.debug('version 113');
 </script>
 ]]>
 </Content>
