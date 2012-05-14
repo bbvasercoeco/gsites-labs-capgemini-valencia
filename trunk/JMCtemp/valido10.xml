@@ -180,7 +180,7 @@
 				
 				if (col==1)
 				{
-				var link = '<a href="' + data.getValue(1+(fila+8*i),col) +'"> ' + data.getValue(1+(fila+8*i),col) + '</a>' ;
+				var link = '<a href="' + data.getValue(1+(fila+8*i),col-1) +'"> ' + data.getValue(1+(fila+8*i),col) + '</a>' ;
 				
 				   dataAux.setCell(fila,col+4*i, link );
 				}
