@@ -82,11 +82,11 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-74
+75
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    console.debug('version 113');
+    
 	var gadgetHelper = null;
 	
 	var varListaColumnas = "";
@@ -176,38 +176,16 @@
 				
 				
 			for(var i=0;i<8;i++){	
-				
-				
-			//	if (col==1)
-				//{
-			//	var link = '<a href="' + data.getValue(1+(fila+8*i),col-1) +'"> ' + data.getValue(1+(fila+8*i),col) + '</a>' ;
-				
-				//   dataAux.setCell(fila,col+4*i, link );
-				//}
-				//else {
 				     dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+8*i),col));
-				//}
 				
-				
-				//console.debug('data.getValue(fila+8*i,col): '+data.getValue(fila+8*i,col));
 				
 			}
 		}
 			
 	}
 		
-	
-	/*	 var view = new google.visualization.DataView(dataAux);
-		view.setColumns([1,5,9,13,17,21,25,29]);*/
-	
-	// for(i=0;i<8;i++){
-	
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
+     	var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
 		
-		// }
-		
-		//formatter.format(dataAux,[0],[1,5,9,13,17,21,25,29]); 
-		//formatter.format(dataAux,[1],[1,5,9,13,17,21,25,29]);
 		formatter.format(dataAux,[1,0]); 
 		formatter.format(dataAux,[5,4]); 
 		formatter.format(dataAux,[9,8]); 
@@ -216,23 +194,8 @@
 		formatter.format(dataAux,[21,20]); 
 		formatter.format(dataAux,[25,24]); 
 		formatter.format(dataAux,[29,28]); 
-/*		
-	//formatter.format(dataAux,[4],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[5],[1,5,9,13,17,21,25,29]); 
-		//formatter.format(dataAux,[8],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[9],[1,5,9,13,17,21,25,29]); 
-		//formatter.format(dataAux,[12],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[13],[1,5,9,13,17,21,25,29]);
-		//formatter.format(dataAux,[16],[1,5,9,13,17,21,25,29]); 		
-		formatter.format(dataAux,[17],[1,5,9,13,17,21,25,29]); 
-		//formatter.format(dataAux,[20],[1,5,9,13,17,21,25,29]); 
-		//formatter.format(dataAux,[21],[1,5,9,13,17,21,25,29]); 
-		//formatter.format(dataAux,[24],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[25],[1,5,9,13,17,21,25,29]); 
-		//formatter.format(dataAux,[28],[1,5,9,13,17,21,25,29]); 
-		formatter.format(dataAux,[29],[1,5,9,13,17,21,25,29]); 
-		*/
-		 // Apply formatter and set the formatted value of the first column.
+
+		// Apply formatter and set the formatted value of the first column.
 		var view = new google.visualization.DataView(dataAux);
 		view.setColumns([1,5,9,13,17,25,29]);
 		
@@ -242,10 +205,9 @@
 				
 			}
 		
-		chart.draw(view, options);
-	    
+		chart.draw(view, options);	    
 	}
-	console.debug('version 113');
+	
 </script>
 ]]>
 </Content>
