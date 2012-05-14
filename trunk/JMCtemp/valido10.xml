@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-2
+4
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -174,7 +174,7 @@
 		}
 	}	
 	
-	for(var fila=0;fila<roundCount-1;fila++)
+	for(var fila=0;fila<roundCount;fila++)
 	{
 		for (var col=0; col<4; col++)
 		{	 
@@ -182,8 +182,8 @@
 				 dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
 				
 				
-			for(var i=0;i<roundCount-1;i++){	
-				     dataAux.setCell(fila,col+4*i,data.getValue((resto-1)+(fila+8*i),col));
+			for(var i=0;i<roundCount;i++){	
+				     dataAux.setCell(fila,col+4*i,data.getValue((resto)+(fila+8*i),col));
 				
 				
 			}
@@ -201,6 +201,7 @@
 		formatter.format(dataAux,[21,20]); 
 		formatter.format(dataAux,[25,24]); 
 		formatter.format(dataAux,[29,28]); 
+		formatter.format(dataAux,[33,32]); 
 
 		//Create DataView
 		var view = new google.visualization.DataView(dataAux);
