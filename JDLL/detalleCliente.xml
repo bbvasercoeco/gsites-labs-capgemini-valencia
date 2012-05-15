@@ -89,7 +89,7 @@
 		<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 		<h2>
-			v2 Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
+			v3 Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<hr>
 		</h2>			
 
@@ -129,7 +129,8 @@
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("ficha-");				
 				//var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
-				var querytosend = "select *  where A like 'IDGLOBAL0016'";
+				//var querytosend = "select *  where A like 'IDGLOBAL0016'";
+				var querytosend = "select max(B),F where A like 'IDGLOBAL0016' group by F";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 			}
