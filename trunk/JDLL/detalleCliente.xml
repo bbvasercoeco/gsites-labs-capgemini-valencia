@@ -200,7 +200,7 @@
 				{
 					for (var i=0;i<data.getNumberOfRows();i++)
 					{
-						paises += data.getValue(i,1) + " , ";
+						paises += data.getValue(i,1) + ", ";
 					}
 				}	
 				//document.getElementById('idPaises').innerHTML = data.getValue(0,1) + ", " +data.getValue(1,1);
