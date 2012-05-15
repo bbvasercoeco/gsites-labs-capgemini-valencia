@@ -93,20 +93,20 @@
 		
 		<div id="tablediv2"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
+		<div id="tablediv3"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
+
 		<h2>
-			v19 Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
+			v20 Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<hr>
 		</h2>			
 
 		<div id="detalleFicha">
 			<div id="imagenCliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 			<ul id="datosFicha">
-				<li>Código Cliente: <span id="idCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Producto: <br><ul id="listaproductos"><span id="idProducto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
-				<li>Servicio: <span id="idServicio"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Formato: <span id="idFormato"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Detalle: <span id="idDetalle"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Criticidad: <span id="idCriticidad"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Estado: <br><ul id="listaproductos"><span id="idEstado"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
 				<li>Países: <span id="idPaises"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Producto: <span id="idProducto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 			</ul>
 		</div>
 		
@@ -144,6 +144,10 @@
 				var querytosend2 = "select max(B),C,D,F where A like 'IDGLOBAL0016' group by C,D,F";
 				query2.setQuery(querytosend2);			  
 				query2.send(handleQueryResponse2);
+				
+				var querytosend3 = "select max(A), B ,J, N,O where A like 'IDGLOBAL0016' group  by B,J,N,O";
+				query3.setQuery(querytosend3);			  
+				query3.send(handleQueryResponse3);
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
@@ -273,6 +277,48 @@
 				chart.draw(view, options);
 				
 			}
+			
+			function handleQueryResponse3(response) 
+			{
+				if (!gadgetHelper.validateResponse(response)) { return; }
+			
+				data = response.getDataTable();		
+				/*
+				document.getElementById('idCliente').innerHTML = data.getValue(0,0);
+				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);
+				document.getElementById('idProducto').innerHTML = data.getValue(0,2);
+				document.getElementById('idServicio').innerHTML = data.getValue(0,3);				
+				document.getElementById('idDetalle').innerHTML = data.getValue(0,4);
+				document.getElementById('idPaises').innerHTML = data.getValue(0,5);
+				document.getElementById('idFormato').innerHTML = data.getValue(0,6);
+				
+				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,7) +'">';
+				*/
+				
+				var cssClassNames = {
+					'headerRow': 'header',
+					'tableRow': 'filaPar',
+					'oddTableRow': 'filaImpar',
+					'selectedTableRow': 'filaSeleccionada',
+					'hoverTableRow': 'filaHover',
+					'headerCell': '',
+					'tableCell': 'formateoCelda',
+					'rowNumberCell': ''
+				};
+				 
+				var chart = new google.visualization.Table(document.getElementById('tablediv3'));
+				var options = { 'page': 'enable', 'pageSize': 10, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				var view = new google.visualization.DataView(data);
+				//		productos += "<li>"+data.getValue(i,2) + " - " + data.getValue(i,1) + "</li><br/>";
+				
+				
+				//document.getElementById('idProducto').innerHTML = productos;
+				
+				chart.draw(view, options);
+				
+			}
+			
+			
 
 		</script>
 		]]>
