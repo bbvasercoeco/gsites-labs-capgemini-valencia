@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-19
+20
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -185,7 +185,7 @@
 			for(var i=0;i<8;i++){	
 			
 				//	try{
-						dataAux.setCell(fila,col+4*i,data.getValue((fila+((roundCount*i)-1)+(resto-1)),col));
+						dataAux.setCell(fila,col+4*i,data.getValue((fila+((8*i))+(resto)),col));
 				//}catch (err){
 					// alert("No data for index row "+i);
 				//}
