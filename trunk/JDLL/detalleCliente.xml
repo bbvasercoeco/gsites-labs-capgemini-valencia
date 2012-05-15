@@ -89,7 +89,7 @@
 		<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 		<h2>
-			v3 Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
+			v4 Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<hr>
 		</h2>			
 
@@ -162,7 +162,7 @@
 				if (!gadgetHelper.validateResponse(response)) { return; }
 			
 				data = response.getDataTable();		
-				
+				/*
 				document.getElementById('idCliente').innerHTML = data.getValue(0,0);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);
 				document.getElementById('idProducto').innerHTML = data.getValue(0,2);
@@ -172,6 +172,7 @@
 				document.getElementById('idFormato').innerHTML = data.getValue(0,6);
 				
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,7) +'">';
+				*/
 				
 var cssClassNames = {
 					'headerRow': 'header',
