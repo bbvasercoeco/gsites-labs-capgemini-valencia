@@ -89,7 +89,7 @@
 		<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 		<h2>
-			v9 Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
+			v10 Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<hr>
 		</h2>			
 
@@ -189,7 +189,8 @@
 				var options = { 'page': 'enable', 'pageSize': 10, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
-				var paises=""
+				var paises="";
+				console.debug('detalleCliente.xml data.lenght: ' + data.lenght);
 				for (var i=0;i<data.lenght;i++)
 				{
 					paises = data.getValue(i,1);
