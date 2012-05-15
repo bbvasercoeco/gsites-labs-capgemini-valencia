@@ -198,7 +198,7 @@
 				var view = new google.visualization.DataView(data);
 				
 				var paises="";
-				console.debug('detalleCliente.xml data.getNumberOfRows(): ' + data.getNumberOfRows());
+				console.debug('data.getNumberOfRows(): ' + data.getNumberOfRows());
 				
 				if (data.getNumberOfRows() == 1 )
 				{
@@ -250,8 +250,8 @@
 				var options = { 'page': 'enable', 'pageSize': 10, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
-				var paises="";
-				console.debug('detalleCliente.xml data.getNumberOfRows(): ' + data.getNumberOfRows());
+				var productos="";
+				console.debug(' data.getNumberOfRows(): ' + data.getNumberOfRows());
 				
 				if (data.getNumberOfRows() == 1 )
 				{
@@ -261,7 +261,7 @@
 				{
 					for (var i=0;i<data.getNumberOfRows();i++)
 					{
-						productos += data.getValue(i,1) + ", ";
+						productos += data.getValue(i,2) + " - " + data.getValue(i,1) "<br/>";
 					}
 				}	
 				
