@@ -189,7 +189,7 @@ var cssClassNames = {
 				var options = { 'page': 'enable', 'pageSize': 10, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 
-				document.getElementById('idPaises').innerHTML = data.getValue(0,1);
+				document.getElementById('idPaises').innerHTML = data.getValue(0,1) + "," +data.getValue(0,2);
 				
 				chart.draw(view, options);
 				
