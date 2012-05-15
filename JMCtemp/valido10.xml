@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-9
+10
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -202,13 +202,13 @@
      	var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
 		
 		formatter.format(dataAux,[1],[0,4,8,12,16,20,24,28]); 
-		formatter.format(dataAux,[5],[0,4,8,12,16,20,24,28]]); 
-		formatter.format(dataAux,[9],[0,4,8,12,16,20,24,28]]); 
-		formatter.format(dataAux,[13],[0,4,8,12,16,20,24,28]]); 
-		formatter.format(dataAux,[17],[0,4,8,12,16,20,24,28]]); 
-		formatter.format(dataAux,[21],[0,4,8,12,16,20,24,28]]); 
-		formatter.format(dataAux,[25],[0,4,8,12,16,20,24,28]]); 
-		formatter.format(dataAux,[29],[0,4,8,12,16,20,24,28]]); 
+		formatter.format(dataAux,[5],[0,4,8,12,16,20,24,28]); 
+		formatter.format(dataAux,[9],[0,4,8,12,16,20,24,28]); 
+		formatter.format(dataAux,[13],[0,4,8,12,16,20,24,28]); 
+		formatter.format(dataAux,[17],[0,4,8,12,16,20,24,28]); 
+		formatter.format(dataAux,[21],[0,4,8,12,16,20,24,28]); 
+		formatter.format(dataAux,[25],[0,4,8,12,16,20,24,28]); 
+		formatter.format(dataAux,[29],[0,4,8,12,16,20,24,28]); 
 		
 
 		//Create DataView
