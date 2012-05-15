@@ -87,6 +87,10 @@
 			}
 		</style>
 		
+		
+		
+		<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+
 		<h2>
 			v0 - Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<hr>
@@ -167,14 +171,28 @@
 				document.getElementById('idServicio').innerHTML = data.getValue(0,3);				
 				document.getElementById('idDetalle').innerHTML = data.getValue(0,4);*/
 				
-				
-				document.getElementById('idPaises').innerHTML = data.getValue(0,1);
-				
+				//document.getElementById('idPaises').innerHTML = data.getValue(0,0);
 				
 				//document.getElementById('idFormato').innerHTML = data.getValue(0,6);
 				
 				//document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,7) +'">';
-						
+				
+				var cssClassNames = {
+					'headerRow': 'header',
+					'tableRow': 'filaPar',
+					'oddTableRow': 'filaImpar',
+					'selectedTableRow': 'filaSeleccionada',
+					'hoverTableRow': 'filaHover',
+					'headerCell': '',
+					'tableCell': 'formateoCelda',
+					'rowNumberCell': ''
+				};
+				 
+				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
+				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				var view = new google.visualization.DataView(data);
+				
+				chart.draw(view, options);						
 			}
 
 		</script>
