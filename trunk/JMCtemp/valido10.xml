@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-30
+31
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -209,13 +209,13 @@
 		formatter.format(dataAux,[21,20]); 
 		formatter.format(dataAux,[25,24]); 
 		formatter.format(dataAux,[29,28]); 
-		formatter.format(dataAux,[32,31]); 
+		formatter.format(dataAux,[31,30]); 
 		
 
 		//Create DataView
 		var view = new google.visualization.DataView(dataAux);
 		//Select the Columns to DataView
-		view.setColumns([1,5,9,13,17,25,29,32]);
+		view.setColumns([1,5,9,13,17,25,29,31]);
 		
 		function detalle(id)
 			{				
