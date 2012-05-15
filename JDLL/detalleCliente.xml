@@ -88,7 +88,7 @@
 				color: #666666;
 			}
 			ul#listaproductos {
-				margin: 50px;
+				margin-left: 250px;
 			}
 			
 		</style>
@@ -251,7 +251,7 @@
 				{
 					for (var i=0;i<data.getNumberOfRows();i++)
 					{
-						productos += "<li>"+data.getValue(i,2) + " - " + data.getValue(i,1) + "</li><br/>";
+						productos += "<li>"+data.getValue(i,2) + " - " + data.getValue(i,1) + "</li>";
 					}
 				}	
 				
@@ -282,9 +282,7 @@
 				var chart = new google.visualization.Table(document.getElementById('tablediv3'));
 				var options = { 'page': 'enable', 'pageSize': 10, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
-				//		productos += "<li>"+data.getValue(i,2) + " - " + data.getValue(i,1) + "</li><br/>";
 			
-				
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);
 				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,3);
