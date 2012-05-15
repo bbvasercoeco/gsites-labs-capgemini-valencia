@@ -185,7 +185,7 @@
 			for(var i=0;i<8;i++){	
 			
 				//	try{
-						dataAux.setCell(fila,col+4*i,data.getValue((fila+((roundCount*i)-1)+resto),col));
+						dataAux.setCell(fila,col+4*i,data.getValue((fila+((roundCount*i)-1)+(resto-1)),col));
 				//}catch (err){
 					// alert("No data for index row "+i);
 				//}
