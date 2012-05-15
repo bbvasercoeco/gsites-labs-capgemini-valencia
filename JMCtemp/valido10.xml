@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-37
+28
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -182,15 +182,15 @@
 				 dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
 				
 				
-			//for(var i=0;i<roundCount;i++){	
+			for(var i=0;i<roundCount;i++){	
 			
 					try{
-						dataAux.setCell(fila,col+4*i,data.getValue((fila+(8*i)+(resto-1)),col));
+						dataAux.setCell(fila,col+4*i,data.getValue((fila+(roundCount*i)+(resto-1)),col));
 				}catch (err){
 					break;
 				}
 				
-			//}
+			}
 		}
 			
 	}
