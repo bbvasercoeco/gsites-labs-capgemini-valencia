@@ -92,7 +92,7 @@
 		<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 		<h2>
-			v0 - Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
+			v1 - Ficha Cliente <span id="nombreCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<hr>
 		</h2>			
 
@@ -131,8 +131,8 @@
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("ficha-");				
-				//var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
-				var querytosend = "select max(B),F where A like 'IDGLOBAL0016' group by F";
+				var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
+				//var querytosend = "select max(B),F where A like 'IDGLOBAL0016' group by F";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 			}
