@@ -78,13 +78,16 @@
 				white-space: normal;
 				word-spacing: 0;
 			}
-			ul#datosFicha li span {
+			
+			ul#datosFicha li span,
+			ul#listaproductos li span {
 				font-family: trebuchet ms,sans-serif;
 				font-size: small;
 				line-height: 17px;
 				text-align: justify;
 				color: #666666;
 			}
+			
 		</style>
 		<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 		
@@ -99,7 +102,7 @@
 			<div id="imagenCliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 			<ul id="datosFicha">
 				<li>Código Cliente: <span id="idCliente"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Producto: <br><ul><span id="idProducto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
+				<li>Producto: <br><ul id="listaproductos"><span id="idProducto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
 				<li>Servicio: <span id="idServicio"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Formato: <span id="idFormato"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Detalle: <span id="idDetalle"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
