@@ -176,7 +176,7 @@
 	
 	for(var fila=0;fila<roundCount;fila++)
 	{
-		for (var col=0; col<4; col++)
+		for (var col=0; col<8; col++)
 		{	 
 				
 				 dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
@@ -185,7 +185,7 @@
 			//for(var i=0;i<roundCount;i++){	
 			
 					try{
-						dataAux.setCell(fila,col+4*i,data.getValue((fila+(roundCount*i)+(resto-1)),col));
+						dataAux.setCell(fila,col,data.getValue((fila+(roundCount*i)+(resto-1)),col));
 				}catch (err){
 					break;
 				}
