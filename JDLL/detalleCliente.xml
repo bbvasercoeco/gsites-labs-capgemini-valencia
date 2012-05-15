@@ -80,12 +80,15 @@
 			}
 			
 			ul#datosFicha li span,
-			ul#datosFicha li ul#listaproductos li span {
+			ul#listaproductos span li  {
 				font-family: trebuchet ms,sans-serif;
 				font-size: small;
 				line-height: 17px;
 				text-align: justify;
 				color: #666666;
+			}
+			ul#listaproductos {
+				margin: 50px;
 			}
 			
 		</style>
