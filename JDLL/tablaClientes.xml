@@ -84,6 +84,8 @@
 
 		<script type="text/javascript"> 
 			
+			console.debug('tablaClientes.xml v1');
+			
 			var gadgetHelper = null;
 			
 			var varListaColumnas = "";
@@ -195,8 +197,6 @@
 				
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('version B 4');
-				
 				if (_Col!="")
 				{
 					var columnasAmostrar = [];					
@@ -248,7 +248,7 @@
 					}
 				
 				
-				
+				view.setColumnLabel(0,"");
 				chart.draw(view, options);
 			}
 
