@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="menu portal BBVA - Capgemini Valencia" />
+<ModulePrefs title="menu portal BBVA" />
 <Content type="html"><![CDATA[
 <style> 
 #cabeceramenu {
-	width: 960px;
-	height: 65px;
+	height: 38px;
+	position:relative;
 	background-image:url(https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/fondomenu.png);	
-	margin:0;
-	padding: 0;
+	margin-top:20px;
 	background-repeat: no-repeat;
 }
 #button {  
@@ -112,12 +111,14 @@
 <div id="cabeceramenu">
 	<ul id="button">
 		<li><a href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home" class="first" target="_parent" title="home"><img src="https://test-mlp.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
-		<li><a id="gadgets" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/gadgets-finalizados" class="barralateral" target="_parent">Gadgets</a></li>
-		<li><a id="gas" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/gas" class="barralateral" target="_parent">GAS</a></li>
-		<li><a id="labs" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs" class="barralateral" target="_parent">Labs</a></li>  
-		<li><a id="noticias" href="#" class="barralateral desactivado" >Noticias</a></li>
-		<li><a id="tutoriales" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/mini-tutoriales" class="barralateral" target="_parent">Mini<br/>Tutoriales</a></li>
-		<li><a id="enlaces" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/enlaces" target="_parent" class="barralateral">Enlaces<br>de Interes</a></li> 
+		<li><a id="gadgets" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/gadgets-finalizados" class="barralateral" target="_parent">HOME</a></li>
+		<li><a id="gas" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/gas" class="barralateral" target="_parent">CONTACT</a></li>
+		<li><a id="labs" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs" class="barralateral" target="_parent">CONTACTS</a></li>  
+		<li><a id="noticias" href="#" class="barralateral desactivado" >SERVICES</a></li>
+		<li><a id="tutoriales" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/mini-tutoriales" class="barralateral" target="_parent">Mini<br/>PRODUCTS</a></li>
+		<li><a id="enlaces" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/enlaces" target="_parent" class="barralateral">WHERE TO FIND US</a></li> 
+		<li><a id="enlaces" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/enlaces" target="_parent" class="barralateral">SHOP</a></li>
+		<li><a id="enlaces" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/enlaces" target="_parent" class="barralateral">PRIVACY</a></li>
 	</ul>  
 </div>
 <script type="text/javascript">
