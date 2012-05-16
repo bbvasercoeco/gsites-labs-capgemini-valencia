@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-49
+50
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -180,7 +180,10 @@
 			for(var i=0;i<roundCount;i++){	
 			
 					try{
+						if(i=0){dataAux.setColumnLabel(col,"");
+						}else{
 						dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+(roundCount*i)),col));
+						}
 				}catch (err){
 					break;
 				}
