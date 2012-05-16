@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-39
+40
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -213,7 +213,7 @@
 		
 
 		//Create DataView
-		var view = new google.visualization.DataView(dataAux,options);
+		var view = new google.visualization.DataView(dataAux);
 		//Select the Columns to DataView
 		view.setColumns([1,5,9,13,17,21,25,29]);
 		
@@ -223,7 +223,7 @@
 				
 			}
 		
-		chart.draw(view,options);	  
+		chart.draw(view,{ 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};);	  
 	}
 	
 </script>
