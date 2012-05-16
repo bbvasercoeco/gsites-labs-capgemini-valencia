@@ -8,7 +8,7 @@
 </ModulePrefs>
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
-
+<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 
 <Content type="html"><![CDATA[
 
@@ -96,12 +96,12 @@
 	
 	var prefs = new _IG_Prefs(); // User preferences
 	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
-	var	_Col = prefs.getInt("_Col");
-	var	_Row = prefs.getInt("_Row");
+	// var	_Col = prefs.getInt("_Col");
+	// var	_Row = prefs.getInt("_Row");
 	var urlTable = prefs.getString("_table_query_url");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
-	var varListaColumnas = prefs.getString("VarListaColumnas");
-	var varListaFilas = prefs.getString("VarListaFilas");
+	// var varListaColumnas = prefs.getString("VarListaColumnas");
+	// var varListaFilas = prefs.getString("VarListaFilas");
 	
 	
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
@@ -157,7 +157,7 @@
          
         var chart = new google.visualization.Table(document.getElementById('tablediv'));		
 
-        var options = { 'page': 'enable',  'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+        var options = { 'page': 'enable','pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		
 		var dataAux = new google.visualization.DataTable();
 		
