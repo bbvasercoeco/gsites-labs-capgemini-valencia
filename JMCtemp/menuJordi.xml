@@ -46,7 +46,7 @@ way to fit your requirements.
 
 
 
-#dropline {position:relative; font-size:12px; height:38px; background:url(images/back.gif);}
+#dropline {position:relative; font-size:12px; height:38px; background:url(https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/fondomenu.png);}
 
 
 
