@@ -11,9 +11,10 @@
 	background-repeat: no-repeat;
 }
 #button {  
-	padding: 5px 0 0 5px;
-	height:60px;
-	margin: 0 0 0 0px;
+	font-size:12px;
+	height:38px;
+	position:relative;
+	background-image: url("https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/barralateralmenu.png");
 }  
 #button li {  
 	display: inline; 
