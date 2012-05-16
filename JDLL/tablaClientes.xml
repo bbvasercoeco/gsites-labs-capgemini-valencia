@@ -86,8 +86,7 @@
 			
 			console.debug('tablaClientes.xml v1');
 			
-			var gadgetHelper = null;
-			
+			var gadgetHelper = null;			
 			var varListaColumnas = "";
 			var	_Col = ""; 
 			var	_Row = "";
@@ -115,7 +114,7 @@
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
-				//var query = gadgetHelper.createQueryFromPrefs(prefs);			  
+				//var query = gadgetHelper.createQueryFromPrefs(prefs);		  
 				
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);		
@@ -130,7 +129,7 @@
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
-			function indiceCadena (parametros, cadena)
+			function indiceCadena(parametros, cadena)
 			{		
 				console.debug('indiceCadena <-- ' +' parametros: '+ parametros + ' cadena: '+ cadena);
 				for(var i=0; i<parametros.length; i++)
@@ -245,15 +244,11 @@
 						{   
 							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 						}
-					}
+					}				
 				
-				
-				view.setColumnLabel(0,"");
+				data.setColumnLabel(0,"");
 				chart.draw(view, options);
 			}
-
-			
-			
 
 		</script>
 		]]>
