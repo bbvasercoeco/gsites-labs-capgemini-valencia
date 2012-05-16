@@ -1,158 +1,500 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Module>
-<ModulePrefs title="menu portal BBVA" />
-<Content type="html"><![CDATA[
-<style> 
-#cabeceramenu {
-	height: 38px;
-	position:relative;
-	background-image:url(https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/fondomenu.png);	
-	margin-top:20px;
-	background-repeat: no-repeat;
-}
-#button {  
-	font-size:12px;
-	height:38px;
-	position:relative;
-	background-image: url("https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/barralateralmenu.png");
-}  
-#button li {  
-	display: inline; 
-	text-align: center; 
-}  
-#button li a {  
-	font-family: Arial;  
-	font-size:15px;  
-	text-decoration: none;  
-	float:left;  
-	padding: 19px 0 0 0;   
-	color: #fff;  
-	width: 142px;
-	height: 34px;
-} 
-#button li a.barralateral {  
-	background-image: url("https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/barralateralmenu.png");
-    background-position: right 0;
-    background-repeat: no-repeat;
-} 
-#button li a.first {  
-	font-family: Arial;  
-	font-size:15px;  
-	text-decoration: none;  
-	float:left;  
-	padding: 5px 0 0 0;     
-	color: #fff;  
-	width: 60px;
-	height:48px;
-}  
 
-#button li a#gas {  
-	font-family: Arial;  
-	font-size:15px;  
-	text-decoration: none;  
-	float:left;  
-	padding: 19px 0 0 0;     
-	color: #fff;  
-	width: 142px;
-	height:34px;
-}
-#button li a#noticias,
-#button li a#gadgets {  
-	font-family: Arial;  
-	font-size:15px;  
-	text-decoration: none;  
-	float:left;  
-	padding: 19px 0 0 0;     
-	color: #fff;  
-	width: 142px;
-	height:34px;
-}
-#button li a#labs {  
-	font-family: Arial;  
-	font-size:15px;  
-	text-decoration: none;  
-	float:left;  
-	padding: 19px 0 0 0;     
-	color: #fff;  
-	width: 142px;
-	height:34px;
-}
-#button li a#tutoriales {  
-	font-family: Arial;  
-	font-size:15px;  
-	text-decoration: none;  
-	float:left;  
-	padding: 9px 0 0 0;     
-	color: #fff;  
-	width: 142px;
-	height:44px;
-}
-#button li a#enlaces {  
-	font-family: Arial;  
-	font-size:15px;  
-	text-decoration: none;  
-	float:left;  
-	padding: 9px 0 0 0;     
-	color: #fff;  
-	width: 142px;
-	height:44px;
-}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-#button li a:hover {  
-	background-color: #2586d7;  
-}  
-#button li a:active {  
-	background-color: #2586d7;  
-}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
 
-#cabeceramenu #button li a.desactivado {
-	color: #999;
-}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title> stu nicholls dot com | menu -  jQuery dropline menu with current selection #7 </title>
+
+<meta name="Author" content="Stu Nicholls">
+
+<!--
+
+<link rel="stylesheet" media="all" type="text/css" href="jquery-dropline-7_files/stunicholls.css">
+
+-->
+
+<style type="text/css">
+
+/* ================================================================ 
+
+This copyright notice must be kept untouched in the stylesheet at 
+
+all times.
+
+
+
+The original version of this stylesheet and the associated (x)html
+
+is available at http://www.stunicholls.com/menu/jquery-dropline-7.html
+
+Copyright (c) 2005-2008 Stu Nicholls. All rights reserved.
+
+This stylesheet and the associated (x)html may be modified in any 
+
+way to fit your requirements.
+
+=================================================================== */
+
+
+
+#menu {margin-top:20px; position:relative; height:38px;}
+
+
+
+
+
+#dropline {position:relative; font-size:12px; height:38px; background:url(images/back.gif);}
+
+
+
+#dropline, #dropline ul {padding:0; margin:0; list-style:none; width:700px;}
+
+
+
+#dropline table {border-collapse:collapse; margin:-1px -10px; 0 0; padding:0; width:0; height:0; font-size:12px;}
+
+#dropline li {float:left; height:38px;}
+
+#dropline li a {float:left; display:block; height:38px; line-height:38px; padding:0 20px 0 10px; font-family:arial, sans-serif; font-size:11px; color:#000; text-decoration:none; font-weight:bold;}
+
+#dropline li ul li a {color:#666;}
+
+
+
+#dropline li a.down {background:url(images/down.gif) no-repeat right center;}
+
+
+
+#dropline li ul li a.down {font-size:14px; font-weight:bold;}
+
+
+
+#dropline li ul {position:absolute; top:38px; left:-9999px; z-index:10; background:url(images/fade.png);}
+
+
+
+#dropline li ul.floatRight li {float:right;}
+
+
+
 </style>
-<div id="cabeceramenu">
-	<ul id="button">
-		<li><a href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home" class="first" target="_parent" title="home"><img src="https://test-mlp.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
-		<li><a id="gadgets" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/gadgets-finalizados" class="barralateral" target="_parent">HOME</a></li>
-		<li><a id="gas" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/gas" class="barralateral" target="_parent">CONTACT</a></li>
-		<li><a id="labs" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs" class="barralateral" target="_parent">CONTACTS</a></li>  
-		<li><a id="noticias" href="#" class="barralateral desactivado" >SERVICES</a></li>
-		<li><a id="tutoriales" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/mini-tutoriales" class="barralateral" target="_parent">Mini<br/>PRODUCTS</a></li>
-		<li><a id="enlaces" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/enlaces" target="_parent" class="barralateral">WHERE TO FIND US</a></li> 
-		<li><a id="enlaces" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/enlaces" target="_parent" class="barralateral">SHOP</a></li>
-		<li><a id="enlaces" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/enlaces" target="_parent" class="barralateral">PRIVACY</a></li>
-	</ul>  
-</div>
-<script type="text/javascript">
-gadgets.util.registerOnLoadHandler(datospagina);
-function datospagina()
-{
-	var parametros = gadgets.util.getUrlParameters()["parent"];	
-	if (parametros.indexOf("gadgets")!=-1)
-	{
-		document.getElementById("gadgets").style.backgroundColor = "#2586D7";
-	}
-	if (parametros.indexOf("tutoriales")!=-1)
-	{
-		document.getElementById("tutoriales").style.backgroundColor = "#2586d7";
-	}
-	if (parametros.indexOf("gas")!=-1)
-	{
-		document.getElementById("gas").style.backgroundColor = "#2586D7";
-	}
-	if (parametros.indexOf("noticias")!=-1)
-	{
-		document.getElementById("noticias").style.backgroundColor = "#2586D7";
-	}
-	if (parametros.indexOf("enlaces")!=-1)
-	{
-		document.getElementById("enlaces").style.backgroundColor = "#2586D7";
-	}
-	if (parametros.indexOf("/labs")!=-1)
-	{
-		document.getElementById("labs").style.backgroundColor = "#2586d7";
-	}
 
-}
+
+
+
+
+
+
+<script src="jquery-dropline-7_files/jquery-1.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+/* ================================================================ 
+
+This copyright notice must be untouched at all times.
+
+Copyright (c) 2008 Stu Nicholls - stunicholls.com - all rights reserved.
+
+=================================================================== */
+
+/* <![CDATA[ */
+
+$(document).ready(function()
+
+{
+
+	$("#dropline li.current").children("ul").css("left", "0px").show();
+
+	
+
+	$("#dropline li.current").children(":first-child").css("color", "#c00");
+
+
+
+
+
+	$("#dropline li").hover(function()
+
+	{
+
+		if(this.className.indexOf("current") == -1)  
+
+		{
+
+			getCurrent = $(this).parent().children("li.current:eq(0)");
+
+			if(this.className.indexOf("top") != -1)  
+
+			{
+
+				$(this).children("a:eq(0)").css("color","#069");
+
+			}
+
+			else 
+
+			{
+
+				$(this).children("a:eq(0)").css("color","#000");
+
+			}
+
+			if (getCurrent = 1 ) 
+
+			{
+
+				$(this).parent().children("li.current:eq(0)").children("ul").hide();
+
+			}
+
+			$(this).children("ul:eq(0)").css("left", "0px").show();
+
+		}
+
+	},function()
+
+		{
+
+			if(this.className.indexOf("current") == -1)  
+
+			{
+
+				getCurrent = $(this).parent().children("li.current:eq(0)");
+
+				if(this.className.indexOf("top") != -1) 
+
+				{
+
+					$(this).children("a:eq(0)").css("color","#000");
+
+				}
+
+				else 
+
+				{
+
+					$(this).children("a:eq(0)").css("color","#666");
+
+				}
+
+				if (getCurrent = 1 ) 
+
+				{
+
+					$(this).parent().children("li.current:eq(0)").children("ul").show();;
+
+				}
+
+				$(this).children("ul:eq(0)").css("left", "-99999px").hide();
+
+			}
+
+		}
+
+	);
+
+});
+
+/* ]]> */
+
 </script>
-]]></Content>
-</Module>
+
+
+
+</head>
+
+
+
+<body id="www-stunicholls-com">
+
+<div id="wrapper">
+
+
+
+<div id="content">
+
+
+
+
+
+<div id="menu">
+
+<ul id="dropline">
+
+	<li class="top"><a style="color: rgb(0, 0, 0);" href="#url">HOME</a></li>
+
+	<li class="top"><a style="color: rgb(0, 0, 0);" class="down" href="#url">CONTACT</a>
+
+		<ul style="left: -99999px; display: none;" class="sub">
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Email</a></li>
+
+			<li><a href="#url">Letter</a></li>
+
+			<li><a href="#url">Telephone</a></li>
+
+			<li><a href="#url">Fax</a></li>
+
+		</ul>
+
+	</li>
+
+	<li class="top"><a style="color: rgb(0, 0, 0);" class="down" href="#url">CONTACTS</a>
+
+		<ul style="left: -99999px; display: none;" class="sub">
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Support</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" class="down" href="#url">Sales</a>
+
+				<ul style="left: -99999px; display: none;" class="sub">
+
+					<li><a href="#url">USA</a></li>
+
+					<li><a href="#url">Canadian</a></li>
+
+					<li><a href="#url">South American</a></li>
+
+					<li><a class="down" href="#url">European</a>
+
+						<ul class="sub">
+
+							<li><a class="down" href="#url">British</a>
+
+								<ul class="sub">
+
+									<li><a href="#url">London</a></li>
+
+									<li><a href="#url">Liverpool</a></li>
+
+									<li><a href="#url">Glasgow</a></li>
+
+									<li><a class="down" href="#url">Bristol</a>
+
+										<ul class="sub">
+
+											<li><a href="#url">Redland</a></li>
+
+											<li><a href="#url">Hanham</a></li>
+
+											<li><a href="#url">Eastville</a></li>
+
+										</ul>
+
+									</li>
+
+									<li><a href="#url">Cardiff</a></li>
+
+									<li><a href="#url">Belfast</a></li>
+
+								</ul>
+
+							</li>
+
+							<li><a href="#url">French</a></li>
+
+							<li><a href="#url">German</a></li>
+
+							<li><a href="#url">Spanish</a></li>
+
+						</ul>
+
+					</li>
+
+					<li><a href="#url">Australian</a></li>
+
+					<li><a href="#url">Asian</a></li>
+
+				</ul>
+
+			</li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Buying</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" class="down" href="#url">Photographers</a>
+
+				<ul style="left: -99999px; display: none;" class="sub">
+
+					<li><a href="#url">Studio</a></li>
+
+					<li><a href="#url">Pets &amp; Children</a></li>
+
+					<li><a class="down" href="#url">Outdoor</a>
+
+						<ul class="sub">
+
+							<li><a href="#url">Landscape</a></li>
+
+							<li><a href="#url">Architecture</a></li>
+
+							<li><a href="#url">Seascape</a></li>
+
+							<li><a href="#url">Wildlife</a></li>
+
+						</ul>
+
+					</li>
+
+					<li><a href="#url">Wedding &amp; Special Occasions</a></li>
+
+				</ul>
+
+			</li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Stockist</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">General</a></li>
+
+		</ul>
+
+	</li>
+
+	<li class="top"><a style="color: rgb(0, 0, 0);" class="down" href="#url">SERVICES</a>
+
+		<ul style="left: -99999px; display: none;" class="sub">
+
+			<li><a href="#url">Printing</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Photo Framing</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Retouching</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Archiving</a></li>
+
+		</ul>
+
+	</li>
+
+	<!--<li class="top current"><a style="color: rgb(204, 0, 0);" class="down" href="#url">PRODUCTS</a>-->
+
+	<li class="top"><a style="color: rgb(204, 0, 0);" class="down" href="#url">PRODUCTS</a>
+
+		<ul style="left: 0px; display: block;" class="sub">
+
+			<li><a style="color: rgb(102, 102, 102);" class="down" href="#url">Cameras</a>
+
+				<ul style="left: -99999px; display: none;" class="sub">
+
+					<li><a style="color: rgb(102, 102, 102);" href="#url">Nikon</a></li>
+
+					<li><a style="color: rgb(102, 102, 102);" href="#url">Minolta</a></li>
+
+					<li><a style="color: rgb(102, 102, 102);" href="#url">Pentax</a></li>
+
+					<li><a style="color: rgb(102, 102, 102);" href="#url">Canon</a></li>
+
+					<li><a href="#url">Panasonic</a></li>
+
+					<li><a href="#url">Kodak</a></li>
+
+				</ul>
+
+			</li>
+
+			<!--<li class="current"><a style="color: rgb(204, 0, 0);" class="down" href="#url">Lenses</a>-->
+
+			<li ><a style="color: rgb(204, 0, 0);" class="down" href="#url">Lenses</a>
+
+				<ul style="left: 0px; display: block;" class="sub">
+
+					<li><a style="color: rgb(102, 102, 102);" href="#url">Wide Angle</a></li>
+
+					<li><a style="color: rgb(102, 102, 102);" href="#url">Standard</a></li>
+
+					<li><a style="color: rgb(102, 102, 102);" href="#url">Telephoto</a></li>
+
+					<li class="current"><a style="color: rgb(204, 0, 0);" class="down" href="#url">Zoom</a>
+
+						<ul style="left: 0px; display: block;" class="sub">
+
+							<li><a style="color: rgb(102, 102, 102);" href="#url">35mm to 125mm</a></li>
+
+							<li class="current"><a style="color: rgb(204, 0, 0);" href="#url">50mm to 250mm</a></li>
+
+							<li><a style="color: rgb(102, 102, 102);" href="#url">125mm to 500mm</a></li>
+
+						</ul>
+
+					</li>
+
+					<li><a style="color: rgb(102, 102, 102);" href="#url">Mirror</a></li>
+
+					<li><a style="color: rgb(102, 102, 102);" class="down" href="#url">Non standard</a>
+
+						<ul style="left: -99999px; display: none;" class="sub">
+
+							<li><a href="#url">Bayonet mount</a></li>
+
+							<li><a style="color: rgb(102, 102, 102);" href="#url">Screw mount</a></li>
+
+						</ul>
+
+					</li>
+
+				</ul>
+
+			</li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Flash Guns</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Tripods</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Filters</a></li>
+
+		</ul>
+
+	</li>
+
+	<li class="top"><a style="color: rgb(0, 0, 0);" class="down" href="#url">WHERE TO FIND US</a>
+
+		<ul style="left: -99999px; display: none;" class="sub floatRight">
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Travelling by car or rail</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Using public transport</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Our place on the map</a></li>
+
+		</ul>
+
+	</li>
+
+	<li class="top"><a style="color: rgb(0, 0, 0);" class="down" href="#url">SHOP</a>
+
+		<ul style="left: -99999px; display: none;" class="sub floatRight">
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Online</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Catalogue</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="#url">Mail Order</a></li>
+
+		</ul>
+
+	</li>
+
+	<li class="top"><a style="color: rgb(0, 0, 0);" href="#url" id="privacy">PRIVACY</a></li>
+
+</ul>
+
+</div>
+
+<img src="jquery-dropline-7_files/room.jpg" alt="">
+
+
+
+
+
+
+
+
+
+</div> <!-- end of content -->
+
+
+
+</body></html>
