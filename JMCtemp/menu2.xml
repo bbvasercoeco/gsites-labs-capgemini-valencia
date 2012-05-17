@@ -290,7 +290,7 @@ $(document).ready(function()
 
 			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/archivador">Resumen Ejecutivo Implementaciones 2012</a></li>
 
-			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-seguimiento-de-clientes">Resumen Ejecutivo Seguimiento de Clientes</a></li>
+			<li><a style="color: rgb(102, 102, 102);margin-left:10px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-seguimiento-de-clientes">Resumen Ejecutivo Seguimiento de Clientes</a></li>
 
 			
 
