@@ -109,7 +109,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 3');
+			console.debug('detalleProyecto.xml version 4');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -130,6 +130,7 @@
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("detalle-proyecto-");				
+				console.debug('detalleProyecto.xml idCliquery: '+ idCliquery);
 				//var querytosend = "select *  where K like '" + idCliquery.toUpperCase() + "'";
 				var querytosend = "select *  where K like 'PROY0001' ";
 				query.setQuery(querytosend);			  
@@ -155,7 +156,7 @@
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
 				var indexFicha = indiceCadena(arrayParametros,param);		
 				var arrayidCliente = arrayParametros[indexFicha].split("-");		
-				return arrayidCliente[1];		
+				return arrayidCliente[2];		
 			}
 			
 			function handleQueryResponse(response) 
@@ -167,7 +168,7 @@
 			
 				data = response.getDataTable();		
 								
-				document.getElementById('codigoProyectoTitulo').innerHTML = data.getValue(0,10);
+				document.getElementById('codigoProyectoTitulo').innerHTML = data.getValue(0,1);
 				document.getElementById('codigoProyecto').innerHTML = data.getFormattedValue(0,10);
 				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
