@@ -249,7 +249,7 @@ $(document).ready(function()
 
 <ul id="dropline">
 
-	<li class="home"><a style="color:#fff;width:20px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" onclick="mark"></a></li>
+	<li class="home"><a style="color:#fff;width:0px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" onclick="mark"></a></li>
 
 	<li class="top"><a style="color:#fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients">Onboarding Clientes</a>
 
@@ -300,7 +300,7 @@ $(document).ready(function()
 
 	<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia">Metodología</a>
 
-		<ul style="left:-99999px; display: none;" class="sub">
+		<ul style="left:-99999px; display: none;" class="sub floatRight">
 
 			<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/plantillas-peticiones">Plantillas Peticiones</a></li>
 			<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/escenarios-de-implementacion">Escenarios de implementación</a></li>
