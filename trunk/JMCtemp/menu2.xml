@@ -257,12 +257,12 @@ $(document).ready(function()
 
 			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/cuestionarios-ventas">Cuestionarios Ventas</a></li>
 
-			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-servicios-visualizacion">Catálogo Conexiones H2H</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-servicios-visualizacion">Catálogo Conexiones H2H</a></li>
 
-			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/guias-implementacion-clientes">Guías Implementación de Clientes</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/guias-implementacion-clientes">Guías Implementación de Clientes</a></li>
 
-			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/plantillas-peticiones">Plantillas de peticiones</a></li>
-			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-de-servicios">Catálogo de Servicios</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/plantillas-peticiones">Plantillas de peticiones</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-de-servicios">Catálogo de Servicios</a></li>
 
 		</ul>
 
