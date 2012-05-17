@@ -581,8 +581,39 @@ $(document).ready(function()
 			document.getElementById("title-crumbs").innerHTML = s;    
 		}
 	</script>
+// Elemento de menú ---> set visited
+<script type="text/javascript">
+gadgets.util.registerOnLoadHandler(datospagina);
+function datospagina()
+{
+	var parametros = gadgets.util.getUrlParameters()["parent"];	
+	if (parametros.indexOf("gadgets")!=-1)
+	{
+		document.getElementById("gadgets").style.color = "#999";
+	}
+	if (parametros.indexOf("tutoriales")!=-1)
+	{
+		document.getElementById("tutoriales").style.color = "#999";
+	}
+	if (parametros.indexOf("gas")!=-1)
+	{
+		document.getElementById("gas").style.color = "#999";
+	}
+	if (parametros.indexOf("noticias")!=-1)
+	{
+		document.getElementById("noticias").style.color = "#999";
+	}
+	if (parametros.indexOf("enlaces")!=-1)
+	{
+		document.getElementById("enlaces").style.color = "#999";
+	}
+	if (parametros.indexOf("/labs")!=-1)
+	{
+		document.getElementById("labs").style.color = "#999";
+	}
 
-
+}
+</script>
 
 
 
