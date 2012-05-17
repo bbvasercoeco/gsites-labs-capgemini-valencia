@@ -581,7 +581,7 @@ $(document).ready(function()
 			document.getElementById("title-crumbs").innerHTML = s;    
 		}
 	</script>
-// Elemento de menú ---> set visited
+<!-- Elemento de menú set visited -->
 <script type="text/javascript">
 gadgets.util.registerOnLoadHandler(datospagina);
 function datospagina()
