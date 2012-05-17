@@ -100,7 +100,7 @@ way to fit your requirements.
 
 
 
-#dropline li a.down {background-color:transparent;}
+#dropline li a.down {background:url(http://code.google.com/p/gsites-labs-capgemini-valencia/source/browse/trunk/JMCtemp/images/down.gif) no-repeat right center;}
 
 
 
