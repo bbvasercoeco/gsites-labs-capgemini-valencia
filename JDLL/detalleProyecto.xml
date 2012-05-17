@@ -109,7 +109,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 5');
+			console.debug('detalleProyecto.xml version 6');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -169,11 +169,11 @@
 				data = response.getDataTable();		
 								
 				document.getElementById('codigoProyectoTitulo').innerHTML = data.getValue(0,1);
-				document.getElementById('codigoProyecto').innerHTML = data.getFormattedValue(0,10);
+				document.getElementById('codigoProyecto').innerHTML = data.getValue(0,10);
 				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
-				document.getElementById('fechaProyecto').innerHTML = data.getValue(0,13);							
+				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,13);							
 			}
 		</script>
 		]]>
