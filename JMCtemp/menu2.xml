@@ -290,7 +290,7 @@ $(document).ready(function()
 
 			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/archivador">Resumen Ejecutivo Implementaciones 2012</a></li>
 
-			<li><a style="color: rgb(102, 102, 102);padding-right:20px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-seguimiento-de-clientes">Resumen Ejecutivo Seguimiento de Clientes</a></li>
+			<li><a style="color: rgb(102, 102, 102);padding-left:20px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-seguimiento-de-clientes">Resumen Ejecutivo Seguimiento de Clientes</a></li>
 
 			
 
@@ -303,70 +303,27 @@ $(document).ready(function()
 		<ul style="left: 0px; display: block;" class="sub">
 
 			<li><a style="color: rgb(102, 102, 102);" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/plantillas-peticiones">Plantillas Peticiones</a></li>
-
-			<li class="current"><a style="color: rgb(204, 0, 0);" class="down" href="#url">Lenses</a>
-
-			<li ><a style="color: rgb(204, 0, 0);" class="down" href="#url">Lenses</a>
-
-				<ul style="left: 0px; display: block;" class="sub">
-
-					<li><a style="color: rgb(102, 102, 102);" href="#url">Wide Angle</a></li>
-
-					<li><a style="color: rgb(102, 102, 102);" href="#url">Standard</a></li>
-
-					<li><a style="color: rgb(102, 102, 102);" href="#url">Telephoto</a></li>
-
-					<li class="current"><a style="color: rgb(204, 0, 0);" class="down" href="#url">Zoom</a>
-
-						<ul style="left: 0px; display: block;" class="sub">
-
-							<li><a style="color: rgb(102, 102, 102);" href="#url">35mm to 125mm</a></li>
-
-							<li class="current"><a style="color: rgb(204, 0, 0);" href="#url">50mm to 250mm</a></li>
-
-							<li><a style="color: rgb(102, 102, 102);" href="#url">125mm to 500mm</a></li>
-
-						</ul>
-
-					</li>
-
-					<li><a style="color: rgb(102, 102, 102);" href="#url">Mirror</a></li>
-
-					<li><a style="color: rgb(102, 102, 102);" class="down" href="#url">Non standard</a>
-
-						<ul style="left: -99999px; display: none;" class="sub">
-
-							<li><a href="#url">Bayonet mount</a></li>
-
-							<li><a style="color: rgb(102, 102, 102);" href="#url">Screw mount</a></li>
-
-						</ul>
-
-					</li>
-
-				</ul>
-
-			</li>
-
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Flash Guns</a></li>
-
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Tripods</a></li>
-
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Filters</a></li>
-
+			<li><a style="color: rgb(102, 102, 102);" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/escenarios-de-implementacion">Escenarios de implementación</a></li>
+			<li><a style="color: rgb(102, 102, 102);" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/circuitos">Circuitos</a></li>
+			<li><a style="color: rgb(102, 102, 102);" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/documentacion">Documentación</a></li>
 		</ul>
-
 	</li>
 
 	<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services">Global Customer Services</a>
 
 		<ul style="left: -99999px; display: none;" class="sub floatRight">
 
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Travelling by car or rail</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/metodologia">Metodología</a></li>
 
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Using public transport</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/plantillas-implementacion">Plantillas Implementación</a></li>
 
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Our place on the map</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/proyectos">Proyectos</a></li><br/><br/>
+			
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/clientes">Clientes</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio">Enlaces a informes de gestión</a></li>
+
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio">Enlaces a productos</a></li>
 
 		</ul>
 
