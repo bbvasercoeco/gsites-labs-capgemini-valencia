@@ -94,7 +94,7 @@ way to fit your requirements.
 
 #dropline li {float:left; height:38px;}
 
-#dropline li a {float:left; display:block; height:37px; line-height:38px; padding:0 20px 0 10px; font-family:arial, sans-serif; font-size:11px; color:#fff; text-decoration:none; font-weight:bold;padding-left:15px;}
+#dropline li a {float:left; display:block; height:37px; line-height:38px; padding:0 20px 0 10px; font-family:arial, sans-serif; font-size:11px; color:#fff; text-decoration:none; font-weight:bold;padding-left:10px;}
 
 #dropline li ul li a {color:#fff;}
 
@@ -251,7 +251,7 @@ $(document).ready(function()
 
 	<li class="home"><a style="color:#fff;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" onclick="mark"></a></li>
 
-	<li class="top"><a style="color:#fff;" class="down" href="#url">Onboarding Clientes</a>
+	<li class="top"><a style="color:#fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients">Onboarding Clientes</a>
 
 		<ul style="left: -99999px; display: none;" class="sub">
 
@@ -266,8 +266,8 @@ $(document).ready(function()
 		</ul>
 
 	</li>
-
-	<li class="top"><a style="color: #fff;" class="down" href="#url">Servicing</a>
+	<li class="top"><a style="color:#fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes">Clientes</a>
+	<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing">Servicing</a>
 
 		<ul style="left: -99999px; display: none;" class="sub">
 
@@ -377,7 +377,7 @@ $(document).ready(function()
 
 	</li>
 
-	<li class="top"><a style="color: #fff;" class="down" href="#url">Informes Gestión</a>
+	<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion">Informes Gestión</a>
 
 		<ul style="left: -99999px; display: none;" class="sub">
 
@@ -395,7 +395,7 @@ $(document).ready(function()
 
 	<!--<li class="top current"><a style="color: rgb(204, 0, 0);" class="down" href="#url">PRODUCTS</a>-->
 
-	<li class="top"><a style="color: #fff;" class="down" href="#url">Metodología</a>
+	<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia">Metodología</a>
 
 		<ul style="left: 0px; display: block;" class="sub">
 
@@ -473,7 +473,7 @@ $(document).ready(function()
 
 	</li>
 
-	<li class="top"><a style="color: #fff;" class="down" href="#url">Global Customer Services</a>
+	<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services">Global Customer Services</a>
 
 		<ul style="left: -99999px; display: none;" class="sub floatRight">
 
@@ -487,7 +487,7 @@ $(document).ready(function()
 
 	</li>
 
-	<li class="top"><a style="color: #fff;" class="down" href="#url">Global Product</a>
+	<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product">Global Product</a>
 
 		<ul style="left: -99999px; display: none;" class="sub floatRight">
 
@@ -501,7 +501,7 @@ $(document).ready(function()
 
 	</li>
 
-	<li class="top"><a style="color: #fff;" href="#url" id="privacy">Global Sales</a></li>
+	<li class="top"><a style="color: #fff;" href="https://7oc47qf6dqau7fktcgaa6f33gdvc5og2-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://bbvagcs.googlecode.com/svn/trunk/menu.xml&container=enterprise&view=default&lang=es&country=ALL&sanitize=0&v=bfae54d82e33ac71&libs=core:dynamic-height:setprefs&mid=229&parent=https://sites.google.com/a/bbva.com/portal-gcs/#" id="privacy">Global Sales</a></li>
 
 </ul>
 
