@@ -280,12 +280,6 @@ $(document).ready(function()
 
 			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/infomes-servicios-contratados">Informes Servicios contratados</a></li>
 
-			
-
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Stockist</a></li>
-
-			<li><a style="color: rgb(102, 102, 102);" href="#url">General</a></li>
-
 		</ul>
 
 	</li>
@@ -294,45 +288,23 @@ $(document).ready(function()
 
 		<ul style="left: -99999px; display: none;" class="sub">
 
-			<li><a href="#url">Printing</a></li>
+			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/archivador">Resumen Ejecutivo Implementaciones 2012</a></li>
 
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Photo Framing</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-seguimiento-de-clientes">Resumen Ejecutivo Seguimiento de Clientes</a></li>
 
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Retouching</a></li>
-
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Archiving</a></li>
+			
 
 		</ul>
 
 	</li>
 
-	<!--<li class="top current"><a style="color: rgb(204, 0, 0);" class="down" href="#url">PRODUCTS</a>-->
-
 	<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia">Metodología</a>
 
 		<ul style="left: 0px; display: block;" class="sub">
 
-			<li><a style="color: rgb(102, 102, 102);" class="down" href="#url">Cameras</a>
+			<li><a style="color: rgb(102, 102, 102);" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/plantillas-peticiones">Plantillas Peticiones</a></li>
 
-				<ul style="left: -99999px; display: none;" class="sub">
-
-					<li><a style="color: rgb(102, 102, 102);" href="#url">Nikon</a></li>
-
-					<li><a style="color: rgb(102, 102, 102);" href="#url">Minolta</a></li>
-
-					<li><a style="color: rgb(102, 102, 102);" href="#url">Pentax</a></li>
-
-					<li><a style="color: rgb(102, 102, 102);" href="#url">Canon</a></li>
-
-					<li><a href="#url">Panasonic</a></li>
-
-					<li><a href="#url">Kodak</a></li>
-
-				</ul>
-
-			</li>
-
-			<!--<li class="current"><a style="color: rgb(204, 0, 0);" class="down" href="#url">Lenses</a>-->
+			<li class="current"><a style="color: rgb(204, 0, 0);" class="down" href="#url">Lenses</a>
 
 			<li ><a style="color: rgb(204, 0, 0);" class="down" href="#url">Lenses</a>
 
