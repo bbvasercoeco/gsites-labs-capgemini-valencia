@@ -98,7 +98,7 @@ way to fit your requirements.
 
 #dropline li ul li a {color:#fff;}
 
-#dropline li a.home{margin-right:10px;}
+#dropline li a.home{margin-right:100px;}
 
 #dropline li a.down {background:url(http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/images/down.gif) no-repeat right center;}
 
