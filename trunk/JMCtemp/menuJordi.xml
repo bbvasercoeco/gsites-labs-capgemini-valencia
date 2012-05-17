@@ -46,7 +46,7 @@ way to fit your requirements.
 
 
 
-#dropline {position:relative; font-size:12px; height:38px; background:url(http://code.google.com/p/gsites-labs-capgemini-valencia/source/browse/trunk/JMCtemp/images/fondomenu38.png);}
+#dropline {position:relative; font-size:12px; height:38px; background:url(http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/images/fondomenu38.png);}
 
 
 
