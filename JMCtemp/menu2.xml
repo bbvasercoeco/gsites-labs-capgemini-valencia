@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="menu portal BBVA1" />
+<ModulePrefs title="menu portal BBVA1" >
+<Require feature="dynamic-height"/>   
+<Require feature="setprefs" />  
+</Module>
+<UserPref name="VarrootSite" display_name="Root del Site" required="true" />
 <Content type="html" view="configuration" preferred_height="50" style="margin-bottom:-250px;">
 
  <![CDATA[
