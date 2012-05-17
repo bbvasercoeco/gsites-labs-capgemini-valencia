@@ -302,10 +302,10 @@ $(document).ready(function()
 
 		<ul style="left:-99999px; display: none;" class="sub">
 
-			<li><a style="color: rgb(102, 102, 102);" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/plantillas-peticiones">Plantillas Peticiones</a></li>
-			<li><a style="color: rgb(102, 102, 102);" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/escenarios-de-implementacion">Escenarios de implementación</a></li>
-			<li><a style="color: rgb(102, 102, 102);" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/circuitos">Circuitos</a></li>
-			<li><a style="color: rgb(102, 102, 102);" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/documentacion">Documentación</a></li>
+			<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/plantillas-peticiones">Plantillas Peticiones</a></li>
+			<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/escenarios-de-implementacion">Escenarios de implementación</a></li>
+			<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/circuitos">Circuitos</a></li>
+			<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/documentacion">Documentación</a></li>
 		</ul>
 	</li>
 
