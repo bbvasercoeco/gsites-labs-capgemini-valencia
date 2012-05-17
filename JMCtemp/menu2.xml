@@ -98,7 +98,7 @@ way to fit your requirements.
 
 #dropline li ul li a {color:#fff;}
 
-
+#dropline li a.home{margin-right:10px;}
 
 #dropline li a.down {background:url(http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/images/down.gif) no-repeat right center;}
 
@@ -249,7 +249,7 @@ $(document).ready(function()
 
 <ul id="dropline">
 
-	<li class="top"><a style="color:#fff;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" onclick="mark"></a></li>
+	<li class="home"><a style="color:#fff;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" onclick="mark"></a></li>
 
 	<li class="top"><a style="color:#fff;" class="down" href="#url">CONTACT</a>
 
