@@ -72,7 +72,7 @@ way to fit your requirements.
 
 
 
-#dropline li ul {position:absolute; top:38px; left:-9999px; z-index:10; background:url(http://code.google.com/p/gsites-labs-capgemini-valencia/source/browse/trunk/JMCtemp/images/fade.png);}
+#dropline li ul {position:absolute; top:38px; left:-9999px; z-index:10; background:url(http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/images/fade.png);}
 
 
 
@@ -82,7 +82,7 @@ way to fit your requirements.
 
 </style>
 
-<script src="http://code.google.com/p/gsites-labs-capgemini-valencia/source/browse/trunk/JMCtemp/jquery-1.js" type="text/javascript"></script>
+<script src="http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/jquery-1.js" type="text/javascript"></script>
 
 
 
