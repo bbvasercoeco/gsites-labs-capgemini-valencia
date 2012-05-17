@@ -249,7 +249,7 @@ $(document).ready(function()
 
 <ul id="dropline">
 
-	<li class="top"><a style="color:#fff;" href="#url" onclick="mark">HOME</a></li>
+	<li class="top"><a style="color:#fff;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" onclick="mark"></a></li>
 
 	<li class="top"><a style="color:#fff;" class="down" href="#url">CONTACT</a>
 
