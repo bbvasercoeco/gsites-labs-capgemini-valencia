@@ -109,7 +109,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 2');
+			console.debug('detalleProyecto.xml version 3');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -130,7 +130,8 @@
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("detalle-proyecto-");				
-				var querytosend = "select *  where K like '" + idCliquery.toUpperCase() + "'";
+				//var querytosend = "select *  where K like '" + idCliquery.toUpperCase() + "'";
+				var querytosend = "select *  where K like 'PROY0001' ";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 			}
