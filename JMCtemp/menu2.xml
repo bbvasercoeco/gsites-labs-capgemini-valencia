@@ -86,7 +86,7 @@ way to fit your requirements.
 
 
 
-#dropline, #dropline ul {padding:0px; margin:0; list-style:none; width:915px;}
+#dropline, #dropline ul {padding:0px; margin:0; list-style:none; width:908px;}
 
 
 
@@ -255,119 +255,32 @@ $(document).ready(function()
 
 		<ul style="left: -99999px; display: none;" class="sub">
 
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Email</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/cuestionarios-ventas">Cuestionarios Ventas</a></li>
 
-			<li><a href="#url">Letter</a></li>
+			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-servicios-visualizacion">Catálogo Conexiones H2H</a></li>
 
-			<li><a href="#url">Telephone</a></li>
+			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/guias-implementacion-clientes">Guías Implementación de Clientes</a></li>
 
-			<li><a href="#url">Fax</a></li>
+			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/plantillas-peticiones">Plantillas de peticiones</a></li>
+			<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-de-servicios">Catálogo de Servicios</a></li>
 
 		</ul>
 
 	</li>
-	<li class="top"><a style="color:#fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes">Clientes</a>
+	<li class="top"><a style="color:#fff;"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes">Clientes</a>
 	<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing">Servicing</a>
 
 		<ul style="left: -99999px; display: none;" class="sub">
 
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Support</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/informes-incidencias">Informes Servicing</a></li>
 
-			<li><a style="color: rgb(102, 102, 102);" class="down" href="#url">Sales</a>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/enlaces-a-herramientas-servicing">Herramientas Servicing</a></li>
 
-				<ul style="left: -99999px; display: none;" class="sub">
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/gestion-del-servicio">Gestión del Servicio</a></li>
 
-					<li><a href="#url">USA</a></li>
+			<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/infomes-servicios-contratados">Informes Servicios contratados</a></li>
 
-					<li><a href="#url">Canadian</a></li>
-
-					<li><a href="#url">South American</a></li>
-
-					<li><a class="down" href="#url">European</a>
-
-						<ul class="sub">
-
-							<li><a class="down" href="#url">British</a>
-
-								<ul class="sub">
-
-									<li><a href="#url">London</a></li>
-
-									<li><a href="#url">Liverpool</a></li>
-
-									<li><a href="#url">Glasgow</a></li>
-
-									<li><a class="down" href="#url">Bristol</a>
-
-										<ul class="sub">
-
-											<li><a href="#url">Redland</a></li>
-
-											<li><a href="#url">Hanham</a></li>
-
-											<li><a href="#url">Eastville</a></li>
-
-										</ul>
-
-									</li>
-
-									<li><a href="#url">Cardiff</a></li>
-
-									<li><a href="#url">Belfast</a></li>
-
-								</ul>
-
-							</li>
-
-							<li><a href="#url">French</a></li>
-
-							<li><a href="#url">German</a></li>
-
-							<li><a href="#url">Spanish</a></li>
-
-						</ul>
-
-					</li>
-
-					<li><a href="#url">Australian</a></li>
-
-					<li><a href="#url">Asian</a></li>
-
-				</ul>
-
-			</li>
-
-			<li><a style="color: rgb(102, 102, 102);" href="#url">Buying</a></li>
-
-			<li><a style="color: rgb(102, 102, 102);" class="down" href="#url">Photographers</a>
-
-				<ul style="left: -99999px; display: none;" class="sub">
-
-					<li><a href="#url">Studio</a></li>
-
-					<li><a href="#url">Pets &amp; Children</a></li>
-
-					<li><a class="down" href="#url">Outdoor</a>
-
-						<ul class="sub">
-
-							<li><a href="#url">Landscape</a></li>
-
-							<li><a href="#url">Architecture</a></li>
-
-							<li><a href="#url">Seascape</a></li>
-
-							<li><a href="#url">Wildlife</a></li>
-
-						</ul>
-
-					</li>
-
-					<li><a href="#url">Wedding &amp; Special Occasions</a></li>
-
-				</ul>
-
-			</li>
+			
 
 			<li><a style="color: rgb(102, 102, 102);" href="#url">Stockist</a></li>
 
