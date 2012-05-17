@@ -94,9 +94,9 @@ way to fit your requirements.
 
 #dropline li {float:left; height:38px;}
 
-#dropline li a {float:left; display:block; height:37px; line-height:38px; padding:0 20px 0 10px; font-family:arial, sans-serif; font-size:11px; color:#fff; text-decoration:none; font-weight:bold;}
+#dropline li a {float:left; display:block; height:37px; line-height:38px; padding:0 20px 0 10px; font-family:arial, sans-serif; font-size:11px; color:#fff; text-decoration:none; font-weight:bold;padding-left:15px;}
 
-#dropline li ul li a {color:#fff;padding-left:10px;}
+#dropline li ul li a {color:#fff;}
 
 
 
