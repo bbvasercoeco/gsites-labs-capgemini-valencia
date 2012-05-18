@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-39
+40
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -125,7 +125,7 @@
 	
 		data = response.getDataTable();
 		
-		var count = (data.getNumberOfRows())/8;
+		var count = data.getNumberOfRows();
 		var roundCount = Math.ceil(count);
 		var resto = (data.getNumberOfRows())%64;
 		
