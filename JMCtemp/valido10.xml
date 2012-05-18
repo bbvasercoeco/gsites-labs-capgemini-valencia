@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-47
+53
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -125,7 +125,7 @@
 	
 		data = response.getDataTable();
 		
-		var count = data.getNumberOfRows();
+		var count = (data.getNumberOfRows())/8;
 		var roundCount = Math.ceil(count);
 		var resto = (data.getNumberOfRows())%64;
 		
@@ -152,9 +152,9 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		
 		var dataAux = new google.visualization.DataTable();
-		var auxiliar = 0;
 		
-	    dataAux.addRows(count);
+		
+	    dataAux.addRows(roundCount);
 		
 	
 	for (var columna=0;columna<8;columna++){
@@ -168,20 +168,27 @@
 		}
 		
 	}	
-		for (var fila=0; fila<=2; fila++){
-		
-			//for(var col=0; col<29; col+=4){
-			alert(Math.round(fila/8));
-			try{
-			dataAux.setCell(Math.round(fila/8),col,data.getValue(fila,1));
-			alert((fila/8));
-			alert(col);
-			alert(fila);
-			}catch (err){
+	
+	for(var fila=0;fila<roundCount;fila++)
+	{
+		for (var col=0; col<4; col++)
+		{	 
+				
+				 dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				 
+				
+			for(var i=0;i<roundCount;i++){	
+			
+					try{
+						dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+(roundCount*i)),col));
+				}catch (err){
 					break;
 				}
-			//}
+				
+			}
 		}
+			
+	}
 	
 	
 	
