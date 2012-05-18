@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-28
+29
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -174,7 +174,7 @@
 	
 		for(var col=0; col<8; col++){
 			for(var i=0;i<roundCount;i++){
-				dataAux.setCell(fila,col+4*i,data.getValue(fila,1));
+				dataAux.setCell(fila,col,data.getValue(fila,1));
 				
 			}
 		}
