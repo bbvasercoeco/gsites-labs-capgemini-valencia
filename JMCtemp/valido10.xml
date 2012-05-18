@@ -171,11 +171,11 @@
 	
 	for(var fila=0;fila<roundCount;fila++)
 	{
-		for (var col=0; col<8; col+4)
+		for (var col=0; col<8; col++)
 		{
-		    
+		    for(var colaux=0; colaux<8; colaux+4)
 					try{	
-						dataAux.setCell(fila,col+(4*col),data.getValue(fila,col));
+						dataAux.setCell(fila,col,getValue(1+(fila+(roundCount*col)),colaux));
 					}catch (err){
 						break;
 				
