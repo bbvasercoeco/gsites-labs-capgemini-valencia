@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-54
+55
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -181,7 +181,7 @@
 			
 					try{
 					
-					if(1+(fila+(roundCount*i))<=64){
+					if(1+(fila+(8*i))<=64){
 					
 					dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+(8*i)),col));
 					
