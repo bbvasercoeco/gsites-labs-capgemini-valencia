@@ -222,9 +222,9 @@
 	}
 </script>
 
-<!--<body id="www-stunicholls-com">-->
+<!--<body id="www-stunicholls-com">
 
-<div id="wrapper">
+<div id="wrapper">-->
 	<div id="content">
 		<div id="menu">
 
@@ -332,6 +332,6 @@ function datospagina()
 
 
 
-</body>
+
 ]]></Content>
 </Module>
