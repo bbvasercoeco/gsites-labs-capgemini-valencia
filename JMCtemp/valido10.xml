@@ -187,7 +187,7 @@
 					
 					}else{	
 					
-					dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+(roundCount*i)),col));
+					dataAux.setCell(fila,col+4*i+1,data.getValue(1+(fila+(roundCount*i)),col));
 					
 					}
 				}catch (err){
