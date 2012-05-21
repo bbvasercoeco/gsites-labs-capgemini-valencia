@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-673
+674
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -153,7 +153,7 @@
 		
 		var dataAux = new google.visualization.DataTable();
 		
-		var aux = 0;
+		var aux = 1;
 	    dataAux.addRows(roundCount);
 		
 	
@@ -190,12 +190,12 @@
 			
 	}*/
 	
-	for (var fila=1; fila<=roundCount; fila++){
+	for (var fila=0; fila<roundCount; fila++){
 		
 			for(var col=1; col<=29; col+=4){
 		
 			try{
-			//for(var aux=0; aux<8;aux++){
+			//for(var aux=1; aux<9;aux++){
 			dataAux.setCell(fila,col,data.getValue(aux,1));
 			aux++;
 			//}
