@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Tabla desde docs"
-	description="Tabla cargada con paginacion y parametrizada."
+	<ModulePrefs title="Gadget Contactos"
+	description="Tabla que visualiza los datos del Cliente"
 	author_affiliation="Capgemini">
 	<Require feature="idi"/>
 	<Require feature="locked-domain" />
@@ -83,7 +83,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-891
+892
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
