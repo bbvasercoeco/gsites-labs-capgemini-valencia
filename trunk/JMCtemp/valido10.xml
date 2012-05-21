@@ -192,12 +192,12 @@
 	
 	for (var fila=0; fila<roundCount; fila++){
 		
-			for(var col=1; col<29; col+=4){
+			for(var col=0; col<29; col+=4){
 		
 			try{
-			for(var aux=0; aux<8;aux++)
-			dataAux.setCell((fila/roundCount),col,data.getValue(aux,1));
-			
+			for(var aux=0; aux<8;aux++){
+			dataAux.setCell(fila,col,data.getValue(aux,1));
+			}
 			}catch (err){
 					break;
 				}
