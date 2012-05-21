@@ -83,7 +83,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-890
+891
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -113,7 +113,16 @@
 		query.setQuery("querytosend");
 		query.send(handleQueryResponse);
 	}
-	
+	function indiceCadena (parametros, cadena)
+			{	
+				for(var i=0; i<parametros.length; i++)
+				{					
+					if(parametros[i].indexOf(cadena)>-1)
+					{
+						return i;
+					} 
+				}	
+			}	
 	
 	// Abre el detalle de la url
 	function detalle(id)
@@ -124,23 +133,14 @@
 			
 			//obtiene el valor del parametro que le pasamos por url: 
 			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
-			function paramtoquery(param)
+	function paramtoquery(param)
 			{
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
 				var indexFicha = indiceCadena(arrayParametros,param);		
 				var arrayidCliente = arrayParametros[indexFicha].split("-");		
 				return arrayidCliente[1];		
 			}
-	function indiceCadena (parametros, cadena)
-			{	
-				for(var i=0; i<parametros.length; i++)
-				{					
-					if(parametros[i].indexOf(cadena)>-1)
-					{
-						return i;
-					} 
-				}	
-			}		
+		
 			
 	function detalle(id)
 			{				
