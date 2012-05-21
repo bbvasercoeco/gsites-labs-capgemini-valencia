@@ -83,7 +83,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-889
+890
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -113,19 +113,10 @@
 		query.setQuery("querytosend");
 		query.send(handleQueryResponse);
 	}
-	function indiceCadena (parametros, cadena)
-			{	
-				for(var i=0; i<parametros.length; i++)
-				{					
-					if(parametros[i].indexOf(cadena)>-1)
-					{
-						return i;
-					} 
-				}	
-			}
+	
 	
 	// Abre el detalle de la url
-			function detalle(id)
+	function detalle(id)
 			{	
 				var idCliente = paramtoquery("ficha-");
 				window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase() + "/detalle-proyecto-" + id.toLowerCase();
@@ -140,6 +131,16 @@
 				var arrayidCliente = arrayParametros[indexFicha].split("-");		
 				return arrayidCliente[1];		
 			}
+	function indiceCadena (parametros, cadena)
+			{	
+				for(var i=0; i<parametros.length; i++)
+				{					
+					if(parametros[i].indexOf(cadena)>-1)
+					{
+						return i;
+					} 
+				}	
+			}		
 			
 	function detalle(id)
 			{				
