@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-11
+12
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -196,15 +196,17 @@
 			//alert(Math.round(fila/8));
 			//alert(col);
 			//alert(data.getValue(fila,1));
-			try{
 			for(var aux=0; aux<8; aux++){
+			try{
+			
 			dataAux.setCell(fila,col,data.getValue(aux,1));
-			}
+			
 			//alert((fila/8));
 			//alert(col);
 			//alert(fila);
 			}catch (err){
 					break;
+				}
 				}
 			}
 		}
@@ -228,7 +230,7 @@
 		//Create DataView
 		var view = new google.visualization.DataView(dataAux);
 		//Select the Columns to DataView
-		view.setColumns([0,1,5,9,13,17,21,25,29]);
+		view.setColumns([1,5,9,13,17,21,25,29]);
 		
 		function detalle(id)
 			{				
