@@ -83,7 +83,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-888
+889
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -113,7 +113,16 @@
 		query.setQuery("querytosend");
 		query.send(handleQueryResponse);
 	}
-	
+	function indiceCadena (parametros, cadena)
+			{	
+				for(var i=0; i<parametros.length; i++)
+				{					
+					if(parametros[i].indexOf(cadena)>-1)
+					{
+						return i;
+					} 
+				}	
+			}
 	
 	// Abre el detalle de la url
 			function detalle(id)
