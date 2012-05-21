@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-684
+685
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -198,6 +198,7 @@
 			try{
 			//for(var aux=1; aux<9;aux++){
 			dataAux.setCell(fila,col,data.getValue(aux,1));
+			dataAux.setCell(fila,col-1,data.getValue(aux,0));
 			aux++;
 			//}
 			}catch (err){
