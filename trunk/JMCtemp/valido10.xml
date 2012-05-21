@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-7
+8
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -192,7 +192,7 @@
 	
 	for (var fila=0; fila<=3; fila++){
 		
-			for(var col=0; col<29; col+=4){
+			for(var col=1; col<29; col+=4){
 			//alert(Math.round(fila/8));
 			//alert(col);
 			//alert(data.getValue(fila,1));
