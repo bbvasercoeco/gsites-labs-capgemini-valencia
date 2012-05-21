@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-680
+681
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -130,7 +130,7 @@
 		var resto = (data.getNumberOfRows())%64;
 		var result = (data.getNumberOfRows())%8;
 		var total = roundCount+result;
-		alert(total+" prueba");
+		//alert(total+" prueba");
 
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
 		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
@@ -206,7 +206,7 @@
 			}
 		}
 	
-	alert(aux);
+	//alert(aux);
 	
 	
 		// Apply formatter and set the formatted value.
