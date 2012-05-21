@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-10
+8
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -197,7 +197,6 @@
 			//alert(col);
 			//alert(data.getValue(fila,1));
 			try{
-			for(var aux=0; aux<8; aux++){
 			dataAux.setCell(fila,col,data.getValue(fila,1));
 			fila +=1;
 			//alert((fila/8));
