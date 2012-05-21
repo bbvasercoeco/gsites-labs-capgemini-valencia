@@ -82,7 +82,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-681
+682
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -193,7 +193,7 @@
 	
 	for (var fila=0; fila<total; fila++){
 		
-			for(var col=1; col<29; col+=4){
+			for(var col=1; col<=29; col+=4){
 		
 			try{
 			//for(var aux=1; aux<9;aux++){
