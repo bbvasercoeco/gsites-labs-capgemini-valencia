@@ -198,8 +198,8 @@
 			//alert(data.getValue(fila,1));
 			try{
 			for(var aux=0; aux<8; aux++){
-			dataAux.setCell(fila,col,data.getValue(aux,1));
-			}
+			dataAux.setCell(fila,col,data.getValue(fila,1));
+			fila +=1;
 			//alert((fila/8));
 			//alert(col);
 			//alert(fila);
