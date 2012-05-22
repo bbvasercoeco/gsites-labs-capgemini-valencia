@@ -85,7 +85,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-898
+899
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -141,7 +141,7 @@
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
 				alert(arrayParametros);
 				var indexFicha = indiceCadena(arrayParametros,param);		
-				alert (indexFicha);
+				printf(indexFicha);
 				var arrayidCliente = arrayParametros[indexFicha].split("-");		
 				return arrayidCliente[1];		
 			}
