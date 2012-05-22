@@ -85,7 +85,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-894
+895
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -112,7 +112,7 @@
 	    var opts = {dataType:'jsonp'};
 		var query = new google.visualization.Query(urlTable, opts);
 		var idCliquery = paramtoquery("ficha-");
-		var querytosend = "select *  where A like '" + ficha- + "'";
+		var querytosend = "select *  where A like '" + IDGLOBAL0001 + "'";
 		query.setQuery("querytosend");
 		query.send(handleQueryResponse);
 	}
