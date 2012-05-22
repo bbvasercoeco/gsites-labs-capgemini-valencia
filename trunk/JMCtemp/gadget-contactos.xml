@@ -141,7 +141,7 @@
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
 				alert(arrayParametros);
 				var indexFicha = indiceCadena(arrayParametros,param);		
-				printf(indexFicha);
+				alert(indexFicha);
 				var arrayidCliente = arrayParametros[indexFicha].split("-");		
 				return arrayidCliente[1];		
 			}
