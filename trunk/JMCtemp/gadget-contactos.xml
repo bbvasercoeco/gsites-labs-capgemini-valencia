@@ -89,7 +89,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-915
+916
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -119,7 +119,7 @@
 		gadgetHelper = new google.visualization.GadgetHelper();
 	    var opts = {dataType:'jsonp'};
 		var query = new google.visualization.Query(urlTable, opts);
-		var idCliquery = paramtoquery("contactos");
+		var idCliquery = paramtoquery("contactos-");
 		var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
 		query.setQuery(querytosend);
 		query.send(handleQueryResponse);
