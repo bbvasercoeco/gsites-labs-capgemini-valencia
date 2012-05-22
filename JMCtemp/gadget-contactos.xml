@@ -15,7 +15,7 @@
 <UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
 <UserPref name="_NumElemPorPagina" default_value="" display_name="N�mero de elementos por p�gina:" required="true" />
 <UserPref name="Varemail" display_name="Correo:" default_value="jesus.acedos@grupobbva.com"/>	
-<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
+<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/contactos-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/contactos- ):" />
 
 <Content type="html"><![CDATA[
 
@@ -89,7 +89,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-913
+914
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -102,7 +102,6 @@
 	var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
 	var varListaColumnas = prefs.getString("VarListaColumnas");			
-	var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 	var	_Row = prefs.getInt("_Row");
 	var	_Col = prefs.getInt("_Col");
 	var varListaFilas = prefs.getString("VarListaFilas"); 
