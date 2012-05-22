@@ -89,7 +89,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-907
+908
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -121,7 +121,7 @@
 	    var opts = {dataType:'jsonp'};
 		var query = new google.visualization.Query(urlTable, opts);
 		var idCliquery = paramtoquery("ficha-");
-		var querytosend = 'select *  where A like "IDGLOBAL0001"' ;                    //'" + idCliquery.toUpperCase() + "'";
+		var querytosend = 'select *  where A like "ficha-IDGLOBAL0001"' ;                    //'" + idCliquery.toUpperCase() + "'";
 		query.setQuery(querytosend);
 		query.send(handleQueryResponse);
 	}
@@ -176,8 +176,7 @@
 		formatter1.format(data, [6,6]);
 		formatter1.format(data, [11,11]);
 		
-		/*data.setColumnLabel(6) = html;
-		data.setColumnLabel(11) = html;*/
+		
 	
 		var cssClassNames = {
 			'headerRow': 'header',
@@ -191,9 +190,7 @@
 		};
          
         var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-
-        var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
-		
+		var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
 		
