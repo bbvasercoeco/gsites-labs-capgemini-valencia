@@ -10,6 +10,8 @@
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 <UserPref name="columna_a_formatear" default_value="" display_name="Columna a formatear" required="true" />
 <UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
+<UserPref name="Varemail" display_name="Correo:" default_value="jesus.acedos@grupobbva.com"/>	
+<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirÃ¡ la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
 
 <Content type="html"><![CDATA[
 
@@ -83,17 +85,18 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-893
+895
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
-    
+    var html="";
 	var gadgetHelper = null;
 	var prefs = new _IG_Prefs(); // User preferences
 	var urlTable = prefs.getString("_table_query_url");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
 	var aformatear = prefs.getString("columna_a_formatear");
-	
+	var Varemail=prefs.getString("Varemail");
+	var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 	
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
 	
@@ -108,7 +111,7 @@
 		gadgetHelper = new google.visualization.GadgetHelper();
 	    var opts = {dataType:'jsonp'};
 		var query = new google.visualization.Query(urlTable, opts);
-		var idCliquery = paramtoquery("ficha-");
+		//var idCliquery = paramtoquery("ficha-");
 		var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
 		query.setQuery("querytosend");
 		query.send(handleQueryResponse);
@@ -132,7 +135,7 @@
 			}
 			
 			//obtiene el valor del parametro que le pasamos por url: 
-			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
+			 para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
 	function paramtoquery(param)
 			{
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
@@ -149,7 +152,19 @@
 				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
 				
 			}
-			
+	function sendGmail(Varemail)
+			{
+				var to = Varemail;
+				var subject ='Peticion de Informacion';
+				var message ='';
+				var str = 'window.open(\"http://mail.google.com/mail/?view=cm&fs=1' + '&to=' + to + '&su=' + subject + '&body=' + message.replace(/\n/g,'%0A') + '&ui=1\",\"send mail\")';				
+				return str;
+			}
+	var strMail = sendGmail(Varemail);
+	
+	
+	
+	
 	function handleQueryResponse(response) 
 	{
 		if (!gadgetHelper.validateResponse(response)) { return; }
@@ -157,8 +172,13 @@
 		data = response.getDataTable();
 		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
 		formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
-		
-		
+		var formatter1 = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" >{0}</a> ');
+		formatter1.format(data, [6,6]);
+		formatter1.format(data, [11,11]);
+		html+='<h4><a href=\'#\' onclick=\'javascript:' + strMail + '\'>' + Varemail + '</a></h4>';
+		/*data.setColumnLabel(6) = html;
+		data.setColumnLabel(11) = html;*/
+	
 		var cssClassNames = {
 			'headerRow': 'header',
 			'tableRow': 'filaPar',
@@ -175,6 +195,8 @@
         var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		
 		var view = new google.visualization.DataView(data);
+		view.setColumnLabel(6) = html;
+		view.setColumnLabel(11) = html;
 		
 		if(aformatear=="G"){
 			view.setColumns([C,D,E,F,G]);
