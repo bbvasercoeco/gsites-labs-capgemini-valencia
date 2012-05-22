@@ -89,7 +89,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-902
+903
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -137,11 +137,11 @@
 			}	
 	
 	// Abre el detalle de la url
-	function detalle(id)
+	/*function detalle(id)
 			{	
 				var idCliente = paramtoquery("ficha-");
 				window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase() + id.toLowerCase();
-			}
+			}*/
 			
 			//obtiene el valor del parametro que le pasamos por url: 
 			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
@@ -156,11 +156,11 @@
 			}
 		
 			
-	function detalle(id)
+	/*function detalle(id)
 			{				
 				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
 				
-			}
+			}*/
 	function sendGmail(Varemail)
 			{
 				var to = Varemail;
