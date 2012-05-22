@@ -89,7 +89,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-906
+907
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -125,6 +125,7 @@
 		query.setQuery(querytosend);
 		query.send(handleQueryResponse);
 	}
+	
 	function indiceCadena (parametros, cadena)
 			{	
 				for(var i=0; i<parametros.length; i++)
@@ -136,15 +137,9 @@
 				}	
 			}	
 	
-	// Abre el detalle de la url
-	/*function detalle(id)
-			{	
-				var idCliente = paramtoquery("ficha-");
-				window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase() + id.toLowerCase();
-			}*/
-			
-			//obtiene el valor del parametro que le pasamos por url: 
-			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
+	
+	//obtiene el valor del parametro que le pasamos por url: 
+	// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
 	function paramtoquery(param)
 			{
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
@@ -156,11 +151,7 @@
 			}
 		
 			
-	/*function detalle(id)
-			{				
-				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
-				
-			}*/
+	
 	function sendGmail(Varemail)
 			{
 				var to = Varemail;
