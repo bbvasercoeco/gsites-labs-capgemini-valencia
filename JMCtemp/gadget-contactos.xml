@@ -89,7 +89,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-916
+917
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -97,7 +97,7 @@
 	var prefs = new _IG_Prefs(); // User preferences
 	var urlTable = prefs.getString("_table_query_url");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
-	var aformatear = prefs.getString("columna_a_formatear");
+	var aformatear = prefs.getInt("columna_a_formatear");
 	var Varemail = prefs.getString("Varemail");
 	var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
