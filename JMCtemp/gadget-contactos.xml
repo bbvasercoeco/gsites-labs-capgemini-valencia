@@ -85,7 +85,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-895
+896
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -135,7 +135,7 @@
 			}
 			
 			//obtiene el valor del parametro que le pasamos por url: 
-			 para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
+			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
 	function paramtoquery(param)
 			{
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
