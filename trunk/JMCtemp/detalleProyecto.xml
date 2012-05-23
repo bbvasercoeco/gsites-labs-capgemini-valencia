@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 11');
+			console.debug('detalleProyecto.xml version 12');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -139,7 +139,6 @@
 				
 				var idCliqueryaux = paramtoquery3("ficha-");
 				var query3 = new google.visualization.Query(urlTable, opts);	
-				//var querytosend3 = "select max(A), B ,J, N,O where A like 'IDGLOBAL0016' group  by B,J,N,O";
 				var querytosend3 = "select max(A), B ,J, N,O where A like '" + idCliqueryaux.toUpperCase() + "' group  by B,J,N,O";
 				query3.setQuery(querytosend3);			  
 				query3.send(handleQueryResponse3);
@@ -193,6 +192,7 @@
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
 				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,13);
+				
 				
 			}
 			function handleQueryResponse3(response) 
