@@ -181,8 +181,8 @@
 				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
-				var aux1 = data.getFormattedValue(0,13);
-				document.getElementById('fechaProyecto').innerHTML = aux1;
+				var aux1 = data.getValue(0,13);
+				document.getElementById('fechaProyecto').value = aux1;
 				
 				
 			}
