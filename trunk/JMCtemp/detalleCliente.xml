@@ -41,6 +41,18 @@
 			#imagenCliente img {
 				margin-right: 40px;
 			}
+			<!--[if lte IE 8]>
+			#imagenCliente {
+				display: absolute;
+				float: left;
+				margin-left: 10px;
+				text-align: left;
+				width: 280px;
+			}
+			#imagenCliente img {
+				margin-right: 40px;
+			}
+			<![endif]-->
 			hr {
 				background-color: #CCCCCC;
 				border-width: 0;
@@ -99,7 +111,7 @@
 		</h2>			
 
 		<div id="detalleFicha">
-			<div id="imagenCliente"><img class="loading" width="100" src="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-idglobal0001/logo-wolkswagen.png"/></div>
+			<div id="imagenCliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 			<ul id="datosFicha">
 				<li>Criticidad: <span id="idCriticidad"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Estado: <span id="idEstado"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
