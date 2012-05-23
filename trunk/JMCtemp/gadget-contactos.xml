@@ -13,9 +13,8 @@
 <UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 <UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
 <UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (nÃºmero-nÃºmero):" />
-<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
-<UserPref name="Varemail" display_name="Correo:" default_value="jesus.acedos@grupobbva.com"/>	
-<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/contactos-" display_name="URL base desde la que se construirÃ¡ la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/contactos- ):" />
+<UserPref name="_NumElemPorPagina" default_value="" display_name="Numero de elementos por pagina:" required="true" />
+
 
 <Content type="html"><![CDATA[
 
@@ -179,7 +178,7 @@
 		//formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
 		//var formatter1 = new google.visualization.PatternFormat('<a href=\"javascript:sendGmail(\"' + eval(strcolumna) +\");\" >+eval(strcolumna)+</a>');
 		console.debug(aformatearInt);
-		var formatter1 = new google.visualization.PatternFormat('<a href=\"#\" >{6}</a>');
+		var formatter1 = new google.visualization.PatternFormat('<a href=\"#\" >{1}</a>');
 		formatter1.format(data, [0,0]);
 	
 		
