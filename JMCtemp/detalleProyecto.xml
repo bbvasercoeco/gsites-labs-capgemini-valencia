@@ -161,15 +161,19 @@
 			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
 			function paramtoquery(param)
 			{
-				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
-				var indexFicha = indiceCadena(arrayParametros,param);		
+				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");	
+				alert(arrayParametros);
+				var indexFicha = indiceCadena(arrayParametros,param);	
+				alert(indexFicha);
 				var arrayidCliente = arrayParametros[indexFicha].split("-");
 				return arrayidCliente[2];	
 			}
 				function paramtoquery3(param)
 			{
-				var arrayParametros3 = gadgets.util.getUrlParameters()["parent"].split("/");		
-				var indexFicha3 = indiceCadena(arrayParametros3,param);		
+				var arrayParametros3 = gadgets.util.getUrlParameters()["parent"].split("/");
+				alert(arrayParametros3);
+				var indexFicha3 = indiceCadena(arrayParametros3,param);	
+				alert(indexFicha3);
 				var arrayidCliente3 = arrayParametros3[indexFicha3].split("-");		
 				return arrayidCliente3[1];		
 			}
