@@ -163,8 +163,10 @@
 			{
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
 				var indexFicha = indiceCadena(arrayParametros,param);		
-				var arrayidCliente = arrayParametros[indexFicha].split("-");		
-				return arrayidCliente[2];		
+				var arrayidCliente = arrayParametros[indexFicha].split("-");
+				if(param == "ficha-"){
+				return arrayidCliente[1];	
+				}else{return arrayidCliente[2];}	
 			}
 			
 			function handleQueryResponse(response) 
