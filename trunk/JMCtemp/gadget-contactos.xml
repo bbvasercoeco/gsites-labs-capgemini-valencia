@@ -89,7 +89,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-960
+961
 
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
@@ -180,7 +180,7 @@
 		//var formatter1 = new google.visualization.PatternFormat('<a href=\"javascript:sendGmail(\"' + eval(strcolumna) +\");\" >+eval(strcolumna)+</a>');
 		console.debug(aformatearInt);
 		var formatter1 = new google.visualization.PatternFormat('<a href=\"#\" >' + '{'+ aformatearInt+ '}' + '</a>');
-		formatter1.format(data, [aformatearInt,aformatearInt]);
+		formatter1.format(data, [0,0]);
 	
 		
 		
