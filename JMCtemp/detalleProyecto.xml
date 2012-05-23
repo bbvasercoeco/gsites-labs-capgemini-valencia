@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 15');
+			console.debug('detalleProyecto.xml version 16');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -161,21 +161,21 @@
 			function paramtoquery(param)
 			{
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");	
-				alert(arrayParametros);
+				//alert(arrayParametros);
 				var indexFicha = indiceCadena(arrayParametros,param);	
-				alert(indexFicha);
+				//alert(indexFicha);
 				var arrayidCliente = arrayParametros[indexFicha].split("-");
-				alert(arrayidCliente[2]);
+				//alert(arrayidCliente[2]);
 				return arrayidCliente[2];	
 			}
 				function paramtoquery3(param)
 			{
 				var arrayParametros3 = gadgets.util.getUrlParameters()["parent"].split("/");
-				alert(arrayParametros3);
+				//alert(arrayParametros3);
 				var indexFicha3 = indiceCadena(arrayParametros3,param);	
-				alert(indexFicha3);
+				//alert(indexFicha3);
 				var arrayidCliente3 = arrayParametros3[indexFicha3].split("-");	
-				alert(arrayidCliente3[1]);				
+				//alert(arrayidCliente3[1]);				
 				return arrayidCliente3[1];		
 			}
 			
@@ -200,7 +200,9 @@
 			function handleQueryResponse3(response) 
 			{
 				if (!gadgetHelper.validateResponse(response)) { return; }			
-				data = response.getDataTable();		
+				data = response.getDataTable();	
+				var pinta = data.getValue(0,4);
+				alert(pinta);
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,4) +'">';	
 				
 			}
