@@ -178,7 +178,8 @@
 		//formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
 		//var formatter1 = new google.visualization.PatternFormat('<a href=\"javascript:sendGmail(\"' + eval(strcolumna) +\");\" >+eval(strcolumna)+</a>');
 		console.debug(aformatearInt);
-		var formatter = new google.visualization.PatternFormat('<a href=\"#\" >{1}</a>');
+		var formatter = new google.visualization.PatternFormat('<a href=\"javascript:sendGmail(\'{1}\');\">{1}</a>');
+		
 		formatter.format(data, [6,6]);
 	
 		
