@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 13');
+			console.debug('detalleProyecto.xml version 14');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -176,7 +176,7 @@
 				alert(indexFicha3);
 				var arrayidCliente3 = arrayParametros3[indexFicha3].split("-");	
 				alert(arrayidCliente3[0]);				
-				return arrayidCliente3[0];		
+				return arrayidCliente3[1];		
 			}
 			
 			function handleQueryResponse(response) 
