@@ -89,7 +89,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-948
+949
 
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
@@ -143,9 +143,9 @@
 	function paramtoquery(param)
 			{
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
-				alert(arrayParametros);
+				//alert(arrayParametros);
 				var indexFicha = indiceCadena(arrayParametros,param);		
-				alert(indexFicha);
+				//alert(indexFicha);
 				var arrayidCliente = arrayParametros[indexFicha].split("-");		
 				return arrayidCliente[1];		
 			}
@@ -171,11 +171,11 @@
 		var strcolumna = "{" + aformatear + "}";
 		
 		data = response.getDataTable();
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
-		formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
+		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
+		//formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
 		//var formatter1 = new google.visualization.PatternFormat('<a href=\"javascript:sendGmail(\"' + eval(strcolumna) +\");\" >+eval(strcolumna)+</a>');
-		var formatter1 = new google.visualization.PatternFormat('<a href=\"#\" >' + eval("document.write('{');aformatear;document.write('}')") + '</a>');
-		formatter1.format(data, [aformatear,aformatear]);
+		//var formatter1 = new google.visualization.PatternFormat('<a href=\"#\" >' + eval("document.write('{');aformatear;document.write('}')") + '</a>');
+		//formatter1.format(data, [aformatear,aformatear]);
 	
 		
 		
