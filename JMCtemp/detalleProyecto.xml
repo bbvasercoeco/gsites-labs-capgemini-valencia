@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 21');
+			console.debug('detalleProyecto.xml version 23');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -163,16 +163,7 @@
 				//alert(arrayidCliente[2]);
 				return arrayidCliente[2];	
 			}
-				function paramtoquery3(param)
-			{
-				var arrayParametros3 = gadgets.util.getUrlParameters()["parent"].split("/");
-				//alert(arrayParametros3);
-				var indexFicha3 = indiceCadena(arrayParametros3,param);	
-				//alert(indexFicha3);
-				var arrayidCliente3 = arrayParametros3[indexFicha3].split("-");	
-				//alert(arrayidCliente3[1]);				
-				return arrayidCliente3[1];		
-			}
+				
 			
 			function handleQueryResponse(response) 
 			{
@@ -191,7 +182,7 @@
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
 				alert(data.getFormattedValue(0,13));
-				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,13);
+				document.getElementById('fechaProyecto').innerHTML = " + data.getFormattedValue(0,13) + ";
 				
 				
 			}
