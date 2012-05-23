@@ -104,13 +104,13 @@
 				
 				<li>Estado: <span id="estadoProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				
-				<li>Fecha implantación: <span id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Fecha implantación: <div id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div></li>
 			</ul>
 		</div>
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 38');
+			console.debug('detalleProyecto.xml version 39');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
