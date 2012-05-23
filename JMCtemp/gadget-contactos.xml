@@ -89,7 +89,7 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-952
+953
 
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
@@ -177,7 +177,7 @@
 		//formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
 		//var formatter1 = new google.visualization.PatternFormat('<a href=\"javascript:sendGmail(\"' + eval(strcolumna) +\");\" >+eval(strcolumna)+</a>');
 		
-		var formatter1 = new google.visualization.PatternFormat('<a href=\"#\" >' + eval("document.write(straux1+aformatear+straux2);") + '</a>');
+		var formatter1 = new google.visualization.PatternFormat('<a href=\"#\" >' + eval(document.write(straux1+aformatear+straux2);) + '</a>');
 		formatter1.format(data, [eval(aformatear),eval(aformatear)]);
 	
 		
