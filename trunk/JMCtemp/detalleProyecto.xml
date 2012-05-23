@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 19');
+			console.debug('detalleProyecto.xml version 20');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -136,12 +136,12 @@
 				//var querytosend = "select *  where K like 'PROY0001' ";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
-				
+				/*
 				var idCliqueryaux = paramtoquery3("ficha-");
 				var query3 = new google.visualization.Query(urlTable, opts);	
 				var querytosend3 = "select max(A), B ,J, N,O,P where A like '" + idCliqueryaux.toUpperCase() + "' group  by B,J,N,O,P";
 				query3.setQuery(querytosend3);			  
-				query3.send(handleQueryResponse3);
+				query3.send(handleQueryResponse3);*/
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
@@ -187,7 +187,9 @@
 				}
 			
 				data = response.getDataTable();		
-								
+				
+				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,15) +'">';									
+				
 				document.getElementById('codigoProyectoTitulo').innerHTML = data.getValue(0,1);
 				document.getElementById('codigoProyecto').innerHTML = data.getValue(0,10);
 				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
