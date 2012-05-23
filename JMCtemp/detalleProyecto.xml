@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 9');
+			console.debug('detalleProyecto.xml version 11');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -137,7 +137,7 @@
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 				
-				var idCliqueryaux = paramtoqueryAux("ficha-");
+				var idCliqueryaux = paramtoquery3("ficha-");
 				var query3 = new google.visualization.Query(urlTable, opts);	
 				//var querytosend3 = "select max(A), B ,J, N,O where A like 'IDGLOBAL0016' group  by B,J,N,O";
 				var querytosend3 = "select max(A), B ,J, N,O where A like '" + idCliqueryaux.toUpperCase() + "' group  by B,J,N,O";
@@ -166,12 +166,12 @@
 				var arrayidCliente = arrayParametros[indexFicha].split("-");
 				return arrayidCliente[2];	
 			}
-				function paramtoqueryAux(param)
+				function paramtoquery3(param)
 			{
-				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
-				var indexFicha = indiceCadena(arrayParametros,param);		
-				var arrayidCliente = arrayParametros[indexFicha].split("-");		
-				return arrayidCliente[1];		
+				var arrayParametros3 = gadgets.util.getUrlParameters()["parent"].split("/");		
+				var indexFicha3 = indiceCadena(arrayParametros3,param);		
+				var arrayidCliente3 = arrayParametros3[indexFicha3].split("-");		
+				return arrayidCliente3[1];		
 			}
 			
 			function handleQueryResponse(response) 
@@ -195,8 +195,6 @@
 			{
 				if (!gadgetHelper.validateResponse(response)) { return; }			
 				data = response.getDataTable();		
-				
-							
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,4) +'">';	
 				
 			}
