@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 12');
+			console.debug('detalleProyecto.xml version 13');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -165,6 +165,7 @@
 				var indexFicha = indiceCadena(arrayParametros,param);	
 				alert(indexFicha);
 				var arrayidCliente = arrayParametros[indexFicha].split("-");
+				alert(arrayidCliente[2]);
 				return arrayidCliente[2];	
 			}
 				function paramtoquery3(param)
@@ -173,8 +174,9 @@
 				alert(arrayParametros3);
 				var indexFicha3 = indiceCadena(arrayParametros3,param);	
 				alert(indexFicha3);
-				var arrayidCliente3 = arrayParametros3[indexFicha3].split("-");		
-				return arrayidCliente3[1];		
+				var arrayidCliente3 = arrayParametros3[indexFicha3].split("-");	
+				alert(arrayidCliente3[0]);				
+				return arrayidCliente3[0];		
 			}
 			
 			function handleQueryResponse(response) 
