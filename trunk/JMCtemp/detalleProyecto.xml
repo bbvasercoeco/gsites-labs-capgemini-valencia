@@ -104,13 +104,13 @@
 				
 				<li>Estado: <span id="estadoProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				
-				<li>Fecha implantación: <div id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div></li>
+				<li>Fecha implantación: <span id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 			</ul>
 		</div>
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 39');
+			console.debug('detalleProyecto.xml version 40');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -181,7 +181,7 @@
 				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
-				document.getElementById('fechaProyecto').innerHTML = data.getValue(0,13);
+				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,13);
 				
 				
 			}
