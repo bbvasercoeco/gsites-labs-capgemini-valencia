@@ -189,7 +189,8 @@
 				data = response.getDataTable();		
 				
 							
-				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,4) +'">';				
+				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,4) +'">';	
+				
 			}
 		</script>
 		]]>
