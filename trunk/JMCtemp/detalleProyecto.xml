@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 20');
+			console.debug('detalleProyecto.xml version 21');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -136,12 +136,7 @@
 				//var querytosend = "select *  where K like 'PROY0001' ";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
-				/*
-				var idCliqueryaux = paramtoquery3("ficha-");
-				var query3 = new google.visualization.Query(urlTable, opts);	
-				var querytosend3 = "select max(A), B ,J, N,O,P where A like '" + idCliqueryaux.toUpperCase() + "' group  by B,J,N,O,P";
-				query3.setQuery(querytosend3);			  
-				query3.send(handleQueryResponse3);*/
+				
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
@@ -195,19 +190,12 @@
 				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
+				alert(data.getFormattedValue(0,13));
 				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,13);
 				
 				
 			}
-			function handleQueryResponse3(response) 
-			{
-				if (!gadgetHelper.validateResponse(response)) { return; }			
-				data = response.getDataTable();	
-				//var pinta = data.getValue(0,5);
-				//alert(pinta);
-				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';	
-				
-			}
+			
 		</script>
 		]]>
 	</Content>
