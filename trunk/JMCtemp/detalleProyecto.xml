@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 18');
+			console.debug('detalleProyecto.xml version 19');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -201,8 +201,8 @@
 			{
 				if (!gadgetHelper.validateResponse(response)) { return; }			
 				data = response.getDataTable();	
-				var pinta = data.getValue(0,5);
-				alert(pinta);
+				//var pinta = data.getValue(0,5);
+				//alert(pinta);
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';	
 				
 			}
