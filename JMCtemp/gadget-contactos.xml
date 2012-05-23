@@ -88,9 +88,9 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-968
 
-<div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
+
+<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
 	var gadgetHelper = null;
@@ -166,20 +166,11 @@
 	
 	function handleQueryResponse(response) 
 	{
-		if (!gadgetHelper.validateResponse(response)) { return; }
-		var strcolumna = "{" + aformatear + "}";
-		var straux1 = "{";
-		var straux2 = "}";
-		var aformatear = "6";
-		var aformatearInt = parseInt(aformatear);
+		if (!gadgetHelper.validateResponse(response)) { return; }		
 		
 		data = response.getDataTable();
-		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
-		//formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
-		//var formatter1 = new google.visualization.PatternFormat('<a href=\"javascript:sendGmail(\"' + eval(strcolumna) +\");\" >+eval(strcolumna)+</a>');
-		console.debug(aformatearInt);
-		//\'window.open(\"http://mail.google.com/mail/?view=cm&fs=1&to={1}&ui=1\",\"send mail\")\'
-		var formatter = new google.visualization.PatternFormat('<a href=\"#\" onclick=\'window.open(\"http://mail.google.com/mail/?view=cm&fs=1&to={1}&ui=1\",\"send mail\")\'>{1}</a>');
+		
+		var formatter = new google.visualization.PatternFormat('<a href=\"#\" class=\"enlaceTabla\" onclick=\'window.open(\"http://mail.google.com/mail/?view=cm&fs=1&to={1}&ui=1\",\"send mail\")\'>{1}</a>');
 		
 		formatter.format(data, [6,6]);
 	
@@ -198,7 +189,7 @@
 		};
          
         var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-		var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+		var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
 		
