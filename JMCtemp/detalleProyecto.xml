@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 42');
+			
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -127,13 +127,10 @@
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
-				//var query = gadgetHelper.createQueryFromPrefs(prefs);	
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("detalle-proyecto-");				
-				//console.debug('detalleProyecto.xml idCliquery: '+ idCliquery);
 				var querytosend = "select *  where K like '" + idCliquery.toUpperCase() + "'";
-				//var querytosend = "select *  where K like 'PROY0001' ";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 				
@@ -155,12 +152,9 @@
 			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
 			function paramtoquery(param)
 			{
-				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");	
-				//alert(arrayParametros);
-				var indexFicha = indiceCadena(arrayParametros,param);	
-				//alert(indexFicha);
+				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");
+				var indexFicha = indiceCadena(arrayParametros,param);
 				var arrayidCliente = arrayParametros[indexFicha].split("-");
-				//alert(arrayidCliente[2]);
 				return arrayidCliente[2];	
 			}
 				
