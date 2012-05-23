@@ -137,7 +137,7 @@
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 				
-				var idCliqueryaux = paramtoquery("ficha-");
+				var idCliqueryaux = paramtoqueryAux("ficha-");
 				var query3 = new google.visualization.Query(urlTable, opts);	
 				//var querytosend3 = "select max(A), B ,J, N,O where A like 'IDGLOBAL0016' group  by B,J,N,O";
 				var querytosend3 = "select max(A), B ,J, N,O where A like '" + idCliqueryaux.toUpperCase() + "' group  by B,J,N,O";
@@ -164,9 +164,14 @@
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
 				var indexFicha = indiceCadena(arrayParametros,param);		
 				var arrayidCliente = arrayParametros[indexFicha].split("-");
-				if(param == "ficha-"){
-				return arrayidCliente[1];	
-				}else{return arrayidCliente[2];}	
+				return arrayidCliente[2];	
+			}
+				function paramtoqueryAux(param)
+			{
+				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
+				var indexFicha = indiceCadena(arrayParametros,param);		
+				var arrayidCliente = arrayParametros[indexFicha].split("-");		
+				return arrayidCliente[1];		
 			}
 			
 			function handleQueryResponse(response) 
