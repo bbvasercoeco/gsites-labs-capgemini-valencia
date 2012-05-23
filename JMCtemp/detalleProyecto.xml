@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 27');
+			console.debug('detalleProyecto.xml version 28');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
