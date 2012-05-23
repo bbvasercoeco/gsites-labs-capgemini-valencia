@@ -92,7 +92,8 @@
 			<hr>
 		</h2>			
 
-		<div id="detalleFicha">			
+		<div id="detalleFicha">	
+			<div id="imagenCliente"><img class="loading" width="100" src="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-idglobal0001/logo-wolkswagen.png"/></div>
 			<ul id="datosFicha">				
 				
 				<li>Código de proyecto: <span id="codigoProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
