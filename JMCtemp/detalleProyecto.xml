@@ -110,7 +110,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 30');
+			console.debug('detalleProyecto.xml version 31');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -181,7 +181,7 @@
 				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
-				var aux1 = data.getFormattedValue(0,13);
+				var aux1 = data.getValue(0,13);
 				document.getElementById('fechaProyecto').innerHTML = aux1;
 				
 				
