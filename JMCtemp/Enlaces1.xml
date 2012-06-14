@@ -3,7 +3,7 @@
 	<ModulePrefs title="Cajetin personalizado un tercio Help Desk Global"
 		title_url=""
 		height="300"
-		width="465"
+		width="930"
 		author=""
 		author_email=""
 		description="GadGet para Google Sites que muestra enlaces en una caja con formato."
@@ -64,7 +64,9 @@
 			.margintop {
 				margin-top: 7px !important;
 			}
-			
+			#textoenlaces{
+			width:300px;
+			}
 		</style>
 	
 		<div id="content_div"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
@@ -145,6 +147,7 @@
 			.textocolor {
 				width: 57px;
 			}
+			
 		</style>
 		<table width="100%" border="0" id="tablaconfig">			
 			<tr>		
