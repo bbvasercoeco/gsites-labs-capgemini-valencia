@@ -36,8 +36,9 @@
             var prefs = new gadgets.Prefs();           
             function registra(variable)
             {	
+				alert(variable);
                 prefs.set(variable,document.getElementById(variable).value);
-				
+				alert(document.getElementById(variable).value);
 			
             }  
 			
@@ -111,6 +112,8 @@ margin-bottom:25px;
      var prefs = new gadgets.Prefs();  // User preferences
 	 var titulo = prefs.getString("pageTitle");
 	 var size = prefs.getInt("pageSize");
+	 alert(titulo);
+	 alert(size);
 	 document.getElementById('titulo').innerHTML ='<h2>'+titulo+'</h2>';
 	 document.getElementById('titulo').style.fontSize = size;
 	 gadgets.util.registerOnLoadHandler(showBreadcrumbs);
