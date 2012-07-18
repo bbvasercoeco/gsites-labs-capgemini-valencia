@@ -76,7 +76,8 @@ margin-bottom:25px;
 }
  #title-crumbs {
 			font-size:12px;
-			color:#3F78B2;
+			font-family: "BBVA Web Semibold", arial, sans-serif;
+			color:#acacac;
 			text-transform: capitalize;
 			margin-top: 7px;
 			margin-bottom:25px;
@@ -84,16 +85,16 @@ margin-bottom:25px;
 	a.linkBreadCrumb,
 	a:visited.linkBreadCrumb {
 		fon-weight: normal;
-		font-size:12px;
-		color:#3F78B2;
+		font-size:11px;
+		color:#acacac;
 		text-decoration:none;
 		text-transform: capitalize;
 	}
 	a:hover.linkBreadCrumb,
 	a:active.linkBreadCrumb {
 		font-style: normal;
-		font-size:12px;
-		color:#009EE5;
+		font-size:11px;
+		color:#acacac;
 		fon-weight: normal;
 		text-decoration:none;		
 		text-transform: capitalize;
@@ -101,7 +102,7 @@ margin-bottom:25px;
 	.currentBreadCrumb {
 		fon-weight: bold;
 		font-size:12px;
-		color:#009EE5;
+		color:#acacac;
 		text-decoration:none;
 		text-transform: capitalize;		
 	}		
@@ -194,7 +195,7 @@ margin-bottom:25px;
 				}
 			}
 		}
-		document.getElementById("title-crumbs").innerHTML = s;     
+		document.getElementById("title-crumbs").innerHTML = 'You are in:'+ s;     
 	}
     </script>
     ]]>
