@@ -113,7 +113,7 @@ margin-bottom:25px;
 	 var size = prefs.getInt("pageSize");
 	 document.getElementById('titulo').innerHTML ='<h2>'+titulo+'</h2>';
 	 document.getElementById('titulo').style.fontSize = size;
-	 gadgets.util.RegisterOnloadHandler(showBreadcrumbs);
+	 gadgets.util.registerOnloadHandler(showBreadcrumbs);
      
 	function indice (parametros, rootSite)
 	{	
