@@ -9,6 +9,7 @@
 	<Require feature="setprefs" />   
   </ModulePrefs>
 <UserPref name="pageTitle" display_name="Title Page" required="true" />
+<UserPref name="titleProminent" display_name="title Prominent Page" required="true" />
 <UserPref name="sizeTitle" display_name="Title Page Size" required="true" />
 <Content type="html" view="configuration" preferred_height="480">
 
@@ -24,6 +25,11 @@
             <tr>       
                 <td>
                     Title of Page: <input type="text" id="pageTitle" value="__UP_pageTitle__"   onchange="registra('pageTitle')"/>                   
+                </td>
+            </tr>
+			 <tr>       
+                <td>
+                    TitleProminent of Page: <input type="text" id="titleProminent" value="__UP_titleProminent__"   onchange="registra('titleProminent')"/>                   
                 </td>
             </tr>
 			 <tr>       
@@ -113,9 +119,10 @@ margin-bottom:25px;
 	 var gadgetHelper = null;
      var prefs = new gadgets.Prefs();  // User preferences
 	 var titulo = prefs.getString("pageTitle");
+	 var titulodestacado = prefs.getString("titleProminent");
 	 var size = prefs.getInt("sizeTitle");
 	
-	 document.getElementById("titulo").innerHTML ='<h2>'+titulo+'</h2>';
+	 document.getElementById("titulo").innerHTML ='<h2>'+titulo+'<span>'+titulodestacado+'</span></h2>';
 	 document.getElementById("titulo").style.fontSize = size;
 	 gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 	 		
