@@ -5,6 +5,8 @@
     author_affiliation="Capgemini">
     <Require feature="idi"/>
     <Require feature="locked-domain" />
+	<Require feature="dynamic-height"/>   
+	<Require feature="setprefs" />   
   </ModulePrefs>
 <UserPref name="pageTitle" display_name="Title Page" required="true" />
 <UserPref name="sizeTitle" display_name="Title Page Size" required="true" />
