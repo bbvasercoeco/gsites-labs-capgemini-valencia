@@ -113,7 +113,7 @@ margin-bottom:25px;
 	 var gadgetHelper = null;
      var prefs = new gadgets.Prefs();  // User preferences
 	 var titulo = prefs.getString("pageTitle");
-	 var size = prefs.getInt("pageSize");
+	 var size = prefs.getInt("sizeTitle");
 	 alert(titulo);
 	 alert(size);
 	 document.getElementById("titulo").innerHTML ='<h2>'+titulo+'</h2>';
