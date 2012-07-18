@@ -28,7 +28,7 @@
             </tr>
 			 <tr>       
                 <td>
-                    Size of Title: <input type="int" id="sizeTitle" value="__UP_sizeTitle__"   onchange="registra('sizeTitle')"/>                   
+                    Size of Title: <input type="number" id="sizeTitle" value="__UP_sizeTitle__"   onchange="registra('sizeTitle')"/>                   
                 </td>
             </tr>
   </table>	
@@ -116,7 +116,7 @@ margin-bottom:25px;
 	 var size = prefs.getInt("pageSize");
 	 alert(titulo);
 	 alert(size);
-	 document.getElementById("titulo").innerHTML +='<h2>'+titulo+'</h2>';
+	 document.getElementById("titulo").innerHTML ='<h2>'+titulo+'</h2>';
 	 document.getElementById("titulo").style.fontSize = size;
 	 gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 	 		
