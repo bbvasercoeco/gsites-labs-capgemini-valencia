@@ -101,7 +101,7 @@ margin-bottom:25px;
 	.currentBreadCrumb {
 		fon-weight: bold;
 		font-size:12px;
-		color:#acacac;
+		color:#626262;
 		text-decoration:none;
 		text-transform: capitalize;		
 	}		
