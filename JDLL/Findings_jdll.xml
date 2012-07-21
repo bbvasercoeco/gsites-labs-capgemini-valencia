@@ -255,13 +255,13 @@
         var topic = gadgets.util.getUrlParameters()["parent"].split("=");
         var situation = gadgets.util.getUrlParameters()["parent"];
 
-        /*if(situation.indexOf('topic')== -1)
-        {
-            document.getElementById("titleHome").innerHTML = '<h2>Last <strong>Findings</strong></h2><div id="showAll"><a target="_parent" href="https://sites.google.com/a/bbva.com/findings/home/topics">View all topics</a></div>';
-            var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D) desc limit 4";
-        }
+       //if(situation.indexOf('topic')== -1)
+       // {
+            document.getElementById("titleHome").innerHTML = '<h2>Last <strong>Findings</strong></h2>';
+            var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)";
+     /* }
         else
-        {*/
+        {
             document.getElementById("titleHome").innerHTML = '<h2><strong>'+topic[1]+'</strong></h2>';
             //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (A like '%"+topic[1]+"%') and (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)  desc ";
           
@@ -269,7 +269,7 @@
             //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (A like '%"+topic[1]+"%') group by A,C,L,G,R,S,B,F order by max(D)  desc ";
             //añadiendo la validación de F==Yes
             var querytosend = "select max(D),A,C,L,G,R,S,B,F where ((A like '%"+topic[1]+"%') and (F like 'Yes')) group by A,C,L,G,R,S,B,F order by max(D)  desc ";
-      // }
+       }*/
 
         query.setQuery(querytosend);
         query.send(handleQueryResponse);
