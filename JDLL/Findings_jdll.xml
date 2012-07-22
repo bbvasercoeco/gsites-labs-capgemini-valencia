@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('3 findings_jdll.xml');
+    console.debug('4 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -259,8 +259,13 @@
        // {
             document.getElementById("titleHome").innerHTML = '<h2>Last <strong>Findings</strong></h2>';
             //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)";
-            var querytosend = "select * where (F like 'Yes') ";
-   
+            //select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D) limit 10 offset 10
+            //var querytosend = "select D,A,C,L,G,R,S,B,F where (F like 'Yes') group by A,C,L,G,R,S,B,F order by D ";
+
+
+            var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D);   
+
+
      /* }
         else
         {
@@ -287,8 +292,73 @@
         data = response.getDataTable();
 
         var filas = data.getNumberOfRows();
+        var pagActual = 1;
+        var pagTotales = 4;
+
 
         console.debug('filas:'+filas);
+
+        for(var i = 0; i < filas; i++)
+        {
+            var html = "";
+
+            console.debug('i:'+ i);
+            console.debug('10*pagActual:'+ 10*pagActual);
+            console.debug('pagActual:'+ pagActual);
+
+            if ( (i==10*pagActual) && (pagActual <= pagTotales) )
+            {
+                html += <div class="paginaNueva">
+
+            }
+            switch(topicName)
+            {
+                 case 'Security': var classname="green2";break;
+                case 'Banking':  var classname="brown";break;
+                case 'Scouting':  var classname="green";break;
+                case 'Mobile':  var classname="blue";break;
+                case 'Boundaries':  var classname="pink";break;
+                case 'Technology':  var classname="blue2";break;
+                case 'Innovation':  var classname="brown2";break;
+                case 'Enterprise 2.0': var classname="blue3";break;
+                case 'Payments':  var classname="green3";break;
+                default: var classname="brown";break;
+            }
+        
+            html += '<div class="blockFinding" onclick="javascript:window.parent.location.href =\'https://sites.google.com/a/bbva.com/findings/home/coming-events/event?eventname='+ data.getValue(i,7) +'\';">';
+
+            html += '<div class="container-imageFindings"><img width="15" src="' + imageFinding + '"/></div>';
+
+            html += '<div class="blockData">';
+
+            html += '<div class="label-topicName ' + classname + '"><span>' + topicName + '</span></div>';
+
+            html += '<h3 class="label-summary">' + summary + '</h3>';
+
+            html += '<div class="infoviajero">';
+
+            html += '<div class="label-bbvatraveller"><strong>BBVA Traveller</strong> - ' + traveller + '</div>';
+
+            html += '<div class="more-link">';
+            html += '<a target="_parent" href="https://sites.google.com/a/bbva.com/findings/home/coming-events/event?eventname=' + data.getValue(i,7) +'">More Info</a>';
+            html += '</div>';
+
+            html += '</div>';
+            html += '</div>';
+            html += '</div>';
+
+
+            if ( (i==10*pagActual) && (pagActual <= pagTotales) )
+            {
+                html += </div>
+                pagActual += pagActual;
+                console.debug('pagActual:'+ pagActual);
+            }
+
+
+        }
+
+/*
 
         for(var i = 0; i < filas; i++)
         {
@@ -338,6 +408,8 @@
             //alert(data.getValue(i,7));
             document.getElementById("lastfindings").innerHTML += html;
         }
+*/
+
 
     }
    </script>
