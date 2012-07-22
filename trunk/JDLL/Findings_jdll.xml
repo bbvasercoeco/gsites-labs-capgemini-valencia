@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('23 findings_jdll.xml');
+    console.debug('25 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -278,16 +278,16 @@
 
         var filas = data.getNumberOfRows();
         var pagActual = 1;
-        var pagTotales = 4;
-
         
+        // Calcular paginas totales 
+        var pagTotales = 4;
 
         console.debug('filas:'+filas);
         console.debug('<div class="paginaNueva">');
        
         var html = "";
 
-        html += '<div class="paginaNueva" id="pagina1" style="border:1px solid red; display: block;width: auto;height: 660px;">';
+        html += '<div id="pagina1" class="paginaNueva" style="border:1px solid red; display: block;width: auto;height: 660px;">';
 
         for(var i = 0; i < filas; i++)
         {
@@ -298,17 +298,13 @@
             var traveller = data.getValue(i,3);
             var imageFinding = data.getValue(i,4);
             var summary = data.getValue(i,6);
-
-
             console.debug('i:'+ i);
             console.debug('pagActual:'+ pagActual);
             console.debug('10*pagActual:'+ 10*pagActual);
-            
 
-          
             switch(topicName)
             {
-                 case 'Security': var classname="green2";break;
+                case 'Security': var classname="green2";break;
                 case 'Banking':  var classname="brown";break;
                 case 'Scouting':  var classname="green";break;
                 case 'Mobile':  var classname="blue";break;
@@ -342,7 +338,7 @@
             html += '</div>';
             html += '</div>';
 
-            if ( (i==10*pagActual-1))
+            if ( (i==10*pagActual-1) )
             {
                 var pagActualParaMostrar = pagActual+1;
                 html += '</div>';
@@ -357,9 +353,12 @@
                 console.debug('2-> pagActual:'+ pagActual);
             }
 
-            
 
         }
+
+
+        html += '<div id="bloqueEnlaces" style="display:block; height: 40px;border:1px solid green;"><a href="javascript:continuacion();">Siguiente</a></div>';
+
         document.getElementById("lastfindings").innerHTML += html;
 
 
