@@ -38,6 +38,11 @@
 			//http://spreadsheets.google.com/tq?key=0AoYEewut2JmZdGR5SFQ0ckxiOU5nWjVGcENmZzFzd1E
 			//var query = new google.visualization.Query('http://spreadsheets.google.com/tq?key=rYQm6lTXPH8dHA6XGhJVFsA&pub=1');
 			var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0AkmgaUZ_3ICedHU3LUVIeEdfZHY1dmhGNGcwdEkyM1E#gid=0');
+
+			///https://docs.google.com/spreadsheet/ccc?key=0Arsf9nIuNLe-dGlOdlBlZHdCWGlmVGt2NUxJU1FRTHc#gid=0
+
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0Arsf9nIuNLe-dGlOdlBlZHdCWGlmVGt2NUxJU1FRTHc#gid=0');
+
 			
 			function sendAndDraw() {
 			  // Send the query with a callback function.
