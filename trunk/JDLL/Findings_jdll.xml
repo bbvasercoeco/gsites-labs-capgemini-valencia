@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('7 findings_jdll.xml');
+    console.debug('8 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -302,9 +302,16 @@
         {
             var html = "";
 
+            var topicName = data.getValue(i,1);
+            var traveller = data.getValue(i,3);
+            var imageFinding = data.getValue(i,4);
+            var summary = data.getValue(i,6);
+            
+
             console.debug('i:'+ i);
-            console.debug('10*pagActual:'+ 10*pagActual);
             console.debug('pagActual:'+ pagActual);
+            console.debug('10*pagActual:'+ 10*pagActual);
+            
 
             if ( (i==10*pagActual) && (pagActual <= pagTotales) )
             {
@@ -352,7 +359,7 @@
             {
                 html += '</div>';
                 pagActual += pagActual;
-                console.debug('pagActual:'+ pagActual);
+                console.debug('2-> pagActual:'+ pagActual);
             }
 
 
