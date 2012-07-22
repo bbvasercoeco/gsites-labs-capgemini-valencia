@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('15 findings_jdll.xml');
+    console.debug('16 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -295,7 +295,7 @@
         var pagActual = 1;
         var pagTotales = 4;
 
-        var html = "";
+        
 
         console.debug('filas:'+filas);
         console.debug('<div class="paginaNueva">');
@@ -303,7 +303,8 @@
 
         for(var i = 0; i < filas; i++)
         {
-            
+
+            var html = "";
 
             var topicName = data.getValue(i,1);
             var traveller = data.getValue(i,3);
@@ -356,7 +357,7 @@
             if ( (i==10*pagActual))
             {
                 html += '</div>';
-                html += '<div class="paginaNueva">';
+                html += '<div class="paginaNueva" style="border:1px solid blue;">';
                 console.debug('</div><div class="paginaNueva" style="border:1px solid blue;">');
 
             }
