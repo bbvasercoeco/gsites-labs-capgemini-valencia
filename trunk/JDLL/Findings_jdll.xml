@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('4 findings_jdll.xml');
+    console.debug('5 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -263,7 +263,7 @@
             //var querytosend = "select D,A,C,L,G,R,S,B,F where (F like 'Yes') group by A,C,L,G,R,S,B,F order by D ";
 
 
-            var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D);   
+            var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)";   
 
 
      /* }
