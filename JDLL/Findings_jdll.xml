@@ -297,7 +297,7 @@
 
 
         console.debug('filas:'+filas);
-
+        console.debug('<div class="paginaNueva">');
         html += '<div class="paginaNueva">';
 
         for(var i = 0; i < filas; i++)
@@ -319,6 +319,7 @@
             {
                 html += '</div>';
                 html += '<div class="paginaNueva">';
+                console.debug('</div><div class="paginaNueva">');
 
             }
             switch(topicName)
