@@ -341,11 +341,16 @@
             if ( (i==10*pagActual-1) )
             {
                 var pagActualParaMostrar = pagActual+1;
-                html += '<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;border:1px solid green;"><a href="javascript:continuacion();">Siguiente</a></div>';
-                html += '</div>';
-                html += '<div id="pagina'+ pagActualParaMostrar +'" class="paginaNueva" style="display:none; border:1px solid blue; display: block;width: auto;height: 660px;">';
-                console.debug('</div><div class="paginaNueva" style="border:1px solid blue; display: block;width: auto;height: 700px;">');
+                var pagSiquiente = pagActualParaMostrar+1;
 
+                html += '<div id="bloqueEnlaces" style="float:right;"><a href="javascript:continuacion(pagina'+ pagSiquiente +');">Siguiente</a></div>';
+                html += '</div>';
+                html += '<div id="pagina'+ pagActualParaMostrar +'" class="paginaNueva" style="display:none; border:1px solid blue; width: auto;height: 660px;">';
+               
+
+                console.debug('</div><div class="paginaNueva" style="border:1px solid blue; display: block;width: auto;height: 700px;">');
+                console.debug('<div id="bloqueEnlaces" ><a href="javascript:continuacion();">Siguiente</a></div>');
+       
             }
             if ( (i==10*pagActual-1) )
             {
@@ -357,7 +362,6 @@
 
         }
 
-        console.debug('<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;border:1px solid green;"><a href="javascript:continuacion();">Siguiente</a></div>');
         //  html += '<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;border:1px solid green;"><a href="javascript:continuacion();">Siguiente</a></div>';
 
         document.getElementById("lastfindings").innerHTML += html;
