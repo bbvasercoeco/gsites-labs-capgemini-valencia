@@ -353,14 +353,14 @@
             html += '</div>';
             html += '</div>';
 
-            if ( (i==10*pagActual) && (pagActual <= pagTotales) )
+            if ( (i==10*pagActual))
             {
                 html += '</div>';
                 html += '<div class="paginaNueva">';
                 console.debug('</div><div class="paginaNueva" style="border:1px solid blue;">');
 
             }
-            if ( (i==10*pagActual) && (pagActual <= pagTotales) )
+            if ( (i==10*pagActual) )
             {
                 //html += '</div>';
                 pagActual++;
