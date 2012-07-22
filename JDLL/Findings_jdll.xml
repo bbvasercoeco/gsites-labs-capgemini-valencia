@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('16 findings_jdll.xml');
+    console.debug('17 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -255,31 +255,16 @@
         var topic = gadgets.util.getUrlParameters()["parent"].split("=");
         var situation = gadgets.util.getUrlParameters()["parent"];
 
-       //if(situation.indexOf('topic')== -1)
-       // {
-            document.getElementById("titleHome").innerHTML = '<h2>Last <strong>Findings</strong></h2>';
-            //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)";
-            //select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D) limit 10 offset 10
-            //var querytosend = "select D,A,C,L,G,R,S,B,F where (F like 'Yes') group by A,C,L,G,R,S,B,F order by D ";
+    
+        document.getElementById("titleHome").innerHTML = '<h2>Last <strong>Findings</strong></h2>';
 
 
-            var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)";   
+        var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)";   
 
-
-     /* }
-        else
-        {
-            document.getElementById("titleHome").innerHTML = '<h2><strong>'+topic[1]+'</strong></h2>';
-            //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (A like '%"+topic[1]+"%') and (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)  desc ";
-          
-            //esta query funciona
-            //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (A like '%"+topic[1]+"%') group by A,C,L,G,R,S,B,F order by max(D)  desc ";
-            //añadiendo la validación de F==Yes
-            var querytosend = "select max(D),A,C,L,G,R,S,B,F where ((A like '%"+topic[1]+"%') and (F like 'Yes')) group by A,C,L,G,R,S,B,F order by max(D)  desc ";
-       }*/
 
         query.setQuery(querytosend);
         query.send(handleQueryResponse);
+
     }
 
    function handleQueryResponse(response)
@@ -299,12 +284,15 @@
 
         console.debug('filas:'+filas);
         console.debug('<div class="paginaNueva">');
+       
+        var html = "";
+
         html += '<div class="paginaNueva" style="border:1px solid red;">';
 
         for(var i = 0; i < filas; i++)
         {
 
-            var html = "";
+            //var html = "";
 
             var topicName = data.getValue(i,1);
             var traveller = data.getValue(i,3);
@@ -368,61 +356,11 @@
                 console.debug('2-> pagActual:'+ pagActual);
             }
 
-            document.getElementById("lastfindings").innerHTML += html;
+            
 
         }
+        document.getElementById("lastfindings").innerHTML += html;
 
-/*
-
-        for(var i = 0; i < filas; i++)
-        {
-            var html = "";
-
-            var topicName = data.getValue(i,1);
-            var traveller = data.getValue(i,3);
-            var imageFinding = data.getValue(i,4);
-            var summary = data.getValue(i,6);
-            // alert(data.getColumnType(7));
-
-            switch(topicName)
-            {
-                 case 'Security': var classname="green2";break;
-                case 'Banking':  var classname="brown";break;
-                case 'Scouting':  var classname="green";break;
-                case 'Mobile':  var classname="blue";break;
-                case 'Boundaries':  var classname="pink";break;
-                case 'Technology':  var classname="blue2";break;
-                case 'Innovation':  var classname="brown2";break;
-                case 'Enterprise 2.0': var classname="blue3";break;
-                case 'Payments':  var classname="green3";break;
-                default: var classname="brown";break;
-            }
-		
-            html += '<div class="blockFinding" onclick="javascript:window.parent.location.href =\'https://sites.google.com/a/bbva.com/findings/home/coming-events/event?eventname='+ data.getValue(i,7) +'\';">';
-
-            html += '<div class="container-imageFindings"><img width="15" src="' + imageFinding + '"/></div>';
-
-            html += '<div class="blockData">';
-
-            html += '<div class="label-topicName ' + classname + '"><span>' + topicName + '</span></div>';
-
-            html += '<h3 class="label-summary">' + summary + '</h3>';
-
-            html += '<div class="infoviajero">';
-
-            html += '<div class="label-bbvatraveller"><strong>BBVA Traveller</strong> - ' + traveller + '</div>';
-
-            html += '<div class="more-link">';
-            html += '<a target="_parent" href="https://sites.google.com/a/bbva.com/findings/home/coming-events/event?eventname=' + data.getValue(i,7) +'">More Info</a>';
-            html += '</div>';
-
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
-            //alert(data.getValue(i,7));
-            document.getElementById("lastfindings").innerHTML += html;
-        }
-*/
 
 
     }
