@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('5 findings_jdll.xml');
+    console.debug('6 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -308,7 +308,7 @@
 
             if ( (i==10*pagActual) && (pagActual <= pagTotales) )
             {
-                html += <div class="paginaNueva">
+                html += '<div class="paginaNueva">';
 
             }
             switch(topicName)
