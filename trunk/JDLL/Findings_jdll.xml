@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('8 findings_jdll.xml');
+    console.debug('9 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -306,7 +306,7 @@
             var traveller = data.getValue(i,3);
             var imageFinding = data.getValue(i,4);
             var summary = data.getValue(i,6);
-            
+
 
             console.debug('i:'+ i);
             console.debug('pagActual:'+ pagActual);
@@ -362,6 +362,7 @@
                 console.debug('2-> pagActual:'+ pagActual);
             }
 
+            document.getElementById("lastfindings").innerHTML += html;
 
         }
 
