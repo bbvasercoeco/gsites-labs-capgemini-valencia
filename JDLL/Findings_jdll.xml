@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('26 findings_jdll.xml');
+    console.debug('27 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -341,6 +341,7 @@
             if ( (i==10*pagActual-1) )
             {
                 var pagActualParaMostrar = pagActual+1;
+                html += '<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;border:1px solid green;"><a href="javascript:continuacion();">Siguiente</a></div>';
                 html += '</div>';
                 html += '<div id="pagina'+ pagActualParaMostrar +'" class="paginaNueva" style="display:none; border:1px solid blue; display: block;width: auto;height: 660px;">';
                 console.debug('</div><div class="paginaNueva" style="border:1px solid blue; display: block;width: auto;height: 700px;">');
@@ -357,11 +358,11 @@
         }
 
         console.debug('<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;border:1px solid green;"><a href="javascript:continuacion();">Siguiente</a></div>');
-        //html += '<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;border:1px solid green;"><a href="javascript:continuacion();">Siguiente</a></div>';
+        //  html += '<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;border:1px solid green;"><a href="javascript:continuacion();">Siguiente</a></div>';
 
         document.getElementById("lastfindings").innerHTML += html;
 
-
+        
 
     }
    </script>
