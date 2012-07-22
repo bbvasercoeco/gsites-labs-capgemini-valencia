@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('30 findings_jdll.xml');
+    console.debug('31 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -343,7 +343,7 @@
                 var pagActualParaMostrar = pagActual+1;
                 var pagSiguiente = pagActualParaMostrar+1;
 
-                html += '<div id="bloqueEnlaces" style="float:right;"><a href="javascript:continuacion(\'pagina'+ pagSiguiente +'\'');">Siguiente</a></div>';
+                html += '<div id="bloqueEnlaces" style="float:right;"><a href="javascript:continuacion(\'pagina'+ pagSiguiente +'\');">Siguiente</a></div>';
                 html += '</div>';
                 html += '<div id="pagina'+ pagActualParaMostrar +'" class="paginaNueva" style="display:none; border:1px solid blue; width: auto;height: 660px;">';
                
