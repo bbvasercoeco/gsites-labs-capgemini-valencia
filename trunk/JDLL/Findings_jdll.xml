@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('18 findings_jdll.xml');
+    console.debug('19 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -349,7 +349,7 @@
                 console.debug('</div><div class="paginaNueva" style="border:1px solid blue;">');
 
             }
-            if ( (i==10*pagActual) )
+            if ( (i==10*pagActual-1) )
             {
                 //html += '</div>';
                 pagActual++;
