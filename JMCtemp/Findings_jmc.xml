@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('66 findings_jmc.xml');
+    console.debug('67 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -252,7 +252,8 @@
         var query = gadgetHelper.createQueryFromPrefs(prefs);
         var opts = {dataType:'jsonp'};
         var query = new google.visualization.Query(urlTable, opts);
-        var topic = gadgets.util.getUrlParameters()["parent"].split("=");
+       // var topic = gadgets.util.getUrlParameters()["parent"].split("=");
+		var topic ="Security";
         var situation = gadgets.util.getUrlParameters()["parent"];
 
     
@@ -266,13 +267,13 @@
         }
         else
         {
-            document.getElementById("titleHome").innerHTML = '<h2><strong>'+topic[1]+'</strong></h2>';
-            //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (A like '%"+topic[1]+"%') and (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)  desc ";
+            document.getElementById("titleHome").innerHTML = '<h2><strong>'+topic+'</strong></h2>';
+            //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (A like '%"+topic+"%') and (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D)  desc ";
           
             //esta query funciona
-            //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (A like '%"+topic[1]+"%') group by A,C,L,G,R,S,B,F order by max(D)  desc ";
+            //var querytosend = "select max(D),A,C,L,G,R,S,B,F where (A like '%"+topic+"%') group by A,C,L,G,R,S,B,F order by max(D)  desc ";
             //añadiendo la validación de F==Yes
-            var querytosend = "select max(D),A,C,L,G,R,S,B,F where ((A like '%"Security"%') and (F like 'Yes')) group by A,C,L,G,R,S,B,F order by max(D)  desc ";
+            var querytosend = "select max(D),A,C,L,G,R,S,B,F where ((A like '%"+topic+"%') and (F like 'Yes')) group by A,C,L,G,R,S,B,F order by max(D)  desc ";
         }   
 
 
