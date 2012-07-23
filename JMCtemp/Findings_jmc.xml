@@ -238,7 +238,7 @@ font-weight:bold;
 
 <script type="text/javascript">
 
-    console.debug('106 findings_jmc.xml');
+    console.debug('107 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -395,7 +395,7 @@ font-weight:bold;
 			
 				console.debug('ANTERIOR>');
 				pagActual--;
-				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaMostrar+'\');">Anterior</a></div>';
+				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anteriorUltima(\''+ pagActualParaMostrar+'\');">Anterior</a></div>';
 				
 				
 			}			
@@ -443,6 +443,15 @@ font-weight:bold;
        document.getElementById(bloque_anterior).style.display='block';
 
     }
+	function anteriorUltima(num){
+		var bloque = "pagina"+num;
+        var numInt = parseInt(num)-1;
+        var bloque_anterior = "pagina"+ numInt;
+       
+       document.getElementById(bloque).style.display='none';
+       document.getElementById(bloque_anterior).style.display='block';
+	
+	}
 
 
    </script>
