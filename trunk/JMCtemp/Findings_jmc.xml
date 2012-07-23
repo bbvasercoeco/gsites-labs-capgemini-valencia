@@ -201,7 +201,6 @@
  clear:both;
  display:block;
  margin-left:15px;
- font-size:11px;
  font-weight:bold;
  font-family: arial,sans-serif;
  }
@@ -211,7 +210,6 @@ font-family: arial,sans-serif;
 float:right;
 margin-top:-20px;
 margin-right:50px;
-font-size:11px;
 font-weight:bold;
  }
 </style>
