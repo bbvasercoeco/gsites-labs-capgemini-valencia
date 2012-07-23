@@ -353,7 +353,7 @@
                
 
                 
-            }else if(i==10*pagActual+1){
+            }else if(pagActual==pagTotales-1){
 				var pagActualParaMostrar = pagActual+1;
 				html += '<div id="bloqueEnlaces1" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
 				
