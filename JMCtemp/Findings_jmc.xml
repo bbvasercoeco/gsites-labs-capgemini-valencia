@@ -360,7 +360,7 @@
 
                 
             }
-			else if(pagActual==pagTotales){
+			else if(i==filas-1){
 				//var pagActualParaMostrar = pagActual+1;
 				console.debug('ANTERIOR>');
 				
