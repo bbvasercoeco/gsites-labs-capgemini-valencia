@@ -379,7 +379,7 @@
 				//var pagActualParaMostrar = pagActual+1;
 				console.debug('ANTERIOR>');
 				
-				html += '<div id="bloqueEnlaces1" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
+				html += '<br/><div id="bloqueEnlaces1" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
 				
 				
 			}
