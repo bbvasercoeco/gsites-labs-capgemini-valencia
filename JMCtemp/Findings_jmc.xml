@@ -200,13 +200,13 @@
  .bloqueAnterior{
  clear:both;
  display:block;
- margin-left:10px;
+ margin-left:50px;
  }
  .bloqueSiguiente{
 display:block;
 float:right;
-margin-top:-17px;
-margin-right:10px;
+margin-top:-19px;
+margin-right:50px;
  }
 </style>
 
