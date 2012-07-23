@@ -202,8 +202,7 @@
  display:block;
  }
  .bloqueSiguiente{
-  float:right;
-  display:block;
+
  }
 </style>
 
