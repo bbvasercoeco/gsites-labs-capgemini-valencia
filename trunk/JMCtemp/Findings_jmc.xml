@@ -376,7 +376,7 @@ font-weight:bold;
                 var pagSiguiente = pagActualParaMostrar+1;
 				
 				if(i>9){
-				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
+				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaAnterior +'\');">Anterior</a></div>';
 				console.debug('<div id="bloqueEnlaces" ><a href="javascript:continuacion();">Anterior</a></div>');
 				}
                 html += '<div id="bloqueEnlaces"  class="bloqueSiguiente"><a href="javascript:continuacion(\''+ pagActualParaMostrar +'\');">Siguiente</a></div>';
@@ -436,7 +436,7 @@ font-weight:bold;
        
        var bloque = "pagina"+num;
        var numInt = parseInt(num)-1;
-       var numInt2 = parseInt(num)-2;
+       var numInt2 = parseInt(num)-1;
 	   var bloque_actual = "pagina"+ numInt;
 	   var bloque_anterior = "pagina"+ numInt2;
        
