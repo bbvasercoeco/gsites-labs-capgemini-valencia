@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('73 findings_jmc.xml');
+    console.debug('70 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -368,9 +368,9 @@
                 
 				html += '</div>';
                 html += '<div id="pagina'+ pagActualParaMostrar +'" class="paginaNueva" style="display:none; width: auto;height: 660px;">';
+			
 				console.debug('</div><div class="paginaNueva" style="border:1px solid blue; display: block;width: auto;height: 700px;">');
                 console.debug('<div id="bloqueEnlaces" ><a href="javascript:continuacion();">Siguiente</a></div>');
-				
                
 
                 
@@ -379,7 +379,7 @@
 				//var pagActualParaMostrar = pagActual+1;
 				console.debug('ANTERIOR>');
 				
-				html += '<br/><div id="bloqueEnlaces1" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
+				html += '<div id="bloqueEnlaces1" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
 				
 				
 			}
