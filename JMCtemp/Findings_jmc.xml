@@ -346,9 +346,8 @@
 				
                 html += '<div id="bloqueEnlaces" style="float:right;"><a href="javascript:continuacion(\''+ pagActualParaMostrar +'\');">Siguiente</a></div>';
                 //html += '<div id="bloqueEnlaces" style="float:right;"><a href="javascript:continuacion(\'pagina'+ pagActualParaMostrar +'\');">Siguiente</a></div>';
-                if(i>10){
-				html += '<div id="bloqueEnlaces" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
-				}
+                
+				
                 html += '</div>';
                 html += '<div id="pagina'+ pagActualParaMostrar +'" class="paginaNueva" style="display:none; width: auto;height: 660px;">';
                
@@ -357,6 +356,13 @@
                 console.debug('<div id="bloqueEnlaces" ><a href="javascript:continuacion();">Siguiente</a></div>');
        
             }
+			if(i==pagActual-1){
+				var pagActualParaMostrar = pagActual+1;
+				html += '<div id="bloqueEnlaces" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
+			}
+			
+			
+			
 			
             if ( (i==10*pagActual-1) )
             {
