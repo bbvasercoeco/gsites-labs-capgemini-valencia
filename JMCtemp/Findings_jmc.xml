@@ -377,7 +377,7 @@ font-weight:bold;
 				
 				if(i>9){
 				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
-				console.debug('<div id="bloqueEnlaces" ><a href="javascript:continuacion();">Anterior</a></div>');
+				console.debug('ANTERIOR i>9 -> i='+i);
 				}
                 html += '<div id="bloqueEnlaces"  class="bloqueSiguiente"><a href="javascript:continuacion(\''+ pagActualParaMostrar +'\');">Siguiente</a></div>';
                 
@@ -387,27 +387,18 @@ font-weight:bold;
 				console.debug('</div><div class="paginaNueva" style="border:1px solid blue; display: block;width: auto;height: 700px;">');
                 console.debug('<div id="bloqueEnlaces" ><a href="javascript:continuacion();">Siguiente</a></div>');
                
-
+				pagActual++;
                 
             }
 			else if(i==filas-1){
-				//var pagActualParaMostrar = pagActual+1;
+			
 				console.debug('ANTERIOR>');
 				
 				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
 				
 				
-			}
-			
-               
-			
-			
-            if ( (i==10*pagActual-1) )
-            {
-                //html += '</div>';
-                pagActual++;
-                console.debug('2-> pagActual:'+ pagActual);
-            }
+			}			
+           
 		}
 
        }
