@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('40 findings_jdll.xml');
+    console.debug('41 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -381,7 +381,7 @@
         alert(bloque);
         alert(bloque_anterior);
         document.getElementById(bloque).style.display='block';
-       document.getElementById(bloque_anterior).style.display='hidden';
+       document.getElementById(bloque_anterior).style.display='none';
 
     }
 
