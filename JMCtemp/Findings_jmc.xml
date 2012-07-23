@@ -201,6 +201,10 @@
  clear:both;
  display:block;
  }
+ .bloqueSiguiente{
+  clear:both;
+  display:block;
+ }
 </style>
 
 
