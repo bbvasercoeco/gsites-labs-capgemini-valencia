@@ -205,7 +205,7 @@
  .bloqueSiguiente{
 display:block;
 float:right;
-margin-top:-19px;
+margin-top:-20px;
 margin-right:50px;
  }
 </style>
