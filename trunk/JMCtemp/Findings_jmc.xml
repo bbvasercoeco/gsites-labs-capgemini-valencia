@@ -346,7 +346,7 @@
 				
                 html += '<div id="bloqueEnlaces" style="float:right;"><a href="javascript:continuacion(\''+ pagActualParaMostrar +'\');">Siguiente</a></div>';
                 //html += '<div id="bloqueEnlaces" style="float:right;"><a href="javascript:continuacion(\'pagina'+ pagActualParaMostrar +'\');">Siguiente</a></div>';
-                if(i>10*pag){
+                if(i>10){
 				var pagActualParaMostrar = pagActual-1;
 				html += '<div id="bloqueEnlaces" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
 				}
