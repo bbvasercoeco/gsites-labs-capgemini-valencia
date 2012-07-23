@@ -238,7 +238,7 @@ font-weight:bold;
 
 <script type="text/javascript">
 
-    console.debug('103 findings_jmc.xml');
+    console.debug('104 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -395,7 +395,7 @@ font-weight:bold;
 			
 				console.debug('ANTERIOR>');
 				
-				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActual +'\');">Anterior</a></div>';
+				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActual-1 +'\');">Anterior</a></div>';
 				
 				
 			}			
