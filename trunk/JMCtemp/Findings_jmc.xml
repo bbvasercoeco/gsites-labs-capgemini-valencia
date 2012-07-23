@@ -202,7 +202,9 @@
  display:block;
  }
  .bloqueSiguiente{
-
+display:block;
+float:right;
+margin-top:-17px;
  }
 </style>
 
