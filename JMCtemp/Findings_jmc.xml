@@ -367,7 +367,7 @@ font-weight:bold;
             html += '</div>';
             html += '</div>';
             html += '</div>';
-		
+		alert(PagTotales);
 		if(PagTotales>1){
             if ( (i==10*pagActual-1) )
             {
