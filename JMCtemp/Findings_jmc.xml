@@ -394,7 +394,7 @@ font-weight:bold;
 			else if(i==filas-1){
 			
 				console.debug('ANTERIOR>');
-				
+				pagActual--;
 				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaMostrar+'\');">Anterior</a></div>';
 				
 				
@@ -435,7 +435,8 @@ font-weight:bold;
 	   }
 	   var bloque_actual = "pagina"+ numInt;
 	   var bloque_anterior = "pagina"+ numInt2;
-     
+		alert(bloque_actual);
+		alert(bloque_anterior);
 	   
 	   
        document.getElementById(bloque_actual).style.display='none';
