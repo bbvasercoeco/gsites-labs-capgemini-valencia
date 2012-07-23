@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('70 findings_jmc.xml');
+    console.debug('71 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -378,7 +378,7 @@
 			else if(i==filas-1){
 				//var pagActualParaMostrar = pagActual+1;
 				console.debug('ANTERIOR>');
-				html += '</div>';
+				html += '</div></div>';
 				html += '<div id="bloqueEnlaces1" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
 				
 				
