@@ -238,7 +238,7 @@ font-weight:bold;
 
 <script type="text/javascript">
 
-    console.debug('95 findings_jmc.xml');
+    console.debug('96 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -376,7 +376,7 @@ font-weight:bold;
                 var pagSiguiente = pagActualParaMostrar+1;
 				
 				if(i>9){
-				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaAnterior +'\');">Anterior</a></div>';
+				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
 				console.debug('<div id="bloqueEnlaces" ><a href="javascript:continuacion();">Anterior</a></div>');
 				}
                 html += '<div id="bloqueEnlaces"  class="bloqueSiguiente"><a href="javascript:continuacion(\''+ pagActualParaMostrar +'\');">Siguiente</a></div>';
@@ -435,11 +435,12 @@ font-weight:bold;
     {
        
        var bloque = "pagina"+num;
-       var numInt = parseInt(num);
-       var numInt2 = parseInt(num)-1;
+       var numInt = parseInt(num)-1;
+       var numInt2 = parseInt(num)-2;
 	   var bloque_actual = "pagina"+ numInt;
 	   var bloque_anterior = "pagina"+ numInt2;
-       
+       alert (bloque_actual);
+	   alert (bloque_anterior);
 	   
 	   
        document.getElementById(bloque_actual).style.display='none';
