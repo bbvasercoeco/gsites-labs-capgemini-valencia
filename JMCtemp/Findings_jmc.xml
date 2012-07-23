@@ -238,7 +238,7 @@ font-weight:bold;
 
 <script type="text/javascript">
 
-    console.debug('93 findings_jmc.xml');
+    console.debug('94 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -367,8 +367,8 @@ font-weight:bold;
             html += '</div>';
             html += '</div>';
             html += '</div>';
-		alert(PagTotales);
-		if(PagTotales>1){
+		alert(pagTotales);
+		if(pagTotales>1){
             if ( (i==10*pagActual-1) )
             {
 				
