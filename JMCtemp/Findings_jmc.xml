@@ -400,7 +400,7 @@
     {
        
        var bloque = "pagina"+num;
-       var numInt = parseInt(num)-1;
+       var numInt = parseInt(num)-2;
        var bloque_anterior = "pagina"+ numInt;
         //alert(bloque);
         alert(bloque_anterior);
