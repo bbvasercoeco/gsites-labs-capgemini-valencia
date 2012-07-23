@@ -199,6 +199,7 @@
   
  .bloqueAnterior{
  clear:both;
+ display:block;
  }
 </style>
 
@@ -363,7 +364,7 @@
                 var pagSiguiente = pagActualParaMostrar+1;
 				
 				console.debug('i>9:'+ i);
-				html += '<div id="bloqueEnlaces1" style="float:left;"class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
+				html += '<div id="bloqueEnlaces1" class="bloqueAnterior"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
 				console.debug('<div id="bloqueEnlaces" ><a href="javascript:continuacion();">Anterior</a></div>');
 				
                 html += '<div id="bloqueEnlaces" style="float:right;" class="bloqueSiguiente"><a href="javascript:continuacion(\''+ pagActualParaMostrar +'\');">Siguiente</a></div>';
