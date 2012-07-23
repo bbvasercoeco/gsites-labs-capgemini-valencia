@@ -238,7 +238,7 @@ font-weight:bold;
 
 <script type="text/javascript">
 
-    console.debug('91 findings_jmc.xml');
+    console.debug('92 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -367,7 +367,8 @@ font-weight:bold;
             html += '</div>';
             html += '</div>';
             html += '</div>';
-
+		
+		if(PagTotales>1){
             if ( (i==10*pagActual-1) )
             {
 				
@@ -407,9 +408,9 @@ font-weight:bold;
                 pagActual++;
                 console.debug('2-> pagActual:'+ pagActual);
             }
+		}
 
-
-        }
+       }
 
         //  html += '<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;"><a href="javascript:continuacion();">Siguiente</a></div>';
 
