@@ -443,8 +443,7 @@ font-weight:bold;
 	   }
 	   var bloque_actual = "pagina"+ numInt;
 	   var bloque_anterior = "pagina"+ numInt2;
-       alert (bloque_actual);
-	   alert (bloque_anterior);
+     
 	   
 	   
        document.getElementById(bloque_actual).style.display='none';
