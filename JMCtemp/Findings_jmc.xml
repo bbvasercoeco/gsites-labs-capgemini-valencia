@@ -238,7 +238,7 @@ font-weight:bold;
 
 <script type="text/javascript">
 
-    console.debug('99 findings_jmc.xml');
+    console.debug('100 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -369,7 +369,7 @@ font-weight:bold;
             html += '</div>';
 		
 		if(pagTotales>1){
-            if ( (i==10*pagActual-1) )
+            if ( i==(10*(pagActual-1)) )
             {
 				
                 var pagActualParaMostrar = pagActual+1;
