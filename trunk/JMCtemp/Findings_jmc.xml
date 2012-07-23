@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('68 findings_jmc.xml');
+    console.debug('70 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -253,7 +253,7 @@
         var opts = {dataType:'jsonp'};
         var query = new google.visualization.Query(urlTable, opts);
        // var topic = gadgets.util.getUrlParameters()["parent"].split("=");
-		var topic ="Security";
+		var topic = "Security";
         var situation = gadgets.util.getUrlParameters()["parent"];
 
     
