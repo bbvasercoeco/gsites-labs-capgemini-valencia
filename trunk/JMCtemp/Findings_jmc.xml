@@ -357,7 +357,7 @@
                 console.debug('<div id="bloqueEnlaces" ><a href="javascript:continuacion();">Siguiente</a></div>');
        
             }
-			if(i==pagActual-1){
+			if((i==pagActual-1)){
 				var pagActualParaMostrar = pagActual+1;
 				html += '<div id="bloqueEnlaces" style="float:left;"><a href="javascript:anterior(\''+ pagActualParaMostrar +'\');">Anterior</a></div>';
 			}
