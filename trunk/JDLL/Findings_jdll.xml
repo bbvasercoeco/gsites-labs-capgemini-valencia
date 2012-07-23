@@ -375,7 +375,7 @@
     function continuacion(num)
     {
         alert(bloque);
-        var bloque = "pagina"+num
+        var bloque = "pagina"+num;
         document.getElementById(bloque).style.display='block';
 
     }
