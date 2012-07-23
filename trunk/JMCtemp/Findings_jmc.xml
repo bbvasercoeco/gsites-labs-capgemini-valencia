@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('57 findings_jmc.xml');
+    console.debug('58 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -399,7 +399,7 @@
 	function anterior(num)
     {
        
-       var bloque = "pagina"+num;
+       var bloque = "pagina"+num+1;
        var numInt = parseInt(num)-2;
        var bloque_anterior = "pagina"+ numInt;
         //alert(bloque);
