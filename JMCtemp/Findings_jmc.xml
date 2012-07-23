@@ -238,7 +238,7 @@ font-weight:bold;
 
 <script type="text/javascript">
 
-    console.debug('101 findings_jmc.xml');
+    console.debug('102 findings_jmc.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -273,7 +273,7 @@ font-weight:bold;
     
         document.getElementById("titleHome").innerHTML = '<h2>Last <strong>Findings</strong></h2>';
 
-
+/*
         if(situation.indexOf('jordi')== -1)
         {
             document.getElementById("titleHome").innerHTML = '<h2>Last <strong>Findings</strong></h2><div id="showAll"><a target="_parent" href="https://sites.google.com/a/bbva.com/findings/home/topics">View all topics</a></div>';
@@ -289,7 +289,8 @@ font-weight:bold;
             //añadiendo la validación de F==Yes
             var querytosend = "select max(D),A,C,L,G,R,S,B,F where ((A like '%"+topic+"%') and (F like 'Yes')) group by A,C,L,G,R,S,B,F order by max(D)  desc ";
         }   
-
+*/
+		  var querytosend = "select max(D),A,C,L,G,R,S,B,F where (F like 'Yes') and (dateDiff(D,now())<=0) group by A,C,L,G,R,S,B,F order by max(D) desc";
 
         query.setQuery(querytosend);
         query.send(handleQueryResponse);
