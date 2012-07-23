@@ -200,7 +200,7 @@
  .bloqueAnterior{
  clear:both;
  display:block;
- margin-left:-35px;
+ margin-left:-5px;
  }
  .bloqueSiguiente{
 display:block;
