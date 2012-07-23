@@ -224,7 +224,7 @@
 
 <script type="text/javascript">
 
-    console.debug('41 findings_jdll.xml');
+    console.debug('42 findings_jdll.xml');
 
     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
@@ -279,7 +279,7 @@
         var filas = data.getNumberOfRows();
         var pagActual = 1;
         
-        // Calcular paginas totales 
+        // PENDIENTE !!!!!!!! Calcular paginas totales NUMFILAS/10 
         var pagTotales = 4;
 
         console.debug('filas:'+filas);
@@ -287,7 +287,7 @@
        
         var html = "";
 
-        html += '<div id="pagina1" class="paginaNueva" style="border:1px solid red; display: block;width: auto;height: 660px;">';
+        html += '<div id="pagina1" class="paginaNueva" style=" display: block;width: auto;height: 660px;">';
 
         for(var i = 0; i < filas; i++)
         {
@@ -347,7 +347,7 @@
                 //html += '<div id="bloqueEnlaces" style="float:right;"><a href="javascript:continuacion(\'pagina'+ pagActualParaMostrar +'\');">Siguiente</a></div>';
                 
                 html += '</div>';
-                html += '<div id="pagina'+ pagActualParaMostrar +'" class="paginaNueva" style="display:none; border:1px solid blue; width: auto;height: 660px;">';
+                html += '<div id="pagina'+ pagActualParaMostrar +'" class="paginaNueva" style="display:none; width: auto;height: 660px;">';
                
 
                 console.debug('</div><div class="paginaNueva" style="border:1px solid blue; display: block;width: auto;height: 700px;">');
@@ -364,7 +364,7 @@
 
         }
 
-        //  html += '<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;border:1px solid green;"><a href="javascript:continuacion();">Siguiente</a></div>';
+        //  html += '<div id="bloqueEnlaces" style="text-align: right; width:100%; display:block; height: 40px;"><a href="javascript:continuacion();">Siguiente</a></div>';
 
         document.getElementById("lastfindings").innerHTML += html;
 
@@ -378,8 +378,8 @@
         var bloque = "pagina"+num;
         var numInt = parseInt(num)-1;
         var bloque_anterior = "pagina"+ numInt;
-        alert(bloque);
-        alert(bloque_anterior);
+        //alert(bloque);
+        //alert(bloque_anterior);
         document.getElementById(bloque).style.display='block';
        document.getElementById(bloque_anterior).style.display='none';
 
