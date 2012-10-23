@@ -80,18 +80,21 @@ body {
 .cabeceramenu ul li.exito {
 	width: 219px;
 }
-.cabeceramenu  ul li.home .enlace a {
+.cabeceramenu  ul li.home .enlace a{
 	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 8px -3150px;
 	height: 1.577em;
 }
-.cabeceramenu ul li.iniciate .enlace a {
-	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -2428px transparent;
+.cabeceramenu ul li.iniciate .enlace a{
+	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -2430px transparent;
 }
-.cabeceramenu ul li.apps .enlace a {
-	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -2573px transparent;
+.cabeceramenu ul li.apps .enlace a{
+	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -2575px transparent;
 }
-.cabeceramenu ul li.movilidad .enlace a {
-	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -2714px transparent;
+.cabeceramenu ul li.movilidad .enlace a{
+	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -2717px transparent;
+}
+.cabeceramenu ul li.exito .enlace a{
+	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -3437px transparent;
 }
 </style>
 
