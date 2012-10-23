@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="video.xml"
+    description=""
+    author_affiliation="Capgemini">
+    <Require feature="idi"/>
+    <Require feature="locked-domain" />
+	<Require feature="dynamic-height"/>   
+	<Require feature="setprefs" />   
+  </ModulePrefs>
+<UserPref name="titleVideo" display_name="Title Video" required="true" />
+<UserPref name="textVideo" display_name="Text Video" required="true" />
+<UserPref name="urlVideo" display_name="Url Video" required="true" />
+
+<Content type="html" view="configuration" preferred_height="480">
+
+<![CDATA[
+
+  <style>
+    input#VarrootSite {
+           width: 300px;
+          }
+		  
+  </style>
+  
+  <form name="videoForm">
+   <table width="100%" border="0" id="tablaconfig">  
+	 <tr>       
+                <td>
+                    Title - Video: <input type="text" size="100" id="titleVideo" value="__UP_titleVideo__"   onchange="registra('titleVideo')"/>                   
+                </td>
+            </tr>
+			 <tr>       
+                <td
+					Text - Video: <textarea id="textVideo" style="height: 245px; width: 100%" onchange="registra('textVideo')" >__UP_textVideo__</textarea>
+
+					</form>
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                    Url to Video: <input type="text" size="100" id="urlVideo" value="__UP_urlVideo__"   onchange="registra('urlVideo')"/>                   
+                </td>
+            </tr>
+			
+	</table>	
+
+	<script type="text/javascript">           
+            // Get userprefs
+            var prefs = new gadgets.Prefs();           
+            function registra(variable)
+            {	
+				
+                prefs.set(variable,document.getElementById(variable).value);
+				
+			
+            } 
+			
+			
+            gadgets.window.adjustHeight();
+        </script>   
+ ]]>	
+
+</Content>
+
+  <Content type="html">
+    <![CDATA[
+
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+	<div class="video-container">
+	 <div id="urlVideo"></div>
+		<div id="titleVideo"></div>
+        <div id="textVideo"></div>
+	 </div>
+	 <div id="urlVideo"></div>
+		<div id="titleVideo"></div>
+        <div id="textVideo"></div>
+	 </div>
+	
+    <style type="text/css">
+      
+   
+	
+	</style>
+
+   <script type="text/javascript">
+	 var gadgetHelper = null;
+	 var prefs = new gadgets.Prefs();
+	 
+	 var titleVideo = prefs.getString("titleBanner1");
+	 var textVideo = prefs.getString("textBanner1");
+	 var urlVideo = prefs.getString("urlbanner1");
+	 
+	 document.getElementById("titleVideo").innerHTML = titleVideo;
+	 document.getElementById("textVideo").innerHTML = textVideo;
+	 document.getElementById("urlVideo").innerHTML = '<a href="'+urlVideo+'" target="_parent"></a>';
+	
+	
+	
+
+  </script>
+    ]]>
+  </Content>
+</Module>    
+
+
+

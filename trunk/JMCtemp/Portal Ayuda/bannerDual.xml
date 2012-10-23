@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="bannerDual.xml"
+    description=""
+    author_affiliation="Capgemini">
+    <Require feature="idi"/>
+    <Require feature="locked-domain" />
+	<Require feature="dynamic-height"/>   
+	<Require feature="setprefs" />   
+  </ModulePrefs>
+<UserPref name="titleBanner1" display_name="Title Banner1" required="true" />
+<UserPref name="textBanner1" display_name="Text Banner1" required="true" />
+<UserPref name="urlbanner1" display_name="Url Banner1" required="true" />
+<UserPref name="urlinkname1" display_name="Url link name Banner1" required="true" />
+
+<UserPref name="titleBanner2" display_name="Title Banner2" required="true" />
+<UserPref name="textBanner2" display_name="Text Banner2" required="true" />
+<UserPref name="urlbanner2" display_name="Url Banner2" required="true" />
+<UserPref name="urlinkname2" display_name="Url link name Banner2" required="true" />
+
+<Content type="html" view="configuration" preferred_height="480">
+
+ <![CDATA[
+ <style>
+    input#VarrootSite {
+           width: 300px;
+          }
+		  
+  </style>
+  <form name="myForm">
+  <table width="100%" border="0" id="tablaconfig">           
+            <tr>       
+                <td>
+                    Title - Banner1: <input type="text" size="100" id="titleBanner1" value="__UP_titleBanner1__"   onchange="registra('titleBanner1')"/>                   
+                </td>
+            </tr>
+			 <tr>       
+                <td>
+					
+                    <!--Text of Banner1: <textarea rows="5" cols="40" id="textBanner1" onchange="registra('textBanner1')"></textarea> -->
+					Text - Banner1: <input type="text" size="100" id="textBanner1" value="__UP_textBanner1__" onchange="registra('textBanner1')"/> 
+					</form>
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                    Url to banner1: <input type="text" size="100" id="urlbanner1" value="__UP_urlbanner1__"   onchange="registra('urlbanner1')"/>                   
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                   Text - link banner1: <input type="text" size="100" id="urlinkname1" value="__UP_urlinkname1__"   onchange="registra('urlinkname1')"/>                   
+                </td>
+            </tr>
+			
+			 <tr>       
+                <td>
+                    Title - Banner2: <input type="text" size="100" id="titleBanner2" value="__UP_titleBanner2__"   onchange="registra('titleBanner2')"/>                   
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                   <!-- Text of Banner2: <textarea rows="5" cols="40" id="textBanner2" value="__UP_textBanner2__"   onchange="registra('textBanner2')"/>-->               
+					Text - Banner2: <input type="text" size="100" id="textBanner2" value="__UP_textBanner2__" onchange="registra('textBanner2')"/>
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                    Url to banner2 : <input type="text" size="100" id="urlbanner2" value="__UP_urlbanner2__"   onchange="registra('urlbanner2')"/>                   
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                   Title - link banner2: <input type="text" size="100" id="urlinkname2" value="__UP_urlinkname2__"   onchange="registra('urlinkname2')"/>                   
+                </td>
+            </tr>
+			
+  </table>	
+  
+<script type="text/javascript">           
+            // Get userprefs
+            var prefs = new gadgets.Prefs();           
+            function registra(variable)
+            {	
+				
+                prefs.set(variable,document.getElementById(variable).value);
+				
+			
+            } 
+			
+			
+            gadgets.window.adjustHeight();
+        </script>   
+ ]]>
+ </Content>
+  <Content type="html">
+    <![CDATA[
+
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+    <style type="text/css">
+      
+      body {background-color:transparent;}
+	  
+  .banners-container {
+        margin-bottom: 25px;
+        overflow: hidden;
+      }
+      .banner {
+        color: #fff;
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        height: 133px;
+        padding: 18px 260px 15px 15px;
+        position: relative;
+        width: 190px;
+      }
+      .banner h2 {
+        border: none;
+        font-size: 29px;
+        font-weight: bold;
+        letter-spacing: -1;
+        line-height: 0.9em;
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+      }
+      .banner a {       
+
+        color: black !important;
+font-size: 14px;
+font-weight: bold;
+left: 0px;
+padding: 8px 45px 8px 13px;
+position: absolute;
+
+text-decoration: none;
+text-shadow: 0 1px #DDD;
+width: 156px;
+
+      }
+      .banner-schedule {
+        background: url(https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/Images_Findings_CommingEvents/imagen1.png) no-repeat left top;
+        float: left;
+      }
+      .banner-interest {
+        background: url(https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/Images_Findings_CommingEvents/imagen2.png) no-repeat left top;
+        float: right;
+      }
+
+      p.button {
+ background: url(https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/button.png) no-repeat left top;
+height: 32px;
+width: 156px;
+margin: 0;
+padding: 0;
+position: absolute;
+top: 116px;
+      }
+	
+	p.textoBanner {
+		padding-top: 0px;
+		font-size: 0.9em;
+		margin-top: 7px;
+	}
+	
+ </style>
+
+    <div class="banners-container">
+      <div class="banner banner-schedule">
+        <h2 id="titleBanner1">Calendario</h2>
+        <p id="textBanner1" class="textoBanner">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p id="button1" class="button"><a href="#"></a></p>
+      </div>
+      <div class="banner banner-interest">
+        <h2 id="titleBanner2">¿Te interesa?</h2>
+        <p id="textBanner2" class="textoBanner">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p id="button2" class="button"><a href="#">Contribute</a></p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+	var gadgetHelper = null;
+	var prefs = new gadgets.Prefs();
+	//document.getElementById('textBanner1').defaultValue = prefs.getString("textBanner1");
+	
+  var titlebanner1 = prefs.getString("titleBanner1");
+	var textbanner1 = prefs.getString("textBanner1");
+	var urlbanner1 = prefs.getString("urlbanner1");
+	var urlinkname1 = prefs.getString("urlinkname1");
+
+	var titlebanner2 = prefs.getString("titleBanner2");
+	var textbanner2 = prefs.getString("textBanner2");
+	var urlbanner2 = prefs.getString("urlbanner2");	
+	var urlinkname2 = prefs.getString("urlinkname2");
+	
+	document.getElementById("titleBanner1").innerHTML = titlebanner1;
+	document.getElementById("textBanner1").innerHTML = textbanner1;
+	document.getElementById("button1").innerHTML = '<a href="'+urlbanner1+'" target="_parent">'+urlinkname1+'</a>';
+
+	document.getElementById("titleBanner2").innerHTML = titlebanner2;
+	document.getElementById("textBanner2").innerHTML = textbanner2;
+	document.getElementById("button2").innerHTML = '<a href="'+urlbanner2+'" target="_parent" >'+urlinkname2+'</a>';
+	
+
+  </script>
+    ]]>
+  </Content>
+</Module>
