@@ -74,14 +74,11 @@ body {
 	height: 2em;
 }
 
-.cabeceramenu ul li.iniciate {
-	width: 293px;
-}
-.cabeceramenu ul li.apps {
-	width: 293px;
-}
-.cabeceramenu ul li.movilidad {
-	width: 293px;
+.cabeceramenu ul li.iniciate, 
+.cabeceramenu ul li.apps, 
+.cabeceramenu ul li.movilidad,
+.cabeceramenu ul li.exito {
+	width: 219px;
 }
 .cabeceramenu  ul li.home .enlace a {
 	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 8px -3150px;
