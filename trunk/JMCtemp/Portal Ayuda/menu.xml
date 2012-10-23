@@ -4,7 +4,23 @@
  <Content type="html">
  <![CDATA[ 
   <style> 
-  	body{background-color:transparent !important;}
+body {
+	font-size: 0.5em;
+	font-family: Arial,sans-serif;
+	color: rgb(0, 76, 153);
+	text-align: left;
+	line-height: 1;
+} 	
+body, html {
+	font-size: 125%;
+	background-color: rgb(255, 255, 255);
+}
+body {
+	font-size: 0.5em;
+	font-family: Arial,sans-serif;
+	color: rgb(0, 76, 153);
+	text-align: left;
+}
 .cabeceramenu {
   width: 960px;
   height: 50px;
