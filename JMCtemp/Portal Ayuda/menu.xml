@@ -60,10 +60,19 @@
 .cabeceramenu ul li.movilidad {
 	width: 293px;
 }
-
-
-
-
+.cabeceramenu  ul li.home .enlace a {
+	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 8px -3150px;
+	height: 1.577em;
+}
+.cabeceramenu ul li.iniciate .enlace a {
+	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -2428px transparent;
+}
+.cabeceramenu ul li.apps .enlace a {
+	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -2573px transparent;
+}
+.cabeceramenu ul li.movilidad .enlace a {
+	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -2714px transparent;
+}
 </style>
 
 
