@@ -30,12 +30,12 @@
 }
 
 .cabeceramenu ul li .enlace, .cabeceramenu ul li .enlace:hover{
-  font-size: 14px;
-  margin-right: 0.71px;
+  font-size: 1.4em;
+  margin-right: 0.071em;
   display: block;
   color: #FFF;
   cursor: pointer;
-  height: 35.71px;
+  height: 3.571em;
 
 }
 .cabeceramenu ul li .enlace:hover{
@@ -45,10 +45,10 @@
 	width: 81px;
 }
 .cabeceramenu ul li .enlace a {
-	padding-top: 15.71px;
-	padding-left: 23.57px;
+	padding-top: 1.571em;
+	padding-left: 2.357em;
 	display: inline-block;
-	height: 20px;
+	height: 2em;
 }
 
 .cabeceramenu ul li.iniciate {
