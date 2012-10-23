@@ -81,7 +81,6 @@ ol, ul {
 }
 .cabeceramenu ul li .enlace span{
 	padding-top: 1.286em;
-	padding-left: 2.357em;
 	display: inline-block;
 	height: 2em;
 }
@@ -92,7 +91,7 @@ ol, ul {
 .cabeceramenu ul li.exito {
 	width: 219px;
 }
-<!--
+/*
 .cabeceramenu  ul li.home .enlace span{
 	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 8px -3150px;
 	height: 1.577em;
@@ -108,7 +107,7 @@ ol, ul {
 }
 .cabeceramenu ul li.exito .enlace span{
 	background: url('../img/ico-spritegraficos24.png') no-repeat scroll 0 -3437px transparent;
-}-->
+}*/
 </style>
 
 
