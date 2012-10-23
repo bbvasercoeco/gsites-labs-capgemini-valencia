@@ -68,7 +68,7 @@ body {
 	width: 81px;
 }
 .cabeceramenu ul li .enlace a {
-	padding-top: 1.571em;
+	padding-top: 1.286em;
 	padding-left: 2.357em;
 	display: inline-block;
 	height: 2em;
