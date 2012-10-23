@@ -84,7 +84,9 @@ ol, ul {
 	display: inline-block;
 	height: 2em;
 }
-
+.cabeceramenu ul li .enlace span img{
+margin-top:-10px;
+}
 .cabeceramenu ul li.iniciate, 
 .cabeceramenu ul li.apps, 
 .cabeceramenu ul li.movilidad,
