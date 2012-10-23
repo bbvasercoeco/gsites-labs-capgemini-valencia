@@ -85,7 +85,7 @@ ol, ul {
 	height: 2em;
 }
 .cabeceramenu ul li .enlace span img{
-margin-top:-10px;
+margin-top:-18px;
 }
 .cabeceramenu ul li.iniciate, 
 .cabeceramenu ul li.apps, 
