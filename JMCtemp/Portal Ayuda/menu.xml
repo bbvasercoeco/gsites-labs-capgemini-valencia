@@ -22,18 +22,25 @@ body {
 	text-align: left;
 }
 .cabeceramenu {
-  width: 96em;
-  height: 5em;
-  margin-top: 1.8em;
-  border-radius: 5px 5px 5px 5px;
-  background: -moz-linear-gradient(rgb(0, 121, 193), rgb(0, 82, 155)) repeat scroll 0% 0% transparent;
-  background: -moz-linear-gradient(rgb(0, 121, 193), rgb(0, 82, 155)) repeat scroll 0% 0% transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(0, 121, 193)),  color-stop(100%, rgb(0, 82, 155))) !important;
-  background-image: -o-linear-gradient(90deg,rgb(18,79,126),rgb(59,137,197));
-  position:relative;
-  font-family: BBVA Office Light;
-  font-weight: bold;
-  text-align: center;
+	width: 96em;
+	height: 5em;
+	margin-top: 1.8em;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #0079c1;
+	background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwNzljMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDUyOWIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+');
+	background: -moz-linear-gradient(top,  #0079c1 0%, #00529b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0079c1), color-stop(100%,#00529b));
+	background: -webkit-linear-gradient(top,  #0079c1 0%,#00529b 100%);
+	background: -o-linear-gradient(top,  #0079c1 0%,#00529b 100%);
+	background: -ms-linear-gradient(top,  #0079c1 0%,#00529b 100%);
+	background: linear-gradient(to bottom,  #0079c1 0%,#00529b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0079c1', endColorstr='#00529b',GradientType=0 );
+	position: relative;
+	font-family: BBVA Web Medium;
+	font-weight: normal;
+	text-align: center;
 }
 .cabeceramenu ul{
   margin:0;
