@@ -22,9 +22,9 @@ body {
 	text-align: left;
 }
 .cabeceramenu {
-  width: 960px;
-  height: 50px;
-  margin-top: 18px;
+  width: 96em;
+  height: 5em;
+  margin-top: 1.8em;
   border-radius: 5px 5px 5px 5px;
   background: -moz-linear-gradient(rgb(0, 121, 193), rgb(0, 82, 155)) repeat scroll 0% 0% transparent;
   background: -moz-linear-gradient(rgb(0, 121, 193), rgb(0, 82, 155)) repeat scroll 0% 0% transparent;
