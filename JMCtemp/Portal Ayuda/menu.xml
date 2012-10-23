@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <Module>
+  <ModulePrefs title="menu findings"/> 
+ <Content type="html">
+ <![CDATA[ 
+  <style> 
+  	body{background-color:transparent !important;}
+.cabeceramenu {
+  width: 960px;
+  height: 50px;
+  margin-top: 18px;
+  border-radius: 5px 5px 5px 5px;
+  background: -moz-linear-gradient(rgb(0, 121, 193), rgb(0, 82, 155)) repeat scroll 0% 0% transparent;
+  background: -moz-linear-gradient(rgb(0, 121, 193), rgb(0, 82, 155)) repeat scroll 0% 0% transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(0, 121, 193)),  color-stop(100%, rgb(0, 82, 155))) !important;
+  background-image: -o-linear-gradient(90deg,rgb(18,79,126),rgb(59,137,197));
+  position:relative;
+  font-family: BBVA Office Light;
+  font-weight: bold;
+  text-align: center;
+}
+.cabeceramenu ul{
+  margin:0;
+  padding:0;
+}
+.cabeceramenu ul li{
+  float: left;
+  text-align: center;
+  background: url('../img/separador-menu.png') no-repeat scroll right top transparent;
+}
+
+.cabeceramenu ul li .enlace, .cabeceramenu ul li .enlace:hover{
+  font-size: 14px;
+  margin-right: 0.71px;
+  display: block;
+  color: #FFF;
+  cursor: pointer;
+  height: 35.71px;
+
+}
+.cabeceramenu ul li .enlace:hover{
+  background-color: #004c99;
+}
+.cabeceramenu ul li.home {
+	width: 81px;
+}
+.cabeceramenu ul li .enlace a {
+	padding-top: 15.71px;
+	padding-left: 23.57px;
+	display: inline-block;
+	height: 20px;
+}
+
+.cabeceramenu ul li.iniciate {
+	width: 293px;
+}
+.cabeceramenu ul li.apps {
+	width: 293px;
+}
+.cabeceramenu ul li.movilidad {
+	width: 293px;
+}
+
+
+
+
+</style>
+
+
+<![endif]-->
+
+
+<!--[if gt IE 8]>
+
+<style>
+	body{background-color:transparent !important;}
+#button li a {  
+  font-family: Arial;  
+  font-size:15px;  
+  text-decoration: none;  
+  float:left;  
+  padding: 19px 0 0 20px;   
+  color: #fff;  
+  width: 142px;
+  height:33px;
+
+}
+
+#button li a#contribute {
+padding: 19px 0 0 35px;
+}
+
+
+
+img {
+padding-top:3px;
+padding-left:60px;
+}
+
+
+#button li a.first {  
+  font-family: Arial;  
+  font-size:15px;  
+  text-decoration: none;  
+  float:left;  
+  padding: 8px 0 0 100px;     
+  color: #fff;  
+  width: 95px;
+  height: 43px;
+}  
+
+.select{
+background-repeat:no-repeat;
+padding-right:18px;
+}
+#button li a img{
+padding-right:18px;
+}
+
+#logoHeader,
+#logoHeader img {
+	margin:0;
+	padding:0;
+}
+</style>
+<![endif]-->
+<div class="cabeceramenu">
+  <ul>   
+	<li class="home"><a href="" class="enlace" target="_parent"  title="home"><img src="../img/Home.png" alt="Home" style="padding-top:6px;margin-right:-21px;"/></a></li>
+	<li class="iniciate" ><a href="" class="enlace" target="_parent">Iniciate en tu NET</a></li>
+	<li class="apps"><a href="" class="enlace" target="_parent">Google Apps</a></li>
+	<li class="movilidad"><a href="" class="enlace" target="_parent">Movilidad</a></li>  
+	<li class="exito"><a href="" class="enlace" target="_parent" >Casos de éxito</a></li> 
+  </ul>    
+</div>
+<script type="text/javascript">
+	console.debug('5 menu.xml');
+gadgets.util.registerOnLoadHandler(datospagina);
+function datospagina()
+{
+ 
+  var parametros = gadgets.util.getUrlParameters()["parent"];  
+ console.debug(parametros);
+  if (parametros.length == 50)
+  {
+   
+	document.getElementById("Home").innerHTML += '<span ><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select" /></span>';
+  }
+  if (parametros.indexOf("topics")!=-1)
+  {
+    //document.getElementById("Topics").style.backgroundColor = "#2586D7";
+	document.getElementById("Topics").innerHTML += '<br/><div id="prueba1"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
+
+  }
+   if (parametros.indexOf("coming-events")!=-1)
+  {
+	  if (parametros.indexOf("event?eventname")!=-1)
+	  {
+	    //document.getElementById("Topics").style.backgroundColor = "#2586D7";
+		document.getElementById("Topics").innerHTML += '<br/><div id="prueba1"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
+
+	  }
+	  else
+	  {
+    //document.getElementById("coming-events").style.backgroundColor = "#2586D7";
+	document.getElementById("coming-events").innerHTML += '<br/><div id="prueba2"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
+		}
+  }
+  if (parametros.indexOf("monthly-summary")!=-1)
+  {
+    //document.getElementById("Monthly-Summary").style.backgroundColor = "#2586D7";
+	document.getElementById("Monthly-Summary").innerHTML += '<br/><div id="prueba3"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
+
+  }
+   if (parametros.indexOf("contribute")!=-1)
+  {
+    //document.getElementById("contribute").style.backgroundColor = "#2586d7";
+	document.getElementById("contribute").innerHTML += '<br/><div id="prueba4"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
+
+  }
+  
+
+}
+</script>
+  ]]> 
+  </Content>
+  </Module>
