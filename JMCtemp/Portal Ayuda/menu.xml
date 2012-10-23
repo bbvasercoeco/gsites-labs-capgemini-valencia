@@ -130,58 +130,10 @@ padding-right:18px;
 	<li class="iniciate" ><a href="" class="enlace" target="_parent">Iniciate en tu NET</a></li>
 	<li class="apps"><a href="" class="enlace" target="_parent">Google Apps</a></li>
 	<li class="movilidad"><a href="" class="enlace" target="_parent">Movilidad</a></li>  
-	<li class="exito"><a href="" class="enlace" target="_parent" >Casos de éxito</a></li> 
+	<li class="exito"><a href="" class="enlace" target="_parent" >Casos de &eacute;xito</a></li> 
   </ul>    
 </div>
-<script type="text/javascript">
-	console.debug('5 menu.xml');
-gadgets.util.registerOnLoadHandler(datospagina);
-function datospagina()
-{
- 
-  var parametros = gadgets.util.getUrlParameters()["parent"];  
- console.debug(parametros);
-  if (parametros.length == 50)
-  {
-   
-	document.getElementById("Home").innerHTML += '<span ><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select" /></span>';
-  }
-  if (parametros.indexOf("topics")!=-1)
-  {
-    //document.getElementById("Topics").style.backgroundColor = "#2586D7";
-	document.getElementById("Topics").innerHTML += '<br/><div id="prueba1"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
 
-  }
-   if (parametros.indexOf("coming-events")!=-1)
-  {
-	  if (parametros.indexOf("event?eventname")!=-1)
-	  {
-	    //document.getElementById("Topics").style.backgroundColor = "#2586D7";
-		document.getElementById("Topics").innerHTML += '<br/><div id="prueba1"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
-
-	  }
-	  else
-	  {
-    //document.getElementById("coming-events").style.backgroundColor = "#2586D7";
-	document.getElementById("coming-events").innerHTML += '<br/><div id="prueba2"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
-		}
-  }
-  if (parametros.indexOf("monthly-summary")!=-1)
-  {
-    //document.getElementById("Monthly-Summary").style.backgroundColor = "#2586D7";
-	document.getElementById("Monthly-Summary").innerHTML += '<br/><div id="prueba3"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
-
-  }
-   if (parametros.indexOf("contribute")!=-1)
-  {
-    //document.getElementById("contribute").style.backgroundColor = "#2586d7";
-	document.getElementById("contribute").innerHTML += '<br/><div id="prueba4"><img src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/Findings/images/triangle.png" class="select1"/></div>';
-
-  }
-  
-
-}
-</script>
   ]]> 
   </Content>
   </Module>
