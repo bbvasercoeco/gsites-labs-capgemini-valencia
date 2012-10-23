@@ -67,63 +67,7 @@
 </style>
 
 
-<![endif]-->
 
-
-<!--[if gt IE 8]>
-
-<style>
-	body{background-color:transparent !important;}
-#button li a {  
-  font-family: Arial;  
-  font-size:15px;  
-  text-decoration: none;  
-  float:left;  
-  padding: 19px 0 0 20px;   
-  color: #fff;  
-  width: 142px;
-  height:33px;
-
-}
-
-#button li a#contribute {
-padding: 19px 0 0 35px;
-}
-
-
-
-img {
-padding-top:3px;
-padding-left:60px;
-}
-
-
-#button li a.first {  
-  font-family: Arial;  
-  font-size:15px;  
-  text-decoration: none;  
-  float:left;  
-  padding: 8px 0 0 100px;     
-  color: #fff;  
-  width: 95px;
-  height: 43px;
-}  
-
-.select{
-background-repeat:no-repeat;
-padding-right:18px;
-}
-#button li a img{
-padding-right:18px;
-}
-
-#logoHeader,
-#logoHeader img {
-	margin:0;
-	padding:0;
-}
-</style>
-<![endif]-->
 <div class="cabeceramenu">
   <ul>   
 	<li class="home first"><a href="" class="enlace" target="_parent"  title="home"><img src="../img/Home.png" alt="Home" style="padding-top:6px;margin-right:-21px;"/></a></li>
