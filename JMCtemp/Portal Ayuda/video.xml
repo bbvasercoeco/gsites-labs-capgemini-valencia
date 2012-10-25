@@ -67,8 +67,9 @@
     <![CDATA[
 
     <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-	<div class="video-container">
-	 <div id="urlVideo"></div>
+	<div id="video-container">
+		<div id="urlVideo"></div>
+		<div id="TagVideo"></div>
 		<div id="titleVideo"></div>
         <div id="textVideo"></div>
 	 </div>
@@ -78,9 +79,32 @@
 	 </div>
 	
     <style type="text/css">
-      
-   
-	
+      #video-container{
+	    float:left;
+		width:668px;
+		height:271px;
+	  }
+	  
+	  #urlVideo{
+		float:left;
+	    width:284px;
+		height:189px;
+	  }
+	  #TagVideo{
+	    color:#FCC3A5;
+	  }
+	  
+      #titleVideo{
+		color:#A7BDDB;
+	    
+	  }
+	  #textVideo{
+		color:#323232;
+		font-size:12px;
+		font-family:arial;
+		
+	    
+	  }
 	</style>
 
    <script type="text/javascript">
