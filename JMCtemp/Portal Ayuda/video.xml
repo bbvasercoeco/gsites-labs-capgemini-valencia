@@ -79,6 +79,7 @@
 	 </div>
 	
     <style type="text/css">
+	
       #video-container{
 	    float:left;
 		width:668px;
@@ -103,13 +104,13 @@
 		font-size:12px;
 		font-family:arial;
 		
-	    
-	  }
+	    }
+		
 	</style>
 
    <script type="text/javascript">
 	 var gadgetHelper = null;
-	 var prefs = new gadgets.Prefs();
+	 var prefs = new _IG_Prefs();
 	 
 	 var titleVideo = prefs.getString("titleBanner1");
 	 var textVideo = prefs.getString("textBanner1");
