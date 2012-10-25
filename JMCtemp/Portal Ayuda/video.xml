@@ -70,7 +70,7 @@
 	 document.getElementById("tagVideo").innerHTML = tagVideo;
 	 document.getElementById("titleVideo").innerHTML = titleVideo;
 	 document.getElementById("textVideo").innerHTML = textVideo;
-	 document.getElementById("urlVideo").innerHTML = '<a href="'+urlVideo+'" target="_parent"></a>';
+	 document.getElementById("urlVideo").innerHTML = '<EMBED SRC="'+urlVideo+'" HEIGHT=300 WIDTH=400 AUTOSTART=TRUE LOOP=FALSE/>';
 	
 	
 	
