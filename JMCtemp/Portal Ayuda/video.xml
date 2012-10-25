@@ -77,7 +77,12 @@
   <Content type="html" view="configuration" preferred_height="480">
 
 <![CDATA[
-
+<style type="text/css">
+    input#VarrootSite {
+           width: 300px;
+          }
+		  
+  </style>
   
 
     <script type="text/javascript">           
