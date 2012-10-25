@@ -51,7 +51,7 @@
 	
 	<div id="video-container">
 		<div id="urlVideo"></div>
-		<div id="TagVideo"></div>
+		<div id="tagVideo"></div>
 		<div id="titleVideo"></div>
         <div id="textVideo"></div>
 	 </div>
@@ -67,7 +67,7 @@
 	 var tagVideo = prefs.getString("tagVideo");
 	 
 	 
-	 document.getElementById("TagVideo").innerHTML = tagVideo;
+	 document.getElementById("tagVideo").innerHTML = tagVideo;
 	 document.getElementById("titleVideo").innerHTML = titleVideo;
 	 document.getElementById("textVideo").innerHTML = textVideo;
 	 document.getElementById("urlVideo").innerHTML = '<a href="'+urlVideo+'" target="_parent"></a>';
