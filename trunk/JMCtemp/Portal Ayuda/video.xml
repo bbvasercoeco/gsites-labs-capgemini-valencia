@@ -101,20 +101,7 @@
 			
 	</table>	
 
-	<script type="text/javascript">           
-            // Get userprefs
-            var prefs = new gadgets.Prefs();           
-            function registra(variable)
-            {	
-				
-                prefs.set(variable,document.getElementById(variable).value);
-				
-			
-            } 
-			
-			
-            gadgets.window.adjustHeight();
-        </script>   
+	  
 
 	 
  ]]>	
