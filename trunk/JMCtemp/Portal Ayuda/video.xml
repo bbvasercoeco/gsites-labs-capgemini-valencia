@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
- <Module>
-  
-	<ModulePrefs title="Cajetin personalizado un tercio portal Global Customer Solutions"
-		title_url=""
-		height="300"
-		width="465"
-		author=""
-		author_email=""
-		description="GadGet para Google Sites que muestra textos en una caja con formato."
-		screenshot=""
-		thumbnail=""  
-		scrolling="false"
-		author_location="Madrid, Spain"
-		scaling="false">
-		<Require feature="dynamic-height"/>
-		<Require feature="setprefs"/>
-	</ModulePrefs>
+<Module>
+  <ModulePrefs title="video.xml"
+    description=""
+    author_affiliation="Capgemini">
+    <Require feature="idi"/>
+    <Require feature="locked-domain" />
+	<Require feature="dynamic-height"/>   
+	<Require feature="setprefs" />   
+  </ModulePrefs>
+    
+<UserPref name="titleVideo" display_name="Title Video" required="true" />
+<UserPref name="textVideo" display_name="Text Video" required="true" />
+<UserPref name="urlVideo" display_name="Url Video" required="true" />
+	
  <Content type="html">
  <![CDATA[ 
   <style> 
