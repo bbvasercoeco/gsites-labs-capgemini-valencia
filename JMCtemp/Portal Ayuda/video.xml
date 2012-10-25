@@ -78,12 +78,7 @@
 
 <![CDATA[
 
-  <style type="text/css">
-    input#VarrootSite {
-           width: 300px;
-          }
-		  
-  </style>
+  
   
  
    <table width="100%" border="0" id="tablaconfig">  
@@ -124,7 +119,4 @@
  ]]>	
 
 </Content>
-
-
-
-  </Module>
+</Module>
