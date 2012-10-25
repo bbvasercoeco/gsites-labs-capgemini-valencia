@@ -81,7 +81,11 @@
     input#VarrootSite {
            width: 300px;
           }
-		  
+	table td {
+				color: #000;
+				font-size: 11px;
+				font-weight: bold;
+			}
   </style>
   <table width="100%" border="0" id="tablaconfig">  
 	 <tr>       
@@ -91,14 +95,15 @@
             </tr>
 			 <tr>       
                 <td>
-					Text - Video: <textarea id="textVideo" style="height: 245px; width: 100%" onchange="registra('textVideo')" >__UP_textVideo__</textarea>
+				 Url to Video: <input type="text" size="100" id="urlVideo" value="__UP_urlVideo__"   onchange="registra('urlVideo')"/>   
 
 					
                 </td>
             </tr>
 			<tr>       
                 <td>
-                    Url to Video: <input type="text" size="100" id="urlVideo" value="__UP_urlVideo__"   onchange="registra('urlVideo')"/>                   
+                Text - Video: <textarea id="textVideo" style="height: 245px; width: 100%" onchange="registra('textVideo')" >__UP_textVideo__</textarea>
+               
                 </td>
             </tr>
 			
