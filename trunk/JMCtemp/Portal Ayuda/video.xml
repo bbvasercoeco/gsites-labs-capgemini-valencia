@@ -78,7 +78,12 @@
 
 <![CDATA[
   
-  
+  <style type="text/css">
+    input#VarrootSite {
+           width: 300px;
+          }
+		  
+  </style>
 
 	 
  ]]>	
