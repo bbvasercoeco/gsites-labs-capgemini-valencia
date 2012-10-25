@@ -2,7 +2,7 @@
 <Module>
   <ModulePrefs title="video.xml"
     description=""
-    author_affiliation="Capgemini">
+    author_affiliation="Capgemini"
     <Require feature="idi"/>
     <Require feature="locked-domain" />
 	<Require feature="dynamic-height"/>   
