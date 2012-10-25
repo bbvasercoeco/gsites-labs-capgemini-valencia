@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-  <ModulePrefs title="video.xml"/>
+  <ModulePrefs title="video.xml"
+    description=""
+    author_affiliation="Capgemini">
+    <Require feature="idi"/>
+    <Require feature="locked-domain" />
+	<Require feature="dynamic-height"/>   
+	<Require feature="setprefs" />   
+  </ModulePrefs>
     
 <UserPref name="titleVideo" display_name="Title Video" required="true" />
 <UserPref name="textVideo" display_name="Text Video" required="true" />
