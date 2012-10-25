@@ -57,20 +57,18 @@
 
 </Content>
 
-  <Content type="html">
+ <Content type="html">
     <![CDATA[
 
     <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+	
 	<div id="video-container">
 		<div id="urlVideo"></div>
 		<div id="TagVideo"></div>
 		<div id="titleVideo"></div>
         <div id="textVideo"></div>
 	 </div>
-	 <div id="urlVideo"></div>
-		<div id="titleVideo"></div>
-        <div id="textVideo"></div>
-	 </div>
+	 
 	
     <style type="text/css">
 	
