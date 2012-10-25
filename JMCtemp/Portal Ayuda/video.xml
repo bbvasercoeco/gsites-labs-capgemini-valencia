@@ -74,7 +74,56 @@
   </script>
     ]]>
   </Content>
+<Content type="html" view="configuration" preferred_height="480">
 
+<![CDATA[
+
+  <style type="text/css">
+    input#VarrootSite {
+           width: 300px;
+          }
+		  
+  </style>
+  
+ 
+   <table width="100%" border="0" id="tablaconfig">  
+	 <tr>       
+                <td>
+                    Title - Video: <input type="text" size="100" id="titleVideo" value="__UP_titleVideo__"   onchange="registra('titleVideo')"/>                   
+                </td>
+            </tr>
+			 <tr>       
+                <td
+					Text - Video: <textarea id="textVideo" style="height: 245px; width: 100%" onchange="registra('textVideo')" >__UP_textVideo__</textarea>
+
+					
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                    Url to Video: <input type="text" size="100" id="urlVideo" value="__UP_urlVideo__"   onchange="registra('urlVideo')"/>                   
+                </td>
+            </tr>
+			
+	</table>	
+
+	<script type="text/javascript">           
+            // Get userprefs
+            var prefs = new gadgets.Prefs();           
+            function registra(variable)
+            {	
+				
+                prefs.set(variable,document.getElementById(variable).value);
+				
+			
+            } 
+			
+			
+            gadgets.window.adjustHeight();
+        </script>   
+ ]]>	
+
+</Content>
 
 
 
