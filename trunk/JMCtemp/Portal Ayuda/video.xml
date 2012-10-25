@@ -47,7 +47,7 @@
 
 	<script type="text/javascript">           
             // Get userprefs
-            var prefs = new gadgets.Prefs();           
+            var prefs = new _IG_Prefs();           
             function registra(variable)
             {	
 				
