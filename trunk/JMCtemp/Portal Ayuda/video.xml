@@ -23,7 +23,7 @@
 		  
   </style>
   
-  <form name="videoForm">
+ 
    <table width="100%" border="0" id="tablaconfig">  
 	 <tr>       
                 <td>
@@ -34,7 +34,7 @@
                 <td
 					Text - Video: <textarea id="textVideo" style="height: 245px; width: 100%" onchange="registra('textVideo')" >__UP_textVideo__</textarea>
 
-					</form>
+					
                 </td>
             </tr>
 			<tr>       
