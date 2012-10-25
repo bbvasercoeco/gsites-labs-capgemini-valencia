@@ -61,13 +61,13 @@
 	 var gadgetHelper = null;
 	 var prefs = new gadgets.Prefs();
 	 
-	 var titleVideo = prefs.getString("titleBanner1");
-	 var textVideo = prefs.getString("textBanner1");
-	 var urlVideo = prefs.getString("urlbanner1");
+	 var titleVideo = prefs.getString("titleVideo");
+	 var textVideo = prefs.getString("textVideo");
+	 var urlVideo = prefs.getString("urlVideo");
 	 var tagVideo = prefs.getString("tagVideo");
 	 
 	 
-	 document.getElementById("tagVideo").innerHTML = tagVideo;
+	 document.getElementById("TagVideo").innerHTML = tagVideo;
 	 document.getElementById("titleVideo").innerHTML = titleVideo;
 	 document.getElementById("textVideo").innerHTML = textVideo;
 	 document.getElementById("urlVideo").innerHTML = '<a href="'+urlVideo+'" target="_parent"></a>';
