@@ -30,21 +30,21 @@
 		float:left;
 	    width:284px;
 		height:189px;
+		margin-right:10px;
 	  }
 	  #TagVideo{
 	    color:#FCC3A5;
-		margin-left:10px;
 	  }
 	  
       #titleVideo{
 		color:#A7BDDB;
-	    margin-left:10px;
+	    
 	  }
 	  #textVideo{
 		color:#323232;
 		font-size:12px;
 		font-family:arial;
-		margin-left:10px;
+		
 	    }
 		
 	</style>
@@ -111,7 +111,8 @@
                 <td>
 				 Url to Video: <input type="text" size="100" id="urlVideo" value="__UP_urlVideo__"   onchange="registra('urlVideo')"/>   
 
-				</td>
+					
+                </td>
             </tr>
 			<tr>       
                 <td>
