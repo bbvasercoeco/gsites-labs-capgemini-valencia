@@ -70,7 +70,7 @@
 	 document.getElementById("tagVideo").innerHTML = tagVideo;
 	 document.getElementById("titleVideo").innerHTML = titleVideo;
 	 document.getElementById("textVideo").innerHTML = textVideo;
-	 document.getElementById("urlVideo").innerHTML = '<EMBED SRC="'+urlVideo+'" HEIGHT=189 WIDTH=284 AUTOSTART=TRUE LOOP=FALSE/>';
+	 document.getElementById("urlVideo").innerHTML = '<EMBED SRC="'+urlVideo+'" HEIGHT=189 WIDTH=284 type="application/x-shockwave-flash" AUTOSTART=TRUE LOOP=FALSE/>';
 	
 	
 	
