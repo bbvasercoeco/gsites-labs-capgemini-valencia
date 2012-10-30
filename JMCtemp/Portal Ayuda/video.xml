@@ -46,15 +46,18 @@
 		font-family:arial;
 		
 	    }
-		
+	#infoVideo{
+		float:left;
+		}
 	</style>
     
 	
 	<div id="video-container">
 		<div id="urlVideo"></div>
+	<div id="infoVideo">	
 		<div id="tagVideo"></div>
 		<div id="titleVideo"></div>
-        <div id="textVideo"></div>
+        <div id="textVideo"></div></div>
 	 </div>
 	 
 	
