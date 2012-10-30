@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="googleapps.xml"
+    description=""
+    author_affiliation="Capgemini">
+    <Require feature="idi"/>
+    <Require feature="locked-domain" />
+	<Require feature="dynamic-height"/>   
+	<Require feature="setprefs" />   
+  </ModulePrefs>
+
+<UserPref name="urlGmail" display_name="Gmail" required="true" />  
+<UserPref name="urlCalendar" display_name="Calendar" required="true" />  
+<UserPref name="urlChat" display_name="Chat" required="true" />  
+<UserPref name="urlContacts" display_name="Contacts" required="true" />  
+<UserPref name="urlDrive" display_name="Drive" required="true" />  
+<UserPref name="urlSupport" display_name="Support" required="true" />  
+<UserPref name="urlSites" display_name="Sites" required="true" />  
+
+
+	
+ <Content type="html">
+    <![CDATA[
+	<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+	
+	<style type="text/css">
+	
+     
+		
+	</style>
+    
+	
+	<div id="video-container">
+		<div id="urlVideo"></div>
+		<div id="tagVideo"></div>
+		<div id="titleVideo"></div>
+        <div id="textVideo"></div>
+	 </div>
+	 
+	
+   <script type="text/javascript">
+	 var gadgetHelper = null;
+	 var prefs = new gadgets.Prefs();
+	 
+	 var urlGmail = prefs.getString("urlGmail");
+	 var urlCalendar = prefs.getString("urlCalendar");
+	 var urlChat = prefs.getString("urlChat");
+	 var urlContacts = prefs.getString("urlContacts");
+	 var urlDrive = prefs.getString("urlDrive");
+	 var urlSupport = prefs.getString("urlSupport");
+	 var urlSites = prefs.getString("urlSites");
+	 
+	 
+	 
+	 document.getElementById("urlGmail").innerHTML = urlGmail;
+	 document.getElementById("urlCalendar").innerHTML = urlCalendar;
+	 document.getElementById("urlChat").innerHTML = urlChat;
+	 document.getElementById("urlContacts").innerHTML = urlContacts;
+	 document.getElementById("urlDrive").innerHTML = urlDrive;
+	 document.getElementById("urlSupport").innerHTML = urlSupport;
+	 document.getElementById("urlSites").innerHTML = urlSites;
+	
+	
+	
+
+  </script>
+    ]]>
+  </Content>
+  <Content type="html" view="configuration" preferred_height="480">
+
+<![CDATA[
+<style type="text/css">
+    input#VarrootSite {
+           width: 300px;
+          }
+	table td {
+				color: #000;
+				font-size: 11px;
+				font-weight: bold;
+			}
+  </style>
+  <table width="100%" border="0" id="tablaconfig">  
+	 <tr>       
+                <td>
+                    Url - Gmail: <input type="text" size="100" id="urlGmail" value="__UP_urlGmail__"   onchange="registra('urlGmail')"/>                   
+                </td>
+            </tr>
+	 
+	 
+				<tr>       
+                <td>
+                    Url - Calendar: <input type="text" size="100" id="urlCalendar" value="__UP_urlCalendar__"   onchange="registra('urlCalendar')"/>                   
+                </td>
+            </tr>
+			 <tr>       
+                <td>
+				 Url - Chat: <input type="text" size="100" id="urlChat" value="__UP_urlChat__"   onchange="registra('urlChat')"/>   
+
+					
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                Url - Contacts: <input type="text" size="100" id="urlContacts" value="__UP_urlContacts__"   onchange="registra('urlContacts')"/>
+               
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                Url - Drive: <input type="text" size="100" id="urlDrive" value="__UP_urlDrive__"   onchange="registra('urlDrive')"/>
+               
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                Url - Soporte a la dirección: <input type="text" size="100" id="urlSupport" value="__UP_urlSupport__"   onchange="registra('urlSupport')"/>
+               
+                </td>
+            </tr>
+			<tr>       
+                <td>
+                Url - Sites: <input type="text" size="100" id="urlSites" value="__UP_urlSites__"   onchange="registra('urlSites')"/>                   
+
+               
+                </td>
+            </tr>
+			
+	</table>	
+
+    <script type="text/javascript">           
+            // Get userprefs
+            var prefs = new gadgets.Prefs();           
+            function registra(variable)
+            {	
+				
+                prefs.set(variable,document.getElementById(variable).value);
+				
+			
+            } 
+			gadgets.window.adjustHeight();
+    </script>   	
+
+	  
+
+	 
+ ]]>	
+
+ </Content>
+</Module>
