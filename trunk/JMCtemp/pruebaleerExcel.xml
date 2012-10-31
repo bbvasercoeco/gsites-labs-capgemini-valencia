@@ -79,7 +79,7 @@
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
-				var opts = {dataType:'jsonp'};				
+				var opts = {dataType:'jsonp',username:'jpruebas8',password:'morlacos'};				
 				var query = new google.visualization.Query(urlTable, opts);							
 				var querytosend = "select J,max(W),max(H) where W <> '' group by J";
 				query.setQuery(querytosend);			  
