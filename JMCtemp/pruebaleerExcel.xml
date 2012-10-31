@@ -77,6 +77,7 @@
 			{
 				google.load("visualization", "1", {"packages": ["table"]});
 				google.load("jquery", "1.4.2");
+				google.load("jqueryui", "1.7.2");
 				google.setOnLoadCallback(sendQuery);
 			}
 
