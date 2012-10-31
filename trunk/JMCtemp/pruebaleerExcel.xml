@@ -83,7 +83,7 @@
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
-				var opts = {dataType:'jsonp',username:'jpruebas8',password:'morlacos'};				
+				var opts = {dataType:'json',username:'jpruebas8',password:'morlacos'};				
 				var query = new google.visualization.Query(urlTable, opts);							
 				var querytosend = "select *";
 				query.setQuery(querytosend);			  
