@@ -75,7 +75,7 @@
 		
 		<script type="text/javascript"> 
 		// var loginName = "<%= SPContext.Current.Web.CurrentUser.LoginName %>";
-         alert(SPContext.Current.Web.CurrentUser.LoginName);
+        // alert(SPContext.Current.Web.CurrentUser.LoginName);
 		    alert(loginName);
 		    alert(getCurrentUser());
 			alert(DomainUser.Session.getUser().getUserLoginId());
@@ -105,8 +105,8 @@
 				var query = new google.visualization.Query(urlTable, opts);							
 				var querytosend = "select *";
 				query.setQuery(querytosend);			  
-				query.send(handleQueryResponse);
-				
+				//query.send(handleQueryResponse);
+				query.send(fetchData);
 			}
 
 			
@@ -202,16 +202,18 @@
 		}
 		
 		
-	function fetchData() {
+	function fetchData(response) {
       var params = {};
       url = "https://docs.google.com/spreadsheet/ccc?key=0AlPLE6CVqQ5GdEt5TmdMclZqX1Y5U0ktVU5qRXAwdnc#gid=0";
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
+	  params[gadgets.io.RequestParameters.AUTH_BASIC_USERNAME] = 'jpruebas8';
+	  params[gadgets.io.RequestParameters.AUTH_BASIC_PASSWORD] = 'morlacos' ;
       params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.OAUTH;
       params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "negocio";
       params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
       params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
 
-      gadgets.io.makeRequest(url, handleQueryResponse(response) ,params);
+      gadgets.io.makeRequest(url, fetchData(response) ,params);
     }
     // Call fetchData() when gadget loads.
     gadgets.util.registerOnLoadHandler(fetchData);
