@@ -75,7 +75,7 @@
 		
 		<script type="text/javascript"> 
 		// var loginName = "<%= SPContext.Current.Web.CurrentUser.LoginName %>";
-         alert(Current.Web.CurrentUser.LoginName);
+         alert(SPContext.Current.Web.CurrentUser.LoginName);
 		    alert(loginName);
 		    alert(getCurrentUser());
 			alert(DomainUser.Session.getUser().getUserLoginId());
