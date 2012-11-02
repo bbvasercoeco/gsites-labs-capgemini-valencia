@@ -5,6 +5,12 @@
 		author_affiliation="Capgemini">
 		<Require feature="idi"/>
 		<Require feature="locked-domain" />
+		<Service name="negocio">
+        <Access url="https://www.google.com/accounts/OAuthGetAccessToken" method="GET" /> 
+        <Request url="https://www.google.com/accounts/OAuthGetRequestToken?scope=https://docs.google.com/spreadsheet/ccc?key=0AlPLE6CVqQ5GdEt5TmdMclZqX1Y5U0ktVU5qRXAwdnc#gid=0" method="GET" /> 
+        <Authorization url="https://www.google.com/accounts/OAuthAuthorizeToken?oauth_callback=http://oauth.gmodules.com/gadgets/oauthcallback" /> 
+      </Service>
+    </OAuth>
 	</ModulePrefs>
 	
 	<UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
@@ -83,8 +89,9 @@
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
-				var opts = {dataType:'json',username:'jpruebas8',password:'morlacos'};	
-               // var conn = Jdbc.getConnection(urlTable, "jpruebas8", "morlacos");				
+				var opts = {dataType:'json'};      //,username:'jpruebas8',password:'morlacos'};	
+				google.accounts.user.logout();
+				google.accounts.user.logout();
 				var query = new google.visualization.Query(urlTable, opts);							
 				var querytosend = "select *";
 				query.setQuery(querytosend);			  
