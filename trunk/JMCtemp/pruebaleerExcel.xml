@@ -71,7 +71,7 @@
 		
 		
 		<script type="text/javascript"> 
-			
+			alert(gadgets.util.getUrlParameters()["parent"].split("/"));
 			
 			var user_id = null;
 			var gadgetHelper = null;	
