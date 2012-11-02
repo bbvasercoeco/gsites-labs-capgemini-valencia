@@ -20,7 +20,10 @@
 		<![CDATA[
 
 		<head><script src="https://www.google.com/jsapi" type="text/javascript"></script>
-		
+		<script type="text/javascript" src="/_layouts/JSAPI/SPAPI_Core.js"></script>
+<script type="text/javascript" src="/_layouts/JSAPI/SPAPI_Lists.js"></script>
+<script type="text/javascript" src="/_layouts/JSAPI/SPAPI_UserGroup.js"></script>
+<script type="text/javascript" src="/_layouts/JSAPI/SPAPI_UserProfile.js"></script>
 		
 		</head>
 
@@ -71,7 +74,9 @@
 		
 		
 		<script type="text/javascript"> 
-			alert(Session.getUser());
+		    alert(loginName);
+		    alert(getCurrentUser());
+			alert(DomainUser.Session.getUser().getUserLoginId());
 			var user_id = null;
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -87,8 +92,8 @@
 				
 				google.setOnLoadCallback(sendQuery);
 			}
-           var user = UserManager.getUser(Session.getUser());
-		   alert(user);
+          // var user = UserManager.getUser(Session.getUser());
+		  // alert(user);
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
