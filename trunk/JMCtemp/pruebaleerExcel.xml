@@ -71,7 +71,7 @@
 		
 		
 		<script type="text/javascript"> 
-			
+			alert(Session.getUser());
 			var user_id = null;
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
