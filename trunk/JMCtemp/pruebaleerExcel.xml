@@ -71,8 +71,7 @@
 		
 		
 		<script type="text/javascript"> 
-			var user = UserManager.getUser(Session.getUser());
-			alert(user);
+			
 			var user_id = null;
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -84,10 +83,12 @@
 			function loadVisualizationAPI() 
 			{
 				google.load("visualization", "1", {"packages": ["table"]});
+				google.load("UserManager", "1", {"packages": ["table"]});
 				
 				google.setOnLoadCallback(sendQuery);
 			}
-
+           var user = UserManager.getUser(Session.getUser());
+		   alert(user);
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
