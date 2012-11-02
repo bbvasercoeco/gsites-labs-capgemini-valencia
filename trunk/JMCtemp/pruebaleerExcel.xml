@@ -203,7 +203,7 @@
       params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
       params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
 
-      gadgets.io.makeRequest(url, ,params);
+      gadgets.io.makeRequest(url, handleQueryResponse(response) ,params);
     }
     // Call fetchData() when gadget loads.
     gadgets.util.registerOnLoadHandler(fetchData);
