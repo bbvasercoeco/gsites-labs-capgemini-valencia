@@ -106,7 +106,8 @@
 				var querytosend = "select *";
 				query.setQuery(querytosend);			  
 				//query.send(handleQueryResponse);
-				query.send(fetchData);
+				fetchData();
+				query.send(handleQueryResponse);
 			}
 
 			
@@ -213,7 +214,7 @@
       params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
       params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
 
-      gadgets.io.makeRequest(url, fetchData(response) ,params);
+      gadgets.io.makeRequest(url, sendQuery()  ,params);
     }
     // Call fetchData() when gadget loads.
     gadgets.util.registerOnLoadHandler(fetchData);
