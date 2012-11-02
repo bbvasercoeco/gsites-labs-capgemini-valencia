@@ -84,7 +84,7 @@
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
 				var opts = {dataType:'json',username:'jpruebas8',password:'morlacos'};	
-                var conn = Jdbc.getConnection(urlTable, "jpruebas8", "morlacos");				
+               // var conn = Jdbc.getConnection(urlTable, "jpruebas8", "morlacos");				
 				var query = new google.visualization.Query(urlTable, opts);							
 				var querytosend = "select *";
 				query.setQuery(querytosend);			  
