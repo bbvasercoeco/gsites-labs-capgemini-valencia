@@ -5,6 +5,7 @@
 		author_affiliation="Capgemini">
 		<Require feature="idi"/>
 		<Require feature="locked-domain" />
+	<OAuth>
 		<Service name="negocio">
         <Access url="https://www.google.com/accounts/OAuthGetAccessToken" method="GET" /> 
         <Request url="https://www.google.com/accounts/OAuthGetRequestToken?scope=https://docs.google.com/spreadsheet/ccc?key=0AlPLE6CVqQ5GdEt5TmdMclZqX1Y5U0ktVU5qRXAwdnc#gid=0" method="GET" /> 
