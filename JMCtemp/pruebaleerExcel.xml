@@ -18,7 +18,7 @@
 
 	<Content type="html">
 		<![CDATA[
-
+ <script src="http://gadget-doc-examples.googlecode.com/svn/trunk/opensocial-gadgets/popup.js"></script>
 		<head><script src="https://www.google.com/jsapi" type="text/javascript"></script>
 		<script type="text/javascript" src="/_layouts/JSAPI/SPAPI_Core.js"></script>
 <script type="text/javascript" src="/_layouts/JSAPI/SPAPI_Lists.js"></script>
@@ -215,7 +215,40 @@
       params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
       params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
 
-      gadgets.io.makeRequest(url, sendQuery()  ,params);
+      gadgets.io.makeRequest(url, function (response) { 
+        if (response.oauthApprovalUrl) {
+          // Create the popup handler. The onOpen function is called when the user
+          // opens the popup window. The onClose function is called when the popup
+          // window is closed.
+          var popup = shindig.oauth.popup({
+            destination: response.oauthApprovalUrl,
+            windowOptions: null,
+            onOpen: function() { showOneSection('waiting'); },
+            onClose: function() { fetchData(); }
+          });
+          // Use the popup handler to attach onclick handlers to UI elements.  The
+          // createOpenerOnClick() function returns an onclick handler to open the
+          // popup window.  The createApprovedOnClick function returns an onclick 
+          // handler that will close the popup window and attempt to fetch the user's
+          // data again.
+          var personalize = document.getElementById('personalize');
+          personalize.onclick = popup.createOpenerOnClick();
+          var approvaldone = document.getElementById('approvaldone');
+          approvaldone.onclick = popup.createApprovedOnClick();
+          showOneSection('approval');
+        } else if (response.data) {
+            showOneSection('main');
+            showResults(response.data);
+        } else {
+            // The response.oauthError and response.oauthErrorText values may help debug
+            // problems with your gadget.
+            var main = document.getElementById('main');
+            var err = document.createTextNode('OAuth error: ' +
+              response.oauthError + ': ' + response.oauthErrorText);
+            main.appendChild(err);
+            showOneSection('main');
+        }
+      }  ,params);
     }
     // Call fetchData() when gadget loads.
     gadgets.util.registerOnLoadHandler(fetchData);
