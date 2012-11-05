@@ -208,7 +208,7 @@
       url = "https://docs.google.com/spreadsheet/ccc?key=0AlPLE6CVqQ5GdEt5TmdMclZqX1Y5U0ktVU5qRXAwdnc#gid=0";
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
 	  params[gadgets.io.RequestParameters.AUTH_BASIC_USERNAME] = 'jpruebas8';
-	  params[gadgets.io.RequestParameters.AUTH_BASIC_PASSWORD] = 'morlacos' ;
+	 // params[gadgets.io.RequestParameters.AUTH_BASIC_PASSWORD] = 'morlacos' ;
       params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.OAUTH;
       params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "negocio";
       params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
