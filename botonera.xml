@@ -45,9 +45,19 @@
     <UserPref name="VarEnlace10URL" display_name="enlace 10:" default_value=""/>
     <UserPref name="VarEnlace10ImgURL" display_name="imagen 10:" default_value=""/>
     <Content type="html" view="home"><![CDATA[
-        <style>                
+        <style>
+          @font-face {
+             font-family: 'BBVA Web Book';
+             src:url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.eot');
+             src:url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.eot?iefix') format("embedded-opentype"),
+                url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.woff') format("woff"),
+                url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.ttf') format("truetype"),
+                url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.svg#BBVA Web Book') format("svg");
+             font-style: normal;
+             font-weight: normal;
+          }        
 					.titulo{
-						border-bottom: 1px solid  #D2E5EB;
+						border-bottom: 1px solid  #DDE3EA;
 						background: #ffffff;
 						background: -moz-linear-gradient(top,  #ffffff 0%, #f5f7f8 100%);
 						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f5f7f8));
@@ -56,44 +66,46 @@
 						background: -ms-linear-gradient(top,  #ffffff 0%,#f5f7f8 100%);
 						background: linear-gradient(to bottom,  #ffffff 0%,#f5f7f8 100%);
 						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f7f8',GradientType=0 );
-						font: Stag Sans Book 16px;
+						font: 16px BBVA Web Book;
 						color: #333333;
-						padding-left: 20px;
-						padding-left: 20px;
-						padding-top: 10px;
-						padding-bottom: 9px;
+						padding-left: 18px;
+						padding-left: 18px;
+						padding-top: 14px;
+						padding-bottom: 15px;
 					}
-					body{
-						border: 1px solid #D2E5EB;
+					content_div{
+						border: 1px solid #DDE3EA;
             border-radius: 2px;
             -ms-border-radius: 2px;
             -moz-border-radius: 2px;
             -webkit-border-radius: 2px;
             -khtml-border-radius: 2px;
+            width: 298px;
+            clear: both;
 					}
 					ul{
-						padding-left: 20px;
-						padding-right: 20px;
-						padding-top: 5px;
+						padding-left: 19px;
+						padding-right: 19px;
 						margin: 0;
 					}
 					ul li{
 						list-style: none;
-						border-bottom: 1px solid #D2E5EB;
-						padding-bottom: 4px;
-						padding-top: 5px;
+						border-bottom: 1px solid #DDE3EA;
+						padding-bottom: 12px;
+						padding-top: 17px;
 					}
           ul li:last-child{
-						list-style: none;
 						border: 0;
-						padding-bottom: 5px;
-						padding-top: 5px;
+						padding-bottom: 11px;
+						padding-top: 17px;
 					}     
 					ul li a{
+            padding-left: 2px;
 						vertical-align: 3px;
 						text-decoration: none;
-            font: Arial 14px;
-						color: #0065B7;
+            font: Arial 12px;
+            font-weight: bold;
+						color: #0073C9;
 					}  
                
         </style>
@@ -158,52 +170,52 @@
                 if ((VarEnlace1Texto!="")&&(VarEnlace1URL!="")&&(VarEnlace1ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace1URL);
-                    html+='<li><img src=\"' + VarEnlace1ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace1Texto + '\"  >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace1ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace1Texto + '\"  >' + VarEnlace1Texto + '</a></li>';
                 }
                 if ((VarEnlace2Texto!="")&&(VarEnlace2URL!="")&&(VarEnlace2ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace2URL);
-                    html+='<li><img src=\"' + VarEnlace2ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace2Texto + '\"  >' + VarEnlace2Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace2ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace2Texto + '\"  >' + VarEnlace2Texto + '</a></li>';
                 }
                 if ((VarEnlace3Texto!="")&&(VarEnlace3URL!="")&&(VarEnlace3ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace3URL);
-                    html+='<li><img src=\"' + VarEnlace3ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace3Texto + '\"  >' + VarEnlace3Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace3ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace3Texto + '\"  >' + VarEnlace3Texto + '</a></li>';
                 }
 								 if ((VarEnlace4Texto!="")&&(VarEnlace4URL!="")&&(VarEnlace4ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace4URL);
-                    html+='<li><img src=\"' + VarEnlace4ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace4Texto + '\"  >' + VarEnlace4Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace4ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace4Texto + '\"  >' + VarEnlace4Texto + '</a></li>';
                 }
                  if ((VarEnlace5Texto!="")&&(VarEnlace5URL!="")&&(VarEnlace5ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace5URL);
-                    html+='<li><img src=\"' + VarEnlace5ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace5Texto + '\"  >' + VarEnlace5Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace5ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace5Texto + '\"  >' + VarEnlace5Texto + '</a></li>';
                 }
                  if ((VarEnlace6Texto!="")&&(VarEnlace6URL!="")&&(VarEnlace6ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace6URL);
-                    html+='<li><img src=\"' + VarEnlace6ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace6Texto + '\"  >' + VarEnlace6Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace6ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace6Texto + '\"  >' + VarEnlace6Texto + '</a></li>';
                 }
                  if ((VarEnlace7Texto!="")&&(VarEnlace7URL!="")&&(VarEnlace7ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace7URL);
-                    html+='<li><img src=\"' + VarEnlace7ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace7Texto + '\"  >' + VarEnlace7Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace7ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace7Texto + '\"  >' + VarEnlace7Texto + '</a></li>';
                 }
                  if ((VarEnlace8Texto!="")&&(VarEnlace8URL!="")&&(VarEnlace8ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace8URL);
-                    html+='<li><img src=\"' + VarEnlace8ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace8Texto + '\"  >' + VarEnlace8Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace8ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace8Texto + '\"  >' + VarEnlace8Texto + '</a></li>';
                 }
                  if ((VarEnlace9Texto!="")&&(VarEnlace9URL!="")&&(VarEnlace9ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace9URL);
-                    html+='<li><img src=\"' + VarEnlace9ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace9Texto + '\"  >' + VarEnlace9Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace9ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace9Texto + '\"  >' + VarEnlace9Texto + '</a></li>';
                 }
                  if ((VarEnlace10Texto!="")&&(VarEnlace10URL!="")&&(VarEnlace10ImgURL!=""))
                 {    
                     var strLink = devuelveEnlace(VarEnlace10URL);
-                    html+='<li><img src=\"' + VarEnlace10ImgURL + '\"/>&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace10Texto + '\"  >' + VarEnlace10Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+                    html+='<li><img src=\"' + VarEnlace10ImgURL + '\"/>&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace10Texto + '\"  >' + VarEnlace10Texto + '</a></li>';
                 }
                 return html;
             }    
@@ -264,7 +276,7 @@
                 <td>
                 		Enlace 1 - Imagen: <input type="text" id="VarEnlace1ImgURL" class="btnImg" value="__UP_VarEnlace1ImgURL__" onchange="registra('VarEnlace1ImgURL')"><br/>       
                     Enlace 1 - Texto: <input type="text" id="VarEnlace1Texto" class="btnTexto" value="__UP_VarEnlace1Texto__" onchange="registra('VarEnlace1Texto')"><br/>        
-                    Enlace 1 -URL: <input type="text" id="VarEnlace1URL" class="btnURL" value="__UP_VarEnlace1URL__" onchange="registra('VarEnlace1URL')"><br/>        
+                    Enlace 1 - URL: <input type="text" id="VarEnlace1URL" class="btnURL" value="__UP_VarEnlace1URL__" onchange="registra('VarEnlace1URL')"><br/>        
                 </td>
             </tr>
             <tr>        
