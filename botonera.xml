@@ -239,22 +239,18 @@
                 font-size: 11px;
                 font-weight: bold;
             }
-            table td input,
-            textarea {
+            table td input {
                 color: #000;
                 font-size: 11px;                
-            }            
-            input#VarTituloBloque {
-                width: 300px;
-            }
-            input#VarImagenDestacada {
-                width: 575px;
-            }
+            }   
+            .btnImg {
+                width: 400px;
+            }        
             .btnTexto {
-                width: 200px;
+                width: 400px;
             }
             .btnURL {
-                width: 345px;
+                width: 400px;
             }
             .btnTitulo {
                 width: 400px;
@@ -280,6 +276,11 @@
             }
         </style>
         <table width="100%" border="0" id="tablaconfig">
+            <tr>
+                <td class="separador">
+                    Título: <input type="text" id="VarTituloVentana" class="btnTitulo" value="__UP_VarTituloVentana__" onchange="registra('VarTituloVentana')">
+                </td>
+            </tr>     
             <tr>        
                 <td class="separador">
                 		Enlace 1 - Imagen: <input type="text" id="VarEnlace1ImgURL" class="btnImg" value="__UP_VarEnlace1ImgURL__" onchange="registra('VarEnlace1ImgURL')"><br/>       
@@ -344,17 +345,13 @@
                 </td>
             </tr>
             <tr>        
-                <td class="separador">
+                <td>
                 		Enlace 10 - Imagen: <input type="text" id="VarEnlace10ImgURL" class="btnImg" value="__UP_VarEnlace10ImgURL__" onchange="registra('VarEnlace10ImgURL')"><br/>       
                     Enlace 10 - Texto: <input type="text" id="VarEnlace10Texto" class="btnTexto" value="__UP_VarEnlace10Texto__" onchange="registra('VarEnlace10Texto')"><br/>        
-                    Enlace 10 - URL: <input type="text" id="VarEnlace10URL" class="btnURL" value="__UP_VarEnlace10URL__" onchange="registra('VarEnlace10URL')"><br/>             
+                    Enlace 10 - URL: <input type="text" id="VarEnlace10URL" class="btnURL" value="__UP_VarEnlace10URL__" onchange="registra('VarEnlace10URL')"><br/>   
                 </td>
             </tr>
-            <tr>
-                <td>
-                    Título: <input type="text" id="VarTituloVentana" class="btnTitulo" value="__UP_VarTituloVentana__" onchange="registra('VarTituloVentana')">
-                </td>
-            </tr>     
+            
         </table>        
         <script type="text/javascript">    
             var prefs = new gadgets.Prefs();            
