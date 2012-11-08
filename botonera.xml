@@ -73,7 +73,7 @@
 						padding-top: 14px;
 						padding-bottom: 15px;
 					}
-					content_div{
+					.content_div{
 						border: 1px solid #DDE3EA;
             border-radius: 2px;
             -ms-border-radius: 2px;
