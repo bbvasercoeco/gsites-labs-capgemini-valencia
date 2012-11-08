@@ -239,12 +239,6 @@
                 font-size: 11px;
                 font-weight: bold;
             }
-            table tr {
-                border-bottom: 1px solid;
-            }
-            table tr:last-child {
-                border: 0;
-            }
             table td input,
             textarea {
                 color: #000;
@@ -276,6 +270,9 @@
             .textocolor {
                 width: 57px;
             }
+            .separador {
+                border-bottom: 1px solid;
+            }
             ul.gadget-config-list {
                 list-style: none outside none;
                 margin: 0 !important;
@@ -284,70 +281,70 @@
         </style>
         <table width="100%" border="0" id="tablaconfig">
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 1 - Imagen: <input type="text" id="VarEnlace1ImgURL" class="btnImg" value="__UP_VarEnlace1ImgURL__" onchange="registra('VarEnlace1ImgURL')"><br/>       
                     Enlace 1 - Texto: <input type="text" id="VarEnlace1Texto" class="btnTexto" value="__UP_VarEnlace1Texto__" onchange="registra('VarEnlace1Texto')"><br/>        
                     Enlace 1 - URL: <input type="text" id="VarEnlace1URL" class="btnURL" value="__UP_VarEnlace1URL__" onchange="registra('VarEnlace1URL')"><br/>        
                 </td>
             </tr>
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 2 - Imagen: <input type="text" id="VarEnlace2ImgURL" class="btnImg" value="__UP_VarEnlace2ImgURL__" onchange="registra('VarEnlace2ImgURL')"><br/>       
                     Enlace 2 - Texto: <input type="text" id="VarEnlace2Texto" class="btnTexto" value="__UP_VarEnlace2Texto__" onchange="registra('VarEnlace2Texto')"><br/>        
                     Enlace 2 - URL: <input type="text" id="VarEnlace2URL" class="btnURL" value="__UP_VarEnlace2URL__" onchange="registra('VarEnlace2URL')"><br/>                    
                 </td>
             </tr>
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 3 - Imagen: <input type="text" id="VarEnlace3ImgURL" class="btnImg" value="__UP_VarEnlace3ImgURL__" onchange="registra('VarEnlace3ImgURL')"><br/>       
                     Enlace 3 - Texto: <input type="text" id="VarEnlace3Texto" class="btnTexto" value="__UP_VarEnlace3Texto__" onchange="registra('VarEnlace3Texto')"><br/>        
                     Enlace 3 - URL: <input type="text" id="VarEnlace3URL" class="btnURL" value="__UP_VarEnlace3URL__" onchange="registra('VarEnlace3URL')"><br/>                    
                 </td>
             </tr>
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 4 - Imagen: <input type="text" id="VarEnlace4ImgURL" class="btnImg" value="__UP_VarEnlace4ImgURL__" onchange="registra('VarEnlace4ImgURL')"><br/>       
                     Enlace 4 - Texto: <input type="text" id="VarEnlace4Texto" class="btnTexto" value="__UP_VarEnlace4Texto__" onchange="registra('VarEnlace4Texto')"><br/>        
                     Enlace 4 - URL: <input type="text" id="VarEnlace4URL" class="btnURL" value="__UP_VarEnlace4URL__" onchange="registra('VarEnlace4URL')"><br/>                    
                 </td>
             </tr>
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 5 - Imagen: <input type="text" id="VarEnlace5ImgURL" class="btnImg" value="__UP_VarEnlace5ImgURL__" onchange="registra('VarEnlace5ImgURL')"><br/>       
                     Enlace 5 - Texto: <input type="text" id="VarEnlace5Texto" class="btnTexto" value="__UP_VarEnlace5Texto__" onchange="registra('VarEnlace5Texto')"><br/>        
                     Enlace 5 - URL: <input type="text" id="VarEnlace5URL" class="btnURL" value="__UP_VarEnlace5URL__" onchange="registra('VarEnlace5URL')"><br/>                    
                 </td>
             </tr>
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 6 - Imagen: <input type="text" id="VarEnlace6ImgURL" class="btnImg" value="__UP_VarEnlace6ImgURL__" onchange="registra('VarEnlace6ImgURL')"><br/>       
                     Enlace 6 - Texto: <input type="text" id="VarEnlace6Texto" class="btnTexto" value="__UP_VarEnlace6Texto__" onchange="registra('VarEnlace6Texto')"><br/>        
                     Enlace 6 - URL: <input type="text" id="VarEnlace6URL" class="btnURL" value="__UP_VarEnlace6URL__" onchange="registra('VarEnlace6URL')"><br/>                    
                 </td>
             </tr>
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 7 - Imagen: <input type="text" id="VarEnlace7ImgURL" class="btnImg" value="__UP_VarEnlace7ImgURL__" onchange="registra('VarEnlace7ImgURL')"><br/>       
                     Enlace 7 - Texto: <input type="text" id="VarEnlace7Texto" class="btnTexto" value="__UP_VarEnlace7Texto__" onchange="registra('VarEnlace7Texto')"><br/>        
                     Enlace 7 - URL: <input type="text" id="VarEnlace7URL" class="btnURL" value="__UP_VarEnlace7URL__" onchange="registra('VarEnlace7URL')"><br/>                    
                 </td>
             </tr>
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 8 - Imagen: <input type="text" id="VarEnlace8ImgURL" class="btnImg" value="__UP_VarEnlace8ImgURL__" onchange="registra('VarEnlace8ImgURL')"><br/>       
                     Enlace 8 - Texto: <input type="text" id="VarEnlace8Texto" class="btnTexto" value="__UP_VarEnlace8Texto__" onchange="registra('VarEnlace8Texto')"><br/>        
                     Enlace 8 - URL: <input type="text" id="VarEnlace8URL" class="btnURL" value="__UP_VarEnlace8URL__" onchange="registra('VarEnlace8URL')"><br/>                    
                 </td>
             </tr>
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 9 - Imagen: <input type="text" id="VarEnlace9ImgURL" class="btnImg" value="__UP_VarEnlace9ImgURL__" onchange="registra('VarEnlace9ImgURL')"><br/>       
                     Enlace 9 - Texto: <input type="text" id="VarEnlace9Texto" class="btnTexto" value="__UP_VarEnlace9Texto__" onchange="registra('VarEnlace9Texto')"><br/>        
                     Enlace 9 - URL: <input type="text" id="VarEnlace9URL" class="btnURL" value="__UP_VarEnlace9URL__" onchange="registra('VarEnlace9URL')"><br/>                    
                 </td>
             </tr>
             <tr>        
-                <td>
+                <td class="separador">
                 		Enlace 10 - Imagen: <input type="text" id="VarEnlace10ImgURL" class="btnImg" value="__UP_VarEnlace10ImgURL__" onchange="registra('VarEnlace10ImgURL')"><br/>       
                     Enlace 10 - Texto: <input type="text" id="VarEnlace10Texto" class="btnTexto" value="__UP_VarEnlace10Texto__" onchange="registra('VarEnlace10Texto')"><br/>        
                     Enlace 10 - URL: <input type="text" id="VarEnlace10URL" class="btnURL" value="__UP_VarEnlace10URL__" onchange="registra('VarEnlace10URL')"><br/>             
