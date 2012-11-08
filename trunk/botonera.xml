@@ -3,7 +3,7 @@
     <ModulePrefs title="Cajetin botones"
         title_url=""
         height=""
-        width="298"
+        width="300"
         author=""
         author_email=""
         description="Cajetin botones"
@@ -13,7 +13,8 @@
         author_location="Asturias, Spain"
         scaling="false">
         <Require feature="setprefs"/>
-    </ModulePrefs>  
+    </ModulePrefs>
+    <UserPref name="VarTituloVentana" display_name="Título ventana:" default_value="" required="true"/>
     <UserPref name="VarEnlace1Texto" display_name="Texto enlace 1:" default_value="" required="true"/>
     <UserPref name="VarEnlace1URL" display_name="enlace 1:" default_value="" required="true"/>
     <UserPref name="VarEnlace1ImgURL" display_name="imagen 1:" default_value="" required="true"/>
@@ -117,6 +118,7 @@
             // Obtener userprefs
             var prefs = new gadgets.Prefs();            
             
+            var VarTituloVentana=prefs.getString("VarTituloVentana");
             var VarEnlace1Texto=prefs.getString("VarEnlace1Texto");
             var VarEnlace1URL=prefs.getString("VarEnlace1URL");
             var VarEnlace1ImgURL=prefs.getString("VarEnlace1ImgURL");
@@ -219,7 +221,7 @@
                 }
                 return html;
             }    
-            html+='<div class=\"titulo\">Título demo</div>';
+            html+='<div class=\"titulo\">' + VarTituloVentana + '</div>';
             html+='<ul id=\"botonera\">';                        
             html+=insertarEnlace();            
             html+='</ul>';    
@@ -229,13 +231,19 @@
         </script>
     ]]>  
     </Content>  
-    <Content type="html" view="configuration"  preferred_height="298">
+    <Content type="html" view="configuration"  preferred_height="300">
     <![CDATA[        
         <style>
 						table td {
                 color: #000;
                 font-size: 11px;
                 font-weight: bold;
+            }
+            table tr {
+                border-bottom: 1px solid;
+            }
+            table tr:last-child {
+                border: 0;
             }
             table td input,
             textarea {
@@ -254,6 +262,9 @@
             .btnURL {
                 width: 345px;
             }
+            .btnTitulo {
+                width: 400px;
+            }
             .destacado {
                 color:red;
                 font-size:20px;
@@ -271,7 +282,7 @@
                 padding-left: 5px;
             }
         </style>
-        <table width="100%" border="0" id="tablaconfig">            
+        <table width="100%" border="0" id="tablaconfig">
             <tr>        
                 <td>
                 		Enlace 1 - Imagen: <input type="text" id="VarEnlace1ImgURL" class="btnImg" value="__UP_VarEnlace1ImgURL__" onchange="registra('VarEnlace1ImgURL')"><br/>       
@@ -339,9 +350,14 @@
                 <td>
                 		Enlace 10 - Imagen: <input type="text" id="VarEnlace10ImgURL" class="btnImg" value="__UP_VarEnlace10ImgURL__" onchange="registra('VarEnlace10ImgURL')"><br/>       
                     Enlace 10 - Texto: <input type="text" id="VarEnlace10Texto" class="btnTexto" value="__UP_VarEnlace10Texto__" onchange="registra('VarEnlace10Texto')"><br/>        
-                    Enlace 10 - URL: <input type="text" id="VarEnlace10URL" class="btnURL" value="__UP_VarEnlace10URL__" onchange="registra('VarEnlace10URL')"><br/>                    
+                    Enlace 10 - URL: <input type="text" id="VarEnlace10URL" class="btnURL" value="__UP_VarEnlace10URL__" onchange="registra('VarEnlace10URL')"><br/>             
                 </td>
             </tr>
+            <tr>
+                <td>
+                    Título: <input type="text" id="VarTituloVentana" class="btnTitulo" value="__UP_VarTituloVentana__" onchange="registra('VarTituloVentana')">
+                </td>
+            </tr>     
         </table>        
         <script type="text/javascript">    
             var prefs = new gadgets.Prefs();            
