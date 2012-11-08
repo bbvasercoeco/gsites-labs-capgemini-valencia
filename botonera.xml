@@ -73,7 +73,7 @@
 						padding-top: 14px;
 						padding-bottom: 15px;
 					}
-					.content_div{
+					.caja{
 						border: 1px solid #DDE3EA;
             border-radius: 2px;
             -ms-border-radius: 2px;
@@ -110,7 +110,7 @@
                
         </style>
     
-        <div id="content_div"></div>
+        <div id="content_div" class="caja"></div>
 
         <script type="text/javascript">
             var html="";
