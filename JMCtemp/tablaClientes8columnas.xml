@@ -127,14 +127,14 @@
 		var opts = {dataType:'jsonp',sendMethod:'auto'};
 		//alert("urlTable "+urlTable);
 		
-		var query = new google.gdata.client.Query(urlTable, opts);
+		var query = new google.gdata.client.Query(urlTable);
 
         //service.getFeed('urlTable',addnewEntryCallback,error,google.gdata.Feed);
 		//SpreadsheetsService service = new google.SpreadsheetsService("Copia de Lista Clientes Globales Def");
         //SpreadsheetQuery query = new SpreadsheetQuery();	
 		//SpreadsheetFeed feed = service.Query(query);
 		//var query = service.Query(urlTable, opts);	
-		query.setQuery("select * ");
+		query.setParam("select", "*");
 		query.send(handleQueryResponse);
 	}
 
