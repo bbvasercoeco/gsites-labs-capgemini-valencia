@@ -122,11 +122,13 @@
 	{
 		gadgetHelper = new google.visualization.GadgetHelper();	
 		//var opts = {dataType:'jsonp',sendMethod:'makeRequest'};
-		var opts = {dataType:'jsonp',sendMethod:'auto',target:'_parent'};
+		var opts = {dataType:'jsonp',sendMethod:'auto'};
 		//alert("urlTable "+urlTable);
 		
-		
-		SpreadsheetsService service = new SpreadsheetsService("Copia de Lista Clientes Globales Def");
+		var service = new google.gdata.client.GoogleService('Copia de Lista Clientes Globales Def');
+
+        service.getFeed('urlTable',addnewEntryCallback,error,google.gdata.Feed);
+		SpreadsheetsService service = new google.SpreadsheetsService("Copia de Lista Clientes Globales Def");
         //SpreadsheetQuery query = new SpreadsheetQuery();	
 		//SpreadsheetFeed feed = service.Query(query);
 		var query = service.Query(urlTable, opts);	
