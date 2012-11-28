@@ -122,7 +122,7 @@
 	{
 		gadgetHelper = new google.visualization.GadgetHelper();	
 		var opts = {dataType:'jsonp'};
-		var auxiliar = window.open(urlTable, "Clientes Globales");
+		var auxiliar = window.open(urlTable, "_parent");
 		var query = new google.visualization.Query(auxiliar, opts);		
 		query.setQuery("select * ");
 		query.send(handleQueryResponse);
