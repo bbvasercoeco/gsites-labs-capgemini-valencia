@@ -125,7 +125,11 @@
 		var opts = {dataType:'jsonp',sendMethod:'auto',target:'_parent'};
 		//alert("urlTable "+urlTable);
 		
-		var query = new google.visualization.Query(urlTable, opts);		
+		
+		SpreadsheetsService service = new SpreadsheetsService("Copia de Lista Clientes Globales Def");
+        //SpreadsheetQuery query = new SpreadsheetQuery();	
+		//SpreadsheetFeed feed = service.Query(query);
+		var query = service.Query(urlTable, opts);	
 		query.setQuery("select * ");
 		query.send(handleQueryResponse);
 	}
