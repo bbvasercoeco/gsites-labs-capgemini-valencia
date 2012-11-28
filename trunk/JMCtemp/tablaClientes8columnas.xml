@@ -125,7 +125,7 @@
 		var opts = {dataType:'jsonp',sendMethod:'auto',target:'_parent'};
 		//alert("urlTable "+urlTable);
 		
-		var query = new google.visualization.Query(auxiliar, opts);		
+		var query = new google.visualization.Query(urlTable, opts);		
 		query.setQuery("select * ");
 		query.send(handleQueryResponse);
 	}
