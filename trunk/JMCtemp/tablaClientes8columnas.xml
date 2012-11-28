@@ -135,7 +135,7 @@
 		//SpreadsheetFeed feed = service.Query(query);
 		//var query = service.Query(urlTable, opts);	
 		query.setParam("select", "*");
-		query.send(handleQueryResponse);
+		query.setParam("send", handleQueryResponse);
 	}
 
 	function detalle(id)
