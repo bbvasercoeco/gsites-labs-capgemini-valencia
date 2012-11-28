@@ -101,7 +101,7 @@
 		}
 </style>
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
-
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
     
 	var gadgetHelper = null;
@@ -115,7 +115,9 @@
 	function loadVisualizationAPI() 
 	{
 		google.load("visualization", "1", {"packages": ["table"]});
+		google.load("gdata","2.x");
 		google.setOnLoadCallback(sendQuery);
+		
 	}
 
 	function sendQuery() 
