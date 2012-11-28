@@ -122,11 +122,9 @@
 	{
 		gadgetHelper = new google.visualization.GadgetHelper();	
 		//var opts = {dataType:'jsonp',sendMethod:'makeRequest'};
-		var opts = {dataType:'jsonp',sendMethod:'auto'};
+		var opts = {dataType:'jsonp',sendMethod:'auto',target:'_parent'};
 		//alert("urlTable "+urlTable);
-		var auxiliar = "window.parent.location.href";
-		auxiliar += '='+urlTable;
-		alert(auxiliar);
+		
 		var query = new google.visualization.Query(auxiliar, opts);		
 		query.setQuery("select * ");
 		query.send(handleQueryResponse);
