@@ -101,7 +101,7 @@
 		}
 </style>
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
-<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+
 <script type="text/javascript"> 
     
 	var gadgetHelper = null;
@@ -115,27 +115,16 @@
 	function loadVisualizationAPI() 
 	{
 		google.load("visualization", "1", {"packages": ["table"]});
-		google.load("gdata","2.x");
 		google.setOnLoadCallback(sendQuery);
-		
 	}
 
 	function sendQuery() 
 	{
 		gadgetHelper = new google.visualization.GadgetHelper();	
-		//var opts = {dataType:'jsonp',sendMethod:'makeRequest'};
-		var opts = {dataType:'jsonp',sendMethod:'auto'};
-		//alert("urlTable "+urlTable);
-		
-		var query = new google.gdata.client.Query(urlTable);
-
-        //service.getFeed('urlTable',addnewEntryCallback,error,google.gdata.Feed);
-		//SpreadsheetsService service = new google.SpreadsheetsService("Copia de Lista Clientes Globales Def");
-        //SpreadsheetQuery query = new SpreadsheetQuery();	
-		//SpreadsheetFeed feed = service.Query(query);
-		//var query = service.Query(urlTable, opts);	
-		query.setParam("select", "*");
-		query.setParam("send", handleQueryResponse);
+		var opts = {dataType:'jsonp'};
+		var query = new google.visualization.Query(urlTable, opts);		
+		query.setQuery("select * ");
+		query.send(handleQueryResponse);
 	}
 
 	function detalle(id)
