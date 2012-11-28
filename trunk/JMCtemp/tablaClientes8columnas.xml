@@ -124,7 +124,7 @@
 		//var opts = {dataType:'jsonp',sendMethod:'makeRequest'};
 		var opts = {dataType:'jsonp',sendMethod:'auto'};
 		//alert("urlTable "+urlTable);
-		var auxiliar = window.parent.location.href;
+		var auxiliar = "window.parent.location.href";
 		auxiliar += '='+urlTable;
 		alert(auxiliar);
 		var query = new google.visualization.Query(auxiliar, opts);		
