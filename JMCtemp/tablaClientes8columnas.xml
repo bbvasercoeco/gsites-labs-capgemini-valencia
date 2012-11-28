@@ -121,9 +121,9 @@
 	function sendQuery() 
 	{
 		gadgetHelper = new google.visualization.GadgetHelper();	
-		var opts = {dataType:'jsonp'};
+		//var opts = {dataType:'jsonp'};
 		//var auxiliar = window.open(urlTable, "_parent");
-		var query = new google.visualization.Query(urlTable, opts);		
+		var query = new google.visualization.Query(urlTable, 'xhr');		
 		query.setQuery("select * ");
 		query.send(handleQueryResponse);
 	}
