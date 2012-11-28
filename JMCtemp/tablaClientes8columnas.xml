@@ -122,8 +122,8 @@
 	{
 		gadgetHelper = new google.visualization.GadgetHelper();	
 		//var opts = {dataType:'jsonp',sendMethod:'makeRequest'};
-		var opts = [sendMethod,'makeRequest'];
-		alert("urlTable "+urlTable);
+		var opts = {sendMethod:'makeRequest'};
+		//alert("urlTable "+urlTable);
 		//var auxiliar = window.open(urlTable, "_parent");
 		var query = new google.visualization.Query(urlTable, opts);		
 		query.setQuery("select * ");
