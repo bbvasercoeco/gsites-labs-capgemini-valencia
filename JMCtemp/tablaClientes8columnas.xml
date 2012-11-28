@@ -123,7 +123,7 @@
 		gadgetHelper = new google.visualization.GadgetHelper();	
 		var opts = {dataType:'jsonp'};
 		//var auxiliar = window.open(urlTable, "_parent");
-		var query = new google.visualization.Query(window.open(urlTable), opts);		
+		var query = new google.visualization.Query(urlTable, opts);		
 		query.setQuery("select * ");
 		query.send(handleQueryResponse);
 	}
