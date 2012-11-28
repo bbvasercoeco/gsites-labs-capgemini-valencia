@@ -121,7 +121,7 @@
 	function sendQuery() 
 	{
 		gadgetHelper = new google.visualization.GadgetHelper();	
-		//var opts = {dataType:'jsonp'};
+		var opts = {dataType:'auto'};
 		//var auxiliar = window.open(urlTable, "_parent");
 		var query = new google.visualization.Query(urlTable, 'auto');		
 		query.setQuery("select * ");
