@@ -25,7 +25,7 @@
 				
 			// To see the data that this visualization uses, browse to
 			// http://spreadsheets.google.com/pub?key=rYQm6lTXPH8dHA6XGhJVFsA
-			var query = new google.visualization.Query('http://spreadsheets.google.com/tq?key=rYQm6lTXPH8dHA6XGhJVFsA&pub=1');
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0AkmgaUZ_3ICedEVzM3hjdThEMXNWYUZzV0JzVi0tRHc#gid=0');
 			
 			function sendAndDraw() {
 			  // Send the query with a callback function.
