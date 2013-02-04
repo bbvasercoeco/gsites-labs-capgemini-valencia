@@ -13,12 +13,20 @@
 		<![CDATA[
 
 			 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		
 			<script type="text/javascript">
-			  google.load('visualization', '1', {packages: ['table']});
-			</script>
-			<script type="text/javascript">
+				var gadgetHelper = null;
+	var prefs = new _IG_Prefs(); 
+	
+				_IG_RegisterOnloadHandler(loadVisualizationAPI);
+	 
+	function loadVisualizationAPI() 
+	{
+		google.load("visualization", "1", {"packages": ["table"]});
+		//google.setOnLoadCallback(sendQuery);
+	}
 			
-			console.debug('tablaQueryCustom.xml version 2');
+			console.debug('tablaQueryCustom.xml version 3');
 			
 			var isFirstTime = true;
 			var options = {'showRowNumber': true};
