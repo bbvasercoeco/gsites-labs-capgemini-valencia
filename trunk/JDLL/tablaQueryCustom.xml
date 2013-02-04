@@ -26,7 +26,7 @@
 		//google.setOnLoadCallback(sendQuery);
 	}
 			
-			console.debug('tablaQueryCustom.xml version 3');
+			console.debug('tablaQueryCustom.xml version 4');
 			
 			var isFirstTime = true;
 			var options = {'showRowNumber': true};
@@ -45,13 +45,20 @@
 			//https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdGR5SFQ0ckxiOU5nWjVGcENmZzFzd1E#gid=0
 			//http://spreadsheets.google.com/tq?key=0AoYEewut2JmZdGR5SFQ0ckxiOU5nWjVGcENmZzFzd1E
 			//var query = new google.visualization.Query('http://spreadsheets.google.com/tq?key=rYQm6lTXPH8dHA6XGhJVFsA&pub=1');
-			var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0AkmgaUZ_3ICedE5OVkgzS3NualZWTGhUTy1HM1c4cFE#gid=0');
+			//var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0AkmgaUZ_3ICedE5OVkgzS3NualZWTGhUTy1HM1c4cFE#gid=0');
 
 			///https://docs.google.com/spreadsheet/ccc?key=0Arsf9nIuNLe-dGlOdlBlZHdCWGlmVGt2NUxJU1FRTHc#gid=0
 
-			var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0AkmgaUZ_3ICedE5OVkgzS3NualZWTGhUTy1HM1c4cFE#gid=0');
+			//var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0AkmgaUZ_3ICedE5OVkgzS3NualZWTGhUTy1HM1c4cFE#gid=0');
 
+			//var query = new google.visualization.Query('https://docs.google.com/spreadsheet/ccc?key=0AkmgaUZ_3ICedE5OVkgzS3NualZWTGhUTy1HM1c4cFE#gid=0');
 			
+			
+			gadgetHelper = new google.visualization.GadgetHelper();
+		var opts = {dataType:'jsonp'};		
+		var query = new google.visualization.Query(urlTable, opts);	
+		
+		
 			function sendAndDraw() {
 			  // Send the query with a callback function.
 			  query.send(handleQueryResponse);
