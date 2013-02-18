@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="Iframe test"
+  <ModulePrefs title="gae form"
   > 
   </ModulePrefs>
 <Content type="url"  href="http://bbvarepo.appspot.com/jsp/AppForm.jsp"/>
