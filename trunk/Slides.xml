@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Slides" height:720px; width:960px; scaling="false" />
+  <Content type="html">
+  <![CDATA[ 
+    <div  style="overflow:hidden; height:720px; width:960px; margin:0px; padding:0px;" >
+		<iframe src="https://docs.google.com/presentation/d/1bB8EBKeeOjJ1i1ZzsB5fj7SSfd98RFCX6z6M7tjVDtY/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+	</div>
+  ]]> 
+  </Content>
+</Module>
