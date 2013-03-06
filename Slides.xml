@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Slides" height:720px; width:960px; scaling="false" />
+  <ModulePrefs title="Slides" height="720" width="960" scaling="false" />
   <Content type="html">
   <![CDATA[ 
     <div  style="overflow:hidden; height:720px; width:960px; margin:0px; padding:0px;" >
